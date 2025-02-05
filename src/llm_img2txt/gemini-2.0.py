@@ -1,10 +1,24 @@
 #!/usr/bin/env python3
+"""
+Gemini-2.0 PDF -> PNG -> TEXT Pipeline
+
+This script:
+  1) Converts a PDF into per-page PNG images in data/page_by_page/PNG/<pdf_stem>.
+     (Skips conversion if images already exist.)
+  2) Calls Gemini-2.0 for each page image, producing text output.
+     - Automatically retries on any error, up to 1 hour per page. If it fails after 1 hour, skips that page.
+  3) Merges all returned page texts into a single TXT file (<pdf_stem>.txt).
+  4) Logs usage tokens (prompt/candidate) per page, accumulates them across all pages, and saves a JSON run log.
+
+Everything is aligned with your other Gemini-2.0 scripts for consistency.
+"""
 
 import argparse
 import json
 import logging
 import os
 import sys
+import time
 import tempfile
 from datetime import datetime
 from pathlib import Path
@@ -19,50 +33,63 @@ from PIL import Image
 ###############################################################################
 # Project Paths
 ###############################################################################
-# In your structure, "gemini-2.0.py" is in: project_root/src/llm_img2txt/gemini-2.0.py
-# So .parents[2] should be the project root. Adjust if needed.
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-
 DATA_DIR = PROJECT_ROOT / "data"
 PROMPTS_DIR = PROJECT_ROOT / "src" / "prompts" / "llm_img2txt"
 RESULTS_DIR = PROJECT_ROOT / "results" / "llm_img2txt"
 LOGS_DIR = PROJECT_ROOT / "logs" / "llm_img2txt"
-
-# .env file is in config/.env
 ENV_PATH = PROJECT_ROOT / "config" / ".env"
 
 ###############################################################################
 # Load environment variables
 ###############################################################################
 load_dotenv(dotenv_path=ENV_PATH)
-API_KEY = os.getenv("GOOGLE_API_KEY")  # Make sure this matches your .env key
+API_KEY = os.getenv("GOOGLE_API_KEY")  # Must match your .env key
+
+###############################################################################
+# Constants
+###############################################################################
+MODEL_NAME = "gemini-2.0"
+FULL_MODEL_NAME = "gemini-2.0-flash-exp"
+MAX_OUTPUT_TOKENS = 8192
+SEED = 42
+RETRY_LIMIT_SECONDS = 3600  # 1 hour per page
+
+###############################################################################
+# Utility: Time Formatting
+###############################################################################
+def format_duration(seconds: float) -> str:
+    """
+    Convert a number of seconds into H:MM:SS for clean logging.
+    """
+    hours = int(seconds // 3600)
+    minutes = int((seconds % 3600) // 60)
+    secs = int(seconds % 60)
+    return f"{hours:02d}:{minutes:02d}:{secs:02d}"
 
 ###############################################################################
 # Argument Parsing
 ###############################################################################
 def parse_arguments() -> argparse.Namespace:
     """
-    Parse command-line arguments for the Gemini LLM PDF-to-text pipeline.
-
-    NOTE: We removed the --model_name flag as requested.
+    Parse command-line arguments for the Gemini-2.0 PDF-to-text pipeline.
     """
-    parser = argparse.ArgumentParser(description="Gemini 2.0 PDF-to-text pipeline")
+    parser = argparse.ArgumentParser(description="Gemini-2.0 PDF-to-text pipeline")
 
     parser.add_argument(
         "--pdf",
         type=str,
         required=True,
-        help="Name of the PDF file in data/pdfs/, e.g. type-1.pdf"
+        help="Name of the PDF file in data/pdfs/, e.g. example.pdf"
     )
     parser.add_argument(
         "--temperature",
         type=float,
         default=0.0,
-        help="Temperature for the LLM call. Default: 0.0"
+        help="Temperature for the LLM call (default: 0.0)"
     )
 
     return parser.parse_args()
-
 
 ###############################################################################
 # Utility: Find existing run_XY directories to auto-increment run number
@@ -70,12 +97,7 @@ def parse_arguments() -> argparse.Namespace:
 def find_existing_runs_in_temperature_folder(temp_folder: Path) -> List[int]:
     """
     Look for existing 'run_XX' directories in the temperature-specific folder.
-
-    Args:
-        temp_folder (Path): The folder to scan.
-
-    Returns:
-        List[int]: A list of run numbers (integers) found in the folder.
+    Returns a list of run numbers (integers).
     """
     if not temp_folder.is_dir():
         return []
@@ -89,19 +111,13 @@ def find_existing_runs_in_temperature_folder(temp_folder: Path) -> List[int]:
                 pass
     return runs
 
-
 ###############################################################################
-# Utility: Write a JSON log file in logs/llm_img2txt/<model_name>/
+# Utility: Write a JSON log file in logs/llm_img2txt/gemini-2.0/
 ###############################################################################
 def write_json_log(log_dict: dict, model_name: str) -> None:
     """
-    Save a JSON log file in the logs directory.
-
-    Args:
-        log_dict (dict): The dictionary containing run metadata.
-        model_name (str): The name of the model used (e.g., 'gemini-2.0').
+    Save a JSON log file in the logs/llm_img2txt/<model_name>/ folder.
     """
-    # Create logs/<model_name>/llm_img2txt/ if it doesn't exist
     pipeline_logs_dir = LOGS_DIR / model_name
     pipeline_logs_dir.mkdir(parents=True, exist_ok=True)
 
@@ -114,91 +130,24 @@ def write_json_log(log_dict: dict, model_name: str) -> None:
 
     logging.info(f"JSON log saved at: {log_path}")
 
-
-###############################################################################
-# Gemini 2.0 API Call (Unchanged)
-###############################################################################
-def gemini_api(
-    prompt: str,
-    pil_image: Image.Image,
-    full_model_name: str,
-    max_tokens: int,
-    temperature: float,
-    api_key: str
-) -> Optional[str]:
-    """
-    Call Gemini 2.0 API to generate content based on a prompt and an image.
-
-    NOTE: We are not changing this function (per your request). 
-    Also note we no longer call this function from `main()`.
-    """
-    try:
-        # Create a temporary PNG file from the PIL image to upload
-        with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as temp_file:
-            pil_image.save(temp_file.name, "PNG")
-
-            # Initialize Gemini client
-            client = genai.Client(api_key=api_key)
-
-            # Upload the temporary PNG file
-            file_upload = client.files.upload(path=temp_file.name)
-
-            # Generate content with config parameters (incorporating temperature)
-            response = client.models.generate_content(
-                model=full_model_name,
-                contents=[
-                    types.Part.from_uri(file_uri=file_upload.uri, mime_type=file_upload.mime_type),
-                    prompt
-                ],
-                config=types.GenerateContentConfig(
-                    temperature=temperature,
-                    top_p=0.95,
-                    top_k=20,
-                    candidate_count=1,
-                    seed=5,
-                    max_output_tokens=max_tokens,
-                    stop_sequences=["STOP!"],
-                    presence_penalty=0.0,
-                    frequency_penalty=0.0,
-                )
-            )
-        return response.text
-    except Exception as e:
-        logging.error(f"Gemini 2.0 API error: {e}")
-        return None
-
-
 ###############################################################################
 # Main Pipeline
 ###############################################################################
 def main() -> None:
     """
-    Main function for Gemini 2.0 PDF-to-text pipeline.
-
-    Steps:
-      1. Parse arguments and configure logging.
-      2. Load transcription prompt from prompts/llm_img2txt/gemini-2.0.txt.
-      3. Convert PDF to page images and store them in data/page_by_page/<pdf_stem>/.
-      4. Create results folder under:
-         /Users/niclasgriesshaber/Desktop/llm_historical_dataset_pipeline_benchmarking/
-         results/llm_img2txt/gemini-2.0/<pdf_stem>/temperature_x.x/run_xy/page_by_page/
-      5. For each page image, call Gemini to get text (with infinite retry),
-         log token usage, and save page_000X.txt.
-      6. Concatenate all page text files into <pdf_stem>.txt.
-      7. Write a JSON log in logs/llm_img2txt/gemini-2.0/.
+    Main function for Gemini-2.0 PDF-to-text pipeline, with:
+      - PNG conversion in data/page_by_page/PNG/<pdf_stem>
+      - 1-hour max retry per page
+      - Usage token logging
+      - Final text concatenation
+      - JSON run log with total usage stats
     """
     # -------------------------------------------------------------------------
     # 1. Parse arguments and configure logging
     # -------------------------------------------------------------------------
     args = parse_arguments()
-
-    pdf_name = args.pdf            # e.g., "type-1.pdf"
-    temperature = args.temperature # default 0.0
-
-    # Hardcode the short model name to "gemini-2.0" (per your request)
-    model_name = "gemini-2.0"
-    # Hardcode the full model name to the flash experimental version
-    full_model_name = "gemini-2.0-flash-exp"
+    pdf_name = args.pdf
+    temperature = args.temperature
 
     logging.basicConfig(
         level=logging.INFO,
@@ -206,72 +155,68 @@ def main() -> None:
         handlers=[logging.StreamHandler(sys.stdout)]
     )
 
-    logging.info("Starting Gemini 2.0 PDF-to-text pipeline...")
+    logging.info("=== Gemini-2.0 PDF -> PNG -> TEXT Pipeline ===")
     logging.info(f"PDF to process: {pdf_name}")
-    logging.info(f"Model name: {model_name}")
-    logging.info(f"Full model name: {full_model_name}")
-    logging.info(f"Temperature: {temperature}")
+    logging.info(f"Model: {MODEL_NAME}, Full model: {FULL_MODEL_NAME}")
+    logging.info(f"Temperature: {temperature}, Seed={SEED}")
+
+    # Start overall timer
+    overall_start = time.time()
 
     # -------------------------------------------------------------------------
     # 2. Load the transcription prompt from prompts/llm_img2txt/gemini-2.0.txt
     # -------------------------------------------------------------------------
-    prompt_path = PROMPTS_DIR / f"{model_name}.txt"
+    prompt_path = PROMPTS_DIR / f"{MODEL_NAME}.txt"
     if not prompt_path.is_file():
-        logging.error(f"Could not find prompt file: {prompt_path}")
+        logging.error(f"Prompt file not found: {prompt_path}")
         sys.exit(1)
 
-    with open(prompt_path, 'r', encoding='utf-8') as pf:
-        transcription_prompt = pf.read().strip()
-
+    transcription_prompt = prompt_path.read_text(encoding='utf-8').strip()
     if not transcription_prompt:
-        logging.error(f"The prompt file {prompt_path} is empty.")
+        logging.error(f"Prompt file is empty: {prompt_path}")
         sys.exit(1)
-
     logging.info(f"Prompt loaded from: {prompt_path}")
 
     # -------------------------------------------------------------------------
-    # 3. Convert PDF to page images in data/page_by_page/<pdf_stem>/
+    # 3. Convert PDF to page images in data/page_by_page/PNG/<pdf_stem>
     # -------------------------------------------------------------------------
-    pdf_stem = Path(pdf_name).stem  # e.g. "type-1"
+    pdf_stem = Path(pdf_name).stem
     pdf_path = DATA_DIR / "pdfs" / pdf_name
     if not pdf_path.is_file():
-        logging.error(f"Could not find PDF file: {pdf_path}")
+        logging.error(f"PDF not found at: {pdf_path}")
         sys.exit(1)
 
-    out_dir = DATA_DIR / "page_by_page" / pdf_stem
-    out_dir.mkdir(parents=True, exist_ok=True)
+    png_dir = DATA_DIR / "page_by_page" / "PNG" / pdf_stem
+    if not png_dir.is_dir():
+        logging.info(f"No PNG folder found; converting PDF -> PNG in {png_dir} ...")
+        png_dir.mkdir(parents=True, exist_ok=True)
 
-    logging.info(f"Converting PDF to images => {out_dir} ...")
-    pages = convert_from_path(str(pdf_path))
+        pages = convert_from_path(str(pdf_path))
+        for i, page_img in enumerate(pages, start=1):
+            img_path = png_dir / f"page_{i:04d}.png"
+            page_img.save(img_path, "PNG")
+        logging.info(f"Created {len(pages)} PNG pages in {png_dir}")
+    else:
+        logging.info(f"Folder {png_dir} already exists; skipping PDF->PNG step.")
 
-    image_paths = []
-    for i, page_img in enumerate(pages, start=1):
-        img_name = f"page_{i:04}.png"
-        img_path = out_dir / img_name
-        page_img.save(img_path, "PNG")
-        image_paths.append(img_path)
+    # Gather PNG paths
+    png_files = sorted(png_dir.glob("page_*.png"))
+    if not png_files:
+        logging.error(f"No page images found in {png_dir}. Exiting.")
+        sys.exit(1)
 
-    logging.info(f"PDF split into {len(image_paths)} page images.")
+    total_pages = len(png_files)
 
     # -------------------------------------------------------------------------
-    # 4. Create the results folder under:
-    #    /Users/niclasgriesshaber/Desktop/llm_historical_dataset_pipeline_benchmarking/
-    #    results/llm_img2txt/gemini-2.0/<pdf_stem>/temperature_x.x/run_xy/page_by_page/
+    # 4. Create results folder => results/llm_img2txt/gemini-2.0/<pdf_stem>/temperature_x.x/run_nn/page_by_page
     # -------------------------------------------------------------------------
-    base_results_path = (
-        Path("/Users/niclasgriesshaber/Desktop/llm_historical_dataset_pipeline_benchmarking")
-        / "results" / "llm_img2txt" / model_name / pdf_stem
-    )
-
-    # e.g. /.../gemini-2.0/type-1/temperature_0.0
+    base_results_path = RESULTS_DIR / MODEL_NAME / pdf_stem
     temp_dir = base_results_path / f"temperature_{temperature}"
     temp_dir.mkdir(parents=True, exist_ok=True)
 
     existing_runs = find_existing_runs_in_temperature_folder(temp_dir)
     next_run_number = (max(existing_runs) + 1) if existing_runs else 1
-
-    run_dir_name = f"run_{str(next_run_number).zfill(2)}"
-    run_dir = temp_dir / run_dir_name
+    run_dir = temp_dir / f"run_{str(next_run_number).zfill(2)}"
     run_dir.mkdir(parents=True, exist_ok=False)
 
     run_page_dir = run_dir / "page_by_page"
@@ -280,134 +225,173 @@ def main() -> None:
     logging.info(f"Created run folder: {run_dir}")
 
     # -------------------------------------------------------------------------
-    # 5. For each page image, call Gemini with infinite retry + usage logging
+    # 5. For each page, call Gemini-2.0 with up to 1-hour retry + usage logging
     # -------------------------------------------------------------------------
-    max_tokens = 8192  # Adjust as needed
-
-    page_text_files = []
-
-    # We'll track total token usage for the entire PDF
     total_prompt_tokens = 0
     total_candidates_tokens = 0
     total_tokens = 0
 
-    for img_path in image_paths:
-        page_id = img_path.stem  # e.g. "page_0001"
-        logging.info(f"Transcribing {page_id} ...")
+    page_text_files = []
 
-        # Load the PIL image
-        pil_image = Image.open(img_path)
+    for idx, png_path in enumerate(png_files, start=1):
+        logging.info(f"Processing page {idx} of {total_pages}: {png_path.name}")
 
-        # =====================================================================
-        # Infinite retry block: We do the API call right here, 
-        # exactly as recommended for usage metadata
-        # =====================================================================
-        while True:
-            try:
-                # Create a temporary PNG file from the PIL image to upload
-                with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as temp_file:
-                    pil_image.save(temp_file.name, "PNG")
-
-                    # Initialize Gemini client
-                    client = genai.Client(api_key=API_KEY)
-
-                    # Upload the temporary PNG file
-                    file_upload = client.files.upload(path=temp_file.name)
-
-                    # Actually call generate_content
-                    response = client.models.generate_content(
-                        model=full_model_name,
-                        contents=[
-                            types.Part.from_uri(
-                                file_uri=file_upload.uri,
-                                mime_type=file_upload.mime_type
-                            ),
-                            transcription_prompt
-                        ],
-                        config=types.GenerateContentConfig(
-                            temperature=temperature,
-                            top_p=0.95,
-                            top_k=20,
-                            candidate_count=1,
-                            seed=5,
-                            max_output_tokens=max_tokens,
-                            stop_sequences=["STOP!"],
-                            presence_penalty=0.0,
-                            frequency_penalty=0.0,
-                        )
+        try:
+            with Image.open(png_path) as pil_image:
+                # Log DPI (if known)
+                width, height = pil_image.size
+                dpi_value = pil_image.info.get("dpi", None)
+                if dpi_value and len(dpi_value) == 2:
+                    logging.info(
+                        f"Image metadata -> width={width}px, height={height}px, dpi={dpi_value}"
                     )
-                transcription = response.text
+                else:
+                    logging.info(
+                        f"Image metadata -> width={width}px, height={height}px, dpi=UNKNOWN"
+                    )
 
-                # usage_metadata is a GenerateContentResponseUsageMetadata object
-                usage = response.usage_metadata  # Not a dict, but a pydantic model
+                # Attempt to transcribe with a 1-hour max retry
+                start_retry = time.time()
+                transcription = None
+                page_usage_prompt = 0
+                page_usage_candidate = 0
+                page_usage_total = 0
 
-                # Print usage (page-by-page) to command line
-                logging.info(
-                    f"Usage for {page_id}: "
-                    f"prompt_token_count={usage.prompt_token_count}, "
-                    f"candidates_token_count={usage.candidates_token_count}, "
-                    f"total_token_count={usage.total_token_count}"
-                )
+                while (time.time() - start_retry) < RETRY_LIMIT_SECONDS:
+                    tmp_file = None
+                    try:
+                        with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
+                            tmp_file = tmp.name
+                            pil_image.save(tmp_file, "PNG")
 
-                # Accumulate usage
-                if usage.prompt_token_count is not None:
-                    total_prompt_tokens += usage.prompt_token_count
-                if usage.candidates_token_count is not None:
-                    total_candidates_tokens += usage.candidates_token_count
-                if usage.total_token_count is not None:
-                    total_tokens += usage.total_token_count
+                        client = genai.Client(api_key=API_KEY)
+                        file_upload = client.files.upload(path=tmp_file)
 
-            except Exception as e:
-                logging.error(f"Gemini 2.0 API error: {e}. Retrying...")
-                continue  # retry indefinitely
-            else:
-                # If no exception, break out of the retry loop
-                break
+                        response = client.models.generate_content(
+                            model=FULL_MODEL_NAME,
+                            contents=[
+                                types.Part.from_uri(
+                                    file_uri=file_upload.uri,
+                                    mime_type=file_upload.mime_type,
+                                ),
+                                transcription_prompt
+                            ],
+                            config=types.GenerateContentConfig(
+                                temperature=temperature,
+                                max_output_tokens=MAX_OUTPUT_TOKENS,
+                                seed=SEED  # only keep temperature, max_output_tokens, and seed
+                            ),
+                        )
 
-        # If transcription is empty or None, log a warning
+                        if not response or not response.text:
+                            logging.warning(
+                                "Gemini-2.0 returned empty response; retrying..."
+                            )
+                            continue
+
+                        transcription = response.text
+                        usage = response.usage_metadata
+
+                        # Update usage
+                        page_usage_prompt = usage.prompt_token_count or 0
+                        page_usage_candidate = usage.candidates_token_count or 0
+                        page_usage_total = usage.total_token_count or (
+                            page_usage_prompt + page_usage_candidate
+                        )
+
+                        total_prompt_tokens += page_usage_prompt
+                        total_candidates_tokens += page_usage_candidate
+                        total_tokens += page_usage_total
+
+                    except Exception as e:
+                        logging.warning(f"Gemini-2.0 call failed: {e}. Retrying...")
+                        continue
+                    finally:
+                        if tmp_file and os.path.exists(tmp_file):
+                            try:
+                                os.remove(tmp_file)
+                            except:
+                                pass
+
+                    # If we made it here, we have a valid transcription
+                    break
+
+                else:
+                    # If we exit the while-loop normally, 1 hour was exceeded
+                    logging.error(
+                        f"Skipping page {idx} because Gemini-2.0 API did not succeed within 1 hour."
+                    )
+                    logging.info("")
+                    continue
+
+        except Exception as e:
+            logging.error(f"Failed to open image {png_path}: {e}")
+            logging.info("")
+            continue
+
+        # If transcription is empty
         if not transcription:
-            logging.warning(f"Received empty response for {page_id}. Saving empty file.")
             transcription = ""
+            logging.warning(f"Received empty/None transcription for page {idx}.")
 
-        # Save page_xxxx.txt
-        out_txt_path = run_page_dir / f"{page_id}.txt"
-        with open(out_txt_path, 'w', encoding='utf-8') as f:
+        # Log usage for this page
+        logging.info(
+            f"Gemini-2.0 usage for page {idx}: "
+            f"input={page_usage_prompt}, candidate={page_usage_candidate}, total={page_usage_total}"
+        )
+        logging.info(
+            f"Accumulated so far: input={total_prompt_tokens}, "
+            f"candidate={total_candidates_tokens}, total={total_tokens}"
+        )
+
+        # Save page text
+        page_text_path = run_page_dir / f"{png_path.stem}.txt"
+        with open(page_text_path, 'w', encoding='utf-8') as f:
             f.write(transcription)
-        page_text_files.append(out_txt_path)
+        page_text_files.append(page_text_path)
 
-    logging.info("All pages transcribed. Individual text files created.")
+        # Timing / estimation
+        elapsed = time.time() - overall_start
+        pages_done = idx
+        pages_left = total_pages - pages_done
+        avg_time_per_page = elapsed / pages_done
+        estimated_total = avg_time_per_page * total_pages
+        estimated_remaining = avg_time_per_page * pages_left
 
-    # Log total usage for the entire PDF
-    logging.info(
-        f"Total usage across all pages => "
-        f"prompt_tokens={total_prompt_tokens}, "
-        f"candidates_tokens={total_candidates_tokens}, "
-        f"total_tokens={total_tokens}"
-    )
+        logging.info(
+            f"Time so far: {format_duration(elapsed)} | "
+            f"Estimated total: {format_duration(estimated_total)} | "
+            f"Estimated remaining: {format_duration(estimated_remaining)}"
+        )
+        logging.info("")
+
+    logging.info("All pages processed. Individual text files created.")
 
     # -------------------------------------------------------------------------
     # 6. Concatenate all page text files into <pdf_stem>.txt in the run folder
     # -------------------------------------------------------------------------
     final_txt_path = run_dir / f"{pdf_stem}.txt"
     logging.info(f"Combining page texts into {final_txt_path} ...")
+
     with open(final_txt_path, 'w', encoding='utf-8') as outf:
-        for txt_file in sorted(page_text_files):
-            with open(txt_file, 'r', encoding='utf-8') as tf:
-                outf.write(tf.read().strip())
-                outf.write("\n\n")  # Separate pages by blank line, if desired
+        for text_file in sorted(page_text_files):
+            outf.write(Path(text_file).read_text(encoding='utf-8').strip())
+            outf.write("\n\n")  # separate pages with a blank line
 
     logging.info(f"Final concatenated file: {final_txt_path}")
 
     # -------------------------------------------------------------------------
     # 7. Write a JSON log summarizing the run
     # -------------------------------------------------------------------------
+    total_duration = time.time() - overall_start
     log_info = {
         "timestamp": datetime.now().isoformat(),
         "pdf_name": pdf_name,
         "pdf_path": str(pdf_path),
-        "model_name": model_name,
-        "full_model_name": full_model_name,
+        "model_name": MODEL_NAME,
+        "full_model_name": FULL_MODEL_NAME,
         "temperature": temperature,
+        "seed": SEED,
         "run_directory": str(run_dir),
         "prompt_file": str(prompt_path),
         "pages_count": len(page_text_files),
@@ -416,17 +400,23 @@ def main() -> None:
             "prompt_tokens": total_prompt_tokens,
             "candidates_tokens": total_candidates_tokens,
             "total_tokens": total_tokens
-        }
+        },
+        "total_duration_seconds": int(total_duration),
+        "total_duration_formatted": format_duration(total_duration),
     }
+    write_json_log(log_info, MODEL_NAME)
 
-    write_json_log(log_info, model_name)
-    logging.info("Run information successfully logged.")
+    # Final usage summary
+    logging.info("=== Final Usage Summary ===")
+    logging.info(f"Total input (prompt) tokens: {total_prompt_tokens}")
+    logging.info(f"Total candidate tokens: {total_candidates_tokens}")
+    logging.info(f"Grand total tokens: {total_tokens}")
 
-    logging.info("Pipeline completed successfully. All done!")
+    logging.info(
+        f"Pipeline completed successfully in {format_duration(total_duration)} (H:MM:SS)."
+    )
+    logging.info("All done!")
 
 
-###############################################################################
-# Entry Point
-###############################################################################
 if __name__ == "__main__":
     main()

@@ -1,27 +1,41 @@
 #!/usr/bin/env python3
+"""
+Transkribus PDF -> TIFF -> TEXT Pipeline
+
+This script:
+  1) Parses command-line arguments and configures logging.
+  2) Converts a PDF into per-page TIFF images in data/page_by_page/TIFF/<pdf_stem>.
+     (Skips conversion if images already exist.)
+  3) Creates a results folder under results/ocr_img2txt/transkribus/<pdf_stem>/run_XX/page_by_page/.
+  4) Calls the Transkribus API in a single batch for all pages, retrieving PAGE XML.
+  5) Extracts text from each PAGE XML file and saves it as page_X.txt.
+  6) Merges all returned page texts into a single TXT file (<pdf_stem>.txt).
+  7) Logs progress & timing information, and saves a JSON run log at the end.
+"""
 
 import argparse
 import json
 import logging
 import os
 import sys
-import xml.etree.ElementTree as ET
-from dotenv import load_dotenv
+import time
 from datetime import datetime
 from pathlib import Path
 from typing import List
+import xml.etree.ElementTree as ET
 
 # For PDF -> image conversion
 from pdf2image import convert_from_path
+from PIL import Image
 
 # Transkribus
+from dotenv import load_dotenv
 from transkribus_metagrapho_api import transkribus_metagrapho_api
 
 ###############################################################################
 # Project Paths
 ###############################################################################
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-
 DATA_DIR = PROJECT_ROOT / "data"
 RESULTS_DIR = PROJECT_ROOT / "results" / "ocr_img2txt"
 LOGS_DIR = PROJECT_ROOT / "logs" / "ocr_img2txt"
@@ -33,52 +47,58 @@ ENV_PATH = PROJECT_ROOT / "config" / ".env"
 # Load Transkribus environment variables
 ###############################################################################
 load_dotenv(dotenv_path=ENV_PATH)
-
 TRANSKRIBUS_USERNAME = os.getenv("TRANSKRIBUS_USERNAME")
 TRANSKRIBUS_PASSWORD = os.getenv("TRANSKRIBUS_PASSWORD")
 
-# --------------------------------------------------------------------
-# Convert these IDs to int so Transkribus API recognizes them properly
-# --------------------------------------------------------------------
 line_det_str = os.getenv("TRANSKRIBUS_LINE_DETECTION_ID")
 htr_id_str = os.getenv("TRANSKRIBUS_HTR_ID")
 
 if not line_det_str or not htr_id_str:
-    logging.error("Missing TRANSKRIBUS_LINE_DETECTION_ID or TRANSKRIBUS_HTR_ID in .env.")
+    print("Missing TRANSKRIBUS_LINE_DETECTION_ID or TRANSKRIBUS_HTR_ID in .env.")
     sys.exit(1)
 
 try:
-    TRANSKRIBUS_LINE_DETECTION_ID = int(line_det_str)  # <-- FIX HERE
-    TRANSKRIBUS_HTR_ID = int(htr_id_str)               # <-- FIX HERE
+    TRANSKRIBUS_LINE_DETECTION_ID = int(line_det_str)
+    TRANSKRIBUS_HTR_ID = int(htr_id_str)
 except ValueError:
-    logging.error("Could not convert line detection or HTR IDs to integers.")
+    print("Could not convert line detection or HTR IDs to integers.")
     sys.exit(1)
 
 ###############################################################################
-# Parse Arguments
+# Utility: Time Formatting
+###############################################################################
+def format_duration(seconds: float) -> str:
+    """
+    Convert a number of seconds into H:MM:SS for clean logging.
+    """
+    hours = int(seconds // 3600)
+    minutes = int((seconds % 3600) // 60)
+    secs = int(seconds % 60)
+    return f"{hours:02d}:{minutes:02d}:{secs:02d}"
+
+###############################################################################
+# Argument Parsing
 ###############################################################################
 def parse_arguments() -> argparse.Namespace:
     """
     Parse command-line arguments for the PDF-to-text pipeline using Transkribus.
     """
     parser = argparse.ArgumentParser(description="Transkribus PDF-to-text pipeline")
-
     parser.add_argument(
         "--pdf",
         type=str,
         required=True,
-        help="Name of the PDF file in data/pdfs/, e.g. 'type-1.pdf'"
+        help="Name of the PDF file in data/pdfs/, e.g. example.pdf"
     )
-
     return parser.parse_args()
 
 ###############################################################################
-# Helper: Find existing runs
+# Utility: Find existing run_XX directories to auto-increment run number
 ###############################################################################
 def find_existing_runs_in_folder(model_folder: Path) -> List[int]:
     """
     Look for existing 'run_XX' directories in the given folder.
-    Returns a list of run numbers found.
+    Returns a list of run numbers (integers).
     """
     if not model_folder.is_dir():
         return []
@@ -93,11 +113,11 @@ def find_existing_runs_in_folder(model_folder: Path) -> List[int]:
     return runs
 
 ###############################################################################
-# Helper: Write JSON log
+# Utility: Write a JSON log file in logs/ocr_img2txt/<model_name>/
 ###############################################################################
 def write_json_log(log_dict: dict, model_name: str) -> None:
     """
-    Save a JSON log file in logs/ocr_img2txt/<model_name>/.
+    Save a JSON log file with run metadata in logs/ocr_img2txt/<model_name>/.
     """
     pipeline_logs_dir = LOGS_DIR / model_name
     pipeline_logs_dir.mkdir(parents=True, exist_ok=True)
@@ -112,7 +132,7 @@ def write_json_log(log_dict: dict, model_name: str) -> None:
     logging.info(f"JSON log saved at: {log_path}")
 
 ###############################################################################
-# Helper: Extract text from PAGE XML
+# Utility: Extract text from PAGE XML
 ###############################################################################
 def extract_text_from_page_xml(xml_content: str) -> str:
     """
@@ -132,11 +152,21 @@ def extract_text_from_page_xml(xml_content: str) -> str:
     return "\n".join(lines)
 
 ###############################################################################
-# Main
+# Main Pipeline
 ###############################################################################
 def main() -> None:
     """
-    Main function for PDF-to-text pipeline using Transkribus.
+    Main function for PDF-to-text pipeline using Transkribus, matching the style
+    of other OCR pipelines in the project:
+
+    Steps:
+      1. Parse arguments & configure logging.
+      2. Convert PDF => TIFF in data/page_by_page/TIFF/<pdf_stem>.
+      3. Create results folder under results/ocr_img2txt/transkribus/<pdf_stem>/run_xy/page_by_page/.
+      4. Perform OCR via Transkribus for each page (batch call).
+      5. Concatenate all page text files into <pdf_stem>.txt.
+      6. Write a JSON log in logs/ocr_img2txt/transkribus/.
+      7. Print final summary.
     """
     # -------------------------------------------------------------------------
     # 1. Parse arguments and configure logging
@@ -147,46 +177,53 @@ def main() -> None:
 
     logging.basicConfig(
         level=logging.INFO,
-        format='%(asctime)s | %(levelname)s | %(message)s',
+        format="%(asctime)s | %(levelname)s | %(message)s",
         handlers=[logging.StreamHandler(sys.stdout)]
     )
 
-    logging.info("Starting Transkribus PDF-to-text pipeline...")
+    logging.info("=== Transkribus PDF -> TIFF -> TEXT Pipeline ===")
     logging.info(f"PDF to process: {pdf_name}")
-    logging.info(f"OCR model name: {model_name}")
+    logging.info(f"Model: {model_name}")
 
     if not TRANSKRIBUS_USERNAME or not TRANSKRIBUS_PASSWORD:
         logging.error("TRANSKRIBUS_USERNAME/PASSWORD not set in .env or environment.")
         sys.exit(1)
 
+    overall_start_time = time.time()
+
     # -------------------------------------------------------------------------
-    # 2. Convert PDF to TIFF images in data/page_by_page/<pdf_stem>/
+    # 2. Convert PDF to TIFF images in data/page_by_page/TIFF/<pdf_stem>
+    #    (Skip if folder already exists and is non-empty)
     # -------------------------------------------------------------------------
     pdf_stem = Path(pdf_name).stem
-    pdf_path = DATA_DIR / "pdfs" / pdf_name
+    pdf_path = PROJECT_ROOT / "data" / "pdfs" / pdf_name
     if not pdf_path.is_file():
         logging.error(f"Could not find PDF file: {pdf_path}")
         sys.exit(1)
 
-    out_dir = DATA_DIR / "page_by_page" / pdf_stem
-    out_dir.mkdir(parents=True, exist_ok=True)
+    tiff_dir = PROJECT_ROOT / "data" / "page_by_page" / "TIFF" / pdf_stem
+    if not tiff_dir.is_dir():
+        logging.info(f"No TIFF folder found; converting PDF -> TIFF in {tiff_dir} ...")
+        tiff_dir.mkdir(parents=True, exist_ok=True)
 
-    logging.info(f"Converting PDF to TIFF images => {out_dir} ...")
-    pages = convert_from_path(str(pdf_path))
-    image_paths = []
+        pages = convert_from_path(str(pdf_path))
+        for i, page_img in enumerate(pages, start=1):
+            img_path = tiff_dir / f"page_{i:04d}.tiff"
+            page_img.save(img_path, "TIFF")
+        logging.info(f"Created {len(pages)} TIFF pages in {tiff_dir}")
+    else:
+        logging.info(f"Folder {tiff_dir} already exists; skipping PDF->TIFF step.")
 
-    for i, page_img in enumerate(pages, start=1):
-        # Save each page as a TIFF with 4-digit zero-padding
-        img_name = f"page_{i:04}.tiff"  # <-- If needed: page_0001.tiff, etc.
-        img_path = out_dir / img_name
-        page_img.save(img_path, "TIFF")
-        image_paths.append(img_path)
+    tiff_files = sorted(tiff_dir.glob("page_*.tiff"))
+    if not tiff_files:
+        logging.error(f"No page images found in {tiff_dir}. Exiting.")
+        sys.exit(1)
 
-    logging.info(f"PDF split into {len(image_paths)} page images (TIFF).")
+    total_pages = len(tiff_files)
 
     # -------------------------------------------------------------------------
-    # 3. Create results folder for this run:
-    #    results/ocr_img2txt/transkribus/<pdf_stem>/run_XX/page_by_page/
+    # 3. Create the results folder:
+    #    results/ocr_img2txt/transkribus/<pdf_stem>/run_xy/page_by_page/
     # -------------------------------------------------------------------------
     base_results_path = RESULTS_DIR / model_name / pdf_stem
     base_results_path.mkdir(parents=True, exist_ok=True)
@@ -194,8 +231,7 @@ def main() -> None:
     existing_runs = find_existing_runs_in_folder(base_results_path)
     next_run_number = (max(existing_runs) + 1) if existing_runs else 1
 
-    run_dir_name = f"run_{str(next_run_number).zfill(2)}"
-    run_dir = base_results_path / run_dir_name
+    run_dir = base_results_path / f"run_{str(next_run_number).zfill(2)}"
     run_dir.mkdir(parents=True, exist_ok=False)
 
     run_page_dir = run_dir / "page_by_page"
@@ -204,15 +240,14 @@ def main() -> None:
     logging.info(f"Created run folder: {run_dir}")
 
     # -------------------------------------------------------------------------
-    # 4. Call Transkribus OCR on all pages (handle None returns gracefully)
+    # 4. Call Transkribus OCR on all pages in a single batch
     # -------------------------------------------------------------------------
-    logging.info("Calling Transkribus API...")
+    logging.info("Calling Transkribus API for all pages...")
+    page_text_files = []
     try:
-        # Open a session with your Transkribus credentials
         with transkribus_metagrapho_api(TRANSKRIBUS_USERNAME, TRANSKRIBUS_PASSWORD) as api:
-            # This call returns a list of PAGE XML strings (or None if failed)
             all_page_xml = api(
-                *image_paths,
+                *tiff_files,
                 line_detection=TRANSKRIBUS_LINE_DETECTION_ID,
                 htr_id=TRANSKRIBUS_HTR_ID
             )
@@ -220,65 +255,89 @@ def main() -> None:
         logging.error(f"Transkribus OCR error: {e}")
         sys.exit(1)
 
-    # Ensure we have something for each page (some may be None if 500 error)
-    page_text_files = []
-    for img_path, xml_content in zip(image_paths, all_page_xml):
-        page_id = img_path.stem  # e.g., "page_0001"
+    # Go through each page's XML result
+    for idx, (tiff_path, xml_content) in enumerate(zip(tiff_files, all_page_xml), start=1):
+        logging.info(f"Processing page {idx} of {total_pages}: {tiff_path.name}")
+        page_id = tiff_path.stem  # e.g., "page_0001"
 
         if xml_content is None:
-            logging.error(f"Transkribus returned None (HTTP error) for {img_path}. Skipping page.")
+            logging.error(f"Transkribus returned None (HTTP error) for {tiff_path}. Skipping page.")
             continue
 
         # Save PAGE XML
         xml_path = run_page_dir / f"{page_id}.xml"
-        with open(xml_path, 'w', encoding='utf-8') as xf:
-            xf.write(xml_content)
+        xml_path.write_text(xml_content, encoding='utf-8')
 
-        # Extract text lines from the PAGE XML
+        # Extract text from PAGE XML
         extracted_text = extract_text_from_page_xml(xml_content)
         if not extracted_text:
-            logging.warning(f"No text extracted from {page_id}. PAGE XML may be empty or invalid.")
+            logging.warning(f"No text extracted for {tiff_path.stem}. PAGE XML may be empty or invalid.")
 
-        # Save the extracted text
+        # Save text
         out_txt_path = run_page_dir / f"{page_id}.txt"
-        with open(out_txt_path, 'w', encoding='utf-8') as tf:
-            tf.write(extracted_text)
+        out_txt_path.write_text(extracted_text, encoding='utf-8')
         page_text_files.append(out_txt_path)
+
+        # ---------------------------------------------------------------------
+        # Timing / estimation
+        # ---------------------------------------------------------------------
+        elapsed = time.time() - overall_start_time
+        pages_done = idx
+        pages_left = total_pages - pages_done
+        avg_time_per_page = elapsed / pages_done
+        estimated_total = avg_time_per_page * total_pages
+        estimated_remaining = avg_time_per_page * pages_left
+
+        logging.info(
+            f"Time so far: {format_duration(elapsed)} | "
+            f"Estimated total: {format_duration(estimated_total)} | "
+            f"Estimated remaining: {format_duration(estimated_remaining)}"
+        )
+        logging.info("")
 
     logging.info("All pages processed (or skipped if errors). Individual text files created.")
 
     # -------------------------------------------------------------------------
-    # 5. Concatenate all page text files into <pdf_stem>.txt in the run folder
+    # 5. Concatenate all page text files into <pdf_stem>.txt
     # -------------------------------------------------------------------------
     final_txt_path = run_dir / f"{pdf_stem}.txt"
     logging.info(f"Combining page texts into {final_txt_path} ...")
     with open(final_txt_path, 'w', encoding='utf-8') as outf:
         for txt_file in sorted(page_text_files):
-            with open(txt_file, 'r', encoding='utf-8') as tf:
-                outf.write(tf.read().strip())
-                outf.write("\n\n")  # Separate pages by blank line
+            text_content = txt_file.read_text(encoding='utf-8').strip()
+            outf.write(text_content + "\n\n")
 
     logging.info(f"Final concatenated file: {final_txt_path}")
 
     # -------------------------------------------------------------------------
     # 6. Write a JSON log summarizing the run
     # -------------------------------------------------------------------------
+    total_duration = time.time() - overall_start_time
     log_info = {
         "timestamp": datetime.now().isoformat(),
         "pdf_name": pdf_name,
         "pdf_path": str(pdf_path),
         "model_name": model_name,
         "run_directory": str(run_dir),
-        "pages_count": len(image_paths),
-        "pages_success": len(page_text_files),
+        "pages_count": total_pages,
+        "pages_successfully_processed": len(page_text_files),
         "final_text_file": str(final_txt_path),
         "transkribus_line_detection_id": TRANSKRIBUS_LINE_DETECTION_ID,
-        "transkribus_htr_id": TRANSKRIBUS_HTR_ID
+        "transkribus_htr_id": TRANSKRIBUS_HTR_ID,
+        "total_duration_seconds": int(total_duration),
+        "total_duration_formatted": format_duration(total_duration)
     }
 
     write_json_log(log_info, model_name)
+
+    # -------------------------------------------------------------------------
+    # 7. Final summary
+    # -------------------------------------------------------------------------
     logging.info("Run information successfully logged.")
-    logging.info("Transkribus pipeline completed successfully. All done!")
+    logging.info(
+        f"Pipeline completed successfully in {format_duration(total_duration)} (H:MM:SS)."
+    )
+    logging.info("All done!")
 
 ###############################################################################
 # Entry Point

@@ -1,36 +1,35 @@
-You are an expert historian manually extracting data from a historical directory scan to build a historical text dataset.
+You are an expert historian manually extracting data from a German directory image scan to build a historical text dataset.
 
 For each entry, produce a JSON object with these fields:
-- "full name"
+- "first and middle names"
+- "surname"
 - "occupation"
 - "address"
-- "full_entry" (this should be the full data point entry depicted in the image)
 
-### Rules
-1. **Strict Formatting**:
-   - Return **only** valid JSON (no markdown, no explanations).
+Rules:
+1. Strict Formatting:
+   - Return only valid JSON (no markdown, no explanations).
    - Multiple entries = JSON array, single entry = single object or array with one object.
 
-2. **Field Guidelines**:
-   - Extract **only** the depicted data exactly as shown.
-   - Only 
-   - Never write anything into the dataset that is not in the historical image scan.
-   - **Missing fields?** Omit or set to `null`.
+2. Field Guidelines:
+   - Extract data EXACTLY as written.
+   - NEVER write anything into the dataset that is not in the historical image scan.
+   - If fields are missing, then omit or set to `null`.
    - Only extract the fields indicated above. Nothing else.
 
-3. **Historical Accuracy**:
-   - Preserve all archaic spellings and terms.
-   - Do not modernize names, occupations, or addresses.
-   - Only transcribe the information depicted on the main image. Any overhang form other book pages should be ignored.
+3. Historical Accuracy:
+   - Preserve all archaic spellings, terms, and abbreviations.
+   - NEVER modernize names, occupations, or addresses.
+   - Only transcribe the information depicted on the main page. Any overhang from other book pages should be completely ignored.
 
-### Example Output
+Example Output:
 [
   {
-    "name": "John Doe",
-    "address": "123 Elm Street",
-    "occupation": "Blacksmith",
-    "full_entry": None
+    "first and middle names": "Paul Joh.",
+    "surname": "Bartels"
+    "occupation": "Schneiderm.",
+    "address": "Hartengr. Mar. Nr. 626."
   }
 ]
 
-**Extract exactly as written. No commentary. Just JSON.**
+Extract EXACTLY as written. No commentary. Just JSON. Thank you.
