@@ -8,10 +8,8 @@ This script:
   2) Calls Gemini-2.0 for each page image, retrieving JSON output.
      - Automatically retries on any error (including JSON parsing failures).
      - Limits each page's retry attempts to 1 hour; if no success within that hour, it skips the page.
-  3) Merges all returned JSON data into a single CSV (named <pdf_stem>.csv).
+  3) Merges **all** returned JSON data (from the entire run_page_json_dir) into a single CSV (named <pdf_stem>.csv).
   4) Logs usage tokens per page, accumulates them across all pages, and saves a JSON run log.
-
-References to "Gemini-2.0" in comments are intentional to maintain clarity.
 """
 
 import os
@@ -51,10 +49,10 @@ load_dotenv(dotenv_path=ENV_PATH)
 API_KEY = os.getenv("GOOGLE_API_KEY")
 
 # Model constants
-MODEL_NAME = "gemini-2.0"            # Short name for folder naming
-FULL_MODEL_NAME = "gemini-2.0-flash-exp"  # Actual Gemini-2.0 variant used for API calls
+MODEL_NAME = "gemini-2.0"           # Short name for folder naming
+FULL_MODEL_NAME = "gemini-2.0-flash"
 MAX_OUTPUT_TOKENS = 8192
-RETRY_LIMIT_SECONDS = 3600  # 1 hour max retry per page
+RETRY_LIMIT_SECONDS = 600  # up to 10 max retries per page
 
 ###############################################################################
 # Utility: Time formatting
@@ -148,6 +146,7 @@ def convert_json_to_csv(json_data: Union[Dict, List], csv_path: Path) -> None:
         writer.writeheader()
         for rec in records:
             if not isinstance(rec, dict):
+                # Fallback: convert to dict with "value" column
                 row_data = {fn: "" for fn in fieldnames}
                 row_data["value"] = str(rec)
                 writer.writerow(row_data)
@@ -199,7 +198,8 @@ def gemini_api_call(
                 config=types.GenerateContentConfig(
                     temperature=temperature,
                     max_output_tokens=MAX_OUTPUT_TOKENS,
-                    seed=42,  # Only seed, temperature, and max_output_tokens remain
+                    response_mime_type="application/json",
+                    seed=42,
                 ),
             )
 
@@ -253,9 +253,17 @@ def main():
         default=0.0,
         help="LLM temperature for Gemini-2.0 (default = 0.0)"
     )
+    # Changed to default=None so we can detect if it's omitted vs. provided.
+    parser.add_argument(
+        "--continue_from_page",
+        type=int,
+        default=None,
+        help="Page number to continue from (if omitted, always create a new run)."
+    )
     args = parser.parse_args()
     pdf_name = args.pdf
     temperature = args.temperature
+    continue_from_page = args.continue_from_page
 
     # -------------------------------------------------------------------------
     # Configure logging
@@ -267,7 +275,7 @@ def main():
     )
 
     logging.info("=== Gemini-2.0 PDF -> PNG -> JSON -> CSV Pipeline ===")
-    logging.info(f"PDF: {pdf_name} | Temperature: {temperature}")
+    logging.info(f"PDF: {pdf_name} | Temperature: {temperature} | Continue from page: {continue_from_page}")
 
     # -------------------------------------------------------------------------
     # Verify the PDF exists
@@ -325,6 +333,7 @@ def main():
     temp_folder = pdf_folder / f"temperature_{temperature}"
     temp_folder.mkdir(parents=True, exist_ok=True)
 
+    # Collect existing runs
     existing_runs = []
     for child in temp_folder.iterdir():
         if child.is_dir() and child.name.startswith("run_"):
@@ -333,25 +342,50 @@ def main():
                 existing_runs.append(run_num)
             except ValueError:
                 pass
-    next_run = max(existing_runs) + 1 if existing_runs else 1
-    run_folder = temp_folder / f"run_{str(next_run).zfill(2)}"
-    run_folder.mkdir(parents=True, exist_ok=False)
-    logging.info(f"Created new run folder: {run_folder}")
+
+    highest_run_num = max(existing_runs) if existing_runs else 0
+
+    # -------------------------------------------------------------------------
+    # Run folder logic
+    # -------------------------------------------------------------------------
+    if continue_from_page is None:
+        #
+        # If --continue_from_page is omitted, always create a new run_x+1 folder
+        #
+        next_run = highest_run_num + 1
+        run_folder = temp_folder / f"run_{str(next_run).zfill(2)}"
+        run_folder.mkdir(parents=True, exist_ok=False)
+        logging.info(f"No --continue_from_page given; created new run folder: {run_folder}")
+    else:
+        #
+        # If --continue_from_page was provided, reuse or create the highest run
+        #
+        if highest_run_num == 0:
+            # no runs exist => make run_01
+            run_folder = temp_folder / "run_01"
+            run_folder.mkdir(parents=True, exist_ok=True)
+            logging.info(
+                f"No existing runs found, but --continue_from_page={continue_from_page} set. Using {run_folder}."
+            )
+        else:
+            run_folder = temp_folder / f"run_{str(highest_run_num).zfill(2)}"
+            logging.info(
+                f"Continuing from page {continue_from_page}, using existing run folder: {run_folder}"
+            )
 
     # Subfolder for page-level JSON
     run_page_json_dir = run_folder / "page_by_page"
-    run_page_json_dir.mkdir(parents=True, exist_ok=False)
+    run_page_json_dir.mkdir(parents=True, exist_ok=True)
 
     # Final CSV path -> run_folder/<pdf_stem>.csv
     final_csv_path = run_folder / f"{pdf_stem}.csv"
 
     # -------------------------------------------------------------------------
-    # Accumulators for usage tokens, data for final CSV
+    # Accumulators for usage tokens, data for newly processed pages
     # -------------------------------------------------------------------------
     total_prompt_tokens = 0
     total_candidates_tokens = 0
     total_tokens = 0
-    merged_data: List[Any] = []
 
     # -------------------------------------------------------------------------
     # Start timing the entire pipeline
@@ -359,9 +393,15 @@ def main():
     overall_start_time = time.time()
 
     # -------------------------------------------------------------------------
-    # Process each page image
+    # Process each page image from continue_from_page onward
     # -------------------------------------------------------------------------
-    for idx, png_path in enumerate(png_files, start=1):
+    # If continue_from_page is None, we start from page 1.
+    start_page = continue_from_page if continue_from_page is not None else 1
+    if start_page > 1:
+        # Slice the list to skip pages before 'start_page'.
+        png_files = png_files[start_page - 1:]
+
+    for idx, png_path in enumerate(png_files, start=start_page):
         logging.info(f"Processing page {idx} of {total_pages}: {png_path.name}")
 
         # Log image metadata before calling Gemini-2.0
@@ -419,7 +459,7 @@ def main():
         )
 
         # ---------------------------------------------------------------------
-        # JSON parsing (infinite retries up to 1 hour)
+        # JSON parsing (retry up to 1 hour)
         # ---------------------------------------------------------------------
         parse_start_time = time.time()
         while True:
@@ -433,6 +473,7 @@ def main():
                     parsed = None
                     break
                 logging.error(f"JSON parse error for page {idx}: {ve}")
+                logging.info(f"Current response text: \n{response_text}\n")
                 logging.error("Retrying Gemini-2.0 call for JSON parse fix...")
                 new_result = gemini_api_call(
                     prompt=task_prompt,
@@ -476,18 +517,6 @@ def main():
         with page_json_path.open("w", encoding="utf-8") as jf:
             json.dump(parsed, jf, indent=2, ensure_ascii=False)
 
-        # Reorder for final CSV
-        if isinstance(parsed, list):
-            for obj in parsed:
-                if isinstance(obj, dict):
-                    merged_data.append(reorder_dict_with_page_number(obj, idx))
-                else:
-                    merged_data.append(obj)
-        elif isinstance(parsed, dict):
-            merged_data.append(reorder_dict_with_page_number(parsed, idx))
-        else:
-            merged_data.append(parsed)
-
         # ---------------------------------------------------------------------
         # Timing / Estimation
         # ---------------------------------------------------------------------
@@ -503,15 +532,49 @@ def main():
             f"Estimated total: {format_duration(estimated_total)} | "
             f"Estimated remaining: {format_duration(estimated_remaining)}"
         )
-
-        # Blank line after processing page
         logging.info("")
 
     # -------------------------------------------------------------------------
-    # Convert merged data to CSV
+    # Now gather *all* JSON files in the run_page_json_dir to create final CSV
+    # -------------------------------------------------------------------------
+    logging.info("Gathering all JSON files from page_by_page folder to build final CSV...")
+    all_page_json_files = sorted(run_page_json_dir.glob("page_*.json"))
+
+    merged_data: List[Any] = []
+
+    for fpath in all_page_json_files:
+        # page_0001.json => get '0001' => page_number=1
+        page_str = fpath.stem.split("_")[1]
+        page_num = int(page_str)
+
+        with fpath.open("r", encoding="utf-8") as jf:
+            content = json.load(jf)
+
+        if isinstance(content, list):
+            for obj in content:
+                if isinstance(obj, dict):
+                    merged_data.append(reorder_dict_with_page_number(obj, page_num))
+                else:
+                    merged_data.append(obj)
+        elif isinstance(content, dict):
+            merged_data.append(reorder_dict_with_page_number(content, page_num))
+        else:
+            merged_data.append(content)
+
+    # -------------------------------------------------------------------------
+    # Add "id" to each record in merged_data (now truly all pages)
+    # -------------------------------------------------------------------------
+    for i, record in enumerate(merged_data, start=1):
+        if isinstance(record, dict):
+            record["id"] = i
+        else:
+            merged_data[i-1] = {"id": i, "value": str(record)}
+
+    # -------------------------------------------------------------------------
+    # Convert merged data (all pages) to CSV
     # -------------------------------------------------------------------------
     convert_json_to_csv(merged_data, final_csv_path)
-    logging.info(f"Final CSV saved at: {final_csv_path}")
+    logging.info(f"Final CSV (all pages) saved at: {final_csv_path}")
 
     # -------------------------------------------------------------------------
     # Write JSON log with run metadata

@@ -91,8 +91,10 @@ def openai_api(
     }
 
     try:
-        response = requests.post("https://api.openai.com/v1/chat/completions",
-                                 headers=headers, json=payload)
+        response = requests.post(
+            "https://api.openai.com/v1/chat/completions",
+            headers=headers, json=payload
+        )
         if response.status_code == 200:
             data = response.json()
             text_out = data["choices"][0]["message"]["content"]
@@ -121,11 +123,11 @@ load_dotenv(dotenv_path=ENV_PATH)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Model constants
-MODEL_NAME = "gpt-4o"              # Short name for folder naming
-FULL_MODEL_NAME = "gpt-4o-2024-08-06"  # Full GPT-4o model ID
-MAX_OUTPUT_TOKENS = 16134          # "max_tokens" in openai_api
-RETRY_LIMIT_SECONDS = 3600         # 1 hour max retry per page
-SEED = 42                          # For consistency (not used by OpenAI)
+MODEL_NAME = "gpt-4o"                    # Short name for folder naming
+FULL_MODEL_NAME = "gpt-4o-2024-08-06"    # Full GPT-4o model ID
+MAX_OUTPUT_TOKENS = 16134               # "max_tokens" in openai_api
+RETRY_LIMIT_SECONDS = 600               # shortened from 3600 to 600 seconds (10 min)
+SEED = 42                                # For consistency (not used by OpenAI)
 
 ###############################################################################
 # Utility: Time formatting
@@ -223,7 +225,7 @@ def convert_json_to_csv(json_data: Union[Dict, List], csv_path: Path) -> None:
             writer.writerow(row_data)
 
 ###############################################################################
-# GPT-4o API Call with up to 1-hour retry
+# GPT-4o API Call with up to 10-minute retry (adjusted from 1-hour)
 ###############################################################################
 def gpt4o_api_call(
     prompt: str,
@@ -231,13 +233,13 @@ def gpt4o_api_call(
     temperature: float
 ) -> Optional[dict]:
     """
-    Call GPT-4o with the given prompt + image, retry up to 1 hour if needed.
+    Call GPT-4o with the given prompt + image, retry up to RETRY_LIMIT_SECONDS if needed.
     Returns a dict:
       {
         "text": <the text response>,
         "usage": <usage metadata with {prompt_tokens, completion_tokens, total_tokens}>
       }
-    or None if it fails after 1 hour.
+    or None if it fails after RETRY_LIMIT_SECONDS.
     """
     start_retry = time.time()
 
@@ -264,7 +266,7 @@ def gpt4o_api_call(
         except Exception as e:
             logging.warning(f"GPT-4o call failed: {e}. Retrying...")
 
-    logging.error("GPT-4o call did not succeed after 1 hour.")
+    logging.error("GPT-4o call did not succeed within the retry limit.")
     return None
 
 ###############################################################################
@@ -289,9 +291,19 @@ def main():
         default=0.0,
         help="LLM temperature for GPT-4o (default = 0.0)"
     )
+    parser.add_argument(
+        "--continue_from_page",
+        type=int,
+        default=None,
+        help=(
+            "If provided, continue from this page number in the highest existing run folder. "
+            "If not provided, a new run folder is always created."
+        )
+    )
     args = parser.parse_args()
     pdf_name = args.pdf
     temperature = args.temperature
+    continue_from_page = args.continue_from_page
 
     # -------------------------------------------------------------------------
     # Configure logging
@@ -304,6 +316,7 @@ def main():
 
     logging.info("=== GPT-4o PDF -> PNG -> JSON -> CSV Pipeline ===")
     logging.info(f"PDF: {pdf_name} | Temperature: {temperature} | Seed={SEED}")
+    logging.info(f"Continue from page: {continue_from_page if continue_from_page else 'None (create new run)'}")
 
     # -------------------------------------------------------------------------
     # Verify the PDF exists
@@ -369,25 +382,41 @@ def main():
                 existing_runs.append(run_num)
             except ValueError:
                 pass
-    next_run = max(existing_runs) + 1 if existing_runs else 1
-    run_folder = temp_folder / f"run_{str(next_run).zfill(2)}"
-    run_folder.mkdir(parents=True, exist_ok=False)
-    logging.info(f"Created new run folder: {run_folder}")
+    highest_run_num = max(existing_runs) if existing_runs else 0
+
+    # If --continue_from_page is not provided => always create a new run folder
+    if continue_from_page is None:
+        next_run = highest_run_num + 1
+        run_folder = temp_folder / f"run_{str(next_run).zfill(2)}"
+        run_folder.mkdir(parents=True, exist_ok=False)
+        logging.info(f"Creating new run folder: {run_folder}")
+    else:
+        # If user explicitly set --continue_from_page, reuse highest existing run folder
+        if highest_run_num == 0:
+            run_folder = temp_folder / "run_01"
+            run_folder.mkdir(parents=True, exist_ok=True)
+            logging.info(
+                f"No existing runs found, but --continue_from_page={continue_from_page} set. Using {run_folder}."
+            )
+        else:
+            run_folder = temp_folder / f"run_{str(highest_run_num).zfill(2)}"
+            logging.info(
+                f"Continuing from page {continue_from_page}, using existing run folder: {run_folder}"
+            )
 
     # Subfolder for page-level JSON
     run_page_json_dir = run_folder / "page_by_page"
-    run_page_json_dir.mkdir(parents=True, exist_ok=False)
+    run_page_json_dir.mkdir(parents=True, exist_ok=True)
 
     # Final CSV path -> run_folder/<pdf_stem>.csv
     final_csv_path = run_folder / f"{pdf_stem}.csv"
 
     # -------------------------------------------------------------------------
-    # Accumulators for usage tokens, data for final CSV
+    # Accumulators for usage tokens only
     # -------------------------------------------------------------------------
     total_prompt_tokens = 0
     total_completion_tokens = 0
     total_tokens = 0
-    merged_data: List[Any] = []
 
     # -------------------------------------------------------------------------
     # Start timing the entire pipeline
@@ -395,9 +424,15 @@ def main():
     overall_start_time = time.time()
 
     # -------------------------------------------------------------------------
-    # Process each page image
+    # Process each page image from `continue_from_page` onward if it was given
     # -------------------------------------------------------------------------
-    for idx, png_path in enumerate(png_files, start=1):
+    start_index = 1
+    if continue_from_page is not None and continue_from_page > 1:
+        start_index = continue_from_page
+    # Adjust the png_files to start from that page index
+    png_files = png_files[start_index - 1:]
+
+    for idx, png_path in enumerate(png_files, start=start_index):
         logging.info(f"Processing page {idx} of {total_pages}: {png_path.name}")
 
         # Log image metadata before calling GPT-4o
@@ -414,7 +449,7 @@ def main():
                         f"Image metadata -> width={width}px, height={height}px, dpi=UNKNOWN"
                     )
 
-                # GPT-4o call with up to 1-hour retry
+                # GPT-4o call with up to RETRY_LIMIT_SECONDS
                 result = gpt4o_api_call(
                     prompt=task_prompt,
                     pil_image=pil_image,
@@ -427,7 +462,7 @@ def main():
 
         if result is None:
             logging.error(
-                f"Skipping page {idx} because GPT-4o API did not succeed within 1 hour."
+                f"Skipping page {idx} because GPT-4o API did not succeed within {RETRY_LIMIT_SECONDS} seconds."
             )
             logging.info("")
             continue
@@ -456,7 +491,7 @@ def main():
         )
 
         # ---------------------------------------------------------------------
-        # JSON parsing (infinite retry up to 1 hour)
+        # JSON parsing (retry up to RETRY_LIMIT_SECONDS)
         # ---------------------------------------------------------------------
         parse_start_time = time.time()
         while True:
@@ -465,7 +500,7 @@ def main():
             except ValueError as ve:
                 if (time.time() - parse_start_time) > RETRY_LIMIT_SECONDS:
                     logging.error(
-                        f"Skipping page {idx}: JSON parse still failing after 1 hour."
+                        f"Skipping page {idx}: JSON parse still failing after {RETRY_LIMIT_SECONDS} seconds."
                     )
                     parsed = None
                     break
@@ -473,14 +508,21 @@ def main():
                 logging.error("Retrying GPT-4o call for JSON parse fix...")
 
                 # Attempt a new GPT-4o call
-                new_result = gpt4o_api_call(
-                    prompt=task_prompt,
-                    pil_image=Image.open(png_path),
-                    temperature=temperature
-                )
+                try:
+                    with Image.open(png_path) as pil_image_again:
+                        new_result = gpt4o_api_call(
+                            prompt=task_prompt,
+                            pil_image=pil_image_again,
+                            temperature=temperature
+                        )
+                except Exception as e2:
+                    logging.error(f"Failed to re-open image {png_path}: {e2}")
+                    parsed = None
+                    break
+
                 if not new_result:
                     logging.error(
-                        f"Could not fix JSON parse for page {idx}, skipping after 1 hour."
+                        f"Could not fix JSON parse for page {idx}, skipping after {RETRY_LIMIT_SECONDS} seconds."
                     )
                     parsed = None
                     break
@@ -504,7 +546,8 @@ def main():
                     f"completion={total_completion_tokens}, total={total_tokens}"
                 )
             else:
-                break  # parse succeeded
+                # parse succeeded
+                break
 
         if not parsed:
             logging.info("")
@@ -516,18 +559,6 @@ def main():
         page_json_path = run_page_json_dir / f"{png_path.stem}.json"
         with page_json_path.open("w", encoding="utf-8") as jf:
             json.dump(parsed, jf, indent=2, ensure_ascii=False)
-
-        # Reorder for final CSV
-        if isinstance(parsed, list):
-            for obj in parsed:
-                if isinstance(obj, dict):
-                    merged_data.append(reorder_dict_with_page_number(obj, idx))
-                else:
-                    merged_data.append(obj)
-        elif isinstance(parsed, dict):
-            merged_data.append(reorder_dict_with_page_number(parsed, idx))
-        else:
-            merged_data.append(parsed)
 
         # ---------------------------------------------------------------------
         # Timing / Estimation
@@ -547,10 +578,47 @@ def main():
         logging.info("")
 
     # -------------------------------------------------------------------------
-    # Convert merged data to CSV
+    # Gather all JSON files from run_page_json_dir
+    # -------------------------------------------------------------------------
+    logging.info("Gathering all JSON files from page_by_page folder to build final CSV...")
+    all_page_json_files = sorted(run_page_json_dir.glob("page_*.json"))
+
+    merged_data: List[Any] = []
+
+    for fpath in all_page_json_files:
+        # Parse page number from the filename, e.g. 'page_0001.json' => '0001' => 1
+        page_str = fpath.stem.split("_")[1]
+        page_num = int(page_str)
+
+        with fpath.open("r", encoding="utf-8") as jf:
+            content = json.load(jf)
+
+        # Reorder dictionary keys so that 'page_number' is at the end
+        if isinstance(content, list):
+            for obj in content:
+                if isinstance(obj, dict):
+                    merged_data.append(reorder_dict_with_page_number(obj, page_num))
+                else:
+                    merged_data.append(obj)
+        elif isinstance(content, dict):
+            merged_data.append(reorder_dict_with_page_number(content, page_num))
+        else:
+            merged_data.append(content)
+
+    # -------------------------------------------------------------------------
+    # Add "id" to each record
+    # -------------------------------------------------------------------------
+    for i, record in enumerate(merged_data, start=1):
+        if isinstance(record, dict):
+            record["id"] = i
+        else:
+            merged_data[i-1] = {"id": i, "value": str(record)}
+
+    # -------------------------------------------------------------------------
+    # Convert merged_data to CSV
     # -------------------------------------------------------------------------
     convert_json_to_csv(merged_data, final_csv_path)
-    logging.info(f"Final CSV saved at: {final_csv_path}")
+    logging.info(f"Final CSV (all pages) saved at: {final_csv_path}")
 
     # -------------------------------------------------------------------------
     # Write JSON log with run metadata

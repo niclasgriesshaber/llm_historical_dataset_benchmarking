@@ -3,9 +3,13 @@ You are an expert historian manually extracting data from a scan of a German pat
 For each entry, produce a JSON object with these fields:
 - "Patentnummer" (integer and always the first 5 numbers without whitespaces)
 - "Patentinhaber" (string)
+- "Klasse" (integer)
 - "Datum" (string)
 - "ort_patentinhaber" (string)
 - "land_patentinhaber" (string)
+- "Geschlecht" (string)
+- "vertreter" (string)
+- "ort_vertreter" (string)
 
 Rules:
 1. Strict Formatting:
@@ -34,17 +38,24 @@ Example Output:
   {
     "Patentnummer": 36798,
     "Patentinhaber": "Müller, F.",
+    "Klasse": 2,
     "Datum": "12. Februar 1892",
     "ort_patentinhaber": "Hamburg",
     "land_patentinhaber": "Deutschland",
+    "Geschlecht": "m",
+    "vertreter": ".",
+    "ort_vertreter": "Richtersweil"
   },
   {
     "Patentnummer": 28291,
     "Patentinhaber": "Schmidt, L.",
-    "Datum": "25. Februar 1891",
+    "Klasse": 3,
     "ort_patentinhaber": "Denver, Colorado",
-    "land_patentinhaber": "USA",  
-   }
+    "land_patentinhaber": "USA",
+    "Geschlecht": "w",
+    "vertreter": "Griesshaber, Greif & Co",
+    "ort_Vertreter": "Frankfurt am Main"
+  }
 ]
 
 Extract EXACTLY as written. No commentary. Thank you.
