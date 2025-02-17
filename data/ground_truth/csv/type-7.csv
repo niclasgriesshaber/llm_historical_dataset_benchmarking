@@ -1,75 +1,89 @@
-Additional Information,Given Name,House Number,Neighborhood/Area,Profession/Occupation,Property Owner Information,Street/Location Description,Surname,Title
-,E.,21,,,,gr. Hirschgr.,Wenz,Dr.
-,P.,29,,,,Weissadlergasse,Wirsing,Dr.
-,W. H.,44,,,,Bleichstrasse,Wittlinger,Dr.
-,,,,,,,Aficheur,
-,F.,4,,,,Kalbächerg.,Eckstein,
-,,,,,,,Agenturen,
-,H.,3,,,,gr. Hirschgr.,Bernhard,
-s. Gesch.-Empf. Nr. 25 (I. Thl.),Ch. E.,62,,,,n. Mainzerstr.,Derschow,
-,A. W.,8,,,,gr. Sandg.,Herff,
-,H.,12,,,,Bornheimerstr.,Plaut,
-,C. H.,15,,,,Gr. Gallusstrasse,Textor,
-,,5,,,,Rebstock,Textor,
-,Paul,122,,,,Fahrg.,Altvater,
-,Carl,33,,,,gr. Eschenheimergasse,Andrae,
-s. Gesch.-Empf. No. 96 (II. Thl.),R.,6,,,,Römerg.,Bangel,
-,Frz.,10,,,,Götheplatz,Böhm,
-,Ernst,9,,,,kl. Bockenheimergasse,Büchner,
-s. Gesch.-Empf. No. 25 (I. Thl.),Ch. E.,62,,,,n. Mainzerstr.,Derschow,
-,,14,,,,kl. Hirschgraben,Deutscher Phönix,
-s. Gesch.-Empf. No. 26 (I. Thl.),W. A.,1,,,,Limpurgerg.,Dietz,
-,H.,2,,,,Kaiserhofstr.,Elnain,
-,Ph. Jac.,9,,,,Haaseng.,Ficus,
-,Ludw. Friedr.,7,,,,Steinweg,Föll,
-s. Gesch.-Empf. No. 36 (I. Thl.),Ph.,31,,,,Saalg.,Forster,
-s. Gesch.-Empf. No. 115 (II. Thl.),H.,3,,,,gr. Gallusg.,Hahn,
-,A. W.,8,,,,gr. Sandg.,Herff,
-s. Gesch.-Empf. No. 118 (II. Thl.),,7,,,,Bibergasse,Hobrecht & Möwes,
-,Jac.,34,,,,Töngesg.,Lottholz,
-,G. C.,17,,,,Sachsenl.,Melchin,
-,Chr. Ad.,15/17,,,,Baustrasse,Menges,
-,C.,5,,,,gr. Hirsch-graben,Mettenheimer,
-,,9,,,,Haaseng.,Minoprio,
-,,10,,,,Schillerplatz,Oeler-de-Bary,
-,,13,,,,gr. Hirschgr.,Providentia,
-,Louis,8,,,,alte Rothehofgasse,Rhumbler,
-,Heinr.,28,,,,Meiseng.,Scharff,
-s. Gesch.-Empf. No. 140 (II. Thl.),,No. 2,,,,kl. Hirschgraben,Scheidemann,fr.
-s. Gesch.-Empf. No. 67 (I. Thl.),J.,1,,,,Götheplatz,Schlegel,
-,Heinrich,1,,,,Töngesg.,Seitz,
-,L.,20,,,,Rossmarkt,Speyer-Ellissen,
-s. Gesch.-Empf. No. 89 (I. Thl.),Gebrüder,3,,,,am Salzhaus,Wolff,
-,G. A.,5,,,,Kaiserhofstr.,Zipf,
-,Ch. E.,62,,,,n. Mainzerstr.,Derschow,
-,J.,1,,,,Götheplatz,Schlegel,
-,R.,6,,,,Römerg.,Bangel,
-,Ch. E.,62,,,,Mainzerstrasse,Derschow,
-,Ph.,31,,,,Saalg.,Forster,
-,S.,8,,,,Buchgasse,Friederich,
-,,7,,,,Bibergasse,Hobrecht & Möwes,
-,G. C.,17,,,,Sachsenl.,Melchin,
-,Fr.,2,,,,Kl. Hirschgraben,Scheidemann,
-,J.,1,,,,Götheplatz,Schlegel,
-,G. A.,5,,,,Falkeng.,Schmidt,
-,Gebrüder,3,,,,am Salzhaus,Wolff,
-,G. A.,5,,,,Kaiserhofstr.,Zipf,
-,H.,2,,,,Kaiserhofstr.,Elnain,
-s. Gesch.-Empf. No. 115 (II. Thl.),H.,3,,,,gr. Gallusstr.,Hahn,
-,H. J.,16,,,,Kaiserhofstrasse,Eckhardt,
-,Julius,22,,,,Götheplatz,Jaffé,
-,G.,22/24,,,,gr. Hirschgraben,Köcher,
-"s. Gesch.-Empf. No. 69, (I. Thl.)",J.,9,,,,Junghofstr.,Schultheis,
-s. Gesch.-Empf. No. 74 (I. Thl.),J. A.,6,,,,n. Rothhofstrasse,Simeons,
-,E. F.,9,,,,gr. Bockenheimerg.,Weismantel,
-s. Gesch.-Empf. No. 85 (I. Thl.),S.,21,,,,a. d. Lehbach,Wohl,
-,Paul,122,,,,Fahrg.,Altvater,
-s. Gesch.-Empf. No. 96 (II. Thl.),R.,6,,,,Römerg.,Bangel,
-,Ch. E.,62,,,,n. Mainzerstr.,Derschow,
-,W. A.,1,,,,Limpurgerg.,Dietz,
-,H.,2,,,,Kaiserhofstr.,Elnain,
-,Ph.,31,,,,Saalg.,Forster,
-,,14,,,,kl. Hirschgrb.,Frankf. Lebens.-Vers.,
-,,5,,,,Rossm.,Germania,
-,H.,3,,,,gr. Gallusg.,Hahn,
-,A. W.,8,,,,gr. Sandg.,Herff,
+first and middle names,surname,occupation,address,id
+Carl Friedrich,Grohmann,,PV. Johannisg. 225,1
+Benjamin,Hänßschel,Assistent,WV. Entenpf. 653,2
+Gottlob Friedrich,Junig,Amtsfrohn,Breiteg. Amtsfrohnveste.,3
+Carl Gottfr.,Erdmann,Amts = Physikus,Eoe. SV. kl. Plau G. 500,4
+Christian Friedrich,Gonne,Amtschirurgus,Weberg. 110,5
+Friedrich August,Thyme,Ober-Kriegs-Commissar und Rentbeamter,Oe. Pirn. G. im Amthause.,6
+Friedrich Christian,Richter,Expeditoren,Ram. G. 651,7
+Gustav Adolph,Franke,Expeditoren,PV. Pirn. G. 274,8
+Carl Johann Friedrich,Franke,Expeditoren,WV. Schießg. 924,9
+Carl Heinrich,Wagner,Expeditoren,SV. Waisenhg. 9 A.,10
+Johann Gottlieb,Schütze,Rentamts=Bothen,WV. Hundsg. 777,11
+Johann Christian,Linke,Rentamts=Bothen,Nst. Rhänitzg. 88,12
+Carl Gottfried,Beyer,Rentamts=Bothen,WV. Viehw. 903,13
+Johann Gottfried,Klaus,Rentamts=Bothen,PV. Ziegelg. 110,14
+Joh. Benj.,Oehser,Amtsgewerken. Mauermstr.,WV. am See 72 A.,15
+Ge.S.,Hörnig,Amtsgewerken. Baucomm.Zimmermstr.,Nst. Königstr.15 A.,16
+Carl,Schönheit,Amtsgewerken. Zimmerpolier,WV. im Mühlhofe.,17
+Joh. Gotthelf,Krause,Amtsgewerken. Mauerpolier,WV. Anneng. 738,18
+Carl Friedr.,Voigt,Amtsschreiberey. Amtsschreiber,im Kön. Amth.,19
+Carl Traug.,Donath,Amtsschreiberey. Expeditor,PV. Pirn. G. 241,20
+Anton,Peterßen,Amtsschreiberey. Exped.,PV. Neueg. 162,21
+Julius August Daniel,Köhler,Amtsverwalter auf dem Vorwerk Ostra.,Oe. Amts-Inspector.,22
+J.Mrt.,Fleischmann,Die Haupt = Kellerey. Oberlandweinmst.,Eoe.Ram.G.K.G.,23
+Joh. Glieb,Wölffer,Die Haupt = Kellerey. Kellerschreib.,kl. Schießg. K. Geb.,24
+J. Glob.,Schönert,Die Haupt = Kellerey. Oberbottch. u. Kellermstr.,im Kuffenh.,25
+Friedrich Wilhelm,Gömlich,Die Haupt = Kellerey. Böttcher,PV. Ram.G. 146,26
+August Gottlob,Gleisberg,Ober=Accis= auch Gleits= und Land=Accis=Commissar,Oe. Pirn. G. 724,27
+Gottlob Amand.,Cunradi,Die Haupt = Land = Accis = Einnahme zu Dresden. *) Obereinnehmer,Seeg. 71,28
+Ernst Fr.,Ludewig,Die Haupt = Land = Accis = Einnahme zu Dresden. *) ersterLd.Acc Schreiber,kl.Schießg.696,29
+Aph Aug.,Mehlig,Die Haupt = Land = Accis = Einnahme zu Dresden. *) zweyt.Ld Acc.Schreib.,SV.amSee487,30
+August Benj.,Carius,Die Haupt = Land = Accis = Einnahme zu Dresden. *) Assistenzschreiber,PV. Pirn.G.253,31
+Christn. Friedr. Aug.,Rocksch,Die Haupt = Gleits-Einnahme zu Dresden.*) Gleitsmann,Pirn. G. 691,32
+J. Sam.,Drasdo,Die Haupt = Gleits-Einnahme zu Dresden.*) Gleitsgegenschr.,Pirn. G. im Amth.,33
+Joh.,Henoch,Die Haupt = Gleits-Einnahme zu Dresden.*) Elbzoll-Aufseher,Nst. an d. Elbe im Accish.,34
+Joh. Ge. Glieb,Kunath,Die Haupt = Gleits-Einnahme zu Dresden.*) desgl.,PV. an d. Elbe im Accish.,35
+Johann David,Waldau,Die Haupt = Gleits-Einnahme zu Dresden.*) Zollbereiter,NA. Budiss. Str 19,36
+Chr. Fr.,Renner,Die General=Accis=Inspection zu Dresden.*) Coinspector u. Senator,Kreuzg. 532,37
+GrgeMor.,Walther,Die General=Accis=Inspection zu Dresden.*) Sub-Coinsp. u. Senat.,Schloßg 323,38
+C. Fr. Traug.,Winter,Actuarien. Accis=Insp.,kl. Schießg. 697,39
+Joh. Grge,Burkhardt,Actuarien. Accis=Insp.,Nst. gr. Meißn.G. 10,40
+Johann Gottlob,Richter,Actuarien. Copist,PV. Johannisg 345,41
+,Zimmermann,Die Ober = Einnahme.*) Ob.Acc Einnehm,WV.a.See75A.,42
+Carl Gotthelf,Dietrich,Die Ober = Einnahme.*) Assist. Einnehm.,Lochg. 449.,43
+Johann Christian,Hegewald,Die Haupt = Einnahme. *) Accis = Einnehmer,kl. Schießg. 701,44
+Joh. Gottlieb August,Thielemann,Die Haupt = Einnahme. *) Accis = Einnehmer,SV. kl. Plau. G. 534,45
+Carl Friedrich Leopold,Wittig,Die Haupt = Einnahme. *) Accis = Einnehmer,SV. gr. Plau. G. 486,46
+Carl Christoph,Knobloch,Die Haupt = Einnahme. *) Accis = Einnehmer,Nst. am Markt 55,47
+Carl Gustav Ludwig,Segniz,Die Haupt = Einnahme. *) Accis = Einnehmer,SV. Waisenh. G. 411 b.,48
+,Pfizmann,Accis = Assistenzeinnehmer. auch Thorrevisor,SV.kl.Oberseerg.421a.,49
+Johann Gottfried,Fischer,Accis = Assistenzeinnehmer.,PV. an der Elbe 27,50
+Gottl. Fr.,Leichsenring,Die General=Acciseinnahmen in Friedrich=stadt und auf dem Neuen Anbau. Coinspect.,Fst. Schäferstr. 127,51
+Gust Adolph,Dehme,Die General=Acciseinnahmen in Friedrich=stadt und auf dem Neuen Anbau. Acciseinnehm.,Fst. Brückenstr. 12,52
+Carl Glob,Dreßler,Die General=Acciseinnahmen in Friedrich=stadt und auf dem Neuen Anbau. Acciseinnehm.,NA. Budiss. Str. 57,53
+Heinrich Benjamin,Rödicher,Ober = Güterbeschauer,h d. Kreuzk. 544,54
+Johann Christlieb,Zimmermann,Ober = Güterbeschauer,Schreiberg. 27,55
+Johann Carl Christian,Bausch,Ober = Güterbeschauer,im Ostrawiesenschlage.,56
+Hanns Hieronymus,Köckeritz,General=Accis=Waage=Güter=Bestädter,Scheffelg. 151,57
+Friedrich August,Leisching,Wein=Visier zu Dresden,Wilsdr. G.237,58
+Gottlieb Ehrenfried,Mittag,General=Accis=Thorschreiber,im weißen Thor.,59
+Johann Gottlieb,Stöckel,General=Accis=Thorschreiber,im weißen Thor,60
+Aug. Heinr. Gotthard,Kunath,General=Accis=Thorschreiber,im schwarzen Thor.,61
+George Christoph,Helsig,General=Accis=Thorschreiber,ebendas.,62
+Friedrich Wilhelm,Jäckel,General=Accis=Thorschreiber,am Meißn. Elbthor.,63
+Joh.,Henoch,Gleits= u.Ld.Accis-Unter-Einnehm.,ebendas.,64
+Johann George,Kunath,General=Accis=Thorschreiber,an der Pirn. Elbe.,65
+Johann August,Knauth,General=Accis=Thorschreiber,Blasew. Schlag.,66
+Carl Adolph,Hänisch,General=Accis=Thorschreiber,Ram. Schlag.,67
+Benjamin Gotthelf,Franz,General=Accis=Thorschreiber,Pirn. Schlag.,68
+Carl Gottlieb Friedrich,Heidrich,General=Accis=Thorschreiber,Dohn. Schlag.,69
+Ephraim Andreas,Böttiger,General=Accis=Thorschreiber,Dippoldisw. Schlag.,70
+Johann Gottlieb,Dreß,General=Accis=Thorschreiber,am Falkenschlag.,71
+Johann Ludwig,Zimmermann,General=Accis=Thorschreiber,Freyb. Schlag.,72
+Joh. Christoph Benjamin,Zimmermann,General=Accis=Thorschreiber,ebendas.,73
+Christian Friedrich,Flachs,General=Accis=Thorschreiber,Wilsdr. Thor.,74
+Gottlob Benjamin,Bernhard,General=Accis=Thorschreiber,Pirn. Thor.,75
+Christian Traugott,Hiemann,General=Accis=Thorschreiber,Löbtaer Schlag.,76
+Christoph Samuel,Redtel,General=Accis=Thorschreiber,Prießn. Schlag.,77
+Johann Friedrich,Zahn,geh. Finanz=Rath und Direct. der gesammten Flößen,SV. Waysenh. G. 412b.,78
+C.Aug.,Jursch,Holzverwalt imRam.Holzh.,PV.Ram.G.,79
+Johann Gottfried,Schober,Anweiser,ebend.,80
+Friedr. Gotth.,Schubert,Holzverw.,im Ostraer Holzhof,81
+Wilh,Wegener,Anweiser,WV. an der Schmelzm. 35 U.,82
+Johann Carl Friedrich,Spillner,"Floßmeister,  geh Finanz-Rath",im Weiserisfloßholzhof.,83
+Carl Gotth.,Gursch,Anweiser auf der Weiseritzflöße,,84
+Carl,Tüllmann,Holzverw. Major,Holzhof a. d. NA.,85
+Ldw.,Schneider,Commissär u Landrentmstr.,a. Jüdh.390,86
+Friedrich Ferdinand,Breuer,Factor bey der Spiegel=Niederlage in Dresden,an der kl. Ostrawiese 32 A.,87
+Glob Friedrich,Pauli,Inspector,an der Frauenk. 646,88

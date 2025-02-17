@@ -465,7 +465,13 @@ def main():
     # Write a run log (JSON) in the same folder
     # -------------------------------------------------------------------------
     total_duration = time.time() - overall_start_time
+
+    # -------------------------------------------------------------------------
+    # FIX: Ensure the log directory exists before writing
+    # -------------------------------------------------------------------------
     log_path = LOGS_DIR / MODEL_NAME / f"run_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+
     log_data = {
         "timestamp": datetime.now().isoformat(),
         "pdf_name": pdf_name,

@@ -1,4 +1,4 @@
-You are an expert historian manually extracting data from a scan of a German business directory to build a historical text dataset.
+You are an expert historian manually extracting data from a transcribed text file of a German business directory to build a historical text dataset.
 
 For each entry, produce a JSON object with these fields:
 - "first and middle names" (string)
@@ -20,7 +20,6 @@ Rules:
 3. Historical Accuracy:
    - Preserve all archaic spellings, terms, and abbreviations.
    - NEVER modernize names, occupations, or addresses.
-   - Only transcribe the information depicted on the main page. Any overhang from other book pages should be completely ignored.
 
 Example Output:
 

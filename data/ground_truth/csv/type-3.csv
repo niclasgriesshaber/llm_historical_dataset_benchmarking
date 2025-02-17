@@ -1,89 +1,41 @@
-Additional Information,Given Name,House Number,Neighborhood/Area,Profession/Occupation,Property Owner Information,Street/Location Description,Surname,Title
-der Buschmühle,Carl August,,,Pachter,,,Schulze,Hr.
-der Königsmühle,Johann Christian,,,PAchter,,,Walther,Hr.
-in Plauen,Joh. Traug Imm.,,,Walkmüller,,,Dammüller,Hr.
-in der sogen. Walkmühle b. Reisewitzens,Joh. Lebr.,,,,,,Vogel,Hr.
-Bes. d. Schiffmühle v. d. weiszen Thore,Carl Glob,,,,Bes. d. H.,,Eichler,Hr.
-,,,,,,,Mützenmacher,
-PV. Joh. G.,Johanne Christiane,194,,,,,Bauer,Fr.
-SV. Joh. G.,Adam,49,A.,,,,Büschenschusz,Hr.
-PV. Pirn. G.,Carl,333,,,,,Graupe,Hr.
-,Caroline Auguste,764,,,,Moritzstr.,Koch,Fr.
-,Friedrich,26,,,,Schreiberg.,Küntzel,Hr.
-,Friedrich,253,,,,Schloszg.,Lustig,Hr.
-,George Michael,,,,,Pirn. G. beym Landhause.,Stricker,Hr.
-,Christiane Sophie,513,,,,Altenm.,Betterman,Fr.
-,,,,Musiklehrer.,,,,
-,Friedrich,443,,,,SV. gr. Oberseerg.,Bauer,Hr.
-,George,25,,,,Schreiberg.,Ehlich,Hr.
-,Christian Friedrich,2,A.,,,am Wilsdr. Thor,Gerhardt,Hr.
-,Friedrich,68,,,,Breiteg.,Grosze,Hr.
-,Johann Gottfried,153,,,,PV. Ram. G.,Grüßtzner,Hr.
-,Gottlieb,14,,,,Schreiberg.,Helbid,Hr.
-,Joseph,584,,,,Töpferg.,Tauch,Hr.
-PV.,Johann Gotthelf,46,,,,Elbberg,Pischel,Hr.
-PV.,Johann August,243,,,,Neueg.,Schäme,Hr.
-,Johann Gottlob,716,,,,gr. Schieszg.,Sonntag,Hr.
-SV.,Anton,419,,,,Waisenh. G.,Weisze,Hr.
-,Christian,59,,,,Breiteg.,Wustlich,Hr.
-,,,,,,,Nadler,
-,D. Friedrich Christian,,,Depurtirter.,,,Tittmann,Hr.
-mittl.,Christian August,367,,Oberält.,,Fraueng.,Schmidt,Hr.
-,Joh. Glieb Aug,41,,Mitältest.,,Fst. Weiseritzstr.,Mehlig,Hr.
-,Christian Gottlieb Benhamin,45,,PV.,,Elbberg,Beck,Hr.
-,Gottlieb Carl,378,,,,mittle Fraueng.,Brückmann,Hr.
-,Heinrich Benhamin Claus,189,,,,Nst. Breiteg.,Wittwe,Hr.
-,Johann August,116,,Fst.,,Schäferstr.,Serbing,Hr.
-,Gottfried Benjamin,16A,S.,SV.,,Waisenh.,John,Hr.
-,Carl August Johns,131 b.,,PV.,,Ram G.,Wittwe,Hr.
-,Friedrich Wilhelm,342,,,,am Altenm.,Kohlmann,Hr.
-,Christian Gottlob,368,,,,Altenm.,Löser,Hr.
-,Johann Friedrich,668,,,,Ram. G.,KManewald,Hr.
-,Joh. Chstph.,N. 394,,schenke Bier,,Sthost. am Jüdenteiche,Angermann,Hr.
-Willszd. Vst. Viehweide,Chstph. Fdr.,N. 24,A.,,Bes. d. H.,,Angermann,Hr.
-,Joh. Jak.,N. 416,,Advk.,,Sthvst. Fstgsgr.,Apel,Hr.
-,Carl Friedrich,222,,PV.,,Johannisg.,Meisel,Hr.
-der Buschmühle,Carl August,,,Pachter,,,Schulze,Hr.
-der Königsmühle,Johann Christian,,,PAchter,,,Walther,Hr.
-in Plauen,Joh. Traug Imm.,,,Walkmüller,,,Dammüller,Hr.
-in der sogen. Walkmühle b. Reisewitzens,Joh. Lebr.,,,,,,Vogel,Hr.
-Bes. d. Schiffmühle v. d. weiszen Thore,Carl Glob,,,,Bes. d. H.,,Eichler,Hr.
-,,,,,,,Mützenmacher,
-PV. Joh. G.,Johanne Christiane,194,,,,,Bauer,Fr.
-SV. Joh. G.,Adam,49,A.,,,,Büschenschusz,Hr.
-PV. Pirn. G.,Carl,333,,,,,Graupe,Hr.
-,Caroline Auguste,764,,,,Moritzstr.,Koch,Fr.
-,Friedrich,26,,,,Schreiberg.,Küntzel,Hr.
-,Friedrich,253,,,,Schloszg.,Lustig,Hr.
-,George Michael,,,,,Pirn. G. beym Landhause.,Stricker,Hr.
-,Christiane Sophie,513,,,,Altenm.,Betterman,Fr.
-,,,,Musiklehrer.,,,,
-,Friedrich,443,,,,SV. gr. Oberseerg.,Bauer,Hr.
-,George,25,,,,Schreiberg.,Ehlich,Hr.
-,Christian Friedrich,2,A.,,,am Wilsdr. Thor,Gerhardt,Hr.
-,Friedrich,68,,,,Breiteg.,Grosze,Hr.
-,Johann Gottfried,153,,,,PV. Ram. G.,Grüßtzner,Hr.
-,Gottlieb,14,,,,Schreiberg.,Helbid,Hr.
-,Joseph,584,,,,Töpferg.,Tauch,Hr.
-PV.,Johann Gotthelf,46,,,,Elbberg,Pischel,Hr.
-PV.,Johann August,243,,,,Neueg.,Schäme,Hr.
-,Johann Gottlob,716,,,,gr. Schieszg.,Sonntag,Hr.
-SV.,Anton,419,,,,Waisenh. G.,Weisze,Hr.
-,Christian,59,,,,Breiteg.,Wustlich,Hr.
-,,,,,,,Nadler,
-,D. Friedrich Christian,,,Depurtirter.,,,Tittmann,Hr.
-mittl.,Christian August,367,,Oberält.,,Fraueng.,Schmidt,Hr.
-,Joh. Glieb Aug,41,,Mitältest.,,Fst. Weiseritzstr.,Mehlig,Hr.
-,Christian Gottlieb Benhamin,45,,PV.,,Elbberg,Beck,Hr.
-,Gottlieb Carl,378,,,,mittle Fraueng.,Brückmann,Hr.
-,Heinrich Benhamin Claus,189,,,,Nst. Breiteg.,Wittwe,Hr.
-,Johann August,116,,Fst.,,Schäferstr.,Serbing,Hr.
-,Gottfried Benjamin,16A,S.,SV.,,Waisenh.,John,Hr.
-,Carl August Johns,131 b.,,PV.,,Ram G.,Wittwe,Hr.
-,Friedrich Wilhelm,342,,,,am Altenm.,Kohlmann,Hr.
-,Christian Gottlob,368,,,,Altenm.,Löser,Hr.
-,Johann Friedrich,668,,,,Ram. G.,KManewald,Hr.
-,Joh. Chstph.,N. 394,,schenke Bier,,Sthost. am Jüdenteiche,Angermann,Hr.
-Willszd. Vst. Viehweide,Chstph. Fdr.,N. 24,A.,,Bes. d. H.,,Angermann,Hr.
-,Joh. Jak.,N. 416,,Advk.,,Sthvst. Fstgsgr.,Apel,Hr.
-,Carl Friedrich,222,,PV.,,Johannisg.,Meisel,Hr.
+first and middle names,surname,occupation,address,id
+Joh Gotthelf,Lange,,in der Catharinenstraße,1
+Christian Fürchtegott,Leypold,,auf dem Thomaskirch= hofe,2
+Joh. August,König,,auf der Reichsstraße,3
+Christian Friedrich,Wechsler,,auf der Petersstraße,4
+Christian,Günther,Küster Emeritus,im Peters-Zwinger.,5
+Joh. Christoph,Zeibig,Substitut,,6
+Caspar,Richter,Vorsteher,,7
+Joh. Heinrich,Scherzer,Prediger,neben dem Waysenhause.,8
+Joh. Sam.,Kühn,Cantor,in der Nicolasstraße  in Dam- hohns Hause.,9
+George Andreas,Wacker,Kirchen-Famulus,in dem Waysen= Hause.,10
+Michael,Fugmann,Thürmer,eben daselbst.,11
+Ernst Gottlieb,Küstner,Vorsteher,Bey der St. Johannis= und Hospital=Kirche vor dem Grimmischen Thore.,12
+Christian Sam.,Forbiger,Prediger,in der Pfarrwohnung daselbst.,13
+Johann George,Hille,Organist,"in der Nicolasstraße,  in D. Wagners Hause.",14
+Joh. Gottfried,Klein,Präcentor,"auf der Bettelgasse,  in Nöstels Hause.",15
+Gottfried,Heinze,Küster,"auf dem Grimmischen Steinwege,  im Waltherischen Hause",16
+Hartmann,Winkler,Vorsteher,,17
+Jeremias,Friederici,"Priester, der Heil. Schrift Baccalaureus","am Mühlgraben,  in der Pfarrwohnung.",18
+Joh. Christ.,Sachse,Der Hausvater im Lazarethe,,19
+Louis,Pajon,Prediger,in der Grimmischen Gasse,20
+Joh.,Arment,Cantor,auf der Reichsstraße,21
+Jacob,Born,Vorsteher,Bey der Schule zu St. Nicolai.,22
+Christian Gottlob,Zaltaus,Rector,auf der Nicolasschule.,23
+Gottlieb,Adami,Conrector,eben daselbst.,24
+Joh. Gottfr.,Kade,Tertius,"in der Nicolasstraße,  im Jacobischen Hause.",25
+Carl August,Thieme,Cantor,"im Barfußgåßchen,  in Ulrichs Hause-.",26
+Joh. Christoph,Thiele,Collegen.,"im Brühle,  im schwarzen Creutze.",27
+Joh. Zacharias,Franke,Collegen.,"in der Nicolasstraße,  in Man= golds Hause.",28
+Joh. Gottfried,Schwalbe,Collegen.,"in der Ritterstraße,  in Je= nichens Hause.",29
+Carl Friedrich,Trier,Vorsteher,Bey der Schule zu St. Thomas,30
+Joh. August,Ernesti,Rector,,31
+Johann Friedrich,Fischer,Conrector,auf der Thomasschule.,32
+Gottlob,Harrer,Cantor,auf der Thomasschule.,33
+Abraham,Kriegel,Tertius,"in der Burgstraße, in Radiks Hause.",34
+Gabr.,Matthesius,Quartus,in der Burgstr. in Glauchens Haus.,35
+George,Irmler,Baccalaureus Funerum,"im Schustergåßchen,  in Dottens Hause-Collegen.",36
+Joh. Friedrich,Breunigk,Collegen.,auf dem Pauliner-Collegio.,37
+Joh. Adam,Meyer,Collegen.,"auf dem neuen Kirchhofe, in Höcks Haus.",38
+Anton Wilhelm,Plaz,Schul-Medicus.,,39
+,Arkstee und Merkus,Buchhändler,"auf der Petersstraße,  im Hohman- nischen Hause.",40

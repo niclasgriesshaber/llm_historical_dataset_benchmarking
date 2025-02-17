@@ -50,7 +50,7 @@ API_KEY = os.getenv("GOOGLE_API_KEY")  # Must match your .env key
 # Constants
 ###############################################################################
 MODEL_NAME = "gemini-2.0"
-FULL_MODEL_NAME = "gemini-2.0-flash-exp"
+FULL_MODEL_NAME = "gemini-2.0-flash" #    "gemini-2.0-flash-exp"
 MAX_OUTPUT_TOKENS = 8192
 SEED = 42
 RETRY_LIMIT_SECONDS = 3600  # 1 hour per page

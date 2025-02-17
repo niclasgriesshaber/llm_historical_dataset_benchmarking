@@ -1,34 +1,116 @@
-Additional Information,Given Name,House Number,Neighborhood/Area,Profession/Occupation,Property Owner Information,Street/Location Description,Surname,Title
-,Joh. Aug,524 a,,Tapezier,,an der Kreusk.,Haufe,
-,Joh. Gfried,187,,Braumstr,,Scheffelg.,Haufe,
-,Joh. Glob.,200,,Hbf.,,Johannisg.,Haufe,sen.
-,Joh. Sophie,91,,Hbf.,,gr. Ziegelg.,Haufe,
-,Andreas Chrstn,74,,desgl.,,Seeg.,Hauffe,
-,Carl Friedr.,726,,Ob. Wund-Arzt,,Frieseng.,Hauffe,
-Hbf.,Dav. Benh,254,,Tischl,,PV. Pirn. G.,Hauffe,
-Hbf.,Lebr,25,,Drechsl,,Nst. gr. Meisznerg.,Hauffe,Gfr.
-Hbf.,Glob Siegm,419,,Kaufm,,Baderg.,Hauffe,
-,Herrmann,74,,Handlungsdiener,,Seeg.,Hauffe,
-,Chrstn,465,,Knopfmacher,,gr. Frohng.,Haupt,
-Hbf.,Friedr. Wilh,176,,Kupfersch.,,Scheffelg.,Haupt,
-Hbf.,Glob Friedr.,624,,Tischler,,gr. Fischerg,Haupt,
-,Joh. Ehrenfrd,116,,Centr. Cass Calc.,,PV Ram. G.,Haupt,
-d. Königl. kl.,,664,,,,kl. Schieszg.,Haupt-Auswechselungs-Casse,
-,C. H.,,,Stall-Unteroff.,,Ostraall. i. d n. Ställ.,Hauptmann,
-Hbf.,Chrstne Dor,15,A.,,,Feigeng.,Hauptmann,
-,Glieb,244,,Lackirer,,Wilsdr. G.,Hauptmann,
-,Comp. Chir. W,293,,,,Langeg.,Hauptmann,
-,Carl Glieb,84,,SChenkw,,Zahnsg.,Hauptvogel,
-,Al.,411 b,,Gen. Kr. Ger. Act. u. Adv,,Waisenh. G.,Hauschild,
-,August,138 a,,HOfrath,,PV Ram. G.,Hauschild,
-,C. Henr. Fr.,89,,D. d. Rechte W.,,Nst. Königstr.,Hauschild,
-,Chrstne Wilh.,549,,D. W.,,Schulg.,Hauschild,
-,M. Ernst Innocenz,16,A.,Lehr. a. d. Kreuzsch.,,Joh. G.,Hauschild,
-"Eoe., im Palais",E. F.,,,Haus-Insp. u. Secr. b. d. Chirurg. medic. Akad.,,,Hauschild,
-PV.,D. F. A.,265 b,,"Adv. u. Ger. Dir. d. k. Schatulleng. Ger. zu Schönfeld, Jeffen, Graupe u. Pratzschwitz",,Pirn. G.,Hauschild,
-,D. Franz Theod.,703,,jur. pract.,,kl. Schieszg.,Hauschild,
-,Sophia Veronica,511 b,,Hofzahlmstrs W.,,Waisenh. G.,Hauschild,
-,Joh. Gfrd,888,,Schuhm.,,Gerberg.,Hause,
-H. FM,Carl Ferd. Friedr.,101,,Gen. Maj. d. Inf.,,Nst. Königstr.,Hausen,v.
-Nst,Carl R.,2,,"Prltn, u. Adjut.",,gr. Meiszn. G.,Hausen,v.
-Nst.,Cl. Wenzesl.,167,,Maj.,,Hptstr.,Hausen,v.
+first and middle names,surname,occupation,address,id
+D. A.,Friedberg,"Gebrauchte Möbeln, Betten, Antiquitäten, Spiegel u. Spiegelglas, C. u. Sp. ",Friedbergerstrasse 37.,1
+David Abraham,Friedberg,Hdlsm,Brönnerstr. 1.,2
+Isaac,Friedberg,Handelsmanns,Töngesgasse 5.,3
+J. & S.,Friedberg,"Lotterie, C u. Sp. ",Töngesgasse 5.,4
+Simon,Friedberg,Hdlsm,Friedberger Anlage 5.,5
+Christian Eduard,Friedel,Buchdruckergeh., kl. Mainzerg. 1.,6
+Joseph,Friedenberg,"Agenturen, Comm. u. Sped.",Vilbelerstrasse 29.,7
+Joseph Johannes,Friedenberg,Hdlsm,Mittelweg 32.,8
+Carl Philipp,Friederich,Handelsmann,,9
+Carl Philipp,Friederich,"Specereiwaaren,  Seefische,  Commission und Spedition.",Garküchenplatz 10.,10
+Dietrich Gotthard,Friederich,Weissbindergesell,Rothkreuzg. 27.,11
+Franz,Friederich,Organist an der Paulskirche,Kerbengasse 8.,12
+Georg Ferdinand,Friederich,Handelsmann,Schützenstrasse 4.,13
+Gerhard,Friederich,"ev. luth. Pfarrer u. Consistorialrath,  Senior d. Ministerii emer.",Obermainanl. 11.,14
+Joh. Jacob,Friederich,Handelsmann,Weissfrauenstrasse 3.,15
+Joh. Jacob Friedrich,Friederich,Säckler,in Nordamerika.,16
+Joseph Heinrich,Friederich,Güter-Expeditionsgehülfe an der Main-Neckar-Eisenbahn,Gutleutstrasse 18.,17
+Wilhelm Christian,Friederich,Hdlsmann,Garküchenplatz 10.,18
+,Friedhofs-Commission,,Paulsgasse 5.,19
+Alex. Theodor Engelh.,Friedleben,Arzt,Fahrg. 33.,20
+Joh. Christoph,Friedleben,Handelsmann,in Offenbach.,21
+Joh. Jacob Julius,Friedleben,Advocat,kl. Hirschgr. 2.,22
+Theodor,Friedleben, Lehrers,Alte Mainzerg. 32.,23
+Joh. Jacob,Friedlein,Maurergesellens, Heilig-Kreuzg. 11.,24
+Joseph,Friedmann,Handelsmann,siehe nachstehend.,25
+Joseph,Friedmann,"Juwelen,  Bijouteriewaaren en gros,  Commission und Spedition.",Zeil 63.,26
+Heinrich Ludwig,Friedrichs,Sattler,Biebergasse 8.,27
+Joh. Georg,Friedrichs,Landfuhrmann,gr. Bockenhmrstr. 46.,28
+Joh. Nicolaus Franz,Friedrichs,Lehrer,kl. Eschenhmrstr. 26.,29
+Joh. Peter,Friedrichs,Bäcker,Elisabethenstrasse 15.,30
+Joh. Peter,Friedrichs,Lohnkutscher,Alte Rothhofgasse 1.,31
+Andreas,Fries,Scribent,Steingasse 13.,32
+Carl Friedrich,Fries,Fettkrämer,Brunnengasse 8.,33
+Carl Gottfried,Fries,Metzger,Brückenquai 6.,34
+Christoph Jacob,Fries,Bleichgärtner,kl. Eschenheimerstrasse 7.,35
+Georg Friedrich,Fries,Handelsmann,Zeil 24.,36
+Heinrich Remigius,Fries,,Schulstrasse 13.,37
+Joh. Carl,Fries,Handelsmann,Metzgergasse 3.,38
+Joh. Georg,Fries,Zinngiesser,Kannengiessergasse 4.,39
+Joh. Hermann,Fries,Hdlsm,Brückenquai 6.,40
+Joh. Jacob,Fries,Handelsmann,Brückenquai 6.,41
+Joh. Jacob,Fries,Metzger,Rapunzelgässchen 4.,42
+Joh. Peter,Fries,Sattler,Stelzengasse 14.,43
+Joh. Simon,Fries,"Eisengiesserei und Maschinenfabrik. (Eig. Heinrich Remigius Fried; - Proc. Jacob Carl Racuh.) Fabriklager bei J. Krämger, Neue Krämge 16.",Schulstrasse 13.,44
+Joh. Thomas,Fries,des Metzgerhandwerks,Paradiesgasse 33.,45
+Maria Cunig.,Fries,Garn- u. Leinwdhdlerin,Kannengiesserg. 8.,46
+Peter Wilhelm,Fries,Metzger,Saalgasse 20.,47
+Philipp Ferdinand,Fries,Metzger,Saalgasse 26.,48
+Joh. Joseph,Friesenhahn,Güterschaffners, Karpfengasse 4.,49
+Joh. Matthäus Julius Ferdinand,Friesenhahn,Oberlieutenants,Karpfengasse 4.,50
+Joh. Jacob,Friess,Oberlieutenant,Hochstrasse 27.,51
+Philipp Jacob,Friess,des Raths,Hochstrasse 27.,52
+Johannes,Frisch,Weingärtner,im Hederich SG. XVI. 146.,53
+G. W.,Frischen,"Material- und Farbwaaren,  C. u. Sp. ",Töngesgasse 38.,54
+Gerhard Wilhelm,Frischen,Handelsmann,siehe vorstehend.,55
+Friedrich,Frischmann,Oeconom,Eschersh. Landstr. VIII. 4/9.,56
+Georg Michael,Frischmann,Oeconom,Eschersh. Ldstr. VIII. 4/9.,57
+Benjamin Gottlob,Fritsch,Scribent,Judengasse 57.,58
+Catharina,Fritsch,Putzgeschäft,Paradeplatz 5.,59
+Christian Friedrich,Fritsch,Hauptmanns, Alte Rothhof. 1.,60
+Christian Julius,Fritsch,Handelsmann,Hochstrasse 1.,61
+Christian Philipp,Fritsch,Kappenmacher,Bleidenstrasse 29.,62
+Friedr. Carl Wilh. Ludw.,Fritsch,Buchdrucker,Bleidenstr. 29.,63
+Georg Christoph,Fritsch,Scribent,gr. Bockenheimerstrasse 50.,64
+Georg Wilh. Aug. Theod.,Fritsch,Hdlsm,gr. Bockenhmrstr. 10.,65
+Joh. Christian,Fritsch,Scribent,Alte Mainzergasse 57.,66
+Joh. Georg,Fritsch,Handelsmanns,in Worms.,67
+Joh. Georg jun,Fritsch,Handelsmann,Garküchenplatz 6.,68
+Joh. Michael,Fritsch,Specereikrämers,Alte Mainzerg. 57.,69
+Joh. Rudolph Matthäus,Fritsch,Hdlsm,gr. Bockenheimerstr. 9.,70
+Carl Friedr. Christ. Wilh.,v. Fritsch,grhz. u. hz. sächs. wirkl. geh. Rath u. Bundestagsgesandter,Weserstrasse 15.,71
+Georg August Heinrich,Fritz,Mechanikus,Klostergasse 10.,72
+Heinrich,Fritz,Wgärtner u. Todtengräber,3Königstr.6.,73
+Jacob,Fritz,Kammmacher,Borngasse 19.,74
+Johannes,Fritz,Kunstgärtner,in Bornheim.,75
+Joh. Bernhard,Fritz,Schuhmacher,Schäfergasse 7.,76
+Joh. Conrad,Fritz,Restaurateur,gr. Kornmarkt 18.,77
+Joh. Friedrich Carl,Fritz,Specereikrämer,Rechneigrabenstr. 19.,78
+Joh. Heinrich,Fritz,Lohnbedientens,gr. Kornmarkt 16.,79
+Joh. Jacob,Fritz,Weinhändler,Kerbengasse 4.,80
+Joh. Ludwig,Fritz,Lohnbediente,Schärfengässchen 4.,81
+Louise Charlotte,Fritz,Merceriegeschäft,siehe vorstehend.,82
+Philipp Jacob,Fritz,Schlosser,Frohnhofstrasse 11.,83
+Philipp Nicolaus,Fritz,Schuhmacher,Elephantengasse 10.,84
+Christian Heinrich,Frohberg,Schreiners,Bleidenstr. 15.,85
+Joh. Philipp,Frohberg,Schreiner,Karpfengasse 7.,86
+Joseph Friedrich,Fröhlich,Stiefelholzmacher,Vilbelerstrasse 17.,87
+Joh. Georg Herm.,Fröhling,Schriftgiessergeh.,gr. Eschenhstr. 72.,88
+Herz,Frohmann,Hdlsm,Seilerstr. 11.,89
+Joh. Adam Christoph,Frohmann,Buchbinder,Neue Rothhofg. 3.,90
+Joh. Martin,Frohmann,Handelsmann,Oberrader Fussweg 4.,91
+Carl,Frölich,"Manufacturwaaren,  C. u. Sp. ",Neue Kräme 24.,92
+Carl Heinrich Ludwig,Frölich,(s. vorst.),Neue Kräme 19.,93
+Georg Adolph,Frölich,Conducteur,Allerheilstr. 66.,94
+Joh. Georg Christoph,Fronmüller,Bereiters,Bergweg 4.,95
+Joseph,Frühauf,Prof. der italien. Sprache und beeidigter Uebersetzer,Lange Strasse 19.,96
+Balthasar,Fruth,Tabaksspinner,Stiftstrasse 30.,97
+Georg,Fruth,Tapezierer,Gelnhäusergasse 6.,98
+Heinrich Dominicus,Fruth,Tabakspinners,Dreikönigstr.5.,99
+Joh. Adam,Fruth,Schuhmachers,Dreikönigstrasse 5.,100
+Anselm Anton August,Fuchs,Hdlsm,Neue Rothhofgasse 15.,101
+Christian Wilhelm,Fuchs,Handelsmann,in Wilhelmsbad.,102
+Daniel Hirsch,Fuchs,,Judengasse 93.,103
+Georg,Fuchs,Handelsmann,Taunusplatz 6.,104
+Georg,Fuchs,Steindecker,Trierischer Platz 5.,105
+Gottfried Wilhelm,Fuchs,Handelsmann,Darmst. Landstr. 4.,106
+Heinrich Ludwig Jacob,Fuchs,Handelsmann,in Offenbach.,107
+Joh. Conrad,Fuchs,"Specereiwaaren,  Landesproducte,  Commission und Spedition.",Töngesgasse 45.,108
+Joh. Conrad,Fuchs,Handelsmann,siehe vorstehend.,109
+Joh. Gottfried,Fuchs,Schuhmachers,Neue Rothhofg. 15.,110
+Matthias,Fuchs,Locomotivführer,Schäfergasse 2.,111
+Daniel,Fück,Schuhmacher,am Porzellanhof 2.,112
+Joh. Georg,Fück,Wildprethändler,in Bornheim.,113
+Joh. Friedrich August,Fucke,Handelsmann,siehe nachstehend.,114
+,Fucke-Metz,"Papier,  Musikalien,  C. u. Sp.",Fahrgasse 25.,115

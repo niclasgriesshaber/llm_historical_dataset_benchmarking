@@ -1,22 +1,70 @@
-Additional Information,Given Name,House Number,Neighborhood/Area,Profession/Occupation,Property Owner Information,Street/Location Description,Surname,Title
-,Matthias,Nr. 165,,Schuhmacherm.,,oben der Kreyenstr.,Borgwardt,
-,Joh. Christ.,Nr.579,,Töpfermeister,,Aegidienstrasze,Bormann,
-im schwarzen Bären,Franz Christo.,Nr. 711,,Gastwirth,,Mühlenstr.,Bossau,
-Engl. Grube oben im Keller,Balzer Hinr.,,M. M.,Krügerey,,,Both,
-auf dem Finkenberge vor dem Holstenthor,Herm. Hinr.,,,Gärtner,,,Both,
-"vor dem Holstenthor, ohnweit der Lachwehr",Joh.,,,Gärtner,,,Both,se.
-"vor dem Holstenthor, bey der Lachswehr",Joh.,,,Gärtner,,,Both,jun.
-,Joh. Christ.,Nr. 571,M. M.,Holzh.,,Alszheyde,Both,
-,Christo. Fried.,Nr. 844,,Perückenmacher,,im alten Schrangen,Bottstede,
-Seidne u. a. Zeuge,Joh. Christ.,Nr. 168,,Weisze Waaren,,Schüssebuden,Bouffet,
-an der Marienk.,Joh. Jac.,Nr. 203,Mar.,Küster,,,Bouffet,
-,Anth. Hinr.,Nr. 623,Jac.,Schiffer,,Kl. Birgstr.,Boy,
-"vor dem Mühlensthor, vorne am Geniner Wege linker Hand.",Christ.,,,Handelsgärtner,,,Boy sen.,
-"vor dem Mühlenthor, vorne am Hamburger Landwege.",Christ.,,,Handelsgärtner,,,Boy jun.,
-auf dem Finkenberg vor dem Holstenthor.,Clas,,,Gärtner,,,Boy Wwe.,
-"bey den Oldesloer Böten, an der Trave bey der kl. Altenfähre",Hinr. Wilh.,Nr 638,M. M.,Schreiber,,,Boy,
-"vor dem Mühlenthor, vorne am Geniner Wege, rechter Hand.",Johann,,,Handelsgärtner,,,Boy,
-"auf dem Finkenberge, vor dem Holstenthor.",Joh.,,,Gärtner,,,Boy,
-,Joh. Casp.,Nr. 656,M. m.,Bild= und Steinhauer,,kl. Altefähre,Boy,
-,Johann Hinr.,Nr. 400,Jac.,Brandtweinbrenner,,gr. Gröpelgrube,Boy,
-in der Stadt Braunschweig,Joh. Jac.,Nr. 679,,Gastwirth,,Mühlenstr.,Boy,
+first and middle names,surname,occupation,address,id
+Carl Wilh.,Aacken,Comptoirist,Kleine Neustraße Nr. 86 und 87.,1
+Carl,Abrahamson,landscher Kommissionär,St. Peterburger Straße Nr. 241 und 242.,2
+Afonassiew,Abramow,Budenhandel,Todtenstraße 6. Quartier Nr. 173.,3
+Thimofey,Abramow,Budenhandel,Vorst. kl. Sandstraße Nr. 222.,4
+Eduard Bernhard,Achelius,Glasermeister,Kalkstraße Nr. 134.,5
+Michael,Adachowsky,Arbeiter,St. Peterburger Straße Nr. 64.,6
+Vincent,Adamowitsch,Marktpächter,Schmiedestraße Nr. 174.,7
+Mattwey,Adamowiz,Uhrmacher,Gr. Klüversholm Nr. 5.,8
+Adam,Adamsohn,Lohndiener,St. Peterburgische Straße Nr. 55.,9
+,Adamy Erben,,Kalkstraße Nr. 230.,10
+Foh. Gabriel,Adler,Lehrer,Thorersberg Nr. 10.,11
+Reinh.,Adler,Schneidermeister,Vorst. kl. Schulenstraße Nr. 164.,12
+Samson,Adler,Petschierstecher,gr. Neustraße Nr. 74.,13
+Anna,Afonassiiew,Wittwe,Todtenstraße 2. D. Nr. 223.,14
+Lawrenty,Affonassiiew,dim. Sergeant,Hagenshof Nr. 71.,15
+George,Afonasjew,Lohndiener,Schmiedestraße Nr. 198.,16
+Euka,Afonaßiew,Hanfbinder,Vorst. gr. Neureusfische Straße Nr. 168.,17
+Pawel,Affonassiew,,Hagenshof Nr. 53.,18
+Franz,Agarius,Maurergesell,Vorst. Schmiedestraße Nr. 279.,19
+Iwan,Agunzow,Major,Vorst. Schmiedestraße Nr. 279.,20
+Eduard,Ahrens,Comptoirist,Münzstraße Nr. 303.,21
+Friedr.,Ahrens,Schneidermeister,Scharrenstraße Nr. 244 und 245.,22
+Joh. Friedr.,Ahrens,Zimmermeister,Gerberstraße Nr. 141.,23
+Joh. Heinr.,Ahrens,Tischlermeister,Schmiede- straße Nr. 138.,24
+Julius,Ahrens,Konditor,gr. Neustraße Nr. 75.,25
+Andreas,Ahrends,Arbeitsmann,Sassenhof Nr. 72.,26
+Joh. Michael,Ahrendt,Lohgerbermeister,Vorst. gr. Sandstraße Nr. 5.,27
+Joh.,Aksentowis,Barbierer,Schmiedestraße Nr. 188.,28
+August,Albanus,m. f. den 3ten Abschnitt,Neu- straße am Eingange des Domesganges Nr. 50.,29
+Carl George,Albrecht,Tischlermeister,Schmiede- straße Nr. 162.,30
+Carl Joachim,Albrecht,Schuhmachermeister,Schmiedestraße Nr. 124.,31
+Catharina,Albrecht,Lehrerin,Hagenshof Nr. 29.,32
+George,Albrecht,Tischlermeister,Riesingsstraße Nr. 151.,33
+Daniel Friedrich,Aldagh,,Friedrichsholm Nr. 12.,34
+Jakob,Alexandrowitsch,Schuhmacher,Frie- drichsholm Nr. 28.,35
+Kusma Pawel,Alifannow,Wechsler und Kauf- mann,Lindenstraße Nr. 96 bis 98.,36
+Michael Kusmin,Alifannow,Wechsler und Kauf- mann,Vorst. gr. Sandstraße Nr. 25.,37
+Gregor Iwan,Alimpjew,Kurrenne = und Buden= handel,Lastadienstraße Nr. 104.,38
+Joh. Christian,Allenstein,Bäckermeister,Vorst. gr. Schmiedestraße Nr. 143.,39
+Fedor Gegorow,Allelujew,Lichtgießer,Palisaden- traße Nr. 150.,40
+Andreas,Alv,Ligger,gr. Reeperstraße Nr. 79.,41
+Joh.,Alv,Ligger,Vorst. gr. Mühlenstraße Nr. 76.,42
+Michael,Alv,Ligger,Galgenstraße Nr. 75.,43
+Carl,Altmann,Maurergesell,Petrikirchhof.,44
+Joh. Christ.,Amelong,Kaufmann,Badstuben- traße Nr. 260.,45
+Christian Gustav,Amende,Comptoirist,Herren- traße Nr. 308 und 309.,46
+Fedor Stepan,Andabursky,Budenhandel,Pferdestraße Nr. 262.,47
+Iwan Ywannow,Andabursky,Wechsler,Reeperstraße Nr. 167.,48
+Wassil Andrejew,Andabursky,Kaufmann,Gr. Kluversholm Nr. 68.,49
+Elias,Andersohn,Arbeiter,Vorst. Kalkstraße Nr. 249.,50
+Maria,Andrá,Paraplumacherwittwe,Vorsf. kl. Schulenstraße Nr. 121.,51
+Stepan,Andråow,Tischler,"Karlsstraße,  Nr. 37.",52
+Worlam,Andreow,Budenhandel,Vorst. gr. Neu=reussische Straße Nr. 116.,53
+Heinrich George,Andresobn,Kaufmann,Schmiedestraße Nr. 159.,54
+Lew. Ossip.,Annekewis,Wechsler,kl. Reeperstraße Nr. 117.,55
+Massey Osilpow,Annekewiz,Wechsler,gr. Reeperstraße Nr. 67.,56
+Michallow,Antiv,Budenhandel,Vorst. gr. Neu=reussische Straße Nr. 195.,57
+Damna Gregorjewa,Antivow,Wittwe,Vorst. gr. Neureussische Straße Nr. 19o.,58
+Lorion,Antipow,Badstuber und Budenhandel,kl. Fuhrmannsstraße Nr. 168.,59
+Nicolat,Antoniew,Prediger an der Alexiikirche,Klosteruraße Nr. 102.,60
+Iwan Nikittin,Antonow,Major,Badstubenstraße Nr. 281.,61
+Yoh. Martin,Apse,Mastenwraker,Friedrichsholm Nr. 3.,62
+Yohann,Apselon,Budenhandel,Seilerstraße Nr. 314.,63
+Philip,Arends,Kunstgartner,Sassenhof Nr. 5.,64
+Tobias Ernst,Arendt,Goldarbeiter,Lastadien=traße Nr. 123.,65
+Anna Maria,Arnold,Pfeifenfabrikantin,Peterho'm Nr. 45.,66
+Ferd. Phil.,Arnold,Schauspieler,kl. Königsstraße Nr. 2 0.,67
+Pawel,Arremiew,Arbeitsmann,Brunnenstraße Dr. 124.,68
+Artil,Arzibaschow,Major,Vorst. Schmiede=traße Nr. 49.,69

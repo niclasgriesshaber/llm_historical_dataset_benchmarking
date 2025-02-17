@@ -1,16 +1,13 @@
 #!/usr/bin/env python3
 """
-Transkribus PDF -> TIFF -> TEXT Pipeline
+Transkribus PDF -> TIFF -> TEXT Pipeline with lxml-based PAGE XML parsing.
 
-This script:
-  1) Parses command-line arguments and configures logging.
-  2) Converts a PDF into per-page TIFF images in data/page_by_page/TIFF/<pdf_stem>.
-     (Skips conversion if images already exist.)
-  3) Creates a results folder under results/ocr_img2txt/transkribus/<pdf_stem>/run_XX/page_by_page/.
-  4) Calls the Transkribus API in a single batch for all pages, retrieving PAGE XML.
-  5) Extracts text from each PAGE XML file and saves it as page_X.txt.
-  6) Merges all returned page texts into a single TXT file (<pdf_stem>.txt).
-  7) Logs progress & timing information, and saves a JSON run log at the end.
+Requires:
+  - pdf2image
+  - Pillow (PIL)
+  - python-dotenv
+  - transkribus_metagrapho_api
+  - lxml
 """
 
 import argparse
@@ -22,15 +19,14 @@ import time
 from datetime import datetime
 from pathlib import Path
 from typing import List
-import xml.etree.ElementTree as ET
 
-# For PDF -> image conversion
 from pdf2image import convert_from_path
 from PIL import Image
-
-# Transkribus
 from dotenv import load_dotenv
 from transkribus_metagrapho_api import transkribus_metagrapho_api
+
+# Import lxml for improved PAGE XML parsing
+from lxml import etree
 
 ###############################################################################
 # Project Paths
@@ -93,7 +89,7 @@ def parse_arguments() -> argparse.Namespace:
     return parser.parse_args()
 
 ###############################################################################
-# Utility: Find existing run_XX directories to auto-increment run number
+# Utility: Find existing runs in folder
 ###############################################################################
 def find_existing_runs_in_folder(model_folder: Path) -> List[int]:
     """
@@ -132,24 +128,97 @@ def write_json_log(log_dict: dict, model_name: str) -> None:
     logging.info(f"JSON log saved at: {log_path}")
 
 ###############################################################################
-# Utility: Extract text from PAGE XML
+# Utility: Extract text from PAGE XML with reading order (lxml-based)
 ###############################################################################
 def extract_text_from_page_xml(xml_content: str) -> str:
     """
-    Extract text lines from a PAGE XML string returned by Transkribus.
+    Extract text from a PAGE XML string with reading order awareness.
+    This function:
+      - Finds the reading order (<ReadingOrder>) if present.
+      - Iterates over TextRegion elements in that order.
+      - For each TextLine, assembles text from <Word> elements if they exist.
+        Otherwise, falls back to the line-level <TextEquiv>.
+      - Joins lines with line breaks and regions with blank lines.
     """
     try:
-        root = ET.fromstring(xml_content)
-    except ET.ParseError:
+        root = etree.fromstring(xml_content.encode("utf-8"))
+    except etree.XMLSyntaxError:
+        # Return empty string if parsing fails
         logging.error("Could not parse PAGE XML. Returning empty text.")
         return ""
 
-    ns = {'ns': root.tag.split('}')[0].strip('{')}
-    lines = []
-    for unicode_elem in root.findall('.//ns:Unicode', ns):
-        if unicode_elem.text:
-            lines.append(unicode_elem.text)
-    return "\n".join(lines)
+    # Default PAGE namespace might look like:
+    # "http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15"
+    # We'll call it 'pc' for convenience.
+    page_ns = root.nsmap.get(None, "")
+    ns = {"pc": page_ns}
+
+    # 1) Check <ReadingOrder>
+    ro_xpath = ".//pc:ReadingOrder/pc:OrderedGroup/pc:RegionRefIndexed"
+    region_ref_elements = root.findall(ro_xpath, namespaces=ns)
+
+    if not region_ref_elements:
+        # Fallback: retrieve TextRegions in document order
+        text_regions = root.findall(".//pc:TextRegion", namespaces=ns)
+    else:
+        # Build a mapping of regionID -> reading order index
+        region_order_map = {}
+        for ref in region_ref_elements:
+            region_id = ref.get("regionRef")
+            index_str = ref.get("index")
+            if region_id and index_str is not None:
+                try:
+                    region_order_map[region_id] = int(index_str)
+                except ValueError:
+                    pass
+
+        # Now find all <TextRegion> and keep only those referenced
+        all_regions = root.findall(".//pc:TextRegion", namespaces=ns)
+        text_regions = []
+        for region in all_regions:
+            r_id = region.get("id")
+            if r_id in region_order_map:
+                text_regions.append(region)
+
+        # Sort by reading order index
+        text_regions.sort(key=lambda r: region_order_map[r.get("id")])
+
+    all_regions_text = []
+
+    # 2) Iterate over TextRegion in correct order
+    for region in text_regions:
+        region_lines = []
+        text_lines = region.findall(".//pc:TextLine", namespaces=ns)
+
+        for line in text_lines:
+            # Word-level approach
+            word_elements = line.findall(".//pc:Word", namespaces=ns)
+            if word_elements:
+                words = []
+                for w_el in word_elements:
+                    w_text_equiv = w_el.find(".//pc:TextEquiv", namespaces=ns)
+                    if w_text_equiv is not None:
+                        w_unicode = w_text_equiv.find("pc:Unicode", namespaces=ns)
+                        if w_unicode is not None and w_unicode.text:
+                            words.append(w_unicode.text.strip())
+                line_text = " ".join(words)
+                if line_text:
+                    region_lines.append(line_text)
+                continue
+
+            # If no <Word>, fallback to line-level <TextEquiv>
+            text_equiv = line.find(".//pc:TextEquiv", namespaces=ns)
+            if text_equiv is not None:
+                unicode_elem = text_equiv.find("pc:Unicode", namespaces=ns)
+                if unicode_elem is not None and unicode_elem.text:
+                    region_lines.append(unicode_elem.text.strip())
+
+        if region_lines:
+            region_block_text = "\n".join(region_lines)
+            all_regions_text.append(region_block_text)
+
+    # Join regions with double newlines
+    return "\n\n".join(all_regions_text)
 
 ###############################################################################
 # Main Pipeline
@@ -164,9 +233,10 @@ def main() -> None:
       2. Convert PDF => TIFF in data/page_by_page/TIFF/<pdf_stem>.
       3. Create results folder under results/ocr_img2txt/transkribus/<pdf_stem>/run_xy/page_by_page/.
       4. Perform OCR via Transkribus for each page (batch call).
-      5. Concatenate all page text files into <pdf_stem>.txt.
-      6. Write a JSON log in logs/ocr_img2txt/transkribus/.
-      7. Print final summary.
+      5. Parse PAGE XML with reading order to extract text (lxml).
+      6. Concatenate all page text files into <pdf_stem>.txt.
+      7. Write a JSON log in logs/ocr_img2txt/transkribus/.
+      8. Print final summary.
     """
     # -------------------------------------------------------------------------
     # 1. Parse arguments and configure logging
@@ -248,14 +318,15 @@ def main() -> None:
         with transkribus_metagrapho_api(TRANSKRIBUS_USERNAME, TRANSKRIBUS_PASSWORD) as api:
             all_page_xml = api(
                 *tiff_files,
-                line_detection=TRANSKRIBUS_LINE_DETECTION_ID,
                 htr_id=TRANSKRIBUS_HTR_ID
             )
     except Exception as e:
         logging.error(f"Transkribus OCR error: {e}")
         sys.exit(1)
 
-    # Go through each page's XML result
+    # -------------------------------------------------------------------------
+    # 5. For each page's XML, parse text with reading order and save
+    # -------------------------------------------------------------------------
     for idx, (tiff_path, xml_content) in enumerate(zip(tiff_files, all_page_xml), start=1):
         logging.info(f"Processing page {idx} of {total_pages}: {tiff_path.name}")
         page_id = tiff_path.stem  # e.g., "page_0001"
@@ -268,7 +339,7 @@ def main() -> None:
         xml_path = run_page_dir / f"{page_id}.xml"
         xml_path.write_text(xml_content, encoding='utf-8')
 
-        # Extract text from PAGE XML
+        # Extract text (lxml-based function)
         extracted_text = extract_text_from_page_xml(xml_content)
         if not extracted_text:
             logging.warning(f"No text extracted for {tiff_path.stem}. PAGE XML may be empty or invalid.")
@@ -295,10 +366,10 @@ def main() -> None:
         )
         logging.info("")
 
-    logging.info("All pages processed (or skipped if errors). Individual text files created.")
+    logging.info("All pages processed. Individual text files created.")
 
     # -------------------------------------------------------------------------
-    # 5. Concatenate all page text files into <pdf_stem>.txt
+    # 6. Concatenate all page text files into <pdf_stem>.txt
     # -------------------------------------------------------------------------
     final_txt_path = run_dir / f"{pdf_stem}.txt"
     logging.info(f"Combining page texts into {final_txt_path} ...")
@@ -310,7 +381,7 @@ def main() -> None:
     logging.info(f"Final concatenated file: {final_txt_path}")
 
     # -------------------------------------------------------------------------
-    # 6. Write a JSON log summarizing the run
+    # 7. Write a JSON log summarizing the run
     # -------------------------------------------------------------------------
     total_duration = time.time() - overall_start_time
     log_info = {
@@ -331,7 +402,7 @@ def main() -> None:
     write_json_log(log_info, model_name)
 
     # -------------------------------------------------------------------------
-    # 7. Final summary
+    # 8. Final summary
     # -------------------------------------------------------------------------
     logging.info("Run information successfully logged.")
     logging.info(

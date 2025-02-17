@@ -29,7 +29,7 @@ def main():
         required=True,
         help=(
             "One or more OCR model/script names. "
-            "E.g. pytesseractOCR, paddleOCR, transkribus."
+            "E.g. pytesseractOCR, paddleOCR, transkribusOCR."
         )
     )
     parser.add_argument(

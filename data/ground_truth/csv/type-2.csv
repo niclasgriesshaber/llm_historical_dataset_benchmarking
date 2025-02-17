@@ -1,23 +1,59 @@
-Additional Information,Given Name,House Number,Neighborhood/Area,Profession/Occupation,Property Owner Information,Street/Location Description,Surname,Title
-,Joh. Chstph.,N. 394,,schenke Bier,,Sthost. am Jüdenteiche,Angermann,Hr.
-Willszd. Vst. Viehweide,Chstph. Fdr.,N. 24,A.,,Bes. d. H.,,Angermann,Hr.
-,Joh. George,N. ?. 42,,,B.d. H.,,Angermann,Hr.
-Wllszdr. Vit. an d. Ostrawiese,Karl,N. 33,A.,Kammer= u. ital. Opersänger,,,Angiolini,Hr.
-,Charl. Wilhelm.,N. 559,,,,D. Pfg.,Anhelm,Frl.
-,Joh.,N. 202,,Konditor,,Nst. Br. G.,Ants,Hr.
-"bey der Prinzessin Elis. k. Hoheit, Willszd. Vit. Obersee",Joh.,N. 690,,Hofbedienter,,,Anton,Hr.
-,Glieb. Eman.,N. 147,,,,Nst. an der Rit.,Anton,Hr.
-Willszd. Vst. Ostraallee,Benj. Glob.,N. 14,A.,Werkmeister in d. Rochlischen Tuchfabrik,,,Anton,Hr.
-Bt?n. Vorstadt Festungsgr.,Angelo,N. 197,,Agent,,,D'Antoniant,Hr.
-,Joh. Jak.,N. 416,,Advk.,,Sthvst. Fstgsgr.,Apel,Hr.
-,Konkordie,N. 725,,,,D. Frieseng.,Apel,Jgfr.
-,Karl Gfrd.,N. 677,Wllszd.,der Chirurgie Befliszn.,,Vst. Entenpfütze,Apelt,Hr.
-,Fdr. Traug.,N. 653,W.,Chirurgus,,Vst. Entenpfütze,Apfel,Hr.
-,Fdr. Ehregott,N. 45,,Kürschner,,Fdrstadt. Weißeritzst.,Apfelstädt,Hr.
-,Juliane Karoline,N. 177,N. G.,Obersteuerkalkulators Wittwe,,Pirn. Vst.,Apitz,Fr.
-,Chst. Erdmann,N. 167,,Schneidemeist.,,D. Scheffelg.,Appollo,Hr.
-,Heinr. Amand Wilh.,N. 103,,Kriegskanzlist,,Nst. Ränitzg.,Appun,Hr.
-,Franz Andr.,N. 456,,Gürtlermst.,,D. kleine Frohng.,Arbeiter,Hr.
-,Joh. George,N. 162,,Schlossmst.,,D. Scheffelgasse,Arlt,Hr.
-Aug.,Chrst.,N. 12,,Advk.,,D. Schberg.,Arndt,Hr.
-beym Kaufm. Hrn. Sahr,Joh. Aug.,N. 516,Willszd. Vst. Fischersdorf.,Buchhalter,Bes. des Haus. N. 706.,D. a. M.,Arndt,Hr.
+first and middle names,surname,occupation,address,id
+Joh. Gottfr.,Richter,Schneidermeister,,1
+Joh. Aug.,Schwabe,Schneidermeister,,2
+Eleon. Sophie,Cubaldi,Obersteuerregistrs. Witt.,Nr. 3.,3
+Karl Heinr.,Cubaldi,Hofwirthschaftskopist,Nr. 3.,4
+Simon Salomon,Isaak,Handelsjude,Nr. 3.,5
+Karl Christian,Liebel,Paruckenmacher,Nr. 3.,6
+Joh. George,Simon,kurfürstl. Geschirrschreiber,Nr. 3.,7
+,,,Nr. 4.,8
+M. Elias Friedr.,Pöge,"vierter Diakonus an der Kreuzkirche, und Prediger an der Sophienkirche",Nr. 5.,9
+M. Joh. Gottlob,Sammt,Hauslehrer beym Hrn. М. Рögе,Nr. 5.,10
+Friedr. Gustav,Berggold,Premierleutnant beym Ingenieurskorps,Nr. 6.,11
+Dankegott Im.,Merkel,privatisirender Gelehrter,Nr. 6.,12
+Karl Wilh.,Schulze,Schneidermeister,Nr. 6.,13
+,Schumann,Weißbäckermeister,Nr. 6.,14
+Gottfr. Benjamin,Eras,Tischlermeister,Nr. 557.,15
+Dorothee Charlotte,Klette,Kreissteuereinnehmers Wittwe,Nr. 557.,16
+Heinr. Gotthelf,Klette,Advokat,Nr. 557.,17
+Joh. Gebh. Adam,Riebestahl,kurfurstl. Hofkoch,Nr. 557.,18
+Joh. Jacob,Schöpf,Schneidermeister,Nr. 557.,19
+Adolph Heinr.,Walther,Hofschauspieler,Nr. 557.,20
+Joh. Christian,Kliebert,Schneidermeister,Nr. 558.,21
+Joh. Gottfr.,Lipsius,Sekretär und Kanzlist bey der kurfürstl. Bibliothek,Nr. 558.,22
+Christian Gottfr.,Prietzel,Lohnkutscher,Nr. 558.,23
+Joh. Friedr.,Rost,Buchhalter und Kassier in der Hauptauswechselungskasse,Nr. 558.,24
+Joh. David,Felgenhauer,Schumachermeister,Nr. 559.,25
+Joh. Gottfr.,Guthmann,Besitzer dieses Hauses,Nr. 559.,26
+Gotthelf Benjamin,Flathe,Böttchermeister,Nr. 560.,27
+Christian Samuel,Klammer,Schneidermeister,Nr. 560.,28
+Karl Aug.,Herfort,Schneidermeister,Nr. 561.,29
+Joh. Adolph,Pärsch,Schlossermeister,Nr. 561.,30
+Aug. Gottfr. Benj.,Zeibig,Kaufmann,Nr. 561.,31
+Christ. Friederike,Zeibig,Zwirnhändlerinn,Nr. 561.,32
+Karl Gottlieb,Kaltofen,Kaufmann,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 11.",33
+Christian Friebr.,Kunze,Advokat,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 11.",34
+Adam Friedr.,Neubert,Galanteriearbeiter,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 11.",35
+Joh. Friedr.,Zährling,Tischlermeister,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 11.",36
+Christian August,Arndt,Advokat,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 12.",37
+Christoph,Becker,Konditer,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 12.",38
+Joh. Gottlob,Hahn,d. ä. Täschnermeister,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 12.",39
+Joh. Heinr. ,Schuh,Schneidermeister,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 12.",40
+D. Joh. Friedr.,Barthel,praktizirender Arzt,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 13.",41
+Joh. Henr.,Flachs,Wittwe des verstorbenen Archidiakonus allhier,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 13.",42
+Joh. Regine,Menzel,Sekretars Wittwe,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 13.",43
+Karl Gottlieb,Sehm,Generalstabskanzlist,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 13.",44
+Adam Aug.,Weller,Sattlermeister,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 13.",45
+Christian Aug.,Hancke,geh. Kabinetsaufwärter,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 14.",46
+Gottfr.,Lah,Kandidat des Predigtamts,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 14.",47
+Basilius,Lalitsch,Kapelldiener an der rußisch= kaiserl. Gesandtschaftskapelle,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 14.",48
+Joh. Gottlieb,Lotze,Obersteuerexpeditor,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 14.",49
+Karl Gottlieb,Prätorius,Schneidermeister,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 14.",50
+Joh. Moriz,Steuer,Schumachermeister,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 14.",51
+Christian Gottlieb,Böhme,Schneidermeister,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 15.",52
+Gottlieb Wilhelm,Kammsetzer,Buchbindermeistr.,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 15.",53
+Christian Lebrecht,Lenck,Kandidat des Predigtamts,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 15.",54
+Christian Friedr.,Röpke,Beutlermeister,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 15.",55
+Gottlob,Schröder,Schneidermeister,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 15.",56
+Joh. Gottfr.,Strubell,Lederhandler,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 15.",57
+Traugott Lebr.,Franke,Rothgießermeister,"Schreibergasse, Zwischen dem Alten Markte und der Stadtmauer, Vom alten Markte nach der Stadtmauer zu, a) linke Hand. Nr 16.",58
