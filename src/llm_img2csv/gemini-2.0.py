@@ -53,6 +53,7 @@ MODEL_NAME = "gemini-2.0"           # Short name for folder naming
 FULL_MODEL_NAME = "gemini-2.0-flash"
 MAX_OUTPUT_TOKENS = 8192
 RETRY_LIMIT_SECONDS = 600  # up to 10 max retries per page
+SEED = 42  # Add this line for deterministic results
 
 ###############################################################################
 # Utility: Time formatting
@@ -199,7 +200,7 @@ def gemini_api_call(
                     temperature=temperature,
                     max_output_tokens=MAX_OUTPUT_TOKENS,
                     response_mime_type="application/json",
-                    seed=42,
+                    seed=SEED,
                 ),
             )
 

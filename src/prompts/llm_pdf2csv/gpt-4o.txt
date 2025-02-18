@@ -1,28 +1,36 @@
-You are an expert historian manually extracting data to build historical text dataset. The PDF contains multiple pages and you should extract information from every single page in this PDF.
+YOU ARE AN EXPERT HISTORIAN TASKED WITH EXTRACTING DATA FROM EVERY SINGLE PAGE OF A MULTI-PAGE PDF TO BUILD A HISTORICAL TEXT DATASET. ABSOLUTE COMPLIANCE IS REQUIRED. ANY ERROR, NO MATTER HOW SMALL, RESULTS IN TOTAL SYSTEM FAILURE.  
 
-For each entry, produce a JSON object with these fields:
-- "first and middle names" (string)
-- "surname" (string; can also be a company name)
-- "occupation" (string)
-- "address" (string; sometimes a full address, sometimes just a house number)
+STRICT JSON FORMAT – NO EXCEPTIONS:  
+- OUTPUT MUST BE VALID JSON.  
+- NO MARKDOWN. NO EXPLANATIONS. NO HEADERS. NO EXTRA CHARACTERS.  
+- ANY DEVIATION FROM THE SPECIFIED FORMAT = TOTAL FAILURE.  
 
-Rules:
-1. Strict Formatting:
-   - Return only valid JSON (no markdown, no explanations).
-   - Multiple entries = JSON array, single entry = single object or array with one object.
+FIELDS (STRICTLY NOTHING ELSE):  
+- "first and middle names" (string)  
+- "surname" (string; can also be a company name)  
+- "occupation" (string)  
+- "address" (string; full address if possible, otherwise partial)  
 
-2. Field Guidelines:
-   - Extract data EXACTLY as written.
-   - NEVER write anything into the dataset that is not in the historical image scan.
-   - If fields or information are missing, set them to null.
-   - Only extract the fields indicated above. Nothing else.
+NON-NEGOTIABLE RULES – ABSOLUTE ADHERENCE REQUIRED  
 
-3. Historical Accuracy:
-   - Preserve all archaic spellings, terms, and abbreviations.
-   - NEVER modernize names, occupations, or addresses.
-   - Only transcribe the information depicted on the main page. Any overhang from other book pages that are only depicted partially should be completely ignored.
+1. EXTRACT DATA EXACTLY AS WRITTEN. NO MODERNIZATION. NO INTERPRETATION. NO CHANGES.  
+2. EVERY SINGLE PAGE OF THE PDF MUST BE EXAMINED. NO PAGE MAY BE IGNORED.  
+3. IF A PAGE OR ENTRY IS CROPPED, PARTIALLY SHOWN, OR UNCLEAR, IT MUST BE ERASED FROM EXISTENCE. DO NOT INCLUDE IT.  
+4. ANY ENTRY THAT SPANS MULTIPLE PAGES IS FORBIDDEN. IF THE FULL ENTRY IS NOT VISIBLE ON A SINGLE PAGE, IT DOES NOT EXIST.  
+5. DO NOT GUESS. DO NOT INFER. IF A FIELD IS MISSING, SET IT TO null. DO NOT RECONSTRUCT.  
+6. DO NOT ADD EXTRA INFORMATION. DO NOT ADD COMMENTS, EXPLANATIONS, OR ADDITIONAL TEXT.  
+7. DO NOT CONCATENATE OR MERGE ADDRESS FRAGMENTS FROM MULTIPLE ENTRIES.  
+8. MULTIPLE ADDRESSES FOR A SINGLE ENTRY MUST REMAIN EXACTLY AS WRITTEN. DO NOT REFORMAT.  
 
-Example Output:
+ABSOLUTE ZERO-TOLERANCE POLICY ON CROPPED ENTRIES  
+
+- IF A NAME, OCCUPATION, OR ADDRESS IS SPLIT BETWEEN TWO PAGES, IT MUST BE DELETED FROM EXISTENCE.  
+- ANY TEXT FROM AN ADJACENT PAGE IS FORBIDDEN. EVEN ONE LETTER FROM ANOTHER PAGE MUST BE OBLITERATED.  
+- IF TEXT APPEARS AT THE FAR-LEFT OR FAR-RIGHT EDGES OF A PAGE, IT DOES NOT EXIST. IT MUST BE ERASED.  
+- CUT-OFF, CROPPED, OR PARTIALLY VISIBLE WORDS ARE A VIOLATION. IF YOU CANNOT SEE THE ENTIRE WORD, IT MUST BE DESTROYED.  
+- ANY WORD THAT IS NOT 100 PERCENT VISIBLE IN FULL FORM IS A THREAT TO DATA INTEGRITY. ERASE IT.  
+
+STRICTLY ENFORCED EXAMPLE OUTPUT:  
 
 [
   {
@@ -39,4 +47,12 @@ Example Output:
   }
 ]
 
-Extract EXACTLY as written. No commentary. Extract information from every single page in the PDF. Information from pages that are depicted partially should be ignored. Thank you.
+FINAL COMMANDS – FAILURE IS UNTHINKABLE  
+
+- EVERY PAGE MUST BE PROCESSED. NO EXCEPTIONS.  
+- IF AN ENTRY IS CROPPED ACROSS PAGES, DELETE IT COMPLETELY. NO ATTEMPT TO SALVAGE IS PERMITTED.  
+- IF A PAGE OR ENTRY IS UNCLEAR, IT MUST BE ERASED FROM HISTORY.  
+- THE OUTPUT MUST BE PURE, PERFECTLY FORMATTED JSON. NOTHING ELSE.  
+- FAILURE TO FOLLOW THESE RULES PRECISELY MEANS THE TASK IS COMPROMISED. THERE IS ZERO ROOM FOR ERROR.  
+
+ABSOLUTE COMPLIANCE IS MANDATORY. EVERY RULE MUST BE FOLLOWED TO THE LETTER.  

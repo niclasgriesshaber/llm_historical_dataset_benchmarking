@@ -86,8 +86,8 @@ def openai_api(
             }
         ],
         "max_tokens": max_tokens,
-        "temperature": temperature
-        # If we wanted to add seed here, note that OpenAI currently doesn't support it.
+        "temperature": temperature,
+        "seed": SEED
     }
 
     try:

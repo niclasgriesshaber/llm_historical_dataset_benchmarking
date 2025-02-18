@@ -65,8 +65,8 @@ def parse_arguments():
     parser.add_argument(
         "--output_html",
         type=str,
-        default="llm_vs_ocr_benchmarking_results.html",
-        help="Output HTML file (default: llm_vs_ocr_benchmarking_results.html)."
+        default="txt_accuracy.html",
+        help="Output HTML file (default: txt_accuracy.html)."
     )
     parser.add_argument(
         "--n_jobs",

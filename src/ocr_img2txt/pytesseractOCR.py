@@ -9,7 +9,6 @@ This script:
   3) Merges all returned page texts into a single TXT file (<pdf_stem>.txt).
   4) Logs progress & timing information, and saves a JSON run log at the end.
 
-Everything is styled similarly to the Gemini or GPT-4o pipelines.
 """
 
 import argparse
@@ -24,7 +23,7 @@ from typing import List
 
 from pdf2image import convert_from_path
 from PIL import Image
-import pytesseract  # or 'import pytesseract as real_tesseract' if you prefer
+import pytesseract
 
 ###############################################################################
 # Project Paths
@@ -106,8 +105,7 @@ def write_json_log(log_dict: dict, model_name: str) -> None:
 ###############################################################################
 def main() -> None:
     """
-    Main function for PDF-to-text pipeline using pytesseract, matching the style
-    of other pipelines in the project:
+    Main function for PDF-to-text pipeline using pytesseract:
 
     Steps:
       1. Parse arguments & configure logging.

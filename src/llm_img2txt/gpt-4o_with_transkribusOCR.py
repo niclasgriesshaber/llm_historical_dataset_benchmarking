@@ -46,7 +46,6 @@ LOGS_DIR = PROJECT_ROOT / "logs" / "llm_img2txt"
 ENV_PATH = PROJECT_ROOT / "config" / ".env"
 
 # We store PNG in data/page_by_page/PNG/<pdf_stem>
-
 # Transkribus OCR text is pre-existing in:
 # results/ocr_img2txt/transkribus/<pdf_stem>/run_01/page_by_page/page_000N.txt
 
@@ -139,6 +138,45 @@ def write_json_log(log_dict: dict, model_name: str) -> None:
         json.dump(log_dict, f, indent=4)
 
     logging.info(f"JSON log saved at: {log_path}")
+
+###############################################################################
+# Load the GPT-4o prompt from file
+###############################################################################
+def load_gpt4o_prompt() -> str:
+    """
+    Reads the strict transcription prompt from:
+    src/prompts/llm_img2txt/gpt-4o.txt
+    and returns it as a string.
+    """
+    prompt_path = PROJECT_ROOT / "src" / "prompts" / "llm_img2txt" / "gpt-4o.txt"
+    if not prompt_path.is_file():
+        logging.error(f"Prompt file not found at {prompt_path}")
+        sys.exit(1)
+    return prompt_path.read_text(encoding='utf-8')
+
+###############################################################################
+# Multimodal OCR correction prompt function
+###############################################################################
+def multimodal_ocr_correction(ocr_text: str, image_path: Path) -> str:
+    """
+    Applies multimodal OCR post-correction while enforcing strict transcription rules.
+
+    :param ocr_text: Raw text extracted from OCR (Transkribus output)
+    :param image_path: Path to the corresponding image for verification (not used directly in prompt text)
+    :return: Full prompt to pass to GPT-4o
+    """
+    # Load the base prompt from the text file
+    base_prompt = load_gpt4o_prompt().strip()
+
+    # Merge the base prompt and the OCR text
+    gpt4o_prompt_text = (
+        f"{base_prompt}\n\n"
+        "Below is the OCR output from Transkribus so you know how to spell the archaic words. Please use this information to correct any errors and ensure the text is fully compliant with the strict transcription rules.\n"
+        "-- OCR Output (Transkribus) --\n"
+        f"{ocr_text}\n"
+    )
+
+    return gpt4o_prompt_text
 
 ###############################################################################
 # OpenAI GPT-4o API call
@@ -262,7 +300,7 @@ def main() -> None:
         sys.exit(1)
 
     # PNG folder
-    png_dir = Path(DATA_DIR) / "page_by_page" / "PNG" / pdf_stem
+    png_dir = DATA_DIR / "page_by_page" / "PNG" / pdf_stem
     if not png_dir.is_dir():
         logging.info(f"Converting PDF -> PNG in {png_dir}")
         png_dir.mkdir(parents=True, exist_ok=True)
@@ -339,14 +377,8 @@ def main() -> None:
         ocr_text = transkribus_txt_path.read_text(encoding='utf-8').strip()
         logging.info(f"Loaded OCR text (~{len(ocr_text)} chars).")
 
-        # 5b) Call GPT-4o with up to 1-hour retry
-        post_correction_prompt = (
-            "Below is text extracted from a classical OCR engine (Transkribus). "
-            "Please improve/correct it and produce the most accurate transcription "
-            "given the image. There is an image provided. DO ONLY PROVIDE THE CORRECTED TRANSCRIPTION.\n\n"
-            "-- OCR Output (Transkribus) --\n"
-            f"{ocr_text}\n"
-        )
+        # 5b) Construct the prompt using the new function: includes the strict rules from the file
+        post_correction_prompt = multimodal_ocr_correction(ocr_text, png_path)
 
         gpt4o_output = None
         page_usage_prompt = 0

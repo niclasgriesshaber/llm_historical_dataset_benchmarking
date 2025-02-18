@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Benchmark CSV Extraction</title>
+<style>
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 40px;
+  background: #fdfdfd;
+  color: #333;
+}
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0.25em;
+}
+h2 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 0.5em;
+  background: #fff;
+}
+th {
+  background: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  vertical-align: middle;
+  text-align: center;
+}
+tr:nth-child(even) {
+  background: #f2f2f2;
+}
+.model-name {
+  font-weight: bold;
+  background: #f9f9de !important;
+}
+.mismatch {
+  color: red;
+  font-weight: bold;
+}
+.note {
+  font-size: 0.9em;
+  line-height: 1.4em;
+  color: #555;
+  border-top: 2px solid #ccc;
+  padding-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+.section-note {
+  font-size: 0.9em;
+  line-height: 1.4em;
+  color: #555;
+  margin-bottom: 2em;
+}
+</style>
+</head>
+<body>
+<h1>CSV Extraction Benchmark (Exact, Normalized, Fuzzy)</h1>
+
+<p><strong>General Remarks:</strong><br>
+We compare predictions to ground truth using exactly 4 columns:
+['first and middle names', 'surname', 'occupation', 'address']. Row mismatches => <em>dim mismatch</em>. 
+Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
+
+<b>Matching rules in these tables:</b><br>
+1) <em>Exact</em>: direct string equality (lowercased, trimmed).<br>
+2) <em>Normalized</em>: ASCII-only, punctuation-removed, then exact compare.<br>
+3) <em>Fuzzy</em>: Jaro-Winkler similarity ≥ 0.9.<br><br>
+
+<b>Total number of cells</b>: (GT row count) × 4.<br>
+<b>GT Rows</b>: ground-truth row count for each doc.<br>
+</p>
+
+<h2>Table 1 (Exact): By Type</h2>
+<table><tr>
+<th>Model</th>
+<th>type-1</th>
+<th>type-2</th>
+<th>type-3</th>
+<th>type-4</th>
+<th>type-5</th>
+<th>type-6</th>
+<th>type-7</th>
+<th>type-8</th>
+<th>type-9</th>
+<th>type-10</th>
+<th>All</th>
+</tr>
+<tr><td class='model-name'>llm_img2csv/gemini-2.0</td>
+<td>92.60% | 363</td>
+<td>31.90% | 74</td>
+<td><span class='mismatch'>dim mismatch (r=39)</span></td>
+<td><span class='mismatch'>dim mismatch (r=116)</span></td>
+<td>39.71% | 54</td>
+<td>46.94% | 169</td>
+<td>58.52% | 206</td>
+<td>64.13% | 177</td>
+<td>63.64% | 196</td>
+<td>92.19% | 413</td>
+<td>65.97% | 1652</td>
+</tr>
+<tr><td class='model-name'>llm_img2csv/gpt-4o</td>
+<td><span class='mismatch'>dim mismatch (r=94)</span></td>
+<td><span class='mismatch'>dim mismatch (r=55)</span></td>
+<td><span class='mismatch'>dim mismatch (r=38)</span></td>
+<td>50.65% | 233</td>
+<td>34.56% | 47</td>
+<td><span class='mismatch'>dim mismatch (r=85)</span></td>
+<td>36.08% | 127</td>
+<td>31.88% | 88</td>
+<td><span class='mismatch'>dim mismatch (r=76)</span></td>
+<td><span class='mismatch'>dim mismatch (r=102)</span></td>
+<td>40.44% | 495</td>
+</tr>
+<tr><td class='model-name'>llm_pdf2csv/gemini-2.0</td>
+<td>86.99% | 341</td>
+<td><span class='mismatch'>dim mismatch (r=57)</span></td>
+<td><span class='mismatch'>dim mismatch (r=17)</span></td>
+<td><span class='mismatch'>dim mismatch (r=116)</span></td>
+<td>50.00% | 68</td>
+<td><span class='mismatch'>dim mismatch (r=86)</span></td>
+<td>59.66% | 210</td>
+<td>72.83% | 201</td>
+<td>59.09% | 182</td>
+<td>48.44% | 217</td>
+<td>63.76% | 1219</td>
+</tr>
+<tr><td class='model-name'>llm_txt2csv/gemini-2.0</td>
+<td>99.23% | 389</td>
+<td><span class='mismatch'>dim mismatch (r=57)</span></td>
+<td>56.25% | 90</td>
+<td><span class='mismatch'>dim mismatch (r=105)</span></td>
+<td>66.18% | 90</td>
+<td>67.78% | 244</td>
+<td>75.00% | 264</td>
+<td>73.19% | 202</td>
+<td>77.27% | 238</td>
+<td>95.98% | 430</td>
+<td>80.06% | 1947</td>
+</tr>
+<tr><td class='model-name'>llm_txt2csv/gpt-4o</td>
+<td>74.49% | 292</td>
+<td><span class='mismatch'>dim mismatch (r=59)</span></td>
+<td>56.25% | 90</td>
+<td><span class='mismatch'>dim mismatch (r=109)</span></td>
+<td>62.50% | 85</td>
+<td>62.50% | 225</td>
+<td>74.72% | 263</td>
+<td>73.55% | 203</td>
+<td>75.65% | 233</td>
+<td>71.43% | 320</td>
+<td>70.35% | 1711</td>
+</tr>
+<tr><td class='model-name'>Total number of cells</td>
+<td>392</td>
+<td>232</td>
+<td>160</td>
+<td>460</td>
+<td>136</td>
+<td>360</td>
+<td>352</td>
+<td>276</td>
+<td>308</td>
+<td>448</td>
+<td>3124</td>
+</tr>
+<tr><td class='model-name'>GT Rows</td>
+<td>98</td>
+<td>58</td>
+<td>40</td>
+<td>115</td>
+<td>34</td>
+<td>90</td>
+<td>88</td>
+<td>69</td>
+<td>77</td>
+<td>112</td>
+<td>781</td>
+</tr>
+</table>
+
+<div class="note">
+  <strong>Notes for Table 1 (Exact):</strong>
+  <ul>
+    <li>Cells are "XX.XX% | #hits" if dimension matches, otherwise "dim mismatch (r=NN)".</li>
+    <li>"Total number of cells" = GT row count * 4.</li>
+    <li>"GT Rows" is the ground-truth row count for each doc.</li>
+  </ul>
+</div>
+
+<h2>Table 2 (Exact): By Variable</h2>
+<table><tr>
+<th>Model</th>
+<th>first and middle names</th>
+<th>surname</th>
+<th>occupation</th>
+<th>address</th>
+<th>All</th>
+</tr>
+<tr><td class='model-name'>llm_img2csv/gemini-2.0</td>
+<td>80.67% (505/626)</td>
+<td>80.99% (507/626)</td>
+<td>47.92% (300/626)</td>
+<td>54.31% (340/626)</td>
+<td>65.97% (1652/2504)</td>
+</tr>
+<tr><td class='model-name'>llm_img2csv/gpt-4o</td>
+<td>60.46% (185/306)</td>
+<td>51.31% (157/306)</td>
+<td>40.20% (123/306)</td>
+<td>9.80% (30/306)</td>
+<td>40.44% (495/1224)</td>
+</tr>
+<tr><td class='model-name'>llm_pdf2csv/gemini-2.0</td>
+<td>80.13% (383/478)</td>
+<td>88.49% (423/478)</td>
+<td>47.49% (227/478)</td>
+<td>38.91% (186/478)</td>
+<td>63.76% (1219/1912)</td>
+</tr>
+<tr><td class='model-name'>llm_txt2csv/gemini-2.0</td>
+<td>95.72% (582/608)</td>
+<td>94.90% (577/608)</td>
+<td>75.82% (461/608)</td>
+<td>53.78% (327/608)</td>
+<td>80.06% (1947/2432)</td>
+</tr>
+<tr><td class='model-name'>llm_txt2csv/gpt-4o</td>
+<td>92.11% (560/608)</td>
+<td>94.24% (573/608)</td>
+<td>78.62% (478/608)</td>
+<td>16.45% (100/608)</td>
+<td>70.35% (1711/2432)</td>
+</tr>
+</table>
+
+<div class="note">
+  <strong>Notes for Table 2 (Exact):</strong>
+  <ul>
+    <li>Mismatched docs are skipped. Each cell shows "XX.XX% (#hits / #total)".</li>
+    <li>If a model has zero matched docs, it's "0.00% (0/0)".</li>
+  </ul>
+</div>
+
+<h2>Table 3 (Normalized): By Type</h2>
+<table><tr>
+<th>Model</th>
+<th>type-1</th>
+<th>type-2</th>
+<th>type-3</th>
+<th>type-4</th>
+<th>type-5</th>
+<th>type-6</th>
+<th>type-7</th>
+<th>type-8</th>
+<th>type-9</th>
+<th>type-10</th>
+<th>All</th>
+</tr>
+<tr><td class='model-name'>llm_img2csv/gemini-2.0</td>
+<td>95.41% | 374</td>
+<td>49.14% | 114</td>
+<td><span class='mismatch'>dim mismatch (r=39)</span></td>
+<td><span class='mismatch'>dim mismatch (r=116)</span></td>
+<td>39.71% | 54</td>
+<td>51.11% | 184</td>
+<td>62.50% | 220</td>
+<td>88.41% | 244</td>
+<td>73.38% | 226</td>
+<td>93.53% | 419</td>
+<td>73.28% | 1835</td>
+</tr>
+<tr><td class='model-name'>llm_img2csv/gpt-4o</td>
+<td><span class='mismatch'>dim mismatch (r=94)</span></td>
+<td><span class='mismatch'>dim mismatch (r=55)</span></td>
+<td><span class='mismatch'>dim mismatch (r=38)</span></td>
+<td>64.57% | 297</td>
+<td>36.76% | 50</td>
+<td><span class='mismatch'>dim mismatch (r=85)</span></td>
+<td>37.22% | 131</td>
+<td>41.30% | 114</td>
+<td><span class='mismatch'>dim mismatch (r=76)</span></td>
+<td><span class='mismatch'>dim mismatch (r=102)</span></td>
+<td>48.37% | 592</td>
+</tr>
+<tr><td class='model-name'>llm_pdf2csv/gemini-2.0</td>
+<td>93.37% | 366</td>
+<td><span class='mismatch'>dim mismatch (r=57)</span></td>
+<td><span class='mismatch'>dim mismatch (r=17)</span></td>
+<td><span class='mismatch'>dim mismatch (r=116)</span></td>
+<td>58.09% | 79</td>
+<td><span class='mismatch'>dim mismatch (r=86)</span></td>
+<td>60.23% | 212</td>
+<td>83.33% | 230</td>
+<td>82.47% | 254</td>
+<td>48.44% | 217</td>
+<td>71.03% | 1358</td>
+</tr>
+<tr><td class='model-name'>llm_txt2csv/gemini-2.0</td>
+<td>99.23% | 389</td>
+<td><span class='mismatch'>dim mismatch (r=57)</span></td>
+<td>70.62% | 113</td>
+<td><span class='mismatch'>dim mismatch (r=105)</span></td>
+<td>87.50% | 119</td>
+<td>88.61% | 319</td>
+<td>78.69% | 277</td>
+<td>98.91% | 273</td>
+<td>96.75% | 298</td>
+<td>96.21% | 431</td>
+<td>91.24% | 2219</td>
+</tr>
+<tr><td class='model-name'>llm_txt2csv/gpt-4o</td>
+<td>99.23% | 389</td>
+<td><span class='mismatch'>dim mismatch (r=59)</span></td>
+<td>74.38% | 119</td>
+<td><span class='mismatch'>dim mismatch (r=109)</span></td>
+<td>84.56% | 115</td>
+<td>85.56% | 308</td>
+<td>81.82% | 288</td>
+<td>99.64% | 275</td>
+<td>87.34% | 269</td>
+<td>96.21% | 431</td>
+<td>90.21% | 2194</td>
+</tr>
+<tr><td class='model-name'>Total number of cells</td>
+<td>392</td>
+<td>232</td>
+<td>160</td>
+<td>460</td>
+<td>136</td>
+<td>360</td>
+<td>352</td>
+<td>276</td>
+<td>308</td>
+<td>448</td>
+<td>3124</td>
+</tr>
+<tr><td class='model-name'>GT Rows</td>
+<td>98</td>
+<td>58</td>
+<td>40</td>
+<td>115</td>
+<td>34</td>
+<td>90</td>
+<td>88</td>
+<td>69</td>
+<td>77</td>
+<td>112</td>
+<td>781</td>
+</tr>
+</table>
+
+<div class="note">
+  <strong>Notes for Table 3 (Normalized):</strong>
+  <ul>
+    <li>Removes punctuation and non-ASCII, then lower-cases before direct comparison.</li>
+    <li>Dimension mismatch is the same concept: row counts must match.</li>
+  </ul>
+</div>
+
+<h2>Table 4 (Normalized): By Variable</h2>
+<table><tr>
+<th>Model</th>
+<th>first and middle names</th>
+<th>surname</th>
+<th>occupation</th>
+<th>address</th>
+<th>All</th>
+</tr>
+<tr><td class='model-name'>llm_img2csv/gemini-2.0</td>
+<td>86.58% (542/626)</td>
+<td>81.79% (512/626)</td>
+<td>65.50% (410/626)</td>
+<td>59.27% (371/626)</td>
+<td>73.28% (1835/2504)</td>
+</tr>
+<tr><td class='model-name'>llm_img2csv/gpt-4o</td>
+<td>60.78% (186/306)</td>
+<td>52.29% (160/306)</td>
+<td>40.85% (125/306)</td>
+<td>39.54% (121/306)</td>
+<td>48.37% (592/1224)</td>
+</tr>
+<tr><td class='model-name'>llm_pdf2csv/gemini-2.0</td>
+<td>90.79% (434/478)</td>
+<td>88.70% (424/478)</td>
+<td>51.46% (246/478)</td>
+<td>53.14% (254/478)</td>
+<td>71.03% (1358/1912)</td>
+</tr>
+<tr><td class='model-name'>llm_txt2csv/gemini-2.0</td>
+<td>95.89% (583/608)</td>
+<td>95.07% (578/608)</td>
+<td>81.25% (494/608)</td>
+<td>92.76% (564/608)</td>
+<td>91.24% (2219/2432)</td>
+</tr>
+<tr><td class='model-name'>llm_txt2csv/gpt-4o</td>
+<td>92.27% (561/608)</td>
+<td>94.24% (573/608)</td>
+<td>85.53% (520/608)</td>
+<td>88.82% (540/608)</td>
+<td>90.21% (2194/2432)</td>
+</tr>
+</table>
+
+<div class="note">
+  <strong>Notes for Table 4 (Normalized):</strong>
+  <ul>
+    <li>Mismatched docs are skipped. Each cell shows "XX.XX% (#hits / #total)".</li>
+    <li>This helps catch cells that only differ by accents or punctuation.</li>
+  </ul>
+</div>
+
+<h2>Table 5 (Fuzzy): By Type</h2>
+<table><tr>
+<th>Model</th>
+<th>type-1</th>
+<th>type-2</th>
+<th>type-3</th>
+<th>type-4</th>
+<th>type-5</th>
+<th>type-6</th>
+<th>type-7</th>
+<th>type-8</th>
+<th>type-9</th>
+<th>type-10</th>
+<th>All</th>
+</tr>
+<tr><td class='model-name'>llm_img2csv/gemini-2.0</td>
+<td>98.21% | 385</td>
+<td>56.47% | 131</td>
+<td><span class='mismatch'>dim mismatch (r=39)</span></td>
+<td><span class='mismatch'>dim mismatch (r=116)</span></td>
+<td>47.79% | 65</td>
+<td>54.17% | 195</td>
+<td>65.91% | 232</td>
+<td>97.10% | 268</td>
+<td>81.49% | 251</td>
+<td>96.65% | 433</td>
+<td>78.27% | 1960</td>
+</tr>
+<tr><td class='model-name'>llm_img2csv/gpt-4o</td>
+<td><span class='mismatch'>dim mismatch (r=94)</span></td>
+<td><span class='mismatch'>dim mismatch (r=55)</span></td>
+<td><span class='mismatch'>dim mismatch (r=38)</span></td>
+<td>70.87% | 326</td>
+<td>59.56% | 81</td>
+<td><span class='mismatch'>dim mismatch (r=85)</span></td>
+<td>52.27% | 184</td>
+<td>65.58% | 181</td>
+<td><span class='mismatch'>dim mismatch (r=76)</span></td>
+<td><span class='mismatch'>dim mismatch (r=102)</span></td>
+<td>63.07% | 772</td>
+</tr>
+<tr><td class='model-name'>llm_pdf2csv/gemini-2.0</td>
+<td>97.45% | 382</td>
+<td><span class='mismatch'>dim mismatch (r=57)</span></td>
+<td><span class='mismatch'>dim mismatch (r=17)</span></td>
+<td><span class='mismatch'>dim mismatch (r=116)</span></td>
+<td>80.15% | 109</td>
+<td><span class='mismatch'>dim mismatch (r=86)</span></td>
+<td>67.61% | 238</td>
+<td>96.74% | 267</td>
+<td>90.26% | 278</td>
+<td>83.04% | 372</td>
+<td>86.09% | 1646</td>
+</tr>
+<tr><td class='model-name'>llm_txt2csv/gemini-2.0</td>
+<td>99.49% | 390</td>
+<td><span class='mismatch'>dim mismatch (r=57)</span></td>
+<td>73.75% | 118</td>
+<td><span class='mismatch'>dim mismatch (r=105)</span></td>
+<td>91.91% | 125</td>
+<td>91.39% | 329</td>
+<td>78.69% | 277</td>
+<td>98.91% | 273</td>
+<td>97.40% | 300</td>
+<td>96.43% | 432</td>
+<td>92.27% | 2244</td>
+</tr>
+<tr><td class='model-name'>llm_txt2csv/gpt-4o</td>
+<td>99.23% | 389</td>
+<td><span class='mismatch'>dim mismatch (r=59)</span></td>
+<td>77.50% | 124</td>
+<td><span class='mismatch'>dim mismatch (r=109)</span></td>
+<td>86.76% | 118</td>
+<td>85.83% | 309</td>
+<td>83.52% | 294</td>
+<td>99.64% | 275</td>
+<td>88.31% | 272</td>
+<td>96.43% | 432</td>
+<td>91.00% | 2213</td>
+</tr>
+<tr><td class='model-name'>Total number of cells</td>
+<td>392</td>
+<td>232</td>
+<td>160</td>
+<td>460</td>
+<td>136</td>
+<td>360</td>
+<td>352</td>
+<td>276</td>
+<td>308</td>
+<td>448</td>
+<td>3124</td>
+</tr>
+<tr><td class='model-name'>GT Rows</td>
+<td>98</td>
+<td>58</td>
+<td>40</td>
+<td>115</td>
+<td>34</td>
+<td>90</td>
+<td>88</td>
+<td>69</td>
+<td>77</td>
+<td>112</td>
+<td>781</td>
+</tr>
+</table>
+
+<div class="note">
+  <strong>Notes for Table 5 (Fuzzy):</strong>
+  <ul>
+    <li>A cell is considered a match if Jaro-Winkler similarity ≥ 0.9.</li>
+    <li>Dimension mismatch is the same concept: row counts must match.</li>
+    <li>We do minimal lowercasing/whitespace-trimming before measuring similarity.</li>
+  </ul>
+</div>
+
+<h2>Table 6 (Fuzzy): By Variable</h2>
+<table><tr>
+<th>Model</th>
+<th>first and middle names</th>
+<th>surname</th>
+<th>occupation</th>
+<th>address</th>
+<th>All</th>
+</tr>
+<tr><td class='model-name'>llm_img2csv/gemini-2.0</td>
+<td>90.10% (564/626)</td>
+<td>87.38% (547/626)</td>
+<td>69.49% (435/626)</td>
+<td>66.13% (414/626)</td>
+<td>78.27% (1960/2504)</td>
+</tr>
+<tr><td class='model-name'>llm_img2csv/gpt-4o</td>
+<td>67.65% (207/306)</td>
+<td>66.34% (203/306)</td>
+<td>50.65% (155/306)</td>
+<td>67.65% (207/306)</td>
+<td>63.07% (772/1224)</td>
+</tr>
+<tr><td class='model-name'>llm_pdf2csv/gemini-2.0</td>
+<td>96.03% (459/478)</td>
+<td>94.77% (453/478)</td>
+<td>75.31% (360/478)</td>
+<td>78.24% (374/478)</td>
+<td>86.09% (1646/1912)</td>
+</tr>
+<tr><td class='model-name'>llm_txt2csv/gemini-2.0</td>
+<td>96.55% (587/608)</td>
+<td>97.70% (594/608)</td>
+<td>81.58% (496/608)</td>
+<td>93.26% (567/608)</td>
+<td>92.27% (2244/2432)</td>
+</tr>
+<tr><td class='model-name'>llm_txt2csv/gpt-4o</td>
+<td>92.76% (564/608)</td>
+<td>95.07% (578/608)</td>
+<td>86.84% (528/608)</td>
+<td>89.31% (543/608)</td>
+<td>91.00% (2213/2432)</td>
+</tr>
+</table>
+
+<div class="note">
+  <strong>Notes for Table 6 (Fuzzy):</strong>
+  <ul>
+    <li>Mismatched docs are skipped. Each cell shows "XX.XX% (#hits / #total)".</li>
+    <li>We consider two cells a match if Jaro-Winkler similarity ≥ 0.9.</li>
+  </ul>
+</div>
+
+
+<div class="section-note">
+  <strong>Implementation Details:</strong><br>
+  - Parallelized with joblib, n_jobs=8.<br>
+  - For fuzzy matching, we used Jaro-Winkler via <code>rapidfuzz.distance.JaroWinkler.similarity()</code> 
+    (≥ 0.9 => match).<br>
+  - Normalization is ASCII-only, punctuation removed, then lower-cased.<br>
+  <strong>Alternative Fuzzy Ideas:</strong> 
+  We could use partial-ratio, token-set ratio, or other advanced methods from 
+  <em>rapidfuzz.fuzz</em> if needed.
+</div>
+</body>
+</html>

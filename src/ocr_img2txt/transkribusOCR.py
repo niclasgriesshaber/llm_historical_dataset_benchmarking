@@ -225,8 +225,7 @@ def extract_text_from_page_xml(xml_content: str) -> str:
 ###############################################################################
 def main() -> None:
     """
-    Main function for PDF-to-text pipeline using Transkribus, matching the style
-    of other OCR pipelines in the project:
+    Main function for PDF-to-text pipeline using Transkribus:
 
     Steps:
       1. Parse arguments & configure logging.

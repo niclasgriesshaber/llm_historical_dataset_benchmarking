@@ -8,27 +8,29 @@ generating SIX tables now:
  1) Table 1 (Exact) by Type
  2) Table 2 (Exact) by Variable
 
- -- FUZZY MATCHING (Jaro-Winkler, threshold=0.90) --
- 3) Table 3 (Fuzzy) by Type
- 4) Table 4 (Fuzzy) by Variable
+ -- NORMALIZED MATCHING (ASCII-only, punctuation removed, lower-cased) --
+ 3) Table 3 (Normalized) by Type
+ 4) Table 4 (Normalized) by Variable
 
- -- LEVENSHTEIN-BASED MATCHING --
- 5) Table 5 (Levenshtein): By Type
- 6) Table 6 (Levenshtein): By Variable
+ -- FUZZY MATCHING (Jaro-Winkler, threshold=0.90) --
+ 5) Table 5 (Fuzzy) by Type
+ 6) Table 6 (Fuzzy) by Variable
 
 We only allow these 4 columns in the final comparison:
   ["first and middle names", "surname", "occupation", "address"]
 
 (Previously included "id", but we now exclude it from all calculations.)
 
-However, for Table 1's row "Total number of cells", we use the GROUND-TRUTH CSV's
-original column count (before we remove extras) multiplied by the GT row count.
+For Table 1's and 3's and 5's row "Total number of cells", we use:
+  (GT row count) * 4
+since we only compare these 4 columns.
+
 The row "GT Rows" is just the ground-truth row count for each doc.
 
 Matching rules:
- - EXACT: cell1 == cell2 after basic normalization (empty, "null" => "")
+ - EXACT: cell1 == cell2 (after basic lowercasing/whitespace trimming)
+ - NORMALIZED: ASCII-only, punctuation removed, then lower-cased, compare exact
  - FUZZY: Jaro-Winkler similarity >= 0.90 => matched
- - LEVENSHTEIN: distance <= (number of words in the GT cell)
 
 If row counts differ, we label dimension mismatch (and skip that doc in the aggregated tables).
 """
@@ -39,12 +41,10 @@ import argparse
 import logging
 from joblib import Parallel, delayed
 import pandas as pd
+import re
 
 # For fuzzy matching:
 from rapidfuzz.distance import JaroWinkler
-
-# For Levenshtein-based distance:
-from rapidfuzz.distance import Levenshtein
 
 logging.basicConfig(
     level=logging.INFO,
@@ -63,9 +63,8 @@ DOC_NAMES = [f"type-{i}" for i in range(1, 11)]  # type-1..type-10
 # EXCLUDE "id" FROM ALL CALCULATIONS:
 EXPECTED_COLUMNS = ["first and middle names", "surname", "occupation", "address"]
 
-# Now including "llm_txt2csv"
 CATEGORIES = ["llm_img2csv", "llm_pdf2csv", "llm_txt2csv"]
-FUZZY_THRESHOLD = 0.90
+FUZZY_THRESHOLD = 0.90  # Adjust if you need a different “sellable” threshold
 
 
 ##############################################################################
@@ -91,8 +90,8 @@ def parse_arguments():
     parser.add_argument(
         "--output_html",
         type=str,
-        default="benchmark_csv.html",
-        help="Output HTML file (default: benchmark_csv.html)."
+        default="csv_accuracy.html",
+        help="Output HTML file (default: csv_accuracy.html)."
     )
     parser.add_argument(
         "--n_jobs",
@@ -109,25 +108,44 @@ def parse_arguments():
 
 def normalize_cell_value(x: str) -> str:
     """
-    Convert 'null', 'NULL', None, empty string, or all-whitespace => ""
-    Everything else => strip leading/trailing whitespace.
+    Basic normalization for EXACT match:
+      - empty, "null" => ""
+      - lowercase, strip whitespace
     """
     if x is None:
         return ""
     x_str = str(x).strip().lower()
     if x_str in ("", "null"):
         return ""
-    # Otherwise, return original but stripped
-    return str(x).strip()
+    return x_str
 
 def normalize_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """
     In-place: normalize every cell with normalize_cell_value.
-    Return the same DF for convenience.
     """
     for col in df.columns:
         df[col] = df[col].apply(normalize_cell_value)
     return df
+
+def ascii_only_punct_removed_lower(x: str) -> str:
+    """
+    Normalized version for "normalized matching":
+      1) Lowercase
+      2) Remove non-ASCII characters
+      3) Remove punctuation
+      4) Trim whitespace
+    """
+    if not x:
+        return ""
+    # Lowercase
+    x = x.lower()
+    # Remove non-ASCII
+    x = x.encode("ascii", "ignore").decode("ascii", errors="ignore")
+    # Remove punctuation (anything not alphanumeric/underscore/whitespace)
+    x = re.sub(r"[^\w\s]", "", x)
+    # Collapse multiple spaces
+    x = " ".join(x.split())
+    return x
 
 
 ##############################################################################
@@ -149,7 +167,7 @@ def filter_expected_columns(df):
     """
     Keep only the EXPECTED_COLUMNS, in that exact order.
     If df is None or missing any of those columns, return None => mismatch.
-    Otherwise, normalize every cell to handle empty/null matching.
+    Otherwise, do a basic normalization of cells for the EXACT step.
     """
     if df is None:
         return None
@@ -159,20 +177,20 @@ def filter_expected_columns(df):
             return None
     # Reindex to EXACTLY those columns => remove extras
     df = df.reindex(columns=EXPECTED_COLUMNS)
-    # Normalize all cells
+    # Normalize all cells (for EXACT matching)
     df = normalize_dataframe(df)
     return df
 
 
 ##############################################################################
-# Exact Comparison
+# Matching Comparisons
 ##############################################################################
 
 def compare_dataframes_exact(gt_df, pred_df):
     """
     EXACT MATCH:
       - If row counts differ => dimension mismatch
-      - Otherwise => compare cell by cell (exact equality)
+      - Otherwise => compare cell by cell (exact equality after basic normalize)
     Returns (matches, total, mismatch_bool, pred_nrows).
     """
     if gt_df is None or pred_df is None:
@@ -188,24 +206,11 @@ def compare_dataframes_exact(gt_df, pred_df):
     total = gt_rows * len(EXPECTED_COLUMNS)
     return (matches, total, False, pred_rows)
 
-
-##############################################################################
-# Fuzzy Comparison (Jaro-Winkler)
-##############################################################################
-
-def jaro_winkler_sim(a: str, b: str) -> float:
+def compare_dataframes_normalized(gt_df, pred_df):
     """
-    Return Jaro-Winkler similarity in [0..1].
-    Higher => more similar.
-    """
-    return JaroWinkler.similarity(a, b)
-
-def compare_dataframes_fuzzy(gt_df, pred_df):
-    """
-    FUZZY MATCH:
+    NORMALIZED MATCH (ASCII-only, punctuation removed, lower-cased):
       - If row counts differ => dimension mismatch
-      - Otherwise => for each cell: JaroWinkler.similarity >= FUZZY_THRESHOLD => 1 match
-    Returns (matches, total, mismatch_bool, pred_nrows).
+      - Otherwise => transform each cell, then compare exact equality
     """
     if gt_df is None or pred_df is None:
         return (0, 0, True, 0)
@@ -216,39 +221,26 @@ def compare_dataframes_fuzzy(gt_df, pred_df):
     if gt_rows != pred_rows:
         return (0, 0, True, pred_rows)
 
-    # cell-by-cell fuzzy
     total_cells = gt_rows * len(EXPECTED_COLUMNS)
     match_count = 0
+
     for row_idx in range(gt_rows):
         for col_idx in range(len(EXPECTED_COLUMNS)):
-            val_gt = gt_df.iat[row_idx, col_idx]
-            val_pr = pred_df.iat[row_idx, col_idx]
-            sim = jaro_winkler_sim(val_gt, val_pr)
-            if sim >= FUZZY_THRESHOLD:
+            gt_val = gt_df.iat[row_idx, col_idx]
+            pr_val = pred_df.iat[row_idx, col_idx]
+            # Apply "normalized" pipeline:
+            norm_gt = ascii_only_punct_removed_lower(gt_val)
+            norm_pr = ascii_only_punct_removed_lower(pr_val)
+            if norm_gt == norm_pr:
                 match_count += 1
 
     return (match_count, total_cells, False, pred_rows)
 
-
-##############################################################################
-# Levenshtein-based Comparison
-##############################################################################
-
-def levenshtein_distance(a: str, b: str) -> int:
+def compare_dataframes_fuzzy(gt_df, pred_df, threshold=FUZZY_THRESHOLD):
     """
-    Return the Levenshtein edit distance between two strings.
-    """
-    return Levenshtein.distance(a, b)
-
-def compare_dataframes_levenshtein(gt_df, pred_df):
-    """
-    LEVENSHTEIN MATCH:
+    FUZZY MATCH (Jaro-Winkler):
       - If row counts differ => dimension mismatch
-      - Otherwise => for each cell:
-            distance = Levenshtein(gt_val, pred_val)
-            words_in_gt = number of words in gt_val
-            match if distance <= words_in_gt
-    Returns (matches, total, mismatch_bool, pred_nrows).
+      - Otherwise => Jaro-Winkler >= threshold => 1 match
     """
     if gt_df is None or pred_df is None:
         return (0, 0, True, 0)
@@ -265,9 +257,12 @@ def compare_dataframes_levenshtein(gt_df, pred_df):
         for col_idx in range(len(EXPECTED_COLUMNS)):
             val_gt = gt_df.iat[row_idx, col_idx]
             val_pr = pred_df.iat[row_idx, col_idx]
-            dist = levenshtein_distance(val_gt, val_pr)
-            words_in_gt = len(val_gt.split()) if val_gt.strip() else 0
-            if dist <= words_in_gt:
+            # Still do a minimal (basic) normalization for fuzzy comparison:
+            # e.g. strip/lower so that big letter differences don't kill the similarity
+            val_gt = val_gt.strip().lower()
+            val_pr = val_pr.strip().lower()
+            sim = JaroWinkler.similarity(val_gt, val_pr)
+            if sim >= threshold:
                 match_count += 1
 
     return (match_count, total_cells, False, pred_rows)
@@ -286,8 +281,7 @@ def main():
     ground_truth_dir = os.path.join(project_root, "data", "ground_truth", "csv")
     results_dir = os.path.join(project_root, "results")
 
-    # We'll store:  orig_gt_col_count[doc] => # columns in the original ground-truth CSV (before filtering)
-    orig_gt_col_count = {}
+    # We'll store ground-truth DataFrames + row counts
     gt_dataframes = {}
     gt_row_counts = {}
 
@@ -295,11 +289,6 @@ def main():
     for doc in DOC_NAMES:
         path = os.path.join(ground_truth_dir, f"{doc}.csv")
         df_original = load_csv_safely(path)
-        if df_original is not None:
-            orig_gt_col_count[doc] = df_original.shape[1]
-        else:
-            orig_gt_col_count[doc] = 0
-
         df_filtered = filter_expected_columns(df_original)
         if df_filtered is not None:
             gt_dataframes[doc] = df_filtered
@@ -323,29 +312,29 @@ def main():
         logger.warning("No models found under %s.", results_dir)
         return
 
-    # We produce six data structures:
-    #  - EXACT => table1_exact, table2_exact
-    #  - FUZZY => table1_fuzzy, table2_fuzzy
-    #  - LEVEN => table1_lev,   table2_lev
-    # Each is a dict: table1_exact[mk][doc] = (matches, total, mismatch, pred_nrows), etc.
+    # Prepare data structures for 6 tables:
+    # EXACT => table1_exact (by type), table2_exact (by variable)
     table1_exact = {}
     table2_exact = {}
+
+    # NORMALIZED => table1_norm (by type), table2_norm (by variable)
+    table1_norm = {}
+    table2_norm = {}
+
+    # FUZZY => table1_fuzzy (by type), table2_fuzzy (by variable)
     table1_fuzzy = {}
     table2_fuzzy = {}
-    table1_lev = {}
-    table2_lev = {}
 
     # Initialize them
     for cat, model in discovered_models:
         mk = f"{cat}/{model}"
         table1_exact[mk] = {}
         table2_exact[mk] = {}
+        table1_norm[mk] = {}
+        table2_norm[mk] = {}
         table1_fuzzy[mk] = {}
         table2_fuzzy[mk] = {}
-        table1_lev[mk] = {}
-        table2_lev[mk] = {}
 
-    # We'll do a single pass loading predicted CSV once, then do EXACT, FUZZY, LEVEN
     def process_doc(cat, model, doc):
         mk = f"{cat}/{model}"
 
@@ -371,11 +360,10 @@ def main():
 
         # EXACT
         exact_matches, exact_total, exact_mismatch, exact_pred_nrows = compare_dataframes_exact(gt_df, pred_df_filtered)
-        # Table 2 exact
+        # Table 2 exact (by variable)
         if exact_mismatch or gt_df is None or pred_df_filtered is None:
             t2_exact = None
         else:
-            # per-column exact
             t2_exact = {}
             for col in EXPECTED_COLUMNS:
                 gt_col = gt_df[col].values
@@ -384,9 +372,27 @@ def main():
                 col_total = len(gt_col)
                 t2_exact[col] = (col_match, col_total)
 
+        # NORMALIZED
+        norm_matches, norm_total, norm_mismatch, norm_pred_nrows = compare_dataframes_normalized(gt_df, pred_df_filtered)
+        # Table 2 normalized (by variable)
+        if norm_mismatch or gt_df is None or pred_df_filtered is None:
+            t2_norm = None
+        else:
+            t2_norm = {}
+            rows_count = gt_df.shape[0]
+            for col in EXPECTED_COLUMNS:
+                col_match = 0
+                col_total = rows_count
+                gt_col = gt_df[col].values
+                pr_col = pred_df_filtered[col].values
+                for i in range(rows_count):
+                    if ascii_only_punct_removed_lower(gt_col[i]) == ascii_only_punct_removed_lower(pr_col[i]):
+                        col_match += 1
+                t2_norm[col] = (col_match, col_total)
+
         # FUZZY
         fuzzy_matches, fuzzy_total, fuzzy_mismatch, fuzzy_pred_nrows = compare_dataframes_fuzzy(gt_df, pred_df_filtered)
-        # Table 2 fuzzy
+        # Table 2 fuzzy (by variable)
         if fuzzy_mismatch or gt_df is None or pred_df_filtered is None:
             t2_fuzzy = None
         else:
@@ -398,38 +404,19 @@ def main():
                 gt_col = gt_df[col].values
                 pr_col = pred_df_filtered[col].values
                 for i in range(rows_count):
-                    sim = jaro_winkler_sim(gt_col[i], pr_col[i])
+                    sim = JaroWinkler.similarity(gt_col[i].strip().lower(), pr_col[i].strip().lower())
                     if sim >= FUZZY_THRESHOLD:
                         col_match += 1
                 t2_fuzzy[col] = (col_match, col_total)
 
-        # LEVENSHTEIN
-        lev_matches, lev_total, lev_mismatch, lev_pred_nrows = compare_dataframes_levenshtein(gt_df, pred_df_filtered)
-        # Table 2 leven
-        if lev_mismatch or gt_df is None or pred_df_filtered is None:
-            t2_lev = None
-        else:
-            t2_lev = {}
-            rows_count = gt_df.shape[0]
-            for col in EXPECTED_COLUMNS:
-                col_match = 0
-                col_total = rows_count
-                gt_col = gt_df[col].values
-                pr_col = pred_df_filtered[col].values
-                for i in range(rows_count):
-                    dist = levenshtein_distance(gt_col[i], pr_col[i])
-                    word_count = len(gt_col[i].split()) if gt_col[i].strip() else 0
-                    if dist <= word_count:
-                        col_match += 1
-                t2_lev[col] = (col_match, col_total)
-
         return (
             mk, doc,
             (exact_matches, exact_total, exact_mismatch, exact_pred_nrows), t2_exact,
-            (fuzzy_matches, fuzzy_total, fuzzy_mismatch, fuzzy_pred_nrows), t2_fuzzy,
-            (lev_matches, lev_total, lev_mismatch, lev_pred_nrows), t2_lev
+            (norm_matches, norm_total, norm_mismatch, norm_pred_nrows), t2_norm,
+            (fuzzy_matches, fuzzy_total, fuzzy_mismatch, fuzzy_pred_nrows), t2_fuzzy
         )
 
+    # Collect tasks
     tasks = []
     for cat, model in discovered_models:
         for doc in DOC_NAMES:
@@ -439,19 +426,25 @@ def main():
         delayed(process_doc)(cat, model, doc) for (cat, model, doc) in tasks
     )
 
-    # Collect
+    # Store results back
     for item in parallel_results:
-        mk, doc, t1e_data, t2e_dict, t1f_data, t2f_dict, t1l_data, t2l_dict = item
+        (mk, doc,
+         t1e_data, t2e_dict,
+         t1n_data, t2n_dict,
+         t1f_data, t2f_dict) = item
+
         table1_exact[mk][doc] = t1e_data
         table2_exact[mk][doc] = t2e_dict
+
+        table1_norm[mk][doc] = t1n_data
+        table2_norm[mk][doc] = t2n_dict
+
         table1_fuzzy[mk][doc] = t1f_data
         table2_fuzzy[mk][doc] = t2f_dict
-        table1_lev[mk][doc] = t1l_data
-        table2_lev[mk][doc] = t2l_dict
 
     # Aggregators
     def aggregate_table1(table1_dict):
-        # sum matches/total for "All"
+        """Aggregate by doc => 'All' row."""
         for mk in table1_dict:
             sum_m = 0
             sum_t = 0
@@ -468,8 +461,10 @@ def main():
                 table1_dict[mk]["All"] = (sum_m, sum_t, False, 0)
 
     def aggregate_table2(table2_dict):
-        # table2_dict[mk][doc] => {col: (col_match, col_total)} or None
-        # final => table2_final[mk][col] = (sum_m, sum_t)
+        """
+        table2_dict[mk][doc] => {col: (match, total)} or None
+        final => table2_final[mk][col] = (sum_m, sum_t)
+        """
         final = {}
         for mk in table2_dict:
             final[mk] = {}
@@ -487,13 +482,13 @@ def main():
                     final[mk]["All"][1] += ct
         return final
 
-    # do it
-    aggregate_table1(table1_exact)
-    aggregate_table1(table1_fuzzy)
-    aggregate_table1(table1_lev)
+    # Aggregate each set
+    for tb in (table1_exact, table1_norm, table1_fuzzy):
+        aggregate_table1(tb)
+
     table2_exact_final = aggregate_table2(table2_exact)
+    table2_norm_final = aggregate_table2(table2_norm)
     table2_fuzzy_final = aggregate_table2(table2_fuzzy)
-    table2_lev_final = aggregate_table2(table2_lev)
 
     # -------------------------------------------------------------------
     # Build HTML
@@ -566,7 +561,7 @@ tr:nth-child(even) {
 </style>
 </head>
 <body>
-<h1>CSV Extraction Benchmark (Exact + Fuzzy + Levenshtein)</h1>
+<h1>CSV Extraction Benchmark (Exact, Normalized, Fuzzy)</h1>
 """
 
     html_body = []
@@ -574,12 +569,17 @@ tr:nth-child(even) {
     # Some general remarks
     html_body.append(f"""
 <p><strong>General Remarks:</strong><br>
-We first record the <em>original</em> ground-truth column count for each doc 
-(before filtering out unwanted columns). Then we filter to these 4 columns:
-{EXPECTED_COLUMNS}. Row mismatches => "dim mismatch". 
-Empty, "null", or whitespace cells are normalized to "" for both exact & fuzzy checks.<br>
-Fuzzy uses Jaro-Winkler with a threshold of {FUZZY_THRESHOLD} (≥ {FUZZY_THRESHOLD} => match).<br>
-Levenshtein-based uses: two cells match if <em>distance ≤ number_of_words_in_GT</em>.<br>
+We compare predictions to ground truth using exactly 4 columns:
+{EXPECTED_COLUMNS}. Row mismatches => <em>dim mismatch</em>. 
+Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
+
+<b>Matching rules in these tables:</b><br>
+1) <em>Exact</em>: direct string equality (lowercased, trimmed).<br>
+2) <em>Normalized</em>: ASCII-only, punctuation-removed, then exact compare.<br>
+3) <em>Fuzzy</em>: Jaro-Winkler similarity ≥ {FUZZY_THRESHOLD}.<br><br>
+
+<b>Total number of cells</b>: (GT row count) × 4.<br>
+<b>GT Rows</b>: ground-truth row count for each doc.<br>
 </p>
 """)
 
@@ -594,20 +594,13 @@ Levenshtein-based uses: two cells match if <em>distance ≤ number_of_words_in_G
         out.append("<th>All</th>")
         out.append("</tr>")
 
-        # Rows: discovered models
         sorted_mks = sorted(table1_dict.keys(), key=lambda x: x.lower())
         for mk in sorted_mks:
             out.append(f"<tr><td class='model-name'>{mk}</td>")
             for doc in DOC_NAMES + ["All"]:
                 matches, total, mismatch, pred_nrows = table1_dict[mk][doc]
-                if doc != "All":
-                    # original col count, row count, etc.
-                    oc = orig_gt_col_count[doc]  # original GT columns
-                    gt_r = gt_row_counts[doc]    # GT row count
-                else:
-                    oc = sum(orig_gt_col_count[d] for d in DOC_NAMES)
-                    gt_r = sum(gt_row_counts[d] for d in DOC_NAMES)
-
+                # For the "All" row, we sum up row counts, but only for display
+                # We'll still do a mismatch check in the aggregator
                 if mismatch and doc != "All":
                     cell_val = f"<span class='mismatch'>dim mismatch (r={pred_nrows})</span>"
                 elif mismatch and doc == "All":
@@ -621,15 +614,13 @@ Levenshtein-based uses: two cells match if <em>distance ≤ number_of_words_in_G
                 out.append(f"<td>{cell_val}</td>")
             out.append("</tr>")
 
-        # 1) "Total number of cells": original GT column count * GT row count
+        # 1) "Total number of cells" => row_count * 4
         out.append("<tr><td class='model-name'>Total number of cells</td>")
         for doc in DOC_NAMES:
             r = gt_row_counts[doc]
-            c = orig_gt_col_count[doc]
-            out.append(f"<td>{r * c}</td>")
+            out.append(f"<td>{r * len(EXPECTED_COLUMNS)}</td>")
         sum_r = sum(gt_row_counts[d] for d in DOC_NAMES)
-        sum_c = sum(orig_gt_col_count[d] for d in DOC_NAMES)
-        out.append(f"<td>{sum_r * sum_c}</td>")
+        out.append(f"<td>{sum_r * len(EXPECTED_COLUMNS)}</td>")
         out.append("</tr>")
 
         # 2) GT Rows
@@ -675,7 +666,7 @@ Levenshtein-based uses: two cells match if <em>distance ≤ number_of_words_in_G
   <strong>Notes for Table 1 (Exact):</strong>
   <ul>
     <li>Cells are "XX.XX% | #hits" if dimension matches, otherwise "dim mismatch (r=NN)".</li>
-    <li>"Total number of cells" = GT row count * original GT column count.</li>
+    <li>"Total number of cells" = GT row count * 4.</li>
     <li>"GT Rows" is the ground-truth row count for each doc.</li>
   </ul>
 </div>
@@ -692,49 +683,49 @@ Levenshtein-based uses: two cells match if <em>distance ≤ number_of_words_in_G
 </div>
 """)
 
-    # ========== FUZZY Tables (3 & 4) ==========
-    html_body.append(build_table1_html(table1_fuzzy, "Table 3 (Fuzzy): By Type"))
+    # ========== NORMALIZED Tables (3 & 4) ==========
+    html_body.append(build_table1_html(table1_norm, "Table 3 (Normalized): By Type"))
+    html_body.append("""
+<div class="note">
+  <strong>Notes for Table 3 (Normalized):</strong>
+  <ul>
+    <li>Removes punctuation and non-ASCII, then lower-cases before direct comparison.</li>
+    <li>Dimension mismatch is the same concept: row counts must match.</li>
+  </ul>
+</div>
+""")
+
+    html_body.append(build_table2_html(table2_norm_final, "Table 4 (Normalized): By Variable"))
+    html_body.append("""
+<div class="note">
+  <strong>Notes for Table 4 (Normalized):</strong>
+  <ul>
+    <li>Mismatched docs are skipped. Each cell shows "XX.XX% (#hits / #total)".</li>
+    <li>This helps catch cells that only differ by accents or punctuation.</li>
+  </ul>
+</div>
+""")
+
+    # ========== FUZZY Tables (5 & 6) ==========
+    html_body.append(build_table1_html(table1_fuzzy, "Table 5 (Fuzzy): By Type"))
     html_body.append(f"""
 <div class="note">
-  <strong>Notes for Table 3 (Fuzzy):</strong>
+  <strong>Notes for Table 5 (Fuzzy):</strong>
   <ul>
     <li>A cell is considered a match if Jaro-Winkler similarity ≥ {FUZZY_THRESHOLD}.</li>
     <li>Dimension mismatch is the same concept: row counts must match.</li>
+    <li>We do minimal lowercasing/whitespace-trimming before measuring similarity.</li>
   </ul>
 </div>
 """)
 
-    html_body.append(build_table2_html(table2_fuzzy_final, "Table 4 (Fuzzy): By Variable"))
+    html_body.append(build_table2_html(table2_fuzzy_final, "Table 6 (Fuzzy): By Variable"))
     html_body.append(f"""
 <div class="note">
-  <strong>Notes for Table 4 (Fuzzy):</strong>
+  <strong>Notes for Table 6 (Fuzzy):</strong>
   <ul>
-    <li>Mismatched docs are skipped, same logic as Table 2. Each cell shows "XX.XX% (#hits / #total)".</li>
-    <li>Two cells match if their Jaro-Winkler similarity ≥ {FUZZY_THRESHOLD}.</li>
-  </ul>
-</div>
-""")
-
-    # ========== LEVENSHTEIN Tables (5 & 6) ==========
-    html_body.append(build_table1_html(table1_lev, "Table 5 (Levenshtein): By Type"))
-    html_body.append(f"""
-<div class="note">
-  <strong>Notes for Table 5 (Levenshtein):</strong>
-  <ul>
-    <li>A cell is considered a match if Levenshtein distance ≤ (number_of_words_in_GT_cell).</li>
-    <li>Dimension mismatch is the same concept: row counts must match.</li>
-    <li>Example: "hello how are we" (4 words) and "helloa ho aree wee" => distance ≤ 4 => match.</li>
-  </ul>
-</div>
-""")
-
-    html_body.append(build_table2_html(table2_lev_final, "Table 6 (Levenshtein): By Variable"))
-    html_body.append(f"""
-<div class="note">
-  <strong>Notes for Table 6 (Levenshtein):</strong>
-  <ul>
-    <li>Mismatched docs are skipped, same logic as Table 2. Each cell shows "XX.XX% (#hits / #total)".</li>
-    <li>Two cells match if Levenshtein distance ≤ (number_of_words_in_GT_cell).</li>
+    <li>Mismatched docs are skipped. Each cell shows "XX.XX% (#hits / #total)".</li>
+    <li>We consider two cells a match if Jaro-Winkler similarity ≥ {FUZZY_THRESHOLD}.</li>
   </ul>
 </div>
 """)
@@ -747,10 +738,10 @@ Levenshtein-based uses: two cells match if <em>distance ≤ number_of_words_in_G
   - Parallelized with joblib, n_jobs={used_cores}.<br>
   - For fuzzy matching, we used Jaro-Winkler via <code>rapidfuzz.distance.JaroWinkler.similarity()</code> 
     (≥ {FUZZY_THRESHOLD} => match).<br>
-  - For Levenshtein-based, <em>distance ≤ number_of_words_in_ground_truth</em> => match.<br>
+  - Normalization is ASCII-only, punctuation removed, then lower-cased.<br>
   <strong>Alternative Fuzzy Ideas:</strong> 
   We could use partial-ratio, token-set ratio, or other advanced methods from 
-  <em>rapidfuzz.fuzz</em> to handle differences in word order or partial matches.
+  <em>rapidfuzz.fuzz</em> if needed.
 </div>
 </body>
 </html>
@@ -761,7 +752,7 @@ Levenshtein-based uses: two cells match if <em>distance ≤ number_of_words_in_G
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(final_html)
 
-    logger.info("Done! HTML report (Exact + Fuzzy + Levenshtein) saved to '%s'.", out_path)
+    logger.info("Done! HTML report (Exact, Normalized, Fuzzy) saved to '%s'.", out_path)
 
 
 if __name__ == "__main__":

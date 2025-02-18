@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>OCR vs. LLM Benchmarking Results</title>
+<style>
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 40px;
+  background: #fdfdfd;
+  color: #333;
+}
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0.25em;
+}
+h2 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 2em;
+  background: #fff;
+}
+th {
+  background: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 1.5em;
+}
+tr:nth-child(even) {
+  background: #f2f2f2;
+}
+.model-name {
+  font-weight: bold;
+  background: #f9f9de !important;
+}
+.note {
+  font-size: 0.95em;
+  line-height: 1.4em;
+  color: #555;
+  border-top: 2px solid #ccc;
+  padding-top: 1em;
+  margin-top: 2em;
+}
+ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+</style>
+</head>
+<body>
+<h1>OCR vs. LLM Benchmarking Results (Parallel + RapidFuzz)</h1>
+<h2>Normalized Results (ASCII-only, punctuation removed, lowercased)</h2>
+<table>
+<tr>
+  <th>Model</th>
+  <th>type-1</th>
+  <th>type-2</th>
+  <th>type-3</th>
+  <th>type-4</th>
+  <th>type-5</th>
+  <th>type-6</th>
+  <th>type-7</th>
+  <th>type-8</th>
+  <th>type-9</th>
+  <th>type-10</th>
+  <th>Complete Sample</th>
+</tr>
+<tr>
+  <td class="model-name">gemini-2.0</td>
+  <td>25<br>4458<br>0.56%<br>4.01%</td>
+  <td>65<br>3815<br>1.70%<br>11.93%</td>
+  <td>75<br>3921<br>1.91%<br>12.25%</td>
+  <td>7<br>6586<br>0.11%<br>0.78%</td>
+  <td>80<br>2796<br>2.86%<br>18.39%</td>
+  <td>22<br>5289<br>0.42%<br>2.55%</td>
+  <td>67<br>4786<br>1.40%<br>9.38%</td>
+  <td>77<br>3932<br>1.96%<br>13.63%</td>
+  <td>116<br>4194<br>2.77%<br>14.78%</td>
+  <td>33<br>4824<br>0.68%<br>4.72%</td>
+  <td>567<br>44610<br>1.27%<br>8.41%</td>
+</tr>
+<tr>
+  <td class="model-name">gemini-2.0-with-transkribus</td>
+  <td>18<br>4458<br>0.40%<br>2.88%</td>
+  <td>39<br>3815<br>1.02%<br>7.16%</td>
+  <td>36<br>3921<br>0.92%<br>5.88%</td>
+  <td>9<br>6586<br>0.14%<br>1.00%</td>
+  <td>51<br>2796<br>1.82%<br>11.72%</td>
+  <td>24<br>5289<br>0.45%<br>2.78%</td>
+  <td>46<br>4786<br>0.96%<br>6.44%</td>
+  <td>78<br>3932<br>1.98%<br>13.81%</td>
+  <td>69<br>4194<br>1.65%<br>8.79%</td>
+  <td>4<br>4824<br>0.08%<br>0.57%</td>
+  <td>374<br>44610<br>0.84%<br>5.55%</td>
+</tr>
+<tr>
+  <td class="model-name">gpt-4o</td>
+  <td>370<br>4458<br>8.30%<br>59.29%</td>
+  <td>228<br>3815<br>5.98%<br>41.83%</td>
+  <td>178<br>3921<br>4.54%<br>29.08%</td>
+  <td>265<br>6586<br>4.02%<br>29.38%</td>
+  <td>146<br>2796<br>5.22%<br>33.56%</td>
+  <td>474<br>5289<br>8.96%<br>54.92%</td>
+  <td>429<br>4786<br>8.96%<br>60.08%</td>
+  <td>243<br>3932<br>6.18%<br>43.01%</td>
+  <td>338<br>4194<br>8.06%<br>43.06%</td>
+  <td>145<br>4824<br>3.01%<br>20.74%</td>
+  <td>2816<br>44610<br>6.31%<br>41.76%</td>
+</tr>
+<tr>
+  <td class="model-name">gpt-4o-with-transkribus</td>
+  <td>29<br>4458<br>0.65%<br>4.65%</td>
+  <td>45<br>3815<br>1.18%<br>8.26%</td>
+  <td>32<br>3921<br>0.82%<br>5.23%</td>
+  <td>18<br>6586<br>0.27%<br>2.00%</td>
+  <td>68<br>2796<br>2.43%<br>15.63%</td>
+  <td>20<br>5289<br>0.38%<br>2.32%</td>
+  <td>70<br>4786<br>1.46%<br>9.80%</td>
+  <td>74<br>3932<br>1.88%<br>13.10%</td>
+  <td>74<br>4194<br>1.76%<br>9.43%</td>
+  <td>16<br>4824<br>0.33%<br>2.29%</td>
+  <td>446<br>44610<br>1.00%<br>6.61%</td>
+</tr>
+<tr>
+  <td class="model-name">pytesseract</td>
+  <td>1788<br>4458<br>40.11%<br>286.54%</td>
+  <td>846<br>3815<br>22.18%<br>155.23%</td>
+  <td>1320<br>3921<br>33.66%<br>215.69%</td>
+  <td>735<br>6586<br>11.16%<br>81.49%</td>
+  <td>944<br>2796<br>33.76%<br>217.01%</td>
+  <td>1288<br>5289<br>24.35%<br>149.25%</td>
+  <td>664<br>4786<br>13.87%<br>93.00%</td>
+  <td>1086<br>3932<br>27.62%<br>192.21%</td>
+  <td>2909<br>4194<br>69.36%<br>370.57%</td>
+  <td>746<br>4824<br>15.46%<br>106.72%</td>
+  <td>12294<br>44610<br>27.56%<br>182.30%</td>
+</tr>
+<tr>
+  <td class="model-name">transkribus</td>
+  <td>147<br>4458<br>3.30%<br>23.56%</td>
+  <td>51<br>3815<br>1.34%<br>9.36%</td>
+  <td>76<br>3921<br>1.94%<br>12.42%</td>
+  <td>39<br>6586<br>0.59%<br>4.32%</td>
+  <td>396<br>2796<br>14.16%<br>91.03%</td>
+  <td>519<br>5289<br>9.81%<br>60.14%</td>
+  <td>84<br>4786<br>1.76%<br>11.76%</td>
+  <td>66<br>3932<br>1.68%<br>11.68%</td>
+  <td>98<br>4194<br>2.34%<br>12.48%</td>
+  <td>167<br>4824<br>3.46%<br>23.89%</td>
+  <td>1636<br>44610<br>3.67%<br>24.26%</td>
+</tr>
+</table>
+<h2>Non-normalized Results (punctuation & casing preserved, minimal cleaning)</h2>
+<table>
+<tr>
+  <th>Model</th>
+  <th>type-1</th>
+  <th>type-2</th>
+  <th>type-3</th>
+  <th>type-4</th>
+  <th>type-5</th>
+  <th>type-6</th>
+  <th>type-7</th>
+  <th>type-8</th>
+  <th>type-9</th>
+  <th>type-10</th>
+  <th>Complete Sample</th>
+</tr>
+<tr>
+  <td class="model-name">gemini-2.0</td>
+  <td>28<br>4997<br>0.56%<br>4.49%</td>
+  <td>124<br>4225<br>2.93%<br>21.34%</td>
+  <td>92<br>4274<br>2.15%<br>15.03%</td>
+  <td>28<br>7285<br>0.38%<br>3.04%</td>
+  <td>192<br>3138<br>6.12%<br>38.63%</td>
+  <td>113<br>6274<br>1.80%<br>12.39%</td>
+  <td>171<br>5456<br>3.13%<br>22.04%</td>
+  <td>103<br>4433<br>2.32%<br>18.20%</td>
+  <td>148<br>4888<br>3.03%<br>18.81%</td>
+  <td>46<br>5336<br>0.86%<br>6.52%</td>
+  <td>1045<br>50315<br>2.08%<br>14.97%</td>
+</tr>
+<tr>
+  <td class="model-name">gemini-2.0-with-transkribus</td>
+  <td>28<br>4997<br>0.56%<br>4.49%</td>
+  <td>91<br>4225<br>2.15%<br>15.66%</td>
+  <td>67<br>4274<br>1.57%<br>10.95%</td>
+  <td>26<br>7285<br>0.36%<br>2.83%</td>
+  <td>208<br>3138<br>6.63%<br>41.85%</td>
+  <td>155<br>6274<br>2.47%<br>17.00%</td>
+  <td>154<br>5456<br>2.82%<br>19.85%</td>
+  <td>102<br>4433<br>2.30%<br>18.02%</td>
+  <td>110<br>4888<br>2.25%<br>13.98%</td>
+  <td>20<br>5336<br>0.37%<br>2.84%</td>
+  <td>961<br>50315<br>1.91%<br>13.77%</td>
+</tr>
+<tr>
+  <td class="model-name">gpt-4o</td>
+  <td>384<br>4997<br>7.68%<br>61.54%</td>
+  <td>324<br>4225<br>7.67%<br>55.77%</td>
+  <td>221<br>4274<br>5.17%<br>36.11%</td>
+  <td>322<br>7285<br>4.42%<br>35.00%</td>
+  <td>261<br>3138<br>8.32%<br>52.52%</td>
+  <td>638<br>6274<br>10.17%<br>69.96%</td>
+  <td>601<br>5456<br>11.02%<br>77.45%</td>
+  <td>270<br>4433<br>6.09%<br>47.70%</td>
+  <td>423<br>4888<br>8.65%<br>53.75%</td>
+  <td>173<br>5336<br>3.24%<br>24.54%</td>
+  <td>3617<br>50315<br>7.19%<br>51.82%</td>
+</tr>
+<tr>
+  <td class="model-name">gpt-4o-with-transkribus</td>
+  <td>46<br>4997<br>0.92%<br>7.37%</td>
+  <td>122<br>4225<br>2.89%<br>21.00%</td>
+  <td>67<br>4274<br>1.57%<br>10.95%</td>
+  <td>39<br>7285<br>0.54%<br>4.24%</td>
+  <td>233<br>3138<br>7.43%<br>46.88%</td>
+  <td>136<br>6274<br>2.17%<br>14.91%</td>
+  <td>188<br>5456<br>3.45%<br>24.23%</td>
+  <td>114<br>4433<br>2.57%<br>20.14%</td>
+  <td>115<br>4888<br>2.35%<br>14.61%</td>
+  <td>34<br>5336<br>0.64%<br>4.82%</td>
+  <td>1090<br>50315<br>2.17%<br>15.62%</td>
+</tr>
+<tr>
+  <td class="model-name">pytesseract</td>
+  <td>1984<br>4997<br>39.70%<br>317.95%</td>
+  <td>1046<br>4225<br>24.76%<br>180.03%</td>
+  <td>1481<br>4274<br>34.65%<br>241.99%</td>
+  <td>1024<br>7285<br>14.06%<br>111.30%</td>
+  <td>1181<br>3138<br>37.64%<br>237.63%</td>
+  <td>1585<br>6274<br>25.26%<br>173.79%</td>
+  <td>866<br>5456<br>15.87%<br>111.60%</td>
+  <td>1254<br>4433<br>28.29%<br>221.55%</td>
+  <td>3472<br>4888<br>71.03%<br>441.17%</td>
+  <td>807<br>5336<br>15.12%<br>114.47%</td>
+  <td>14673<br>50315<br>29.16%<br>210.21%</td>
+</tr>
+<tr>
+  <td class="model-name">transkribus</td>
+  <td>193<br>4997<br>3.86%<br>30.93%</td>
+  <td>139<br>4225<br>3.29%<br>23.92%</td>
+  <td>119<br>4274<br>2.78%<br>19.44%</td>
+  <td>66<br>7285<br>0.91%<br>7.17%</td>
+  <td>612<br>3138<br>19.50%<br>123.14%</td>
+  <td>703<br>6274<br>11.20%<br>77.08%</td>
+  <td>208<br>5456<br>3.81%<br>26.80%</td>
+  <td>97<br>4433<br>2.19%<br>17.14%</td>
+  <td>145<br>4888<br>2.97%<br>18.42%</td>
+  <td>218<br>5336<br>4.09%<br>30.92%</td>
+  <td>2493<br>50315<br>4.95%<br>35.72%</td>
+</tr>
+</table>
+<div class="note">
+<strong>Notes:</strong>
+<ul>
+  <li>Documents are sorted numerically: type-1, type-2, ..., type-9, type-10, etc.</li>
+  <li>Each cell displays 4 lines: 
+    <br>&emsp;1) Levenshtein distance 
+    <br>&emsp;2) Ground-truth document length 
+    <br>&emsp;3) CER% 
+    <br>&emsp;4) WER%</li>
+  <li>Two tables are shown: 
+    <br>&emsp;- Normalized: ASCII-only, punctuation removed, lowercased, etc.
+    <br>&emsp;- Non-normalized: punctuation/accent/case preserved, linebreaks removed, etc.</li>
+  <li>Parallelized with joblib, using n_jobs=8.</li>
+  <li>Levenshtein distance is computed via <em>rapidfuzz</em> (C++ backend for speed).</li>
+  <li>CER (Character Error Rate) = (distance / reference_length) * 100%, within the given table's cleaning.</li>
+  <li>WER (Word Error Rate) uses a word-level edit distance. Tokenization depends on the cleaning version.</li>
+  <li>Missing predictions are marked with "-".</li>
+</ul>
+</div>
+</body>
+</html>

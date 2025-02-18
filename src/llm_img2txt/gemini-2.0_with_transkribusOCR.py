@@ -148,6 +148,44 @@ def write_json_log(log_dict: dict, model_name: str) -> None:
     logging.info(f"JSON log saved at: {log_path}")
 
 ###############################################################################
+# Load the Gemini prompt from file
+###############################################################################
+def load_gemini_prompt() -> str:
+    """
+    Reads the core Gemini prompt from src/prompts/llm_img2txt/gemini-2.0.txt
+    and returns it as a string.
+    """
+    prompt_path = PROJECT_ROOT / "src" / "prompts" / "llm_img2txt" / "gemini-2.0.txt"
+    if not prompt_path.is_file():
+        logging.error(f"Prompt file not found at {prompt_path}")
+        sys.exit(1)
+    return prompt_path.read_text(encoding='utf-8')
+
+###############################################################################
+# Multimodal OCR correction prompt function
+###############################################################################
+def multimodal_ocr_correction(ocr_text: str, image_path: Path) -> str:
+    """
+    Applies multimodal OCR post-correction while enforcing strict transcription rules.
+    
+    :param ocr_text: Raw text extracted from OCR (Transkribus output)
+    :param image_path: Path to the corresponding image for verification (not used directly in prompt text)
+    :return: Corrected and strictly compliant OCR text prompt
+    """
+    # Load the base prompt from the text file
+    base_prompt = load_gemini_prompt().strip()
+
+    # Merge the base prompt and the OCR text
+    gemini_prompt_text = (
+        f"{base_prompt}\n\n"
+        "Below is the OCR output from Transkribus so you know how to spell the archaic words. Please use this information to correct any errors and ensure the text is fully compliant with the strict transcription rules.\n"
+        "-- OCR Output (Transkribus) --\n"
+        f"{ocr_text}\n"
+    )
+
+    return gemini_prompt_text
+
+###############################################################################
 # Main Pipeline
 ###############################################################################
 def main() -> None:
@@ -265,14 +303,8 @@ def main() -> None:
         ocr_text = transkribus_txt_path.read_text(encoding='utf-8').strip()
         logging.info(f"Loaded OCR text (~{len(ocr_text)} chars).")
 
-        # 5b) Call Gemini with up to 1-hour retry
-        gemini_prompt_text = (
-            "Below is text extracted from a classical OCR engine (Transkribus). "
-            "Please improve/correct it and produce the most accurate transcription "
-            "given the image. There is an image provided.\n\n"
-            "-- OCR Output (Transkribus) --\n"
-            f"{ocr_text}\n"
-        )
+        # 5b) Construct the prompt using the new function: includes the strict rules from file
+        gemini_prompt_text = multimodal_ocr_correction(ocr_text, png_path)
 
         gemini_output = None
         page_usage_prompt = 0
