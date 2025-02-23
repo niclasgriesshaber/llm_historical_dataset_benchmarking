@@ -71,9 +71,9 @@ def openai_api_text(
     max_tokens: int,
     temperature: float,
     api_key: str
-) -> (Optional[str], dict):
+) -> tuple[Optional[str], dict]:
     """
-    Call OpenAI’s GPT-4o with text (no image).
+    Call OpenAI's GPT-4o with text (no image).
     Returns (text_out, usage_info) or (None, {}).
 
     usage_info will be a dict with:
