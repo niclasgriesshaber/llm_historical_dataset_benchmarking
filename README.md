@@ -170,3 +170,14 @@ Results are generated as:
 
 Niclas Griesshaber, niclasgriesshaber@outlook.com
 Gavin Greif, gavin.greif@history.ox.ac.uk
+
+## 👥 Contributing
+
+Contributions are very welcome! Feel free to:
+- Fork the repository
+- Create a feature branch
+- Submit pull requests
+- Open issues for bugs or feature requests
+- Suggest improvements to documentation
+
+Please ensure your contributions align with the project's coding standards and include appropriate tests where applicable.
