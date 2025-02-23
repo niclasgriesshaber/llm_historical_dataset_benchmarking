@@ -341,11 +341,8 @@ def main():
         # Ground truth
         gt_df = gt_dataframes[doc]
 
-        # Decide folder name depending on the category:
-        if cat == "llm_txt2csv":
-            doc_dir = doc  # e.g. "type-1"
-        else:
-            doc_dir = f"{doc}.pdf"  # e.g. "type-1.pdf"
+        # Decide folder name
+        doc_dir = doc
 
         # Predicted path
         pred_dir = os.path.join(results_dir, cat, model, doc_dir)

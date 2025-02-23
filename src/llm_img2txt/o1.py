@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 """
-GPT-4o PDF -> PNG -> TEXT Pipeline
+o1 PDF -> PNG -> TEXT Pipeline
 
 This script:
   1) Converts a PDF into per-page PNG images in data/page_by_page/PNG/<pdf_stem>.
      (Skips conversion if images already exist.)
-  2) Calls GPT-4o for each page image, retrieving text output.
+  2) Calls OpenAI's o1 reasoning model for each page image, retrieving text output.
      - Automatically retries on any error, up to 1 hour per page; if still failing, it skips that page.
   3) Merges all returned page texts into a single TXT file (<pdf_stem>.txt).
   4) Logs usage tokens per page, accumulates them across all pages, and saves a JSON run log.
 
-All references are to GPT-4o, and the pipeline structure matches your other scripts.
+The folder structure for outputs includes "temperature_0.0" for compatibility with existing evals,
+but we do NOT pass a temperature parameter to the API.
 """
 
 import argparse
@@ -46,13 +47,22 @@ load_dotenv(dotenv_path=ENV_PATH)
 API_KEY = os.getenv("OPENAI_API_KEY")  # Must match your .env key
 
 ###############################################################################
-# Model Constants
+# Model Constants & Reasoning Hyperparameters
 ###############################################################################
-MODEL_NAME = "gpt-4o"
-FULL_MODEL_NAME = "gpt-4o-2024-05-13"
-MAX_OUTPUT_TOKENS = 4096
-SEED = 42  # Not used by OpenAI, but included for consistency
+MODEL_NAME = "o1"       # Short name in your pipeline references
+FULL_MODEL_NAME = "o1"  # The actual model name you'd pass to the API (e.g. "o1-latest")
 RETRY_LIMIT_SECONDS = 3600  # 1 hour per page
+
+# Reasoning parameters:
+REASONING_CONFIG = {
+    "reasoning_effort": "high",      # Could be "low", "medium", or "high"
+    "max_completion_tokens": 100000  # Large limit to allow for reasoning + final output
+}
+
+# We only keep "temperature_0.0" as a folder name (no actual usage in the model call)
+FOLDER_TEMPERATURE = "0.0"
+
+SEED = 42  # Kept for consistency/traceability if needed (not used by OpenAI's APIs)
 
 ###############################################################################
 # Utility: Time Formatting
@@ -71,34 +81,28 @@ def format_duration(seconds: float) -> str:
 ###############################################################################
 def parse_arguments() -> argparse.Namespace:
     """
-    Parse command-line arguments for a GPT-4o PDF-to-text pipeline.
+    Parse command-line arguments for an o1 PDF-to-text pipeline.
     """
-    parser = argparse.ArgumentParser(description="GPT-4o PDF-to-text pipeline")
+    parser = argparse.ArgumentParser(description="o1 PDF-to-text pipeline")
     parser.add_argument(
         "--pdf",
         type=str,
         required=True,
         help="Name of the PDF in data/pdfs/, e.g. example.pdf"
     )
-    parser.add_argument(
-        "--temperature",
-        type=float,
-        default=0.0,
-        help="Temperature for the LLM call (default 0.0)"
-    )
     return parser.parse_args()
 
 ###############################################################################
 # Utility: Find existing run_XY directories
 ###############################################################################
-def find_existing_runs_in_temperature_folder(temp_folder: Path) -> List[int]:
+def find_existing_runs_in_folder(folder: Path) -> List[int]:
     """
-    Scan for run_XX subfolders in temp_folder, returning a list of integers.
+    Scan for run_XX subfolders in 'folder', returning a list of run numbers as integers.
     """
-    if not temp_folder.is_dir():
+    if not folder.is_dir():
         return []
     runs = []
-    for child in temp_folder.iterdir():
+    for child in folder.iterdir():
         if child.is_dir() and child.name.startswith("run_"):
             try:
                 run_num = int(child.name.split("_")[1])
@@ -127,21 +131,32 @@ def write_json_log(log_dict: dict, model_name: str) -> None:
     logging.info(f"JSON log saved at: {log_path}")
 
 ###############################################################################
-# OpenAI GPT-4o Call
+# OpenAI o1 Call
 ###############################################################################
-def openai_api(
+def openai_o1_api(
     prompt: str,
     pil_image: Image.Image,
-    full_model_name: str,
-    max_tokens: int,
-    temperature: float,
+    model_name: str,
+    reasoning_config: dict,
     api_key: str
 ) -> (Optional[str], dict):
     """
-    Call OpenAI’s GPT-4o with an image + text prompt, returning (text_out, usage_dict).
+    Call OpenAI’s o1 reasoning model with an image + text prompt,
+    returning (text_out, usage_dict).
 
-    usage_dict has e.g. {"prompt_tokens": ..., "completion_tokens": ..., "total_tokens": ...}.
-    If there's an error, return (None, {}).
+    usage_dict has keys such as:
+      {
+        "prompt_tokens": ...,
+        "completion_tokens": ...,
+        "total_tokens": ...,
+        "completion_tokens_details": {
+          "reasoning_tokens": ...,
+          "accepted_prediction_tokens": ...,
+          "rejected_prediction_tokens": ...
+        }
+      }
+
+    If there's an error, returns (None, {}).
     """
     import base64
     from io import BytesIO
@@ -160,32 +175,40 @@ def openai_api(
     }
 
     payload = {
-        "model": full_model_name,
+        "model": model_name,  # "o1"
+        "reasoning_effort": reasoning_config["reasoning_effort"],
+        "max_completion_tokens": reasoning_config["max_completion_tokens"],
         "messages": [
             {
                 "role": "user",
                 "content": [
                     {"type": "text", "text": prompt},
-                    {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{base64_image}" }}
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": f"data:image/png;base64,{base64_image}"
+                        }
+                    }
                 ]
             }
-        ],
-        "max_tokens": max_tokens,
-        "temperature": temperature
+        ]
     }
 
     try:
-        response = requests.post("https://api.openai.com/v1/chat/completions",
-                                 headers=headers, json=payload)
+        response = requests.post(
+            "https://api.openai.com/v1/chat/completions",
+            headers=headers,
+            json=payload
+        )
         if response.status_code == 200:
             data = response.json()
             text_out = data["choices"][0]["message"]["content"]
             usage_info = data.get("usage", {})
             return text_out, usage_info
         else:
-            raise ValueError(f"OpenAI GPT-4o error {response.status_code}: {response.text}")
+            raise ValueError(f"OpenAI o1 error {response.status_code}: {response.text}")
     except Exception as e:
-        logging.error(f"OpenAI GPT-4o call failed: {e}")
+        logging.error(f"OpenAI o1 call failed: {e}")
         return None, {}
 
 ###############################################################################
@@ -193,19 +216,21 @@ def openai_api(
 ###############################################################################
 def main() -> None:
     """
-    Main GPT-4o PDF -> PNG -> TEXT pipeline with:
+    Main o1 PDF -> PNG -> TEXT pipeline with:
       - data/page_by_page/PNG/<pdf_stem> for images
       - 1-hour max retry per page
-      - usage token logging (input, candidate, total)
+      - usage token logging (including reasoning tokens)
       - final text concatenation
       - JSON log & final usage summary
+
+    The folder structure includes "temperature_0.0" for compatibility with eval scripts,
+    but there's no actual temperature usage in this script.
     """
     # -------------------------------------------------------------------------
     # Parse arguments, configure logging
     # -------------------------------------------------------------------------
     args = parse_arguments()
     pdf_name = args.pdf
-    temperature = args.temperature
 
     logging.basicConfig(
         level=logging.INFO,
@@ -213,16 +238,20 @@ def main() -> None:
         handlers=[logging.StreamHandler(sys.stdout)]
     )
 
-    logging.info("=== GPT-4o PDF -> PNG -> TEXT Pipeline ===")
+    logging.info("=== o1 PDF -> PNG -> TEXT Pipeline ===")
     logging.info(f"PDF to process: {pdf_name}")
     logging.info(f"Model: {MODEL_NAME}, Full model: {FULL_MODEL_NAME}")
-    logging.info(f"Temperature: {temperature} | Seed={SEED}")
+    logging.info("Reasoning hyperparameters:")
+    for k, v in REASONING_CONFIG.items():
+        logging.info(f"  {k}: {v}")
+    logging.info(f"Folder temperature label (not used by model): {FOLDER_TEMPERATURE}")
+    logging.info(f"Seed (unused by the model, for reference): {SEED}")
 
     # Overall timing start
     overall_start = time.time()
 
     # -------------------------------------------------------------------------
-    # Load transcription prompt from: prompts/llm_img2txt/gpt-4o.txt
+    # Load transcription prompt from: prompts/llm_img2txt/o1.txt
     # -------------------------------------------------------------------------
     prompt_path = PROMPTS_DIR / f"{MODEL_NAME}.txt"
     if not prompt_path.is_file():
@@ -267,13 +296,15 @@ def main() -> None:
     total_pages = len(png_files)
 
     # -------------------------------------------------------------------------
-    # Prepare results folder => results/llm_img2txt/gpt-4o/<pdf_stem>/temperature_x.x/run_nn/page_by_page
+    # Prepare results folder
+    # => results/llm_img2txt/o1/<pdf_stem>/temperature_0.0/run_X/page_by_page
+    # We keep "temperature_0.0" even though we're not using it in the API call.
     # -------------------------------------------------------------------------
     base_results_path = RESULTS_DIR / MODEL_NAME / pdf_stem
-    temp_folder = base_results_path / f"temperature_{temperature}"
+    temp_folder = base_results_path / f"temperature_{FOLDER_TEMPERATURE}"
     temp_folder.mkdir(parents=True, exist_ok=True)
 
-    existing_runs = find_existing_runs_in_temperature_folder(temp_folder)
+    existing_runs = find_existing_runs_in_folder(temp_folder)
     next_run = max(existing_runs) + 1 if existing_runs else 1
     run_dir = temp_folder / f"run_{str(next_run).zfill(2)}"
     run_dir.mkdir(parents=True, exist_ok=False)
@@ -285,10 +316,16 @@ def main() -> None:
 
     # -------------------------------------------------------------------------
     # Accumulate usage
+    # We'll track these fields so we can log them:
+    #   prompt_tokens, completion_tokens, total_tokens
+    #   reasoning_tokens, accepted_prediction_tokens, rejected_prediction_tokens
     # -------------------------------------------------------------------------
     total_prompt_tokens = 0
-    total_completion_tokens = 0  # "candidate" tokens in your other scripts
+    total_completion_tokens = 0
     total_tokens = 0
+    total_reasoning_tokens = 0
+    total_accepted_prediction_tokens = 0
+    total_rejected_prediction_tokens = 0
 
     page_text_files = []
 
@@ -311,37 +348,43 @@ def main() -> None:
                 # 1-hour retry
                 start_retry = time.time()
                 text_out = None
-                page_prompt = 0
-                page_candidate = 0
-                page_total = 0
 
                 while (time.time() - start_retry) < RETRY_LIMIT_SECONDS:
                     try:
-                        returned_text, usage_dict = openai_api(
+                        returned_text, usage_dict = openai_o1_api(
                             prompt=transcription_prompt,
                             pil_image=pil_image,
-                            full_model_name=FULL_MODEL_NAME,
-                            max_tokens=MAX_OUTPUT_TOKENS,
-                            temperature=temperature,
+                            model_name=FULL_MODEL_NAME,
+                            reasoning_config=REASONING_CONFIG,
                             api_key=API_KEY
                         )
 
                         if not returned_text:
-                            logging.warning("GPT-4o returned None or empty text; retrying...")
+                            logging.warning("o1 returned None or empty text; retrying...")
                             continue
 
                         text_out = returned_text
+
+                        # Extract usage
                         page_prompt = usage_dict.get("prompt_tokens", 0)
-                        page_candidate = usage_dict.get("completion_tokens", 0)
-                        page_total = usage_dict.get("total_tokens", page_prompt + page_candidate)
+                        page_completion = usage_dict.get("completion_tokens", 0)
+                        page_total = usage_dict.get("total_tokens", page_prompt + page_completion)
+
+                        ctd = usage_dict.get("completion_tokens_details", {})
+                        page_reasoning = ctd.get("reasoning_tokens", 0)
+                        page_accepted = ctd.get("accepted_prediction_tokens", 0)
+                        page_rejected = ctd.get("rejected_prediction_tokens", 0)
 
                         # Update accumulators
                         total_prompt_tokens += page_prompt
-                        total_completion_tokens += page_candidate
+                        total_completion_tokens += page_completion
                         total_tokens += page_total
+                        total_reasoning_tokens += page_reasoning
+                        total_accepted_prediction_tokens += page_accepted
+                        total_rejected_prediction_tokens += page_rejected
 
                     except Exception as e:
-                        logging.warning(f"GPT-4o call failed: {e}. Retrying...")
+                        logging.warning(f"o1 call failed: {e}. Retrying...")
                         continue
                     else:
                         # success => break
@@ -349,7 +392,7 @@ def main() -> None:
                 else:
                     # 1 hour was exceeded
                     logging.error(
-                        f"Skipping page {idx} because GPT-4o call did not succeed within 1 hour."
+                        f"Skipping page {idx} because o1 call did not succeed within 1 hour."
                     )
                     logging.info("")
                     continue
@@ -366,12 +409,15 @@ def main() -> None:
 
         # Log usage for this page
         logging.info(
-            f"GPT-4o usage for page {idx}: "
-            f"input={page_prompt}, candidate={page_candidate}, total={page_total}"
+            f"o1 usage for page {idx}: "
+            f"prompt={page_prompt}, completion={page_completion}, total={page_total}, "
+            f"reasoning={page_reasoning}, accepted_pred={page_accepted}, rejected_pred={page_rejected}"
         )
         logging.info(
-            f"Accumulated so far: input={total_prompt_tokens}, "
-            f"candidate={total_completion_tokens}, total={total_tokens}"
+            "Accumulated so far: "
+            f"prompt={total_prompt_tokens}, completion={total_completion_tokens}, total={total_tokens}, "
+            f"reasoning={total_reasoning_tokens}, accepted_pred={total_accepted_prediction_tokens}, "
+            f"rejected_pred={total_rejected_prediction_tokens}"
         )
 
         # Save page-level text
@@ -418,7 +464,8 @@ def main() -> None:
         "pdf_path": str(pdf_path),
         "model_name": MODEL_NAME,
         "full_model_name": FULL_MODEL_NAME,
-        "temperature": temperature,
+        "reasoning_config": REASONING_CONFIG,
+        "folder_temperature": FOLDER_TEMPERATURE,
         "seed": SEED,
         "run_directory": str(run_dir),
         "prompt_file": str(prompt_path),
@@ -427,7 +474,10 @@ def main() -> None:
         "total_usage": {
             "prompt_tokens": total_prompt_tokens,
             "completion_tokens": total_completion_tokens,
-            "total_tokens": total_tokens
+            "total_tokens": total_tokens,
+            "reasoning_tokens": total_reasoning_tokens,
+            "accepted_prediction_tokens": total_accepted_prediction_tokens,
+            "rejected_prediction_tokens": total_rejected_prediction_tokens
         },
         "total_duration_seconds": int(total_duration),
         "total_duration_formatted": format_duration(total_duration),
@@ -435,9 +485,12 @@ def main() -> None:
     write_json_log(log_info, MODEL_NAME)
 
     # Final usage summary
-    logging.info("=== Final Usage Summary ===")
-    logging.info(f"Total input (prompt) tokens used: {total_prompt_tokens}")
-    logging.info(f"Total candidate tokens used: {total_completion_tokens}")
+    logging.info("=== Final Usage Summary (including new reasoning fields) ===")
+    logging.info(f"Total prompt tokens used: {total_prompt_tokens}")
+    logging.info(f"Total completion tokens used: {total_completion_tokens}")
+    logging.info(f"Total reasoning tokens used: {total_reasoning_tokens}")
+    logging.info(f"Total accepted prediction tokens used: {total_accepted_prediction_tokens}")
+    logging.info(f"Total rejected prediction tokens used: {total_rejected_prediction_tokens}")
     logging.info(f"Grand total of all tokens used: {total_tokens}")
 
     # Final log

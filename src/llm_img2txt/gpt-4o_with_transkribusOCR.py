@@ -190,7 +190,7 @@ def openai_api(
     api_key: str
 ) -> (Optional[str], dict):
     """
-    Call OpenAI’s GPT-4o with an image + text prompt, returning (text_out, usage_dict).
+    Call OpenAI's GPT-4o with an image + text prompt, returning (text_out, usage_dict).
 
     usage_dict has e.g. {"prompt_tokens": ..., "completion_tokens": ..., "total_tokens": ...}.
     If there's an error, return (None, {}).
@@ -232,7 +232,8 @@ def openai_api(
             }
         ],
         "max_tokens": max_tokens,
-        "temperature": temperature
+        "temperature": temperature,
+        "seed": SEED
     }
 
     try:
@@ -281,7 +282,7 @@ def main() -> None:
 
     logging.info("=== GPT-4o Post-Correction Pipeline ===")
     logging.info(f"PDF: {pdf_name}")
-    logging.info(f"Temperature: {temperature} (default=0.0)")
+    logging.info(f"Temperature: {temperature} (default=0.0) | Seed={SEED}")
 
     # Check environment for GPT-4o
     if not API_KEY:

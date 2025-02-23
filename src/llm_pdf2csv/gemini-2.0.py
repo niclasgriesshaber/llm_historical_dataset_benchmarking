@@ -351,7 +351,7 @@ def main():
     # -------------------------------------------------------------------------
     # Prepare results folder => results/llm_pdf2csv/gemini-2.0/<pdf_name>/temperature_x.x/run_nn/
     # -------------------------------------------------------------------------
-    pdf_folder = RESULTS_DIR / MODEL_NAME / pdf_name
+    pdf_folder = RESULTS_DIR / MODEL_NAME / pdf_name.split(".")[0]
     temp_folder = pdf_folder / f"temperature_{temperature}"
     temp_folder.mkdir(parents=True, exist_ok=True)
 

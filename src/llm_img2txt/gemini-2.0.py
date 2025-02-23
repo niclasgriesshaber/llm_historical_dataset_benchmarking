@@ -52,7 +52,6 @@ API_KEY = os.getenv("GOOGLE_API_KEY")  # Must match your .env key
 MODEL_NAME = "gemini-2.0"
 FULL_MODEL_NAME = "gemini-2.0-flash" #    "gemini-2.0-flash-exp"
 MAX_OUTPUT_TOKENS = 8192
-SEED = 42
 RETRY_LIMIT_SECONDS = 3600  # 1 hour per page
 
 ###############################################################################
@@ -158,7 +157,7 @@ def main() -> None:
     logging.info("=== Gemini-2.0 PDF -> PNG -> TEXT Pipeline ===")
     logging.info(f"PDF to process: {pdf_name}")
     logging.info(f"Model: {MODEL_NAME}, Full model: {FULL_MODEL_NAME}")
-    logging.info(f"Temperature: {temperature}, Seed={SEED}")
+    logging.info(f"Temperature: {temperature}")
 
     # Start overall timer
     overall_start = time.time()
@@ -279,7 +278,6 @@ def main() -> None:
                             config=types.GenerateContentConfig(
                                 temperature=temperature,
                                 max_output_tokens=MAX_OUTPUT_TOKENS,
-                                seed=SEED  # only keep temperature, max_output_tokens, and seed
                             ),
                         )
 
@@ -391,7 +389,6 @@ def main() -> None:
         "model_name": MODEL_NAME,
         "full_model_name": FULL_MODEL_NAME,
         "temperature": temperature,
-        "seed": SEED,
         "run_directory": str(run_dir),
         "prompt_file": str(prompt_path),
         "pages_count": len(page_text_files),

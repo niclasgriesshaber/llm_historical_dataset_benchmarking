@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Text Accuracy Comparisons</title>
+<style>
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 20px;
+  background: #fafafa;
+  color: #333;
+}
+h1 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 0.3em;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+.table-scroll {
+  max-height: 600px;
+  overflow: auto;
+  border: 1px solid #ddd;
+}
+.diff-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* consistent column widths */
+}
+.diff-table th {
+  background: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 8px;
+}
+.diff-table td {
+  width: 50%;
+  vertical-align: top;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+/* Force wrapping in <pre> so long lines don't overflow columns */
+.diff-table pre {
+  margin: 0;
+  padding: 10px;
+  font-family: "Courier New", monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.del-span {
+  background-color: #ffecec; /* pink/red for deleted chars */
+  color: #d00;
+}
+.ins-span {
+  background-color: #ecffec; /* green for inserted chars */
+  color: #080;
+}
+.sub-span {
+  background-color: #fff3cd; /* light orange for substituted chars */
+  color: #b45f06;
+}
+.summary {
+  text-align: center;
+  margin: 0.5em 0 0.5em 0;
+  font-size: 1.1em;
+}
+.legend {
+  margin-top: 1.5em;
+  font-size: 1em;
+  color: #555;
+  text-align: center;
+}
+.legend ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 auto;
+  max-width: 400px;
+}
+.legend li {
+  margin: 0.25em 0;
+}
+.legend .del-span,
+.legend .ins-span,
+.legend .sub-span {
+  font-weight: bold;
+  padding: 0 0.2em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="container">
+  <h1>Comparison: type-10.pdf — Model: gemini-2.0-with-transkribus</h1>
+  <div class="table-scroll">
+    <table class="diff-table">
+      <tr>
+        <th>Ground Truth (Line #)</th>
+        <th>Generated (Line #)</th>
+      </tr>
+      <tr>
+        <td><pre>   1 | 20
+   2 | Dreier, Anna, Wittwe, Taglöhnerin II Deutschstr. 270.
+   3 | Dreikorn, Christoph, Reg.=Bote I Domfreihof 88.
+   4 | Drescher, Karl, Ober=Staatsarzt I Banthusstr. 146.
+   5 | Drescher, Peter, Conditor I Pallaststr. 229.
+   6 | Dressler, Karl, Gärtner II Zuckerbergstr. 129.
+   7 | Dressler, Ferdinand, Speisewirth III Weberstr. 50.
+   8 | Drost, Michael, Schreiner IV Johannisstr. 271
+   9 | Druckenmüller, Peter, Schreiner II Diedrichsstr. 173.
+  10 | Druckenmüller, Maria, Wittwe II Diedrichsstr. 173.
+  11 | Drunks, v., Eduard, Katastergeh. Grabenstr. 285.
+  12 | Dümmer, Elisabeth I vorm Römerthor 296.
+  13 | Dümmig, Regina, Wittwe II Judenplatz 287.
+  14 | Dümong, Peter, Schneider III Neustr. 244.
+  15 | Dünnebacke, Joseph, Castellan III Jesuitenstr. 187.
+  16 | Düntzer, Clara, ohne I Sichelstr. 45.
+  17 | Düntzer, Joseph, Küster III Neustr 265.
+  18 | Düring, Friedrich, Friedensrichter II Diedrichsstr. 191.
+  19 | Dürrwald, Jakob, Schreiner IV Jüdemerstr. 97.
+  20 | + Dulcius, Mathias, Aloys und A. Maria, Geschwister,<span class="sub-span"> </span>Rentner IV Brückenstr. 240.
+  21 | Dumetz, Joh. Conrad, Taglöhner III vor dem Neu<span class="sub-span">=</span><span class="sub-span"> </span>thor 287.
+  22 | Duplang, Franz, Schuhmacher III Rahnenstr. 145.
+  23 | Dunst, Nikolaus, Musiklehrer II Fleischstr. 16.
+  24 | Dunst, Clara, Wittwe II Fleischstr. 16.
+  25 | Duroy, Charlotte, barmherzige Schwester IV Irminer-Freihof 307.
+  26 | Durst, Johann, Taglöhner IV Johannisstr. 278.
+  27 | 
+  28 | E<span class="del-span">.</span><span class="del-span">
+  29 | </span><span class="del-span">
+  30 | </span><span class="del-span">E</span>berhard, Veronika, Rentnerin I Pallaststr 201.
+  31 | Eberhard, Friedrich, Kürschner I Brodstr. 230.
+  32 | Eberhard, Ludwig, Buchhändler II Fleischstr. 12.
+  33 | Eberhard, Anna, Wittwe, II Böhmerstr. 91.
+  34 | Eberhard, Peter, Pflasterer III Engelbergstr. 85.
+  35 | Eberhard, Mathias, Regens III Weberstr. 183.
+  36 | Eberle, Herrmann, Gerbergesell III Platzstr. 157.
+  37 | Ebentheurer, Nikolaus, Reg.<span class="sub-span">-</span>Secret. II Zuckerbergstr. 138.
+  38 | Eberts, Jakob, Katastergeometer I Dominikanerst. 139.
+  39 | 
+  40 | 21
+  41 | Eck, Georg Jakob, Knecht III Weberstr. 184.
+  42 | Eckerts, Wilhelm, Apotheker I Dominikanerstr. 137.
+  43 | Edel, Anna Maria, IV Jüdemerstr. 78.
+  44 | Edinger, Johann, Taglöhner II Walleramsneustr. 199.
+  45 | Effert, Catharina, Wittwe IV Krahnenstr. 352.
+  46 | Ehlen, Joseph, Kaufmann I Brodstr. 236.
+  47 | Ehmann, Margartha, Wittwe II Walleramsneustr. 199.
+  48 | Ehnert, Margaretha, Wittwe II Metzelstr. 102.
+  49 | Ehnert, Joseph, Buchbinder II Metzelstr. 102.
+  50 | Ehses, Thomas, Gerber u. Wirth III Neustr. 314.
+  51 | Eibers, Susanna, IV Jüdemerstr. 58.
+  52 | Eich, Peter, Kaminfeger IV Krahnenstr. 311.
+  53 | Eich, Johann, Kaminfeger IV Brittanien 383.
+  54 | Eichert, Margaretha, Wittwe IV Brittanien 379.
+  55 | Eichholz, Wilhelm, Rector II Fleischstraße 155.
+  56 | Eichler, August, Dampfschifffahrts=Geh. II Fleischstr. 55.
+  57 | Eichler, Florentine, Musiklehrerin II Fleischstr. 55.
+  58 | Eichler, Wilhelm, Civil=Supernumerar IV Nagelstr. 31.
+  59 | Eisenstecken, Mathias, Färber III Neustraße 252.
+  60 | <span class="del-span">+</span><span class="del-span"> </span>Elbert, Lorenz, IV Krahnenstr. 345.
+  61 | Elbert, Johann, Steuermann, IV Krahnenstr. 354.
+  62 | Elges, Wilhelm, Gerbergesell III Wechselstr. 124.
+  63 | Eltges, Nikolaus, Schriftsetzer IV Jüdemerstr. 62.
+  64 | Eltges, Johann Peter, Friseur IV Jüdemerstraße 78.
+  65 | Eltges, Elis., Wittwe IV Jüdemerstr. 78.
+  66 | Eltges, Nikolaus, Magazin=Aufseher IV Krahnenstr. 332.
+  67 | Elsen, Mathias, Schmied I Brodstr. 279.
+  68 | Elsen, Johann, Taglöhner III Platzstr. 157.
+  69 | Emans, Maxm. August, Apotheker I Hauptmarkt 187.
+  70 | Embser, Heinrich, Schreiner II Judenplatz 305.
+  71 | Embser, Hieronimus, Friseur IV Schanzstr. 145.
+  72 | <span class="del-span">+</span><span class="del-span"> </span>Emmel, Jonas, Hospitalsbote II Fleischstr. 18.
+  73 | Emmel, Michel, Commissionär I Brodstraße 248.
+  74 | Emmel, Michel, Taxator III Neustr. 348.
+  75 | Emmerich, Friedrich, Rechn.=Rath II Simeonsstift 369.
+  76 | Emmersdorf, Johanna, Rentnerin II Simeonsstift 371.
+  77 | Endres, Anna Elisabeth, Rentnerin I Simeonsstr. 11.
+  78 | Endres, Peter Joseph, Rentner I Pallaststr. 223.
+  79 | Endres, Johann Mathias, Eisenhandel I Brodstr. 234.
+  80 | Endres, Ewald, Eisenhandel I Brodstr. 234.
+  81 | 
+  82 | 22
+  83 | Endres, Barbara, Rentnerin I Brodstr. 266.
+  84 | <span class="del-span">+</span><span class="del-span"> </span>Endres, Stephan, Maurer II Moselstr. 243.
+  85 | Endres, Johann, Gärtner IV vor der Moselbrück 192.
+  86 | Endres, Johanna, barmherzige Schwester IV Irminer<span class="sub-span">=</span><span class="sub-span"> </span>Freihof 367.
+  87 | Engel, Andreas, Aufseher I Sichelstr. 45.
+  88 | Engel, Catharina, ohne I Glockenstr. 64.
+  89 | <span class="del-span">+</span><span class="del-span"> </span>Engel, Johann, Buchbinder I Brodstr. 266.
+  90 | Engel, Christoph, Schuhmacher II Jakobsstr. 286.
+  91 | Engel, Johann Adam, Hauptamts<span class="sub-span">-</span>Assistent III Neustr.279.
+  92 | Engel, Heinrich, Schlosser IV Brückenstr. 243.
+  93 | Engel, Georg, Metzger IV Krahnenstr. 355.
+  94 | Engels, Gottlieb, Weber I Pallaststr. 223.
+  95 | Engels, Angela, ohne II Deutschstr. 269.
+  96 | Engels, Nikolaus, Schieferdecker III Weberstr. 194.
+  97 | Engesser, Wittwe III Neustr. 267.
+  98 | Engler, Elisabeth, Wittwe III Hinterstr. 76.
+  99 | Englert, Sybilla, Rentnerin I Pallaststr. 229.
+ 100 | Ensch, Johann, Schuhmacher III Weberstr. 58.
+ 101 | Ensch, Johann, Tabakspinner IV Brückenstr. 244.
+ 102 | Entz, Peter Adolph, Sattler II Simeonsstr. 321.
+ 103 | Enzminger, Xavier, barmherz. Schwester IV Irminer<span class="sub-span">=</span><span class="sub-span"> </span>Freihof 367.
+ 104 | Eppert, Joseph, Hutfabrikant II Fleischstr. 160.
+ 105 | Eppert, Catharina, Wittwe IV Schanzstr. 147.
+ 106 | Erhard, Wittwe IV Schanzstr. 210.
+ 107 | Erkens, <span class="sub-span">N</span>osina, Wittwe IV Jüdemerstr. 73.
+ 108 | Ernsdorf, Anton, Schlosser II Jakobsstr. 293.
+ 109 | Ernserhof, Maria, ohne III Hinterstr. 75.
+ 110 | Ersfeld, Math. Jos., Geschäftsmann III Wechselstr. 128.
+ 111 | Ertz, Johann, Kappenmacher I Sichelstr. 41.
+ 112 | Ertz, Philipp, Gerber III Neustr. 247.
+ 113 | Ertz, August, Postbüreaugehilfen IV Nagelstr. 31.
+ 114 | Ertz, Franziska, Näherin IV Jüdemerstr. 96.
+ 115 | Erz, Johann, Schreiber II Pferdemarkt 252.
+ 116 | Erz, Jakob, Packmeister IV Nagelstr. 28.
+ 117 | Esch, Mathias, Handelsmann II Metzelstr. 120.
+ 118 | Esch, Peter, Postbote II Hauptmarkt 298.
+ 119 | <span class="del-span">+</span><span class="del-span"> </span>Esch, Theodor, Gerichtsvollzieher III Hosenstr. 5.
+ 120 | Esch, Peter, Taglöhner III Wechselstr. 124.</pre></td>
+        <td><pre>   1 | 20
+   2 | Dreier, Anna, Wittwe, Taglöhnerin II Deutschstr. 270.
+   3 | Dreikorn, Christoph, Reg.=Bote I Domfreihof 88.
+   4 | Drescher, Karl, Ober=Staatsarzt I Banthusstr. 146.
+   5 | Drescher, Peter, Conditor I Pallaststr. 229.
+   6 | Dressler, Karl, Gärtner II Zuckerbergstr. 129.
+   7 | Dressler, Ferdinand, Speisewirth III Weberstr. 50.
+   8 | Drost, Michael, Schreiner IV Johannisstr. 271
+   9 | Druckenmüller, Peter, Schreiner II Diedrichsstr. 173.
+  10 | Druckenmüller, Maria, Wittwe II Diedrichsstr. 173.
+  11 | Drunks, v., Eduard, Katastergeh. Grabenstr. 285.
+  12 | Dümmer, Elisabeth I vorm Römerthor 296.
+  13 | Dümmig, Regina, Wittwe II Judenplatz 287.
+  14 | Dümong, Peter, Schneider III Neustr. 244.
+  15 | Dünnebacke, Joseph, Castellan III Jesuitenstr. 187.
+  16 | Düntzer, Clara, ohne I Sichelstr. 45.
+  17 | Düntzer, Joseph, Küster III Neustr 265.
+  18 | Düring, Friedrich, Friedensrichter II Diedrichsstr. 191.
+  19 | Dürrwald, Jakob, Schreiner IV Jüdemerstr. 97.
+  20 | + Dulcius, Mathias, Aloys und A. Maria, Geschwister,<span class="sub-span">
+  21 | </span>Rentner IV Brückenstr. 240.
+  22 | Dumetz, Joh. Conrad, Taglöhner III vor dem Neu<span class="sub-span">-</span><span class="sub-span">
+  23 | </span>thor 287.
+  24 | Duplang, Franz, Schuhmacher III Rahnenstr. 145.
+  25 | Dunst, Nikolaus, Musiklehrer II Fleischstr. 16.
+  26 | Dunst, Clara, Wittwe II Fleischstr. 16.
+  27 | Duroy, Charlotte, barmherzige Schwester IV Irminer-<span class="ins-span">
+  28 | </span>Freihof 307.
+  29 | Durst, Johann, Taglöhner IV Johannisstr. 278.
+  30 | 
+  31 | Eberhard, Veronika, Rentnerin I Pallaststr 201.
+  32 | Eberhard, Friedrich, Kürschner I Brodstr. 230.
+  33 | Eberhard, Ludwig, Buchhändler II Fleischstr. 12.
+  34 | Eberhard, Anna, Wittwe, II Böhmerstr. 91.
+  35 | Eberhard, Peter, Pflasterer III Engelbergstr. 85.
+  36 | Eberhard, Mathias, Regens III Weberstr. 183.
+  37 | Eberle, Herrmann, Gerbergesell III Platzstr. 157.
+  38 | Ebentheurer, Nikolaus, Reg.<span class="sub-span">=</span>Secret. II Zuckerbergstr. 138.
+  39 | Eberts, Jakob, Katastergeometer I Dominikanerst. 139.
+  40 | 
+  41 | 21
+  42 | Eck, Georg Jakob, Knecht III Weberstr. 184.
+  43 | Eckerts, Wilhelm, Apotheker I Dominikanerstr. 137.
+  44 | Edel, Anna Maria, IV Jüdemerstr. 78.
+  45 | Edinger, Johann, Taglöhner II Walleramsneustr. 199.
+  46 | Effert, Catharina, Wittwe IV Krahnenstr. 352.
+  47 | Ehlen, Joseph, Kaufmann I Brodstr. 236.
+  48 | Ehmann, Margartha, Wittwe II Walleramsneustr. 199.
+  49 | Ehnert, Margaretha, Wittwe II Metzelstr. 102.
+  50 | Ehnert, Joseph, Buchbinder II Metzelstr. 102.
+  51 | Ehses, Thomas, Gerber u. Wirth III Neustr. 314.
+  52 | Eibers, Susanna, IV Jüdemerstr. 58.
+  53 | Eich, Peter, Kaminfeger IV Krahnenstr. 311.
+  54 | Eich, Johann, Kaminfeger IV Brittanien 383.
+  55 | Eichert, Margaretha, Wittwe IV Brittanien 379.
+  56 | Eichholz, Wilhelm, Rector II Fleischstraße 155.
+  57 | Eichler, August, Dampfschifffahrts=Geh. II Fleischstr. 55.
+  58 | Eichler, Florentine, Musiklehrerin II Fleischstr. 55.
+  59 | Eichler, Wilhelm, Civil=Supernumerar IV Nagelstr. 31.
+  60 | Eisenstecken, Mathias, Färber III Neustraße 252.
+  61 | Elbert, Lorenz, IV Krahnenstr. 345.
+  62 | Elbert, Johann, Steuermann, IV Krahnenstr. 354.
+  63 | Elges, Wilhelm, Gerbergesell III Wechselstr. 124.
+  64 | Eltges, Nikolaus, Schriftsetzer IV Jüdemerstr. 62.
+  65 | Eltges, Johann Peter, Friseur IV Jüdemerstraße 78.
+  66 | Eltges, Elis., Wittwe IV Jüdemerstr. 78.
+  67 | Eltges, Nikolaus, Magazin=Aufseher IV Krahnenstr. 332.
+  68 | Elsen, Mathias, Schmied I Brodstr. 279.
+  69 | Elsen, Johann, Taglöhner III Platzstr. 157.
+  70 | Emans, Maxm. August, Apotheker I Hauptmarkt 187.
+  71 | Embser, Heinrich, Schreiner II Judenplatz 305.
+  72 | Embser, Hieronimus, Friseur IV Schanzstr. 145.
+  73 | Emmel, Jonas, Hospitalsbote II Fleischstr. 18.
+  74 | Emmel, Michel, Commissionär I Brodstraße 248.
+  75 | Emmel, Michel, Taxator III Neustr. 348.
+  76 | Emmerich, Friedrich, Rechn.=Rath II Simeonsstift 369.
+  77 | Emmersdorf, Johanna, Rentnerin II Simeonsstift 371.
+  78 | Endres, Anna Elisabeth, Rentnerin I Simeonsstr. 11.
+  79 | Endres, Peter Joseph, Rentner I Pallaststr. 223.
+  80 | Endres, Johann Mathias, Eisenhandel I Brodstr. 234.
+  81 | Endres, Ewald, Eisenhandel I Brodstr. 234.
+  82 | 
+  83 | 22
+  84 | Endres, Barbara, Rentnerin I Brodstr. 266.
+  85 | Endres, Stephan, Maurer II Moselstr. 243.
+  86 | Endres, Johann, Gärtner IV vor der Moselbrück 192.
+  87 | Endres, Johanna, barmherzige Schwester IV Irminer<span class="sub-span">-</span><span class="sub-span">
+  88 | </span>Freihof 367.
+  89 | Engel, Andreas, Aufseher I Sichelstr. 45.
+  90 | Engel, Catharina, ohne I Glockenstr. 64.
+  91 | Engel, Johann, Buchbinder I Brodstr. 266.
+  92 | Engel, Christoph, Schuhmacher II Jakobsstr. 286.
+  93 | Engel, Johann Adam, Hauptamts<span class="sub-span">=</span>Assistent III Neustr.279.
+  94 | Engel, Heinrich, Schlosser IV Brückenstr. 243.
+  95 | Engel, Georg, Metzger IV Krahnenstr. 355.
+  96 | Engels, Gottlieb, Weber I Pallaststr. 223.
+  97 | Engels, Angela, ohne II Deutschstr. 269.
+  98 | Engels, Nikolaus, Schieferdecker III Weberstr. 194.
+  99 | Engesser, Wittwe III Neustr. 267.
+ 100 | Engler, Elisabeth, Wittwe III Hinterstr. 76.
+ 101 | Englert, Sybilla, Rentnerin I Pallaststr. 229.
+ 102 | Ensch, Johann, Schuhmacher III Weberstr. 58.
+ 103 | Ensch, Johann, Tabakspinner IV Brückenstr. 244.
+ 104 | Entz, Peter Adolph, Sattler II Simeonsstr. 321.
+ 105 | Enzminger, Xavier, barmherz. Schwester IV Irminer<span class="sub-span">-</span><span class="sub-span">
+ 106 | </span>Freihof 367.
+ 107 | Eppert, Joseph, Hutfabrikant II Fleischstr. 160.
+ 108 | Eppert, Catharina, Wittwe IV Schanzstr. 147.
+ 109 | Erhard, Wittwe IV Schanzstr. 210.
+ 110 | Erkens, <span class="sub-span">R</span>osina, Wittwe IV Jüdemerstr. 73.
+ 111 | Ernsdorf, Anton, Schlosser II Jakobsstr. 293.
+ 112 | Ernserhof, Maria, ohne III Hinterstr. 75.
+ 113 | Ersfeld, Math. Jos., Geschäftsmann III Wechselstr. 128.
+ 114 | Ertz, Johann, Kappenmacher I Sichelstr. 41.
+ 115 | Ertz, Philipp, Gerber III Neustr. 247.
+ 116 | Ertz, August, Postbüreaugehilfen IV Nagelstr. 31.
+ 117 | Ertz, Franziska, Näherin IV Jüdemerstr. 96.
+ 118 | Erz, Johann, Schreiber II Pferdemarkt 252.
+ 119 | Erz, Jakob, Packmeister IV Nagelstr. 28.
+ 120 | Esch, Mathias, Handelsmann II Metzelstr. 120.
+ 121 | Esch, Peter, Postbote II Hauptmarkt 298.
+ 122 | Esch, Theodor, Gerichtsvollzieher III Hosenstr. 5.
+ 123 | Esch, Peter, Taglöhner III Wechselstr. 124.</pre></td>
+      </tr>
+    </table>
+  </div>
+  <div class="summary">
+    <strong>Levenshtein Distance:</strong> 25 &nbsp;|&nbsp;
+    <strong>Ground Truth Length:</strong> 5340 &nbsp;|&nbsp;
+    <strong>CER:</strong> 0.47%
+  </div>
+</div>
+
+
+
+<div class="legend">
+  <ul>
+    <li><span class="del-span">Deletion</span> (in ground truth)</li>
+    <li><span class="ins-span">Insertion</span> (in generated)</li>
+    <li><span class="sub-span">Substitution</span> (both sides)</li>
+  </ul>
+</div>
+
+
+</body>
+</html>

@@ -161,7 +161,6 @@ def gemini_api_call(prompt: str, temperature: float) -> Optional[dict]:
                     temperature=temperature,
                     max_output_tokens=MAX_OUTPUT_TOKENS,
                     response_mime_type="application/json",
-                    seed=42,
                 ),
             )
 

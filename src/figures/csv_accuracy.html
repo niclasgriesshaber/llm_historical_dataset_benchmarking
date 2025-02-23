@@ -1,0 +1,2192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>CSV Accuracy Comparisons</title>
+
+<style>
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fafafa;
+  color: #333;
+  margin: 20px;
+}
+h1 {
+  font-size: 1.4em;
+  margin-bottom: 0.3em;
+}
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 2em;
+}
+.csv-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+.csv-table th {
+  background: #007BFF;
+  color: #fff;
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+}
+.csv-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.cell-match {
+  background-color: #c6f6d5; /* light green */
+}
+.cell-mismatch {
+  background-color: #fed7d7; /* light red */
+}
+.error {
+  color: #b00;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Comparison: type-1.csv — Model: gemini-2.0 (img2csv)</h1>
+<div class="table-container">
+<table class="csv-table">
+  <thead>
+    <tr>
+      <th>first and middle names</th>
+      <th>surname</th>
+      <th>occupation</th>
+      <th>address</th>
+      <th>id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="cell-match">Christian</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Fabrikmeister</td>
+      <td class="cell-match">Großkölnstraße A 391.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-match">Großkölnstraße A 393.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">ohne Gewerb</td>
+      <td class="cell-match">Seilgraben A 422.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Posamentierer</td>
+      <td class="cell-match">Großkölnstraße A 1007.</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Posamentierer</td>
+      <td class="cell-match">Damengraben A 459½.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Arnold</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Lehrer</td>
+      <td class="cell-match">Franzstraße B 556.</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Konditor</td>
+      <td class="cell-match">Kapuzinergraben B 594.</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolas</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Rentner</td>
+      <td class="cell-match">Judengasse B 820.</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-mismatch">Båcker / Bäcker (gt)</td>
+      <td class="cell-match">Jakobstraße B 889.</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Formanns</td>
+      <td class="cell-match">Schneider</td>
+      <td class="cell-match">Großkölnstraße A 393.</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Formanns</td>
+      <td class="cell-match">Schuhmacher</td>
+      <td class="cell-match">Hirschgraben A 830.</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Forst</td>
+      <td class="cell-match">Maurer</td>
+      <td class="cell-match">Bergdrisch A 110.</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Forst</td>
+      <td class="cell-match">ohne Gewerb</td>
+      <td class="cell-match">Peterstraße A 517.</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Forst</td>
+      <td class="cell-match">Musikus</td>
+      <td class="cell-match">Peterstraße A 557.</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Forst</td>
+      <td class="cell-match">Weber</td>
+      <td class="cell-match">Peterstraße A 582.</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Forst</td>
+      <td class="cell-match">Kaufmann</td>
+      <td class="cell-match">Großkölnstraße A 967.</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Fortier</td>
+      <td class="cell-match">Tapetendrucker</td>
+      <td class="cell-match">Kapuzinergraben B 572.</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Paskal</td>
+      <td class="cell-match">Franck</td>
+      <td class="cell-match">Lederhåndler</td>
+      <td class="cell-match">Jakobstraße B 854.</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Hubert</td>
+      <td class="cell-match">François</td>
+      <td class="cell-match">Schmidt</td>
+      <td class="cell-match">extra muros A 30.</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Pensionair</td>
+      <td class="cell-match">Peterstraße A 562.</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Schneider</td>
+      <td class="cell-match">Peterstraße A 627.</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Anton</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Schmidt</td>
+      <td class="cell-match">Adalbertstraße A 661.</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-mismatch">Thorwåchter / Thorwächter (gt)</td>
+      <td class="cell-match">Franzstraße B 487.</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Geschäftsmann</td>
+      <td class="cell-match">Pontstraße B 619.</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-mismatch">Geschäftsmaun / Geschäftsmann (gt)</td>
+      <td class="cell-match">Pontstraße B 619.</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Nagelschmidt</td>
+      <td class="cell-match">Augustinerbach B 640.</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Barbier</td>
+      <td class="cell-match">Königsstraße B 684.</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Tuchfabrikant</td>
+      <td class="cell-match">Königsstraße B 719.</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Spinner</td>
+      <td class="cell-match">Königsstraße B 720.</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolas</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Spinnermeister</td>
+      <td class="cell-match">Jakobstraße B 884.</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Handelsmann</td>
+      <td class="cell-match">Jakobstraße B 894.</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Josephine</td>
+      <td class="cell-match">Franken</td>
+      <td class="cell-match">Kaufmannschaft</td>
+      <td class="cell-match">Großkölnstraße A 932½.</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Konstantin</td>
+      <td class="cell-match">Franouse</td>
+      <td class="cell-match">Postsekretair</td>
+      <td class="cell-match">Schmidtstraße B 1044.</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-mismatch">Franken / Frantzen (gt)</td>
+      <td class="cell-match">Zuckerbäcker</td>
+      <td class="cell-match">Hirschgraben A 833.</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Aloisa</td>
+      <td class="cell-mismatch">Franken / Frantzen (gt)</td>
+      <td class="cell-match">Lehrerin</td>
+      <td class="cell-match">Hartmannstraße B 1266.</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Arnold</td>
+      <td class="cell-mismatch">Franken / Frantzen (gt)</td>
+      <td class="cell-match">Buchhalter</td>
+      <td class="cell-match">Templergraben.</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-mismatch">Franken / Frantzen (gt)</td>
+      <td class="cell-match">Weber</td>
+      <td class="cell-match">Borngasse B 527.</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <td class="cell-mismatch">Johaun / Johann (gt)</td>
+      <td class="cell-mismatch">Franken / Frantzen (gt)</td>
+      <td class="cell-match">Baumeister</td>
+      <td class="cell-mismatch">außerhalb des Theater
+thores B 35. / außerhalb des Theater= thores B 35. (gt)</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Håndler</td>
+      <td class="cell-match">Pontstraße A 39.</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann Anton</td>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Gerichtsvollzieher</td>
+      <td class="cell-mismatch">Seilgraben
+A 790. / Seilgraben A 790. (gt)</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Schlosser</td>
+      <td class="cell-match">Großkölnstraße A 380.</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Musikus</td>
+      <td class="cell-match">Bergstraße A 135.</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann Joseph</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Wirth</td>
+      <td class="cell-mismatch">Großkölnstraße A
+390. / Großkölnstraße A 390. (gt)</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Kornelius</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Schmidt</td>
+      <td class="cell-match">Peterstraße A 538.</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Stephan</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Ackerer</td>
+      <td class="cell-match">Jakobstraße B 211.</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-match">Franzstraße B 479.</td>
+      <td>46</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Ludwig</td>
+      <td class="cell-match">Freber</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Adalbertstraße A 646½.</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Christian</td>
+      <td class="cell-match">Freber</td>
+      <td class="cell-match">Bote</td>
+      <td class="cell-match">Jakobstraße B 864.</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Gerard</td>
+      <td class="cell-match">Freh</td>
+      <td class="cell-match">Nadler</td>
+      <td class="cell-match">Bergdrisch A 814.</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Severin Joseph</td>
+      <td class="cell-match">Freh</td>
+      <td class="cell-match">Friseur</td>
+      <td class="cell-match">Büchel A 1125.</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Freh</td>
+      <td class="cell-match">Friseur</td>
+      <td class="cell-mismatch">Buchel A 1125. / Büchel A 1125. (gt)</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Freh</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Rosstraße B 276.</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Frehe</td>
+      <td class="cell-match">Meisterknecht</td>
+      <td class="cell-mismatch">Kleinmarschierstraße B
+1192. / Kleinmarschierstraße B 1192. (gt)</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-mismatch">Frcialdenhoven / Freialdenhoven (gt)</td>
+      <td class="cell-match">Maurer</td>
+      <td class="cell-mismatch">Sandkaulstraße A
+255. / Sandkaulstraße A 255. (gt)</td>
+      <td>54</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Engelbert</td>
+      <td class="cell-match">Freialdenhoven</td>
+      <td class="cell-match">Kurzwaarenhandlung</td>
+      <td class="cell-mismatch">Hüh
+nermarkt B 977. / Hüh- nermarkt B 977. (gt)</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Freitag</td>
+      <td class="cell-match">Kutscher</td>
+      <td class="cell-match">Adalbertstraße A 734.</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Fremdgens</td>
+      <td class="cell-match">Fuhrmann</td>
+      <td class="cell-match">Rosgasse B 259.</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Fremdgens</td>
+      <td class="cell-match">Walker</td>
+      <td class="cell-match">Pontstraße A 39.</td>
+      <td>58</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Theodor</td>
+      <td class="cell-match">Fremmy</td>
+      <td class="cell-match">Håndler</td>
+      <td class="cell-match">Rosstraße B 362.</td>
+      <td>59</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Frenken</td>
+      <td class="cell-match">Religionslehrer am Gymnasium</td>
+      <td class="cell-match">Pontstraße A 891.</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-mismatch">Frenk / Frentz (gt)</td>
+      <td class="cell-match">Tuchscheerer</td>
+      <td class="cell-match">Borngasse B 529.</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolas</td>
+      <td class="cell-match">Freudenberger</td>
+      <td class="cell-match">Tapetenhåndler</td>
+      <td class="cell-mismatch">Peterstraße
+B 493. / Peterstraße B 493. (gt)</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob Eduard</td>
+      <td class="cell-match">Freudenthal</td>
+      <td class="cell-match">Polizeikommissair</td>
+      <td class="cell-mismatch">Müns
+sterplatz B 1034. / Mün= sterplatz B 1034. (gt)</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Freund</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Seilgraben A 794.</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <td class="cell-mismatch">Moriß / Moritz (gt)</td>
+      <td class="cell-match">Freyberg</td>
+      <td class="cell-match">Postsekretair</td>
+      <td class="cell-match">Jakobstraße B 928.</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolas</td>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Fabrikmeister</td>
+      <td class="cell-match">Großkölnstraße A 424.</td>
+      <td>66</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Peterstraße A 623.</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Karl</td>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Anstreicher</td>
+      <td class="cell-mismatch">Buchel A 1079. / Büchel A 1079. (gt)</td>
+      <td>68</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Postsekretair</td>
+      <td class="cell-match">Jakobstraße B 934.</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Louise</td>
+      <td class="cell-match">Friedsam</td>
+      <td class="cell-match">ohne Gewerb</td>
+      <td class="cell-match">Peterstraße A 589.</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Rentner</td>
+      <td class="cell-match">Sandkaulstraße A 265.</td>
+      <td>71</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Sandkaulstraße A 224.</td>
+      <td>72</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">ohne Gewerb</td>
+      <td class="cell-match">Seilgraben A 157.</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-mismatch">Båcker / Bäcker (gt)</td>
+      <td class="cell-match">Bergdrisch A 59.</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franziska</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Spezereihändlerin</td>
+      <td class="cell-match">Großkölnstraße A 916.</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Maria</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schusterei</td>
+      <td class="cell-match">Peterstraße A 603½</td>
+      <td>76</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-match">Adalbertstraße A 722.</td>
+      <td>77</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Buchhändler</td>
+      <td class="cell-match">Kleinkölnstraße A 1046.</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Claudius</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Modehändler</td>
+      <td class="cell-match">Ursulinenstraße A 1112.</td>
+      <td>79</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Kleinhändler</td>
+      <td class="cell-match">Körbergasse A 1155.</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Lambert</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schweineschlachter</td>
+      <td class="cell-match">Kleinmarschier= straße B 1240.</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Bierbrauer</td>
+      <td class="cell-mismatch">Anunziatenbach B 674. / Annunziatenbach B 674. (gt)</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schlosser</td>
+      <td class="cell-match">Rosstraße B 352.</td>
+      <td>83</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Mezger</td>
+      <td class="cell-match">Rosstraße B 354.</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Nachtwächter</td>
+      <td class="cell-match">Franzstraße B 495.</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Mezger</td>
+      <td class="cell-match">Judengasse B 822.</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Jakobstraße B 866.</td>
+      <td>87</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Theodor</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schneider</td>
+      <td class="cell-match">Kleinmarschierstraße B 1201.</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Anton</td>
+      <td class="cell-mismatch">Friz / Fritz (gt)</td>
+      <td class="cell-mismatch">Tapetenhåndler / Tapetenhändler (gt)</td>
+      <td class="cell-match">Großkölnstraße A 306.</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Christian</td>
+      <td class="cell-mismatch">Friße / Fritze (gt)</td>
+      <td class="cell-match">Steueraufseher</td>
+      <td class="cell-match">Peterstraße A 545½.</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Leonard</td>
+      <td class="cell-mismatch">Frosch / Frösch (gt)</td>
+      <td class="cell-match">Gärtner</td>
+      <td class="cell-match">Bergstraße A 136.</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Froh</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Franzstraße B 563.</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wendelar</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-match">Rentner</td>
+      <td class="cell-match">Großkölnstraße A 314½.</td>
+      <td>93</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter Johann</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-match">Hutmacher</td>
+      <td class="cell-match">Großkölnstraße A 383.</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter Johann</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-match">Hutmacher</td>
+      <td class="cell-match">Komphausbad A 426.</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-match">Kleinhändler</td>
+      <td class="cell-match">Adalbertstraße A 718.</td>
+      <td>96</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Katharina</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-match">Rentnerin</td>
+      <td class="cell-match">Eselsgasse A 1094.</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-mismatch">Våder / Bäcker (gt)</td>
+      <td class="cell-match">Hartmannstraße A 1237.</td>
+      <td>98</td>
+    </tr>
+  </tbody>
+</table>
+</div><h1>Comparison: type-1.csv — Model: gemini-2.0 (pdf2csv)</h1>
+<div class="table-container">
+<table class="csv-table">
+  <thead>
+    <tr>
+      <th>first and middle names</th>
+      <th>surname</th>
+      <th>occupation</th>
+      <th>address</th>
+      <th>id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="cell-match">Christian</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Fabrikmeister</td>
+      <td class="cell-mismatch">Großkölnstraße A
+391. / Großkölnstraße A 391. (gt)</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-match">Großkölnstraße A 393.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">ohne Gewerb</td>
+      <td class="cell-match">Seilgraben A 422.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Posamentierer</td>
+      <td class="cell-mismatch">Großkölnstraße A
+1007. / Großkölnstraße A 1007. (gt)</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Posamentierer</td>
+      <td class="cell-match">Damengraben A 459½.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Arnold</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Lehrer</td>
+      <td class="cell-match">Franzstraße B 556.</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Konditor</td>
+      <td class="cell-match">Kapuzinergraben B 594.</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolas</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Rentner</td>
+      <td class="cell-match">Judengasse B 820.</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-mismatch">Båcker / Bäcker (gt)</td>
+      <td class="cell-match">Jakobstraße B 889.</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Formanns</td>
+      <td class="cell-match">Schneider</td>
+      <td class="cell-match">Großkölnstraße A 393.</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Formanns</td>
+      <td class="cell-match">Schuhmacher</td>
+      <td class="cell-match">Hirschgraben A 830.</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Forst</td>
+      <td class="cell-match">Maurer</td>
+      <td class="cell-match">Bergdrisch A 110.</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Forst</td>
+      <td class="cell-match">ohne Gewerb</td>
+      <td class="cell-match">Peterstraße A 517.</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Forst</td>
+      <td class="cell-match">Musikus</td>
+      <td class="cell-match">Peterstraße A 557.</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Forst</td>
+      <td class="cell-match">Weber</td>
+      <td class="cell-match">Peterstraße A 582.</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Forst</td>
+      <td class="cell-match">Kaufmann</td>
+      <td class="cell-match">Großkölnstraße A 967.</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Fortier</td>
+      <td class="cell-match">Tapetendrucker</td>
+      <td class="cell-mismatch">Kapuzinergraben B
+572. / Kapuzinergraben B 572. (gt)</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Paskal</td>
+      <td class="cell-match">Franck</td>
+      <td class="cell-match">Lederhåndler</td>
+      <td class="cell-match">Jakobstraße B 854.</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Hubert</td>
+      <td class="cell-match">François</td>
+      <td class="cell-match">Schmidt</td>
+      <td class="cell-match">extra muros A 30.</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Pensionair</td>
+      <td class="cell-match">Peterstraße A 562.</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Schneider</td>
+      <td class="cell-match">Peterstraße A 627.</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Anton</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Schmidt</td>
+      <td class="cell-match">Adalbertstraße A 661.</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-mismatch">Thorwachter / Thorwächter (gt)</td>
+      <td class="cell-match">Franzstraße B 487.</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Geschäftsmann</td>
+      <td class="cell-match">Pontstraße B 619.</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-mismatch">Geschäftsmaun / Geschäftsmann (gt)</td>
+      <td class="cell-match">Pontstraße B 619.</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Nagelschmidt</td>
+      <td class="cell-match">Augustinerbach B 640.</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Barbier</td>
+      <td class="cell-match">Königsstraße B 684.</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Tuchfabrikant</td>
+      <td class="cell-match">Königsstraße B 719.</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Spinner</td>
+      <td class="cell-match">Königsstraße B 720.</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolas</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Spinnermeister</td>
+      <td class="cell-match">Jakobstraße B 884.</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Handelsmann</td>
+      <td class="cell-match">Jakobstraße B 894.</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Josephine</td>
+      <td class="cell-match">Franken</td>
+      <td class="cell-mismatch">Kaufmannfchaft / Kaufmannschaft (gt)</td>
+      <td class="cell-mismatch">Großkölnstraße
+A 932½. / Großkölnstraße A 932½. (gt)</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Konstantin</td>
+      <td class="cell-match">Franouse</td>
+      <td class="cell-mismatch">Poſtsekretair / Postsekretair (gt)</td>
+      <td class="cell-mismatch">Schmidtstraße B
+1044. / Schmidtstraße B 1044. (gt)</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-mismatch">Franken / Frantzen (gt)</td>
+      <td class="cell-match">Zuckerbäcker</td>
+      <td class="cell-match">Hirschgraben A 833.</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Aloisa</td>
+      <td class="cell-mismatch">Franken / Frantzen (gt)</td>
+      <td class="cell-match">Lehrerin</td>
+      <td class="cell-match">Hartmannstraße B 1266.</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Arnold</td>
+      <td class="cell-mismatch">Franken / Frantzen (gt)</td>
+      <td class="cell-match">Buchhalter</td>
+      <td class="cell-match">Templergraben.</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-mismatch">Franken / Frantzen (gt)</td>
+      <td class="cell-match">Weber</td>
+      <td class="cell-match">Borngasse B 527.</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-mismatch">Franken / Frantzen (gt)</td>
+      <td class="cell-match">Baumeister</td>
+      <td class="cell-mismatch">außerhalb des Theater
+thores B 35. / außerhalb des Theater= thores B 35. (gt)</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-mismatch">Händler / Håndler (gt)</td>
+      <td class="cell-match">Pontstraße A 39.</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann Anton</td>
+      <td class="cell-mismatch">Franzen / Franz (gt)</td>
+      <td class="cell-match">Gerichtsvollzieher</td>
+      <td class="cell-mismatch">Seilgraben
+A 790. / Seilgraben A 790. (gt)</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Schlosser</td>
+      <td class="cell-match">Großkölnstraße A 380.</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Musikus</td>
+      <td class="cell-match">Bergstraße A 135.</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann Joseph</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Wirth</td>
+      <td class="cell-mismatch">Großkölnstraße A
+390. / Großkölnstraße A 390. (gt)</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Kornelius</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Schmidt</td>
+      <td class="cell-match">Peterstraße A 538.</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Stephan</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Ackerer</td>
+      <td class="cell-match">Jakobstraße B 211.</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-match">Franzstraße B 479.</td>
+      <td>46</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Ludwig</td>
+      <td class="cell-match">Freber</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Adalbertstraße A 646½.</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Christian</td>
+      <td class="cell-match">Freber</td>
+      <td class="cell-match">Bote</td>
+      <td class="cell-match">Jakobstraße B 864.</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Gerard</td>
+      <td class="cell-match">Freh</td>
+      <td class="cell-match">Nadler</td>
+      <td class="cell-match">Bergdrisch A 814.</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Severin Joseph</td>
+      <td class="cell-match">Freh</td>
+      <td class="cell-match">Friseur</td>
+      <td class="cell-match">Büchel A 1125.</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Freh</td>
+      <td class="cell-match">Friseur</td>
+      <td class="cell-match">Büchel A 1125.</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Freh</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Rosstraße B 276.</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Frehe</td>
+      <td class="cell-match">Meisterknecht</td>
+      <td class="cell-mismatch">Kleinmarschierstraße B
+1192. / Kleinmarschierstraße B 1192. (gt)</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Freialdenhoven</td>
+      <td class="cell-match">Maurer</td>
+      <td class="cell-mismatch">Sandkaulstraße A
+255. / Sandkaulstraße A 255. (gt)</td>
+      <td>54</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Engelbert</td>
+      <td class="cell-match">Freialdenhoven</td>
+      <td class="cell-match">Kurzwaarenhandlung</td>
+      <td class="cell-mismatch">Hüh
+nermarkt B 977. / Hüh- nermarkt B 977. (gt)</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Freitag</td>
+      <td class="cell-match">Kutscher</td>
+      <td class="cell-match">Adalbertstraße A 734.</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Fremdgens</td>
+      <td class="cell-match">Fuhrmann</td>
+      <td class="cell-match">Rosgasse B 259.</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Fremdgens</td>
+      <td class="cell-match">Walker</td>
+      <td class="cell-match">Pontstraße A 39.</td>
+      <td>58</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Theodor</td>
+      <td class="cell-match">Fremmy</td>
+      <td class="cell-mismatch">Händler / Håndler (gt)</td>
+      <td class="cell-match">Rosstraße B 362.</td>
+      <td>59</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Frenken</td>
+      <td class="cell-mismatch">Religionslehrer / Religionslehrer am Gymnasium (gt)</td>
+      <td class="cell-match">Pontstraße A 891.</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-mismatch">Frenk / Frentz (gt)</td>
+      <td class="cell-match">Tuchscheerer</td>
+      <td class="cell-match">Borngasse B 529.</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolas</td>
+      <td class="cell-match">Freudenberger</td>
+      <td class="cell-match">Tapetenhåndler</td>
+      <td class="cell-mismatch">Peterstraße
+B 493. / Peterstraße B 493. (gt)</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob Eduard</td>
+      <td class="cell-match">Freudenthal</td>
+      <td class="cell-match">Polizeikommissair</td>
+      <td class="cell-mismatch">Müns
+sterplatz B 1034. / Mün= sterplatz B 1034. (gt)</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Freund</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Seilgraben A 794.</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <td class="cell-mismatch">Moriß / Moritz (gt)</td>
+      <td class="cell-match">Freyberg</td>
+      <td class="cell-match">Postsekretair</td>
+      <td class="cell-match">Jakobstraße B 928.</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolas</td>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Fabrikmeister</td>
+      <td class="cell-match">Großkölnstraße A 424.</td>
+      <td>66</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Peterstraße A 623.</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Karl</td>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Anstreicher</td>
+      <td class="cell-mismatch">Buchel A 1079. / Büchel A 1079. (gt)</td>
+      <td>68</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Postsekretair</td>
+      <td class="cell-match">Jakobstraße B 934.</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Louise</td>
+      <td class="cell-match">Friedsam</td>
+      <td class="cell-mismatch">Wittwe, ohne Gewerb / ohne Gewerb (gt)</td>
+      <td class="cell-mismatch">Peterstraße
+A 589. / Peterstraße A 589. (gt)</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Rentner</td>
+      <td class="cell-match">Sandkaulstraße A 265.</td>
+      <td>71</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Sandkaulstraße A 224.</td>
+      <td>72</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">ohne Gewerb</td>
+      <td class="cell-match">Seilgraben A 157.</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-mismatch">Båcker / Bäcker (gt)</td>
+      <td class="cell-mismatch">Bergbrisch A 59. / Bergdrisch A 59. (gt)</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franziska</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Spezereihändlerin</td>
+      <td class="cell-mismatch">Großkölnstraße
+A 916. / Großkölnstraße A 916. (gt)</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Maria</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-mismatch">Wittwe, Schusterci / Schusterei (gt)</td>
+      <td class="cell-match">Peterstraße A 603½</td>
+      <td>76</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-match">Adalbertstraße A 722.</td>
+      <td>77</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Buchhändler</td>
+      <td class="cell-match">Kleinkölnstraße A 1046.</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Claudius</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-mismatch">Modchandler / Modehändler (gt)</td>
+      <td class="cell-mismatch">Ursulinenstraße A
+1112. / Ursulinenstraße A 1112. (gt)</td>
+      <td>79</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Kleinhändler</td>
+      <td class="cell-match">Körbergasse A 1155.</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Lambert</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schweineschlachter</td>
+      <td class="cell-mismatch">Kleinmarschier
+straße B 1240. / Kleinmarschier= straße B 1240. (gt)</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Bierbrauer</td>
+      <td class="cell-mismatch">Anunziatenbach B 674. / Annunziatenbach B 674. (gt)</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schlosser</td>
+      <td class="cell-match">Rosstraße B 352.</td>
+      <td>83</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Mezger</td>
+      <td class="cell-match">Rosstraße B 354.</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Nachtwächter</td>
+      <td class="cell-match">Franzstraße B 495.</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Mezger</td>
+      <td class="cell-match">Judengasse B 822.</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Jakobstraße B 866.</td>
+      <td>87</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Theodor</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schneider</td>
+      <td class="cell-mismatch">Kleinmarschierstraße B
+1201. / Kleinmarschierstraße B 1201. (gt)</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Anton</td>
+      <td class="cell-mismatch">Friß / Fritz (gt)</td>
+      <td class="cell-mismatch">Tapetenhåndler / Tapetenhändler (gt)</td>
+      <td class="cell-match">Großkölnstraße A 306.</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Christian</td>
+      <td class="cell-mismatch">Friße / Fritze (gt)</td>
+      <td class="cell-mismatch">Steuerausseher / Steueraufseher (gt)</td>
+      <td class="cell-match">Peterstraße A 545½.</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Leonard</td>
+      <td class="cell-mismatch">Frosch / Frösch (gt)</td>
+      <td class="cell-match">Gärtner</td>
+      <td class="cell-match">Bergstraße A 136.</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Froh</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Franzstraße B 563.</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wendelar</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-match">Rentner</td>
+      <td class="cell-match">Großkölnstraße A 314½.</td>
+      <td>93</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter Johann</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-match">Hutmacher</td>
+      <td class="cell-mismatch">Großkölnstraße A
+383. / Großkölnstraße A 383. (gt)</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter Johann</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-match">Hutmacher</td>
+      <td class="cell-mismatch">Komphausbad A
+426. / Komphausbad A 426. (gt)</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-match">Kleinhändler</td>
+      <td class="cell-match">Adalbertstraße A 718.</td>
+      <td>96</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Katharina</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-mismatch">Wittwe, Rentnerin / Rentnerin (gt)</td>
+      <td class="cell-mismatch">Eselsgasse A
+1094. / Eselsgasse A 1094. (gt)</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-mismatch">Våder / Bäcker (gt)</td>
+      <td class="cell-match">Hartmannstraße A 1237.</td>
+      <td>98</td>
+    </tr>
+  </tbody>
+</table>
+</div><h1>Comparison: type-1.csv — Model: gemini-2.0 (txt2csv)</h1>
+<div class="table-container">
+<table class="csv-table">
+  <thead>
+    <tr>
+      <th>first and middle names</th>
+      <th>surname</th>
+      <th>occupation</th>
+      <th>address</th>
+      <th>id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="cell-match">Christian</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Fabrikmeister</td>
+      <td class="cell-match">Großkölnstraße A 391.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-match">Großkölnstraße A 393.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">ohne Gewerb</td>
+      <td class="cell-match">Seilgraben A 422.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Posamentierer</td>
+      <td class="cell-match">Großkölnstraße A 1007.</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Posamentierer</td>
+      <td class="cell-match">Damengraben A 459½.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Arnold</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Lehrer</td>
+      <td class="cell-match">Franzstraße B 556.</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Konditor</td>
+      <td class="cell-match">Kapuzinergraben B 594.</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolas</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Rentner</td>
+      <td class="cell-match">Judengasse B 820.</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Förster</td>
+      <td class="cell-match">Bäcker</td>
+      <td class="cell-match">Jakobstraße B 889.</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Formanns</td>
+      <td class="cell-match">Schneider</td>
+      <td class="cell-match">Großkölnstraße A 393.</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Formanns</td>
+      <td class="cell-match">Schuhmacher</td>
+      <td class="cell-match">Hirschgraben A 830.</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Forst</td>
+      <td class="cell-match">Maurer</td>
+      <td class="cell-match">Bergdrisch A 110.</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Forst</td>
+      <td class="cell-match">ohne Gewerb</td>
+      <td class="cell-match">Peterstraße A 517.</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Forst</td>
+      <td class="cell-match">Musikus</td>
+      <td class="cell-match">Peterstraße A 557.</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Forst</td>
+      <td class="cell-match">Weber</td>
+      <td class="cell-match">Peterstraße A 582.</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Forst</td>
+      <td class="cell-match">Kaufmann</td>
+      <td class="cell-match">Großkölnstraße A 967.</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Fortier</td>
+      <td class="cell-match">Tapetendrucker</td>
+      <td class="cell-match">Kapuzinergraben B 572.</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Paskal</td>
+      <td class="cell-match">Franck</td>
+      <td class="cell-match">Lederhåndler</td>
+      <td class="cell-match">Jakobstraße B 854.</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Hubert</td>
+      <td class="cell-match">François</td>
+      <td class="cell-match">Schmidt</td>
+      <td class="cell-match">extra muros A 30.</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Pensionair</td>
+      <td class="cell-match">Peterstraße A 562.</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Schneider</td>
+      <td class="cell-match">Peterstraße A 627.</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Anton</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Schmidt</td>
+      <td class="cell-match">Adalbertstraße A 661.</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Thorwächter</td>
+      <td class="cell-match">Franzstraße B 487.</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Geschäftsmann</td>
+      <td class="cell-match">Pontstraße B 619.</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Geschäftsmann</td>
+      <td class="cell-match">Pontstraße B 619.</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Nagelschmidt</td>
+      <td class="cell-match">Augustinerbach B 640.</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Barbier</td>
+      <td class="cell-match">Königsstraße B 684.</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Tuchfabrikant</td>
+      <td class="cell-match">Königsstraße B 719.</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Spinner</td>
+      <td class="cell-match">Königsstraße B 720.</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolas</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Spinnermeister</td>
+      <td class="cell-match">Jakobstraße B 884.</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Frank</td>
+      <td class="cell-match">Handelsmann</td>
+      <td class="cell-match">Jakobstraße B 894.</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Josephine</td>
+      <td class="cell-match">Franken</td>
+      <td class="cell-match">Kaufmannschaft</td>
+      <td class="cell-match">Großkölnstraße A 932½.</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Konstantin</td>
+      <td class="cell-match">Franouse</td>
+      <td class="cell-match">Postsekretair</td>
+      <td class="cell-match">Schmidtstraße B 1044.</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Frantzen</td>
+      <td class="cell-match">Zuckerbäcker</td>
+      <td class="cell-match">Hirschgraben A 833.</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Aloisa</td>
+      <td class="cell-match">Frantzen</td>
+      <td class="cell-match">Lehrerin</td>
+      <td class="cell-match">Hartmannstraße B 1266.</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Arnold</td>
+      <td class="cell-match">Frantzen</td>
+      <td class="cell-match">Buchhalter</td>
+      <td class="cell-match">Templergraben.</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Frantzen</td>
+      <td class="cell-match">Weber</td>
+      <td class="cell-match">Borngasse B 527.</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frantzen</td>
+      <td class="cell-match">Baumeister</td>
+      <td class="cell-match">außerhalb des Theater= thores B 35.</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Håndler</td>
+      <td class="cell-match">Pontstraße A 39.</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann Anton</td>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Gerichtsvollzieher</td>
+      <td class="cell-match">Seilgraben A 790.</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Schlosser</td>
+      <td class="cell-match">Großkölnstraße A 380.</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Musikus</td>
+      <td class="cell-match">Bergstraße A 135.</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann Joseph</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Wirth</td>
+      <td class="cell-match">Großkölnstraße A 390.</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Kornelius</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Schmidt</td>
+      <td class="cell-match">Peterstraße A 538.</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Stephan</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Ackerer</td>
+      <td class="cell-match">Jakobstraße B 211.</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Franzen</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-match">Franzstraße B 479.</td>
+      <td>46</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Ludwig</td>
+      <td class="cell-match">Freber</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Adalbertstraße A 646½.</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Christian</td>
+      <td class="cell-match">Freber</td>
+      <td class="cell-match">Bote</td>
+      <td class="cell-match">Jakobstraße B 864.</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Gerard</td>
+      <td class="cell-match">Freh</td>
+      <td class="cell-match">Nadler</td>
+      <td class="cell-match">Bergdrisch A 814.</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Severin Joseph</td>
+      <td class="cell-match">Freh</td>
+      <td class="cell-match">Friseur</td>
+      <td class="cell-match">Büchel A 1125.</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Freh</td>
+      <td class="cell-match">Friseur</td>
+      <td class="cell-match">Büchel A 1125.</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Freh</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Rosstraße B 276.</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Frehe</td>
+      <td class="cell-match">Meisterknecht</td>
+      <td class="cell-match">Kleinmarschierstraße B 1192.</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Freialdenhoven</td>
+      <td class="cell-match">Maurer</td>
+      <td class="cell-match">Sandkaulstraße A 255.</td>
+      <td>54</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Engelbert</td>
+      <td class="cell-match">Freialdenhoven</td>
+      <td class="cell-match">Kurzwaarenhandlung</td>
+      <td class="cell-match">Hüh- nermarkt B 977.</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Freitag</td>
+      <td class="cell-match">Kutscher</td>
+      <td class="cell-match">Adalbertstraße A 734.</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Fremdgens</td>
+      <td class="cell-match">Fuhrmann</td>
+      <td class="cell-match">Rosgasse B 259.</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Fremdgens</td>
+      <td class="cell-match">Walker</td>
+      <td class="cell-match">Pontstraße A 39.</td>
+      <td>58</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Theodor</td>
+      <td class="cell-match">Fremmy</td>
+      <td class="cell-match">Håndler</td>
+      <td class="cell-match">Rosstraße B 362.</td>
+      <td>59</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Frenken</td>
+      <td class="cell-match">Religionslehrer am Gymnasium</td>
+      <td class="cell-match">Pontstraße A 891.</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frentz</td>
+      <td class="cell-match">Tuchscheerer</td>
+      <td class="cell-match">Borngasse B 529.</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolas</td>
+      <td class="cell-match">Freudenberger</td>
+      <td class="cell-match">Tapetenhåndler</td>
+      <td class="cell-match">Peterstraße B 493.</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob Eduard</td>
+      <td class="cell-match">Freudenthal</td>
+      <td class="cell-match">Polizeikommissair</td>
+      <td class="cell-match">Mün= sterplatz B 1034.</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Freund</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Seilgraben A 794.</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Moritz</td>
+      <td class="cell-match">Freyberg</td>
+      <td class="cell-match">Postsekretair</td>
+      <td class="cell-match">Jakobstraße B 928.</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolas</td>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Fabrikmeister</td>
+      <td class="cell-match">Großkölnstraße A 424.</td>
+      <td>66</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Peterstraße A 623.</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Karl</td>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Anstreicher</td>
+      <td class="cell-match">Büchel A 1079.</td>
+      <td>68</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Postsekretair</td>
+      <td class="cell-match">Jakobstraße B 934.</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Louise</td>
+      <td class="cell-mismatch">Friedsam Wittwe / Friedsam (gt)</td>
+      <td class="cell-match">ohne Gewerb</td>
+      <td class="cell-match">Peterstraße A 589.</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Rentner</td>
+      <td class="cell-match">Sandkaulstraße A 265.</td>
+      <td>71</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Sandkaulstraße A 224.</td>
+      <td>72</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">ohne Gewerb</td>
+      <td class="cell-match">Seilgraben A 157.</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Bäcker</td>
+      <td class="cell-match">Bergdrisch A 59.</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franziska</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Spezereihändlerin</td>
+      <td class="cell-match">Großkölnstraße A 916.</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Maria</td>
+      <td class="cell-mismatch">Frings Wittwe / Frings (gt)</td>
+      <td class="cell-match">Schusterei</td>
+      <td class="cell-match">Peterstraße A 603½</td>
+      <td>76</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-match">Adalbertstraße A 722.</td>
+      <td>77</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Buchhändler</td>
+      <td class="cell-match">Kleinkölnstraße A 1046.</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Claudius</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Modehändler</td>
+      <td class="cell-match">Ursulinenstraße A 1112.</td>
+      <td>79</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Kleinhändler</td>
+      <td class="cell-match">Körbergasse A 1155.</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Lambert</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schweineschlachter</td>
+      <td class="cell-match">Kleinmarschier= straße B 1240.</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Bierbrauer</td>
+      <td class="cell-match">Annunziatenbach B 674.</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schlosser</td>
+      <td class="cell-match">Rosstraße B 352.</td>
+      <td>83</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Mezger</td>
+      <td class="cell-match">Rosstraße B 354.</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Nachtwächter</td>
+      <td class="cell-match">Franzstraße B 495.</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Mezger</td>
+      <td class="cell-match">Judengasse B 822.</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Jakobstraße B 866.</td>
+      <td>87</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Theodor</td>
+      <td class="cell-match">Frings</td>
+      <td class="cell-match">Schneider</td>
+      <td class="cell-match">Kleinmarschierstraße B 1201.</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Anton</td>
+      <td class="cell-match">Fritz</td>
+      <td class="cell-match">Tapetenhändler</td>
+      <td class="cell-match">Großkölnstraße A 306.</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Christian</td>
+      <td class="cell-match">Fritze</td>
+      <td class="cell-match">Steueraufseher</td>
+      <td class="cell-match">Peterstraße A 545½.</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Leonard</td>
+      <td class="cell-match">Frösch</td>
+      <td class="cell-match">Gärtner</td>
+      <td class="cell-match">Bergstraße A 136.</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Froh</td>
+      <td class="cell-match">Schuster</td>
+      <td class="cell-match">Franzstraße B 563.</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wendelar</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-match">Rentner</td>
+      <td class="cell-match">Großkölnstraße A 314½.</td>
+      <td>93</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter Johann</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-match">Hutmacher</td>
+      <td class="cell-match">Großkölnstraße A 383.</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter Johann</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-match">Hutmacher</td>
+      <td class="cell-match">Komphausbad A 426.</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-match">Kleinhändler</td>
+      <td class="cell-match">Adalbertstraße A 718.</td>
+      <td>96</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Katharina</td>
+      <td class="cell-mismatch">Frohn Wittwe / Frohn (gt)</td>
+      <td class="cell-match">Rentnerin</td>
+      <td class="cell-match">Eselsgasse A 1094.</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Frohn</td>
+      <td class="cell-match">Bäcker</td>
+      <td class="cell-match">Hartmannstraße A 1237.</td>
+      <td>98</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</body>
+</html>
