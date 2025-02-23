@@ -106,15 +106,11 @@ python src/ocr_img2txt/pytesseractOCR.py --pdf type-1.pdf
 
 # For Transkribus OCR
 python src/ocr_img2txt/transkribusOCR.py --pdf type-1.pdf
-```
 
 # Generate benchmarking results after running all models:
-```bash
 python src/benchmarking/csv_accuracy.py
-```
 
 # Run --help for more information:
-```bash
 python src/llm_img2csv/gemini-2.0.py --help
 ```
 
@@ -166,11 +162,6 @@ Results are generated as:
 - Transkribus team
 - Tesseract OCR community
 
-## 📧 Contact
-
-Niclas Griesshaber, niclasgriesshaber@outlook.com
-Gavin Greif, gavin.greif@history.ox.ac.uk
-
 ## 👥 Contributing
 
 Contributions are very welcome! Feel free to:
@@ -181,3 +172,8 @@ Contributions are very welcome! Feel free to:
 - Suggest improvements to documentation
 
 Please ensure your contributions align with the project's coding standards and include appropriate tests where applicable.
+
+## 📧 Contact
+
+Niclas Griesshaber, niclasgriesshaber@outlook.com
+Gavin Greif, gavin.greif@history.ox.ac.uk
