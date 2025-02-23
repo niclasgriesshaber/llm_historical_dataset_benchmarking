@@ -173,6 +173,20 @@ Contributions are very welcome! Feel free to:
 
 Please ensure your contributions align with the project's coding standards and include appropriate tests where applicable.
 
+## 📝 How to Cite
+
+If you use this pipeline in your research, please cite:
+
+```bibtex
+@article{gg2025historicalbenchmarking,
+    title={Benchmarking Large Language Models and OCR Systems for Historical Document Data Extraction: A Comprehensive Pipeline},
+    author={Griesshaber, Niclas and Greif, Gavin},
+    year={2025},
+    journal={arXiv preprint},
+    url={https://arxiv.org/abs/forthcoming}
+}
+```
+
 ## 📧 Contact
 
 Niclas Griesshaber, niclasgriesshaber@outlook.com
