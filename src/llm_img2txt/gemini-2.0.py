@@ -53,6 +53,7 @@ MODEL_NAME = "gemini-2.0"
 FULL_MODEL_NAME = "gemini-2.0-flash" #    "gemini-2.0-flash-exp"
 MAX_OUTPUT_TOKENS = 8192
 RETRY_LIMIT_SECONDS = 3600  # 1 hour per page
+SEED = 42
 
 ###############################################################################
 # Utility: Time Formatting
@@ -157,7 +158,7 @@ def main() -> None:
     logging.info("=== Gemini-2.0 PDF -> PNG -> TEXT Pipeline ===")
     logging.info(f"PDF to process: {pdf_name}")
     logging.info(f"Model: {MODEL_NAME}, Full model: {FULL_MODEL_NAME}")
-    logging.info(f"Temperature: {temperature}")
+    logging.info(f"Temperature: {temperature} | SEED: {SEED}")
 
     # Start overall timer
     overall_start = time.time()
@@ -278,6 +279,7 @@ def main() -> None:
                             config=types.GenerateContentConfig(
                                 temperature=temperature,
                                 max_output_tokens=MAX_OUTPUT_TOKENS,
+                                seed=SEED,
                             ),
                         )
 

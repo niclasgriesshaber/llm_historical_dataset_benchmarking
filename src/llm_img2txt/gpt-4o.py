@@ -138,7 +138,7 @@ def openai_api(
     api_key: str
 ) -> (Optional[str], dict):
     """
-    Call OpenAI’s GPT-4o with an image + text prompt, returning (text_out, usage_dict).
+    Call OpenAI's GPT-4o with an image + text prompt, returning (text_out, usage_dict).
 
     usage_dict has e.g. {"prompt_tokens": ..., "completion_tokens": ..., "total_tokens": ...}.
     If there's an error, return (None, {}).
@@ -166,7 +166,7 @@ def openai_api(
                 "role": "user",
                 "content": [
                     {"type": "text", "text": prompt},
-                    {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{base64_image}" }}
+                    {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{base64_image}", "detail": "high"}}
                 ]
             }
         ],

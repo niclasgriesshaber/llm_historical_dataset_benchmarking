@@ -44,7 +44,7 @@ def openai_api(
     api_key: str
 ) -> (Optional[str], dict):
     """
-    Call OpenAI’s GPT-4o with an image + text prompt.
+    Call OpenAI's GPT-4o with an image + text prompt.
     Returns (text_out, usage_info) or (None, {}).
 
     usage_info is a dict with keys: {prompt_tokens, completion_tokens, total_tokens}.
@@ -79,7 +79,8 @@ def openai_api(
                     {
                         "type": "image_url",
                         "image_url": {
-                            "url": f"data:image/png;base64,{base64_image}"
+                            "url": f"data:image/png;base64,{base64_image}",
+                            "detail": "high"
                         }
                     }
                 ]

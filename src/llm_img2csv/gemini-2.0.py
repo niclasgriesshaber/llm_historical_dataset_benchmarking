@@ -199,6 +199,7 @@ def gemini_api_call(
                     temperature=temperature,
                     max_output_tokens=MAX_OUTPUT_TOKENS,
                     response_mime_type="application/json",
+                    seed=42,
                 ),
             )
 
@@ -274,7 +275,7 @@ def main():
     )
 
     logging.info("=== Gemini-2.0 PDF -> PNG -> JSON -> CSV Pipeline ===")
-    logging.info(f"PDF: {pdf_name} | Temperature: {temperature} | Continue from page: {continue_from_page}")
+    logging.info(f"PDF: {pdf_name} | Temperature: {temperature} | SEED: 42")
 
     # -------------------------------------------------------------------------
     # Verify the PDF exists

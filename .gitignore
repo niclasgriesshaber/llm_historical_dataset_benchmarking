@@ -4,4 +4,18 @@ config/.env
 # Ignore results/ and logs/ directories
 results/
 logs/
-data/
+
+# Include only specific data directories
+data/*
+!data/ground_truth/
+!data/pdfs/
+
+# Ignore system and cache files
+**/.DS_Store
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
+.idea/
+.vscode/
