@@ -189,5 +189,6 @@ If you use this pipeline in your research, please cite:
 
 ## 📧 Contact
 
-Niclas Griesshaber, niclasgriesshaber@outlook.com
+Niclas Griesshaber, niclas.griesshaber@history.ox.ac.uk
+
 Gavin Greif, gavin.greif@history.ox.ac.uk
