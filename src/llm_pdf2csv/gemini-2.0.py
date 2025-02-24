@@ -54,7 +54,6 @@ MODEL_NAME = "gemini-2.0"             # Short name for folder naming
 FULL_MODEL_NAME = "gemini-2.0-flash"  # If you want an exact model variant
 MAX_OUTPUT_TOKENS = 8192
 RETRY_LIMIT_SECONDS = 3600  # 1 hour per page
-SEED = 42  # Add this line
 
 # Retry limit in seconds (e.g., 1 hour = 3600).
 # Adjust to 600 if you truly only want a 10-minute limit, etc.
@@ -250,7 +249,6 @@ def gemini_api_call_for_pdf(prompt: str, pdf_path: Path, temperature: float = 0.
                 generation_config=genai.types.GenerationConfig(
                     temperature=temperature,
                     max_output_tokens=MAX_OUTPUT_TOKENS,
-                    seed=SEED,
                 )
             )
 
@@ -324,7 +322,7 @@ def main():
     )
 
     logging.info("=== Gemini-2.0 Single-Request PDF -> JSON -> CSV Pipeline (Cookbook) ===")
-    logging.info(f"PDF: {pdf_name} | Temperature: {temperature} | SEED: {SEED}")
+    logging.info(f"PDF: {pdf_name} | Temperature: {temperature}")
 
     # -------------------------------------------------------------------------
     # Verify PDF

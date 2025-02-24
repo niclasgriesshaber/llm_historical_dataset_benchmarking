@@ -82,8 +82,6 @@ def main():
                 model_script_path,
                 "--pdf",
                 pdf_name,
-                "--temperature",
-                str(args.temperature),
             ]
 
             # Print command for logging

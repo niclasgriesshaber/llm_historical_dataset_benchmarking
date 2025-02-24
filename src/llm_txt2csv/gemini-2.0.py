@@ -50,7 +50,6 @@ MODEL_NAME = "gemini-2.0"        # For folder naming
 FULL_MODEL_NAME = "gemini-2.0-flash"
 MAX_OUTPUT_TOKENS = 8192
 RETRY_LIMIT_SECONDS = 3600  # up to 1 hour max for a successful call
-SEED = 42
 
 ###############################################################################
 # Utility: Time formatting
@@ -162,7 +161,6 @@ def gemini_api_call(prompt: str, temperature: float) -> Optional[dict]:
                     temperature=temperature,
                     max_output_tokens=MAX_OUTPUT_TOKENS,
                     response_mime_type="application/json",
-                    seed=SEED,
                 ),
             )
 
@@ -223,7 +221,7 @@ def main():
     )
 
     logging.info("=== Gemini-2.0 TXT -> JSON -> CSV Pipeline ===")
-    logging.info(f"TXT: {txt_name} | Temperature: {temperature} | SEED: {SEED}")
+    logging.info(f"TXT: {txt_name} | Temperature: {temperature}")
 
     # -------------------------------------------------------------------------
     # Verify the TXT file exists

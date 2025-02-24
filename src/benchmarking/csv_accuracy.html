@@ -99,46 +99,59 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 </tr>
 <tr><td class='model-name'>llm_img2csv/gemini-2.0</td>
 <td>92.60% | 363</td>
-<td>31.90% | 74</td>
-<td><span class='mismatch'>dim mismatch (r=39)</span></td>
-<td><span class='mismatch'>dim mismatch (r=116)</span></td>
+<td><span class='mismatch'>dim mismatch (r=58)</span></td>
+<td>40.62% | 65</td>
+<td>87.50% | 406</td>
 <td>39.71% | 54</td>
 <td>46.94% | 169</td>
 <td>58.52% | 206</td>
 <td>64.13% | 177</td>
 <td>63.64% | 196</td>
 <td>92.19% | 413</td>
-<td>65.97% | 1652</td>
+<td>70.75% | 2049</td>
 </tr>
 <tr><td class='model-name'>llm_img2csv/gpt-4o</td>
 <td><span class='mismatch'>dim mismatch (r=94)</span></td>
 <td><span class='mismatch'>dim mismatch (r=55)</span></td>
 <td><span class='mismatch'>dim mismatch (r=38)</span></td>
-<td>50.65% | 233</td>
+<td><span class='mismatch'>dim mismatch (r=115)</span></td>
 <td>34.56% | 47</td>
 <td><span class='mismatch'>dim mismatch (r=85)</span></td>
 <td>36.08% | 127</td>
 <td>31.88% | 88</td>
 <td><span class='mismatch'>dim mismatch (r=76)</span></td>
 <td><span class='mismatch'>dim mismatch (r=102)</span></td>
-<td>40.44% | 495</td>
+<td>34.29% | 262</td>
+</tr>
+<tr><td class='model-name'>llm_img2csv/o1</td>
+<td><span class='mismatch'>dim mismatch (r=74)</span></td>
+<td><span class='mismatch'>dim mismatch (r=58)</span></td>
+<td><span class='mismatch'>dim mismatch (r=38)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>0.00% | 0</span></td>
 </tr>
 <tr><td class='model-name'>llm_pdf2csv/gemini-2.0</td>
 <td>86.99% | 341</td>
-<td><span class='mismatch'>dim mismatch (r=70)</span></td>
+<td>55.70% | 127</td>
 <td><span class='mismatch'>dim mismatch (r=0)</span></td>
-<td><span class='mismatch'>dim mismatch (r=116)</span></td>
+<td>91.16% | 423</td>
 <td>50.00% | 68</td>
 <td><span class='mismatch'>dim mismatch (r=86)</span></td>
 <td>59.66% | 210</td>
 <td>72.83% | 201</td>
 <td>59.09% | 182</td>
 <td>48.44% | 217</td>
-<td>63.76% | 1219</td>
+<td>67.93% | 1769</td>
 </tr>
 <tr><td class='model-name'>llm_txt2csv/gemini-2.0</td>
 <td>99.23% | 389</td>
-<td><span class='mismatch'>dim mismatch (r=57)</span></td>
+<td>50.00% | 114</td>
 <td>56.25% | 90</td>
 <td><span class='mismatch'>dim mismatch (r=105)</span></td>
 <td>66.18% | 90</td>
@@ -147,7 +160,7 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 <td>73.19% | 202</td>
 <td>77.27% | 238</td>
 <td>95.98% | 430</td>
-<td>80.06% | 1947</td>
+<td>77.48% | 2061</td>
 </tr>
 <tr><td class='model-name'>llm_txt2csv/gpt-4o</td>
 <td>74.49% | 292</td>
@@ -162,11 +175,24 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 <td>71.43% | 320</td>
 <td>70.35% | 1711</td>
 </tr>
+<tr><td class='model-name'>llm_txt2csv/o1</td>
+<td>98.72% | 387</td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td>98.72% | 387</td>
+</tr>
 <tr><td class='model-name'>Total number of cells</td>
 <td>392</td>
-<td>232</td>
+<td>228</td>
 <td>160</td>
-<td>460</td>
+<td>464</td>
 <td>136</td>
 <td>360</td>
 <td>352</td>
@@ -177,9 +203,9 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 </tr>
 <tr><td class='model-name'>GT Rows</td>
 <td>98</td>
-<td>58</td>
+<td>57</td>
 <td>40</td>
-<td>115</td>
+<td>116</td>
 <td>34</td>
 <td>90</td>
 <td>88</td>
@@ -209,32 +235,39 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 <th>All</th>
 </tr>
 <tr><td class='model-name'>llm_img2csv/gemini-2.0</td>
-<td>80.67% (505/626)</td>
-<td>80.99% (507/626)</td>
-<td>47.92% (300/626)</td>
-<td>54.31% (340/626)</td>
-<td>65.97% (1652/2504)</td>
+<td>84.25% (610/724)</td>
+<td>84.25% (610/724)</td>
+<td>50.97% (369/724)</td>
+<td>63.54% (460/724)</td>
+<td>70.75% (2049/2896)</td>
 </tr>
 <tr><td class='model-name'>llm_img2csv/gpt-4o</td>
-<td>60.46% (185/306)</td>
-<td>51.31% (157/306)</td>
-<td>40.20% (123/306)</td>
-<td>9.80% (30/306)</td>
-<td>40.44% (495/1224)</td>
+<td>57.59% (110/191)</td>
+<td>43.98% (84/191)</td>
+<td>26.18% (50/191)</td>
+<td>9.42% (18/191)</td>
+<td>34.29% (262/764)</td>
+</tr>
+<tr><td class='model-name'>llm_img2csv/o1</td>
+<td>0.00% (0/0)</td>
+<td>0.00% (0/0)</td>
+<td>0.00% (0/0)</td>
+<td>0.00% (0/0)</td>
+<td>0.00% (0/0)</td>
 </tr>
 <tr><td class='model-name'>llm_pdf2csv/gemini-2.0</td>
-<td>80.13% (383/478)</td>
-<td>88.49% (423/478)</td>
-<td>47.49% (227/478)</td>
-<td>38.91% (186/478)</td>
-<td>63.76% (1219/1912)</td>
+<td>83.41% (543/651)</td>
+<td>89.55% (583/651)</td>
+<td>53.15% (346/651)</td>
+<td>45.62% (297/651)</td>
+<td>67.93% (1769/2604)</td>
 </tr>
 <tr><td class='model-name'>llm_txt2csv/gemini-2.0</td>
-<td>95.72% (582/608)</td>
-<td>94.90% (577/608)</td>
-<td>75.82% (461/608)</td>
-<td>53.78% (327/608)</td>
-<td>80.06% (1947/2432)</td>
+<td>92.48% (615/665)</td>
+<td>92.33% (614/665)</td>
+<td>74.44% (495/665)</td>
+<td>50.68% (337/665)</td>
+<td>77.48% (2061/2660)</td>
 </tr>
 <tr><td class='model-name'>llm_txt2csv/gpt-4o</td>
 <td>92.11% (560/608)</td>
@@ -242,6 +275,13 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 <td>78.62% (478/608)</td>
 <td>16.45% (100/608)</td>
 <td>70.35% (1711/2432)</td>
+</tr>
+<tr><td class='model-name'>llm_txt2csv/o1</td>
+<td>96.94% (95/98)</td>
+<td>100.00% (98/98)</td>
+<td>98.98% (97/98)</td>
+<td>98.98% (97/98)</td>
+<td>98.72% (387/392)</td>
 </tr>
 </table>
 
@@ -270,46 +310,59 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 </tr>
 <tr><td class='model-name'>llm_img2csv/gemini-2.0</td>
 <td>95.41% | 374</td>
-<td>49.14% | 114</td>
-<td><span class='mismatch'>dim mismatch (r=39)</span></td>
-<td><span class='mismatch'>dim mismatch (r=116)</span></td>
+<td><span class='mismatch'>dim mismatch (r=58)</span></td>
+<td>55.62% | 89</td>
+<td>92.89% | 431</td>
 <td>39.71% | 54</td>
 <td>51.11% | 184</td>
 <td>62.50% | 220</td>
 <td>88.41% | 244</td>
 <td>73.38% | 226</td>
 <td>93.53% | 419</td>
-<td>73.28% | 1835</td>
+<td>77.38% | 2241</td>
 </tr>
 <tr><td class='model-name'>llm_img2csv/gpt-4o</td>
 <td><span class='mismatch'>dim mismatch (r=94)</span></td>
 <td><span class='mismatch'>dim mismatch (r=55)</span></td>
 <td><span class='mismatch'>dim mismatch (r=38)</span></td>
-<td>64.57% | 297</td>
+<td><span class='mismatch'>dim mismatch (r=115)</span></td>
 <td>36.76% | 50</td>
 <td><span class='mismatch'>dim mismatch (r=85)</span></td>
 <td>37.22% | 131</td>
 <td>41.30% | 114</td>
 <td><span class='mismatch'>dim mismatch (r=76)</span></td>
 <td><span class='mismatch'>dim mismatch (r=102)</span></td>
-<td>48.37% | 592</td>
+<td>38.61% | 295</td>
+</tr>
+<tr><td class='model-name'>llm_img2csv/o1</td>
+<td><span class='mismatch'>dim mismatch (r=74)</span></td>
+<td><span class='mismatch'>dim mismatch (r=58)</span></td>
+<td><span class='mismatch'>dim mismatch (r=38)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>0.00% | 0</span></td>
 </tr>
 <tr><td class='model-name'>llm_pdf2csv/gemini-2.0</td>
 <td>93.37% | 366</td>
-<td><span class='mismatch'>dim mismatch (r=70)</span></td>
+<td>57.46% | 131</td>
 <td><span class='mismatch'>dim mismatch (r=0)</span></td>
-<td><span class='mismatch'>dim mismatch (r=116)</span></td>
+<td>91.16% | 423</td>
 <td>58.09% | 79</td>
 <td><span class='mismatch'>dim mismatch (r=86)</span></td>
 <td>60.23% | 212</td>
 <td>83.33% | 230</td>
 <td>82.47% | 254</td>
 <td>48.44% | 217</td>
-<td>71.03% | 1358</td>
+<td>73.43% | 1912</td>
 </tr>
 <tr><td class='model-name'>llm_txt2csv/gemini-2.0</td>
 <td>99.23% | 389</td>
-<td><span class='mismatch'>dim mismatch (r=57)</span></td>
+<td>55.70% | 127</td>
 <td>70.62% | 113</td>
 <td><span class='mismatch'>dim mismatch (r=105)</span></td>
 <td>87.50% | 119</td>
@@ -318,7 +371,7 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 <td>98.91% | 273</td>
 <td>96.75% | 298</td>
 <td>96.21% | 431</td>
-<td>91.24% | 2219</td>
+<td>88.20% | 2346</td>
 </tr>
 <tr><td class='model-name'>llm_txt2csv/gpt-4o</td>
 <td>99.23% | 389</td>
@@ -333,11 +386,24 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 <td>96.21% | 431</td>
 <td>90.21% | 2194</td>
 </tr>
+<tr><td class='model-name'>llm_txt2csv/o1</td>
+<td>98.72% | 387</td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td>98.72% | 387</td>
+</tr>
 <tr><td class='model-name'>Total number of cells</td>
 <td>392</td>
-<td>232</td>
+<td>228</td>
 <td>160</td>
-<td>460</td>
+<td>464</td>
 <td>136</td>
 <td>360</td>
 <td>352</td>
@@ -348,9 +414,9 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 </tr>
 <tr><td class='model-name'>GT Rows</td>
 <td>98</td>
-<td>58</td>
+<td>57</td>
 <td>40</td>
-<td>115</td>
+<td>116</td>
 <td>34</td>
 <td>90</td>
 <td>88</td>
@@ -379,32 +445,39 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 <th>All</th>
 </tr>
 <tr><td class='model-name'>llm_img2csv/gemini-2.0</td>
-<td>86.58% (542/626)</td>
-<td>81.79% (512/626)</td>
-<td>65.50% (410/626)</td>
-<td>59.27% (371/626)</td>
-<td>73.28% (1835/2504)</td>
+<td>88.12% (638/724)</td>
+<td>84.94% (615/724)</td>
+<td>68.09% (493/724)</td>
+<td>68.37% (495/724)</td>
+<td>77.38% (2241/2896)</td>
 </tr>
 <tr><td class='model-name'>llm_img2csv/gpt-4o</td>
-<td>60.78% (186/306)</td>
-<td>52.29% (160/306)</td>
-<td>40.85% (125/306)</td>
-<td>39.54% (121/306)</td>
-<td>48.37% (592/1224)</td>
+<td>57.59% (110/191)</td>
+<td>45.55% (87/191)</td>
+<td>27.23% (52/191)</td>
+<td>24.08% (46/191)</td>
+<td>38.61% (295/764)</td>
+</tr>
+<tr><td class='model-name'>llm_img2csv/o1</td>
+<td>0.00% (0/0)</td>
+<td>0.00% (0/0)</td>
+<td>0.00% (0/0)</td>
+<td>0.00% (0/0)</td>
+<td>0.00% (0/0)</td>
 </tr>
 <tr><td class='model-name'>llm_pdf2csv/gemini-2.0</td>
-<td>90.79% (434/478)</td>
-<td>88.70% (424/478)</td>
-<td>51.46% (246/478)</td>
-<td>53.14% (254/478)</td>
-<td>71.03% (1358/1912)</td>
+<td>91.24% (594/651)</td>
+<td>89.86% (585/651)</td>
+<td>56.53% (368/651)</td>
+<td>56.07% (365/651)</td>
+<td>73.43% (1912/2604)</td>
 </tr>
 <tr><td class='model-name'>llm_txt2csv/gemini-2.0</td>
-<td>95.89% (583/608)</td>
-<td>95.07% (578/608)</td>
-<td>81.25% (494/608)</td>
-<td>92.76% (564/608)</td>
-<td>91.24% (2219/2432)</td>
+<td>92.63% (616/665)</td>
+<td>92.48% (615/665)</td>
+<td>79.70% (530/665)</td>
+<td>87.97% (585/665)</td>
+<td>88.20% (2346/2660)</td>
 </tr>
 <tr><td class='model-name'>llm_txt2csv/gpt-4o</td>
 <td>92.27% (561/608)</td>
@@ -412,6 +485,13 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 <td>85.53% (520/608)</td>
 <td>88.82% (540/608)</td>
 <td>90.21% (2194/2432)</td>
+</tr>
+<tr><td class='model-name'>llm_txt2csv/o1</td>
+<td>96.94% (95/98)</td>
+<td>100.00% (98/98)</td>
+<td>98.98% (97/98)</td>
+<td>98.98% (97/98)</td>
+<td>98.72% (387/392)</td>
 </tr>
 </table>
 
@@ -440,46 +520,59 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 </tr>
 <tr><td class='model-name'>llm_img2csv/gemini-2.0</td>
 <td>98.21% | 385</td>
-<td>56.47% | 131</td>
-<td><span class='mismatch'>dim mismatch (r=39)</span></td>
-<td><span class='mismatch'>dim mismatch (r=116)</span></td>
+<td><span class='mismatch'>dim mismatch (r=58)</span></td>
+<td>68.12% | 109</td>
+<td>93.53% | 434</td>
 <td>47.79% | 65</td>
 <td>54.17% | 195</td>
 <td>65.91% | 232</td>
 <td>97.10% | 268</td>
 <td>81.49% | 251</td>
 <td>96.65% | 433</td>
-<td>78.27% | 1960</td>
+<td>81.91% | 2372</td>
 </tr>
 <tr><td class='model-name'>llm_img2csv/gpt-4o</td>
 <td><span class='mismatch'>dim mismatch (r=94)</span></td>
 <td><span class='mismatch'>dim mismatch (r=55)</span></td>
 <td><span class='mismatch'>dim mismatch (r=38)</span></td>
-<td>70.87% | 326</td>
+<td><span class='mismatch'>dim mismatch (r=115)</span></td>
 <td>59.56% | 81</td>
 <td><span class='mismatch'>dim mismatch (r=85)</span></td>
 <td>52.27% | 184</td>
 <td>65.58% | 181</td>
 <td><span class='mismatch'>dim mismatch (r=76)</span></td>
 <td><span class='mismatch'>dim mismatch (r=102)</span></td>
-<td>63.07% | 772</td>
+<td>58.38% | 446</td>
+</tr>
+<tr><td class='model-name'>llm_img2csv/o1</td>
+<td><span class='mismatch'>dim mismatch (r=74)</span></td>
+<td><span class='mismatch'>dim mismatch (r=58)</span></td>
+<td><span class='mismatch'>dim mismatch (r=38)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>0.00% | 0</span></td>
 </tr>
 <tr><td class='model-name'>llm_pdf2csv/gemini-2.0</td>
 <td>97.45% | 382</td>
-<td><span class='mismatch'>dim mismatch (r=70)</span></td>
+<td>64.91% | 148</td>
 <td><span class='mismatch'>dim mismatch (r=0)</span></td>
-<td><span class='mismatch'>dim mismatch (r=116)</span></td>
+<td>93.10% | 432</td>
 <td>80.15% | 109</td>
 <td><span class='mismatch'>dim mismatch (r=86)</span></td>
 <td>67.61% | 238</td>
 <td>96.74% | 267</td>
 <td>90.26% | 278</td>
 <td>83.04% | 372</td>
-<td>86.09% | 1646</td>
+<td>85.48% | 2226</td>
 </tr>
 <tr><td class='model-name'>llm_txt2csv/gemini-2.0</td>
 <td>99.49% | 390</td>
-<td><span class='mismatch'>dim mismatch (r=57)</span></td>
+<td>57.89% | 132</td>
 <td>73.75% | 118</td>
 <td><span class='mismatch'>dim mismatch (r=105)</span></td>
 <td>91.91% | 125</td>
@@ -488,7 +581,7 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 <td>98.91% | 273</td>
 <td>97.40% | 300</td>
 <td>96.43% | 432</td>
-<td>92.27% | 2244</td>
+<td>89.32% | 2376</td>
 </tr>
 <tr><td class='model-name'>llm_txt2csv/gpt-4o</td>
 <td>99.23% | 389</td>
@@ -503,11 +596,24 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 <td>96.43% | 432</td>
 <td>91.00% | 2213</td>
 </tr>
+<tr><td class='model-name'>llm_txt2csv/o1</td>
+<td>98.98% | 388</td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td><span class='mismatch'>dim mismatch (r=0)</span></td>
+<td>98.98% | 388</td>
+</tr>
 <tr><td class='model-name'>Total number of cells</td>
 <td>392</td>
-<td>232</td>
+<td>228</td>
 <td>160</td>
-<td>460</td>
+<td>464</td>
 <td>136</td>
 <td>360</td>
 <td>352</td>
@@ -518,9 +624,9 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 </tr>
 <tr><td class='model-name'>GT Rows</td>
 <td>98</td>
-<td>58</td>
+<td>57</td>
 <td>40</td>
-<td>115</td>
+<td>116</td>
 <td>34</td>
 <td>90</td>
 <td>88</td>
@@ -550,32 +656,39 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 <th>All</th>
 </tr>
 <tr><td class='model-name'>llm_img2csv/gemini-2.0</td>
-<td>90.10% (564/626)</td>
-<td>87.38% (547/626)</td>
-<td>69.49% (435/626)</td>
-<td>66.13% (414/626)</td>
-<td>78.27% (1960/2504)</td>
+<td>91.30% (661/724)</td>
+<td>89.09% (645/724)</td>
+<td>71.27% (516/724)</td>
+<td>75.97% (550/724)</td>
+<td>81.91% (2372/2896)</td>
 </tr>
 <tr><td class='model-name'>llm_img2csv/gpt-4o</td>
-<td>67.65% (207/306)</td>
-<td>66.34% (203/306)</td>
-<td>50.65% (155/306)</td>
-<td>67.65% (207/306)</td>
-<td>63.07% (772/1224)</td>
+<td>68.59% (131/191)</td>
+<td>65.97% (126/191)</td>
+<td>38.74% (74/191)</td>
+<td>60.21% (115/191)</td>
+<td>58.38% (446/764)</td>
+</tr>
+<tr><td class='model-name'>llm_img2csv/o1</td>
+<td>0.00% (0/0)</td>
+<td>0.00% (0/0)</td>
+<td>0.00% (0/0)</td>
+<td>0.00% (0/0)</td>
+<td>0.00% (0/0)</td>
 </tr>
 <tr><td class='model-name'>llm_pdf2csv/gemini-2.0</td>
-<td>96.03% (459/478)</td>
-<td>94.77% (453/478)</td>
-<td>75.31% (360/478)</td>
-<td>78.24% (374/478)</td>
-<td>86.09% (1646/1912)</td>
+<td>95.39% (621/651)</td>
+<td>95.39% (621/651)</td>
+<td>76.34% (497/651)</td>
+<td>74.81% (487/651)</td>
+<td>85.48% (2226/2604)</td>
 </tr>
 <tr><td class='model-name'>llm_txt2csv/gemini-2.0</td>
-<td>96.55% (587/608)</td>
-<td>97.70% (594/608)</td>
-<td>81.58% (496/608)</td>
-<td>93.26% (567/608)</td>
-<td>92.27% (2244/2432)</td>
+<td>93.23% (620/665)</td>
+<td>95.04% (632/665)</td>
+<td>80.15% (533/665)</td>
+<td>88.87% (591/665)</td>
+<td>89.32% (2376/2660)</td>
 </tr>
 <tr><td class='model-name'>llm_txt2csv/gpt-4o</td>
 <td>92.76% (564/608)</td>
@@ -583,6 +696,13 @@ Empty, "null", or whitespace cells are normalized to "" for all methods.<br><br>
 <td>86.84% (528/608)</td>
 <td>89.31% (543/608)</td>
 <td>91.00% (2213/2432)</td>
+</tr>
+<tr><td class='model-name'>llm_txt2csv/o1</td>
+<td>97.96% (96/98)</td>
+<td>100.00% (98/98)</td>
+<td>98.98% (97/98)</td>
+<td>98.98% (97/98)</td>
+<td>98.98% (388/392)</td>
 </tr>
 </table>
 

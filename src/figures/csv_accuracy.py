@@ -259,13 +259,10 @@ def main():
             found_any_csv_for_model = False
 
             for subtask_label, subtask_root in tasks:
-                # If subtask is img2csv/pdf2csv => folder is "<doc_name_no_ext>.pdf"
-                # If subtask is txt2csv => folder is "<doc_name_no_ext>"
-                if subtask_label == "txt2csv":
-                    folder_name = doc_name_no_ext
-                else:
-                    folder_name = doc_name_no_ext + ".pdf"
+                # All subtasks use the same folder name
+                folder_name = doc_name_no_ext
 
+                # Generate the path to the CSV file
                 gen_path = os.path.join(
                     subtask_root,
                     model_name,

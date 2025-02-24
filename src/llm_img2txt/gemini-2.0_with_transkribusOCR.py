@@ -68,7 +68,6 @@ MODEL_NAME = "gemini-2.0-with-transkribus"  # Folder name for final outputs
 FULL_MODEL_NAME = "gemini-2.0-flash"
 MAX_OUTPUT_TOKENS = 8192
 RETRY_LIMIT_SECONDS = 3600  # 1 hour max retry for Gemini
-SEED = 42
 
 ###############################################################################
 # Utility: Time Formatting
@@ -214,7 +213,7 @@ def main() -> None:
 
     logging.info("=== Gemini-2.0 Post-Correction Pipeline ===")
     logging.info(f"PDF: {pdf_name}")
-    logging.info(f"Temperature: {temperature} (default=0.0) | SEED: {SEED}")
+    logging.info(f"Temperature: {temperature} (default=0.0)")
 
     # Check environment for Gemini
     if not API_KEY:
@@ -341,8 +340,7 @@ def main() -> None:
                     ],
                     config=types.GenerateContentConfig(
                         temperature=temperature,
-                        max_output_tokens=MAX_OUTPUT_TOKENS,
-                        seed=SEED
+                        max_output_tokens=MAX_OUTPUT_TOKENS
                     ),
                 )
 
@@ -448,7 +446,6 @@ def main() -> None:
         },
         "total_duration_seconds": int(total_duration),
         "total_duration_formatted": format_duration(total_duration),
-        "seed": SEED,
     }
     write_json_log(log_info, MODEL_NAME)
 
