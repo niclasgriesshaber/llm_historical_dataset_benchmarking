@@ -202,9 +202,9 @@ def main() -> None:
                         f"Image metadata -> width={width}px, height={height}px, dpi=UNKNOWN"
                     )
 
-                # Single attempt at OCR
+                # Single attempt at OCR using deu_frak
                 try:
-                    transcription = pytesseract.image_to_string(pil_image)
+                    transcription = pytesseract.image_to_string(pil_image, lang="deu_frak")
                 except Exception as e:
                     logging.error(f"pytesseract OCR error on {png_path.stem}: {e}. Skipping this page.")
                     transcription = ""

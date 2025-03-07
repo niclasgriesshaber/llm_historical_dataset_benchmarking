@@ -2,7 +2,6 @@
 config/.env
 
 # Ignore results/ and logs/ directories
-results/
 logs/
 
 # Include only specific data directories

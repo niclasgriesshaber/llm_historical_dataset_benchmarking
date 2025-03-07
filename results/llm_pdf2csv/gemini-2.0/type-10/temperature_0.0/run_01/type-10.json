@@ -1,0 +1,674 @@
+[
+  {
+    "first and middle names": "Anna",
+    "surname": "Dreier",
+    "occupation": "Wittwe, Taglöhnerin II",
+    "address": "Deutschstr. 270."
+  },
+  {
+    "first and middle names": "Christoph",
+    "surname": "Dreikorn",
+    "occupation": "Reg.-Bote I",
+    "address": "Domfreihof 88."
+  },
+  {
+    "first and middle names": "Karl",
+    "surname": "Drescher",
+    "occupation": "Ober-Staatsarzt I",
+    "address": "Banthusstr. 146."
+  },
+  {
+    "first and middle names": "Peter",
+    "surname": "Drescher",
+    "occupation": "Conditor I",
+    "address": "Pallaststr. 229."
+  },
+  {
+    "first and middle names": "Karl",
+    "surname": "Dressler",
+    "occupation": "Gärtner II",
+    "address": "Zuckerbergstr. 129."
+  },
+  {
+    "first and middle names": "Ferdinand",
+    "surname": "Dressler",
+    "occupation": "Speisewirth III",
+    "address": "Weberstr. 50."
+  },
+  {
+    "first and middle names": "Michael",
+    "surname": "Drost",
+    "occupation": "Schreiner IV",
+    "address": "Johannisstr. 271."
+  },
+  {
+    "first and middle names": "Peter",
+    "surname": "Druckenmüller",
+    "occupation": "Schreiner II",
+    "address": "Diedrichsstr. 173."
+  },
+  {
+    "first and middle names": "Maria",
+    "surname": "Druckenmüller",
+    "occupation": "Wittwe II",
+    "address": "Diedrichsstr. 173."
+  },
+  {
+    "first and middle names": "Eduard",
+    "surname": "Drunks",
+    "occupation": "Katastergeh.",
+    "address": "Grabenstr. 285."
+  },
+  {
+    "first and middle names": "Elisabeth",
+    "surname": "Dümmer",
+    "occupation": "I",
+    "address": "vorm Römerthor 296."
+  },
+  {
+    "first and middle names": "Regina",
+    "surname": "Dümmig",
+    "occupation": "Wittwe II",
+    "address": "Judenplatz 287."
+  },
+  {
+    "first and middle names": "Peter",
+    "surname": "Dümong",
+    "occupation": "Schneider III",
+    "address": "Neustr. 244."
+  },
+  {
+    "first and middle names": "Joseph",
+    "surname": "Dünnebacke",
+    "occupation": "Castellan III",
+    "address": "Jesuitenstr. 187."
+  },
+  {
+    "first and middle names": "Clara",
+    "surname": "Dünger",
+    "occupation": "ohne I",
+    "address": "Sichelstr. 45."
+  },
+  {
+    "first and middle names": "Joseph",
+    "surname": "Dünger",
+    "occupation": "Küster III",
+    "address": "Neustr 265."
+  },
+  {
+    "first and middle names": "Friedrich",
+    "surname": "Düring",
+    "occupation": "Friedensrichter II",
+    "address": "Diedrichsstr. 191."
+  },
+  {
+    "first and middle names": "Jakob",
+    "surname": "Dürrwald",
+    "occupation": "Schreiner IV",
+    "address": "Jüdemerstr. 97."
+  },
+  {
+    "first and middle names": "Mathias, Aloys und A. Maria",
+    "surname": "Dulcius",
+    "occupation": "Geschwister,\nRentner IV",
+    "address": "Brückenstr. 240."
+  },
+  {
+    "first and middle names": "Joh. Conrad",
+    "surname": "Dumez",
+    "occupation": "Taglöhner III",
+    "address": "vor dem Neu-\nthor 287."
+  },
+  {
+    "first and middle names": "Franz",
+    "surname": "Duplang",
+    "occupation": "Schuhmacher III",
+    "address": "Rahnenstr. 145."
+  },
+  {
+    "first and middle names": "Nikolaus",
+    "surname": "Dunst",
+    "occupation": "Musiklehrer II",
+    "address": "Fleischstr. 16."
+  },
+  {
+    "first and middle names": "Clara",
+    "surname": "Dunst",
+    "occupation": "Wittwe II",
+    "address": "Fleischstr. 16."
+  },
+  {
+    "first and middle names": "Charlotte",
+    "surname": "Duroy",
+    "occupation": "barmherzige Schwester IV",
+    "address": "Irminer-\nFreihof 307."
+  },
+  {
+    "first and middle names": "Johann",
+    "surname": "Durst",
+    "occupation": "Taglöhner IV",
+    "address": "Johannisstr. 278."
+  },
+  {
+    "first and middle names": "Veronika",
+    "surname": "Eberhard",
+    "occupation": "Rentnerin I",
+    "address": "Pallaststr 201."
+  },
+  {
+    "first and middle names": "Friedrich",
+    "surname": "Eberhard",
+    "occupation": "Kürschner I",
+    "address": "Brodstr. 230."
+  },
+  {
+    "first and middle names": "Ludwig",
+    "surname": "Eberhard",
+    "occupation": "Buchhändler II",
+    "address": "Fleischstr. 12."
+  },
+  {
+    "first and middle names": "Anna",
+    "surname": "Eberhard",
+    "occupation": "Wittwe, II",
+    "address": "Böhmerstr. 91."
+  },
+  {
+    "first and middle names": "Peter",
+    "surname": "Eberhard",
+    "occupation": "Pflasterer III",
+    "address": "Engelbergstr. 85."
+  },
+  {
+    "first and middle names": "Mathias",
+    "surname": "Eberhard",
+    "occupation": "Regens III",
+    "address": "Weberstr. 183."
+  },
+  {
+    "first and middle names": "Herrmann",
+    "surname": "Eberle",
+    "occupation": "Gerbergesell III",
+    "address": "Plakstr. 157."
+  },
+  {
+    "first and middle names": "Nikolaus",
+    "surname": "Ebentheurer",
+    "occupation": "Reg.-Secret. II",
+    "address": "Zuckerbergstr. 138."
+  },
+  {
+    "first and middle names": "Jakob",
+    "surname": "Eberts",
+    "occupation": "Katastergeometer I",
+    "address": "Dominikanerst. 139."
+  },
+  {
+    "first and middle names": "Georg Jakob",
+    "surname": "Eck",
+    "occupation": "Knecht III",
+    "address": "Weberstr. 184."
+  },
+  {
+    "first and middle names": "Wilhelm",
+    "surname": "Eckerts",
+    "occupation": "Apotheker I",
+    "address": "Dominikanerstr. 137."
+  },
+  {
+    "first and middle names": "Anna Maria",
+    "surname": "Edel",
+    "occupation": "IV",
+    "address": "Jüdemerstr. 78."
+  },
+  {
+    "first and middle names": "Johann",
+    "surname": "Edinger",
+    "occupation": "Taglöhner II",
+    "address": "Walleramsneustr. 199."
+  },
+  {
+    "first and middle names": "Catharina",
+    "surname": "Effert",
+    "occupation": "Wittwe IV",
+    "address": "Krahnenstr. 352."
+  },
+  {
+    "first and middle names": "Joseph",
+    "surname": "Ehlen",
+    "occupation": "Kaufmann I",
+    "address": "Brodstr. 236."
+  },
+  {
+    "first and middle names": "Margartha",
+    "surname": "Ehmann",
+    "occupation": "Wittwe II",
+    "address": "Walleramsneustr. 199."
+  },
+  {
+    "first and middle names": "Margaretha",
+    "surname": "Ehnert",
+    "occupation": "Wittwe II",
+    "address": "Mezelstr. 102."
+  },
+  {
+    "first and middle names": "Joseph",
+    "surname": "Ehnert",
+    "occupation": "Buchbinder II",
+    "address": "Mezelstr. 102."
+  },
+  {
+    "first and middle names": "Thomas",
+    "surname": "Ehses",
+    "occupation": "Gerber u. Wirth III",
+    "address": "Neustr. 314."
+  },
+  {
+    "first and middle names": "Suzanna",
+    "surname": "Eibers",
+    "occupation": "IV",
+    "address": "Jüdemerstr. 58."
+  },
+  {
+    "first and middle names": "Peter",
+    "surname": "Eich",
+    "occupation": "Kaminfeger IV",
+    "address": "Krahnenstr. 311."
+  },
+  {
+    "first and middle names": "Johann",
+    "surname": "Eich",
+    "occupation": "Kaminfeger IV",
+    "address": "Brittanien 383."
+  },
+  {
+    "first and middle names": "Margaretha",
+    "surname": "Eichert",
+    "occupation": "Wittwe IV",
+    "address": "Brittanien 379."
+  },
+  {
+    "first and middle names": "Wilhelm",
+    "surname": "Eichholz",
+    "occupation": "Rector II",
+    "address": "Fleischstraße 155."
+  },
+  {
+    "first and middle names": "August",
+    "surname": "Eichler",
+    "occupation": "Dampfschifffahrts-Geh. II",
+    "address": "Fleischstr. 55."
+  },
+  {
+    "first and middle names": "Florentine",
+    "surname": "Eichler",
+    "occupation": "Musiklehrerin II",
+    "address": "Fleischstr. 55."
+  },
+  {
+    "first and middle names": "Wilhelm",
+    "surname": "Eichler",
+    "occupation": "Civil-Supernumerar IV",
+    "address": "Nagelstr. 31."
+  },
+  {
+    "first and middle names": "Mathias",
+    "surname": "Eisenstecken",
+    "occupation": "Färber III",
+    "address": "Neustraße 252."
+  },
+  {
+    "first and middle names": "Lorenz",
+    "surname": "Elbert",
+    "occupation": "IV",
+    "address": "Krahnenstr. 345."
+  },
+  {
+    "first and middle names": "Johann",
+    "surname": "Elbert",
+    "occupation": "Steuermann, IV",
+    "address": "Krahnenstr. 354."
+  },
+  {
+    "first and middle names": "Wilhelm",
+    "surname": "Elges",
+    "occupation": "Gerbergesell III",
+    "address": "Wechselstr. 124."
+  },
+  {
+    "first and middle names": "Nikolaus",
+    "surname": "Eltges",
+    "occupation": "Schriftseker IV",
+    "address": "Jüdemerstr. 62."
+  },
+  {
+    "first and middle names": "Johann Peter",
+    "surname": "Eltges",
+    "occupation": "Friseur IV",
+    "address": "Jüdemerstraße 78."
+  },
+  {
+    "first and middle names": "Elis.",
+    "surname": "Eltges",
+    "occupation": "Wittwe IV",
+    "address": "Jüdemerstr. 78."
+  },
+  {
+    "first and middle names": "Nikolaus",
+    "surname": "Eltges",
+    "occupation": "Magazin-Aufseher IV",
+    "address": "Krahnenstr. 332."
+  },
+  {
+    "first and middle names": "Mathias",
+    "surname": "Elsen",
+    "occupation": "Schmied I",
+    "address": "Brodstr. 279."
+  },
+  {
+    "first and middle names": "Johann",
+    "surname": "Elsen",
+    "occupation": "Taglöhner III",
+    "address": "Plakstr. 157."
+  },
+  {
+    "first and middle names": "Maxm. August",
+    "surname": "Emans",
+    "occupation": "Apotheker I",
+    "address": "Hauptmarkt 187."
+  },
+  {
+    "first and middle names": "Heinrich",
+    "surname": "Embser",
+    "occupation": "Schreiner II",
+    "address": "Judenplak 305."
+  },
+  {
+    "first and middle names": "Hieronimus",
+    "surname": "Embser",
+    "occupation": "Friseur IV",
+    "address": "Schanzstr. 145."
+  },
+  {
+    "first and middle names": "Jonas",
+    "surname": "Emmel",
+    "occupation": "Hospitalsbote II",
+    "address": "Fleischstr. 18."
+  },
+  {
+    "first and middle names": "Michel",
+    "surname": "Emmel",
+    "occupation": "Commissionär I",
+    "address": "Brodstraße 248."
+  },
+  {
+    "first and middle names": "Michel",
+    "surname": "Emmel",
+    "occupation": "Taxator III",
+    "address": "Neustr. 348."
+  },
+  {
+    "first and middle names": "Friedrich",
+    "surname": "Emmerich",
+    "occupation": "Nechn. Rath II",
+    "address": "Simeonsstift 369."
+  },
+  {
+    "first and middle names": "Johanna",
+    "surname": "Emmersdorf",
+    "occupation": "Rentnerin II",
+    "address": "Simeonsstift 371."
+  },
+  {
+    "first and middle names": "Anna Elisabeth",
+    "surname": "Endres",
+    "occupation": "Rentnerin I",
+    "address": "Simeonsstr. 11."
+  },
+  {
+    "first and middle names": "Peter Joseph",
+    "surname": "Endres",
+    "occupation": "Rentner I",
+    "address": "Pallaststr. 223."
+  },
+  {
+    "first and middle names": "Johann Mathias",
+    "surname": "Endres",
+    "occupation": "Eisenhandel I",
+    "address": "Brodstr. 234."
+  },
+  {
+    "first and middle names": "Ewald",
+    "surname": "Endres",
+    "occupation": "Eisenhandel I",
+    "address": "Brodstr. 234."
+  },
+  {
+    "first and middle names": "Barbara",
+    "surname": "Endres",
+    "occupation": "Rentnerin I",
+    "address": "Brodstr. 266."
+  },
+  {
+    "first and middle names": "Stephan",
+    "surname": "Endres",
+    "occupation": "Maurer II",
+    "address": "Moselstr. 243."
+  },
+  {
+    "first and middle names": "Johann",
+    "surname": "Endres",
+    "occupation": "Gärtner IV",
+    "address": "vor der Moselbrück 192."
+  },
+  {
+    "first and middle names": "Johanna",
+    "surname": "Endres",
+    "occupation": "barmherzige Schwester IV",
+    "address": "Irminer-\nFreihof 367."
+  },
+  {
+    "first and middle names": "Andreas",
+    "surname": "Engel",
+    "occupation": "Aufseher I",
+    "address": "Sichelstr. 45."
+  },
+  {
+    "first and middle names": "Catharina",
+    "surname": "Engel",
+    "occupation": "ohne I",
+    "address": "Glockenstr. 64."
+  },
+  {
+    "first and middle names": "Johann",
+    "surname": "Engel",
+    "occupation": "Buchbinder I",
+    "address": "Brodstr. 266."
+  },
+  {
+    "first and middle names": "Christoph",
+    "surname": "Engel",
+    "occupation": "Schuhmacher II",
+    "address": "Jakobsstr. 286."
+  },
+  {
+    "first and middle names": "Johann Adam",
+    "surname": "Engel",
+    "occupation": "Hauptamts-Assistent III",
+    "address": "Neustr.279."
+  },
+  {
+    "first and middle names": "Heinrich",
+    "surname": "Engel",
+    "occupation": "Schlosser IV",
+    "address": "Brückenstr. 243."
+  },
+  {
+    "first and middle names": "Georg",
+    "surname": "Engel",
+    "occupation": "Mezger IV",
+    "address": "Krahnenstr. 355."
+  },
+  {
+    "first and middle names": "Gottlieb",
+    "surname": "Engels",
+    "occupation": "Weber I",
+    "address": "Pallaststr. 223."
+  },
+  {
+    "first and middle names": "Angela",
+    "surname": "Engels",
+    "occupation": "ohne II",
+    "address": "Deutschstr. 269."
+  },
+  {
+    "first and middle names": "Nikolaus",
+    "surname": "Engels",
+    "occupation": "Schieferdecker III",
+    "address": "Weberstr. 194."
+  },
+  {
+    "first and middle names": null,
+    "surname": "Engesser",
+    "occupation": "Wittwe III",
+    "address": "Neustr. 267."
+  },
+  {
+    "first and middle names": "Elisabeth",
+    "surname": "Engler",
+    "occupation": "Wittwe III",
+    "address": "Hinterstr. 76."
+  },
+  {
+    "first and middle names": "Sybilla",
+    "surname": "Englert",
+    "occupation": "Rentnerin I",
+    "address": "Pallaststr. 229."
+  },
+  {
+    "first and middle names": "Johann",
+    "surname": "Ensch",
+    "occupation": "Schuhmacher III",
+    "address": "Weberstr. 58."
+  },
+  {
+    "first and middle names": "Johann",
+    "surname": "Ensch",
+    "occupation": "Tabakspinner IV",
+    "address": "Brückenstr. 244."
+  },
+  {
+    "first and middle names": "Peter Adolph",
+    "surname": "Enz",
+    "occupation": "Sattler II",
+    "address": "Simeonsstr. 321."
+  },
+  {
+    "first and middle names": "Xavier",
+    "surname": "Enzminger",
+    "occupation": "barmherz. Schwester IV",
+    "address": "Irminer-\nFreihof 367."
+  },
+  {
+    "first and middle names": "Joseph",
+    "surname": "Eppert",
+    "occupation": "Hutfabrikant II",
+    "address": "Fleischstr. 160."
+  },
+  {
+    "first and middle names": "Catharina",
+    "surname": "Eppert",
+    "occupation": "Wittwe IV",
+    "address": "Schanzstr. 147."
+  },
+  {
+    "first and middle names": null,
+    "surname": "Erhard",
+    "occupation": "Wittwe IV",
+    "address": "Schanzstr. 210."
+  },
+  {
+    "first and middle names": "Nosina",
+    "surname": "Erkens",
+    "occupation": "Wittwe IV",
+    "address": "Jüdemerstr. 73."
+  },
+  {
+    "first and middle names": "Anton",
+    "surname": "Ernsdorf",
+    "occupation": "Schlosser II",
+    "address": "Jakobsstr. 293."
+  },
+  {
+    "first and middle names": "Maria",
+    "surname": "Ernserhof",
+    "occupation": "ohne III",
+    "address": "Hinterstr. 75."
+  },
+  {
+    "first and middle names": "Math. Jos.",
+    "surname": "Ersfeld",
+    "occupation": "Geschäftsmann III",
+    "address": "Wechselstr. 128."
+  },
+  {
+    "first and middle names": "Johann",
+    "surname": "Erz",
+    "occupation": "Kappenmacher I",
+    "address": "Sichelstr. 41."
+  },
+  {
+    "first and middle names": "Philipp",
+    "surname": "Erk",
+    "occupation": "Gerber III",
+    "address": "Neustr. 247."
+  },
+  {
+    "first and middle names": "August",
+    "surname": "Ery",
+    "occupation": "Postbüreaugehilfen IV",
+    "address": "Nagelstr. 31."
+  },
+  {
+    "first and middle names": "Franziska",
+    "surname": "Erz",
+    "occupation": "Näherin IV",
+    "address": "Jüdemerstr. 96."
+  },
+  {
+    "first and middle names": "Johann",
+    "surname": "Erz",
+    "occupation": "Schreiber II",
+    "address": "Pferdemarkt 252."
+  },
+  {
+    "first and middle names": "Jakob",
+    "surname": "Erz",
+    "occupation": "Packmeister IV",
+    "address": "Nagelstr. 28."
+  },
+  {
+    "first and middle names": "Mathias",
+    "surname": "Esch",
+    "occupation": "Handelsmann II",
+    "address": "Mezelstr. 120."
+  },
+  {
+    "first and middle names": "Peter",
+    "surname": "Esch",
+    "occupation": "Postbote II",
+    "address": "Hauptmarkt 298."
+  },
+  {
+    "first and middle names": "Theodor",
+    "surname": "Esch",
+    "occupation": "Gerichtsvollzieher III",
+    "address": "Hosenstr. 5."
+  },
+  {
+    "first and middle names": "Peter",
+    "surname": "Esch",
+    "occupation": "Taglöhner III",
+    "address": "Wechselstr. 124."
+  }
+]

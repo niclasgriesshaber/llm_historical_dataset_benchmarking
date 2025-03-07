@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2025-03-05T19:54:53.106+01:00</Created>
+        <LastChange>2025-03-05T19:54:53.106+01:00</LastChange>
+    </Metadata>
+    <Page imageFilename="page_0003.tiff" imageWidth="1654" imageHeight="2339">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1741200985162" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="271,127 271,2044 1441,2044 1441,127"/>
+            <TextLine id="tr_1_tl_1" custom="readingOrder {index:0;}">
+                <Coords points="342,160 364,160 376,170 385,171 401,181 409,174 418,175 419,101 383,98 378,92 372,94 363,87 343,83"/>
+                <Baseline points="349,153 385,151 421,151"/>
+                <TextEquiv>
+                    <Unicode>90</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:1;}">
+                <Coords points="735,171 899,176 920,188 951,175 1040,185 1037,119 973,108 935,121 914,108 866,113 796,97 733,114"/>
+                <Baseline points="743,159 768,159 793,160 818,161 843,162 868,163 893,163 918,165 943,166 968,168 993,169 1018,169 1043,169"/>
+                <TextEquiv>
+                    <Unicode>Buchhändler.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:2;}">
+                <Coords points="499,266 1267,283 1279,193 767,219 496,188"/>
+                <Baseline points="505,239 544,244 583,246 622,247 661,247 700,248 739,249 778,249 817,253 856,254 895,255 934,256 973,259 1012,265 1051,265 1090,266 1129,267 1168,269 1207,269 1246,270 1285,273"/>
+                <TextEquiv>
+                    <Unicode>2) Bey der Schule zu St. Thomas.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:3;}">
+                <Coords points="780,313 826,310 873,328 903,314 940,327 958,313 990,320 987,267 957,281 929,266 906,274 885,265 862,273 841,261 778,267"/>
+                <Baseline points="787,303 812,305 838,305 864,306 890,308 915,309 941,309 967,311 993,311"/>
+                <TextEquiv>
+                    <Unicode>Vorsteher.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:4;}">
+                <Coords points="336,368 654,345 1439,386 1437,296 1262,327 1052,285 858,330 334,288"/>
+                <Baseline points="343,331 397,335 452,336 507,337 562,339 617,339 672,343 727,345 782,348 837,352 892,352 946,355 1001,355 1056,357 1111,359 1166,361 1221,364 1276,365 1331,371 1386,371 1441,371"/>
+                <TextEquiv>
+                    <Unicode>Hr. Hofrath und Proconsul, D. Carl Friedrich Trier, siehe</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_6" custom="readingOrder {index:5;}">
+                <Coords points="429,407 557,389 641,411 688,401 758,422 756,352 728,364 654,345 426,350"/>
+                <Baseline points="435,383 462,383 489,383 516,383 543,383 570,384 597,386 624,387 651,387 678,389 705,391 732,391 759,393"/>
+                <TextEquiv>
+                    <Unicode>Raths=Collegium.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_7" custom="readingOrder {index:6;}">
+                <Coords points="807,455 829,456 838,448 889,451 922,470 953,455 972,463 971,372 928,383 896,363 864,363 837,383 805,376"/>
+                <Baseline points="813,445 840,445 867,443 894,444 921,445 948,446 975,447"/>
+                <TextEquiv>
+                    <Unicode>Rector.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_8" custom="readingOrder {index:7;}">
+                <Coords points="332,499 924,495 1046,540 1252,507 1249,419 1220,411 925,470 685,455 583,409 330,429"/>
+                <Baseline points="339,473 384,475 430,475 476,476 522,479 568,479 613,481 659,483 705,485 751,485 797,488 842,489 888,492 934,493 980,493 1026,495 1071,496 1117,497 1163,499 1209,501 1255,503"/>
+                <TextEquiv>
+                    <Unicode>Hr. Prof. Joh. August Ernesti, s. die Professoren.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_9" custom="readingOrder {index:8;}">
+                <Coords points="779,546 859,536 909,546 918,540 989,547 987,509 927,496 910,505 878,496 867,507 851,495 827,492 776,498"/>
+                <Baseline points="785,529 810,531 836,531 862,532 888,534 913,535 939,535 965,537 991,537"/>
+                <TextEquiv>
+                    <Unicode>Conrector.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_10" custom="readingOrder {index:9;}">
+                <Coords points="331,586 414,571 472,597 523,579 598,597 775,593 772,528 717,510 622,535 534,516 485,525 449,507 414,524 328,509"/>
+                <Baseline points="339,567 364,565 390,564 416,563 442,563 467,563 493,563 519,565 545,567 570,568 596,569 622,569 648,570 673,573 699,575 725,575 751,576 777,577"/>
+                <TextEquiv>
+                    <Unicode>Hr. M. Johann Friedrich</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_11" custom="readingOrder {index:10;}">
+                <Coords points="793,589 954,597 1020,625 1058,604 1155,607 1220,636 1297,601 1337,615 1335,542 791,540"/>
+                <Baseline points="801,571 827,576 854,579 881,580 908,582 935,583 962,584 989,584 1016,583 1043,585 1070,589 1096,589 1123,589 1150,590 1177,591 1204,591 1231,591 1258,591 1285,593 1312,593 1339,593"/>
+                <TextEquiv>
+                    <Unicode>Fischer, auf der Thomasschule.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_12" custom="readingOrder {index:11;}">
+                <Coords points="791,640 831,641 860,629 876,638 888,631 909,645 925,645 935,634 950,638 949,590 933,589 920,601 874,593 847,598 820,582 790,591"/>
+                <Baseline points="799,623 824,623 850,624 876,625 901,626 927,627 953,627"/>
+                <TextEquiv>
+                    <Unicode>Cantor.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_13" custom="readingOrder {index:12;}">
+                <Coords points="328,691 404,699 470,660 576,689 811,671 1100,709 1097,640 1058,619 699,642 648,609 325,608"/>
+                <Baseline points="335,657 373,657 411,657 449,655 488,657 526,657 564,656 603,659 641,663 679,664 718,667 756,669 794,668 832,669 871,671 909,671 947,671 986,674 1024,675 1062,677 1101,679"/>
+                <TextEquiv>
+                    <Unicode>Hr. Gottlob Harrer, auf der Thomasschule.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_14" custom="readingOrder {index:13;}">
+                <Coords points="801,728 818,722 834,733 851,733 870,718 960,727 958,688 921,687 902,680 851,688 831,674 800,673"/>
+                <Baseline points="807,713 833,713 859,714 885,715 911,715 937,716 963,717"/>
+                <TextEquiv>
+                    <Unicode>Tertius.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_15" custom="readingOrder {index:14;}">
+                <Coords points="327,768 1387,798 1421,733 324,705"/>
+                <Baseline points="335,747 389,745 444,744 498,748 553,749 608,751 662,755 717,755 771,758 826,759 881,759 935,763 990,763 1044,768 1099,771 1154,774 1208,775 1263,775 1317,776 1372,778 1427,783"/>
+                <TextEquiv>
+                    <Unicode>Hr. M. Abraham Kriegel, in der Burgstraste, in Radiks Hause.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_16" custom="readingOrder {index:15;}">
+                <Coords points="764,812 790,813 809,824 829,813 838,820 878,809 907,827 942,812 962,815 962,769 918,778 895,768 877,776 842,764 824,773 801,758 783,771 762,768"/>
+                <Baseline points="771,805 798,805 826,805 854,807 881,807 909,807 937,808 965,809"/>
+                <TextEquiv>
+                    <Unicode>Quartus.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_17" custom="readingOrder {index:16;}">
+                <Coords points="318,870 746,852 1424,910 1420,801 1373,793 881,829 674,811 616,765 314,761"/>
+                <Baseline points="325,839 380,837 435,837 490,840 545,842 600,843 655,845 710,847 765,849 820,851 876,852 931,853 986,855 1041,857 1096,860 1151,862 1206,865 1261,865 1316,867 1371,871 1427,873"/>
+                <TextEquiv>
+                    <Unicode>Hr. M. Gabr. Matthesius, in der Burgstr. in Glauchens Haus.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_18" custom="readingOrder {index:17;}">
+                <Coords points="651,907 829,896 1081,911 1080,878 962,862 834,874 776,856 746,874 649,856"/>
+                <Baseline points="659,887 685,887 712,889 738,890 765,891 791,892 818,893 844,893 871,895 897,895 924,897 950,897 977,898 1003,899 1030,900 1056,901 1083,901"/>
+                <TextEquiv>
+                    <Unicode>Baccalaureus Funerum.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_19" custom="readingOrder {index:18;}">
+                <Coords points="310,955 1369,990 1398,932 307,878"/>
+                <Baseline points="317,929 371,927 425,927 479,929 533,929 588,933 642,937 696,939 750,939 804,941 859,943 913,945 967,946 1021,950 1075,953 1130,955 1184,957 1238,958 1292,960 1346,962 1401,963"/>
+                <TextEquiv>
+                    <Unicode>Hr. M. George Jrmler, im Schustergässchen, in Dottens Hause=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_20" custom="readingOrder {index:19;}">
+                <Coords points="760,1002 804,993 823,1002 845,994 880,1013 896,998 910,998 922,1009 935,997 951,1004 950,964 906,961 899,967 869,950 833,949 819,958 809,950 779,949 758,958"/>
+                <Baseline points="767,985 793,987 820,989 847,989 874,990 901,991 928,991 955,993"/>
+                <TextEquiv>
+                    <Unicode>Collegen.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_21" custom="readingOrder {index:20;}">
+                <Coords points="313,1034 1347,1060 1344,986 312,989"/>
+                <Baseline points="321,1019 372,1017 423,1018 475,1019 526,1021 578,1023 629,1023 680,1027 732,1030 783,1032 835,1035 886,1037 937,1037 989,1039 1040,1039 1092,1041 1143,1044 1194,1045 1246,1049 1297,1049 1349,1053"/>
+                <TextEquiv>
+                    <Unicode>Hr. Joh. Friedrich Breunigk, auf dem Pauliner=Collegio.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_22" custom="readingOrder {index:21;}">
+                <Coords points="310,1088 940,1086 1408,1140 1394,1052 309,1029"/>
+                <Baseline points="317,1067 371,1067 426,1069 480,1069 535,1069 590,1071 644,1073 699,1074 753,1076 808,1078 863,1079 917,1081 972,1085 1026,1087 1081,1088 1136,1092 1190,1093 1245,1097 1299,1097 1354,1100 1409,1101"/>
+                <TextEquiv>
+                    <Unicode>Hr. Joh. Adam Meyer, auf dem neuen Kirchhofe, in Höcks Haus.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_23" custom="readingOrder {index:22;}">
+                <Coords points="700,1139 751,1128 888,1144 1026,1142 1023,1092 698,1084"/>
+                <Baseline points="707,1119 733,1119 760,1122 787,1123 814,1124 841,1126 868,1128 894,1129 921,1129 948,1129 975,1131 1002,1131 1029,1129"/>
+                <TextEquiv>
+                    <Unicode>Schul=Medicus.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_24" custom="readingOrder {index:23;}">
+                <Coords points="303,1177 1332,1194 1330,1151 1188,1132 302,1126"/>
+                <Baseline points="311,1153 362,1154 413,1155 464,1157 515,1159 567,1160 618,1161 669,1163 720,1166 771,1167 823,1169 874,1171 925,1173 976,1175 1027,1177 1079,1178 1130,1181 1181,1182 1232,1185 1283,1185 1335,1189"/>
+                <TextEquiv>
+                    <Unicode>Hr. D. und Prof. Anton Wilhelm Plaz, s. die Professoren.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_25" custom="readingOrder {index:24;}">
+                <Coords points="343,1204 1405,1233 1390,1186 342,1161"/>
+                <Baseline points="351,1189 403,1195 456,1197 509,1198 562,1201 615,1201 667,1204 720,1205 773,1207 826,1209 879,1211 931,1213 984,1213 1037,1217 1090,1218 1143,1221 1195,1223 1248,1225 1301,1226 1354,1228 1407,1229"/>
+                <TextEquiv>
+                    <Unicode>Ausser diesen öffentlichen Schulen befinden sich auch in und vor der</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_26" custom="readingOrder {index:25;}">
+                <Coords points="302,1239 1404,1281 1401,1235 1289,1224 301,1200"/>
+                <Baseline points="309,1227 363,1231 418,1231 473,1234 528,1234 583,1237 637,1239 692,1241 747,1243 802,1245 857,1247 911,1249 966,1249 1021,1251 1076,1254 1131,1257 1185,1259 1240,1261 1295,1263 1350,1264 1405,1269"/>
+                <TextEquiv>
+                    <Unicode>Stadt viele Privat=Schulen, allwo die zarte Jugend beyderley Geschlechts</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_27" custom="readingOrder {index:26;}">
+                <Coords points="299,1274 1397,1313 1369,1268 298,1237"/>
+                <Baseline points="307,1267 361,1267 416,1267 470,1269 525,1272 580,1273 634,1275 689,1277 743,1279 798,1282 853,1283 907,1285 962,1287 1016,1289 1071,1292 1126,1294 1180,1297 1235,1299 1289,1299 1344,1300 1399,1301"/>
+                <TextEquiv>
+                    <Unicode>im Christenthume und andern nöthigen Stücken unterrichtet wird.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_28" custom="readingOrder {index:27;}">
+                <Coords points="305,1314 1394,1351 1393,1306 302,1268"/>
+                <Baseline points="311,1305 365,1303 419,1305 473,1307 528,1309 582,1309 636,1311 691,1314 745,1316 799,1318 854,1321 908,1323 962,1323 1016,1326 1071,1328 1125,1331 1179,1331 1234,1335 1288,1335 1342,1337 1397,1337"/>
+                <TextEquiv>
+                    <Unicode>Ueber diese Privat=Schulen haben die vier untersten Herren Geistli=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_29" custom="readingOrder {index:28;}">
+                <Coords points="298,1343 1343,1386 1390,1348 296,1313"/>
+                <Baseline points="305,1339 359,1339 413,1341 468,1343 522,1343 577,1347 631,1347 685,1349 740,1352 794,1355 849,1357 903,1359 957,1360 1012,1362 1066,1364 1121,1365 1175,1367 1229,1371 1284,1371 1338,1373 1393,1373"/>
+                <TextEquiv>
+                    <Unicode>chen des Ministerii die Jn confection und Visitation, nach den vier Stadt=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_30" custom="readingOrder {index:29;}">
+                <Coords points="295,1390 1393,1420 1328,1377 294,1344"/>
+                <Baseline points="303,1375 357,1375 412,1376 466,1379 521,1381 576,1383 630,1385 685,1387 739,1388 794,1392 849,1393 903,1393 958,1395 1012,1396 1067,1399 1122,1403 1176,1403 1231,1405 1285,1408 1340,1409 1395,1409"/>
+                <TextEquiv>
+                    <Unicode>Vierteln eingetheilet; und darf Niemand eine solche Privat=Schule an=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_31" custom="readingOrder {index:30;}">
+                <Coords points="295,1420 1397,1456 1395,1421 1317,1412 294,1388"/>
+                <Baseline points="303,1415 357,1413 412,1413 467,1415 522,1417 577,1419 631,1423 686,1423 741,1425 796,1428 851,1431 905,1431 960,1433 1015,1433 1070,1436 1125,1439 1179,1441 1234,1443 1289,1447 1344,1447 1399,1447"/>
+                <TextEquiv>
+                    <Unicode>stellen, als bis er von einem jeden dieser Herren Jnspectoren ein Zeug=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_32" custom="readingOrder {index:31;}">
+                <Coords points="290,1452 1390,1497 1388,1456 288,1420"/>
+                <Baseline points="297,1447 351,1449 406,1449 461,1451 516,1454 571,1455 625,1459 680,1459 735,1461 790,1463 845,1467 899,1467 954,1469 1009,1471 1064,1472 1119,1476 1173,1479 1228,1481 1283,1481 1338,1482 1393,1485"/>
+                <TextEquiv>
+                    <Unicode>niß seiner Geschicklichkeit bey E. E. Hochw. Rathe vorgewiesen, und um</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_33" custom="readingOrder {index:32;}">
+                <Coords points="291,1485 1390,1535 1350,1486 290,1455"/>
+                <Baseline points="299,1481 353,1486 408,1488 463,1489 517,1491 572,1493 627,1495 681,1497 736,1499 791,1500 846,1503 900,1505 955,1507 1010,1509 1064,1512 1119,1514 1174,1517 1228,1519 1283,1519 1338,1520 1393,1523"/>
+                <TextEquiv>
+                    <Unicode>Vergünstigung Schule zu halten, schriftlich angehalten, auch die Er=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_34" custom="readingOrder {index:33;}">
+                <Coords points="292,1535 1040,1561 1038,1519 987,1511 290,1484"/>
+                <Baseline points="299,1523 336,1523 373,1524 410,1526 447,1527 485,1527 522,1530 559,1531 596,1531 633,1533 671,1535 708,1536 745,1537 782,1537 819,1540 857,1541 894,1541 931,1543 968,1543 1005,1544 1043,1549"/>
+                <TextEquiv>
+                    <Unicode>laubniß dazu wirklich in Schriften erhalten hat.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_35" custom="readingOrder {index:34;}">
+                <Coords points="608,1624 727,1649 779,1619 811,1635 866,1623 915,1648 1115,1641 1113,1580 1062,1587 940,1548 833,1540 751,1568 698,1543 605,1540"/>
+                <Baseline points="615,1607 640,1610 665,1612 690,1614 715,1616 740,1617 765,1619 790,1617 815,1618 840,1620 866,1620 891,1619 916,1621 941,1623 966,1624 991,1625 1016,1625 1041,1625 1066,1627 1091,1629 1117,1629"/>
+                <TextEquiv>
+                    <Unicode>Dechste Abtheilung.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_36" custom="readingOrder {index:35;}">
+                <Coords points="285,1706 1377,1757 1375,1634 1118,1663 874,1630 756,1666 283,1624"/>
+                <Baseline points="293,1703 347,1707 401,1710 456,1713 510,1715 565,1717 619,1717 673,1718 728,1719 782,1719 837,1723 891,1725 945,1723 1000,1726 1054,1727 1109,1727 1163,1731 1217,1733 1272,1736 1326,1740 1381,1741"/>
+                <TextEquiv>
+                    <Unicode>Von der sämmtl. Bürgerschaft.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_37" custom="readingOrder {index:36;}">
+                <Coords points="694,1809 769,1801 802,1812 845,1803 869,1812 896,1801 955,1812 954,1759 904,1748 889,1761 834,1743 760,1741 743,1750 724,1733 692,1740"/>
+                <Baseline points="701,1785 726,1787 752,1787 778,1788 804,1789 830,1790 855,1791 881,1789 907,1791 933,1791 959,1793"/>
+                <TextEquiv>
+                    <Unicode>I. Abschnitt.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_38" custom="readingOrder {index:37;}">
+                <Coords points="383,1871 820,1905 1153,1883 1253,1911 1251,1814 1111,1792 979,1827 382,1801"/>
+                <Baseline points="391,1855 434,1857 477,1859 520,1860 563,1862 607,1863 650,1863 693,1863 736,1865 779,1863 823,1863 866,1866 909,1868 952,1870 995,1871 1039,1872 1082,1875 1125,1876 1168,1877 1211,1878 1255,1875"/>
+                <TextEquiv>
+                    <Unicode>Von Handlungs=Verwandten.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_39" custom="readingOrder {index:38;}">
+                <Coords points="327,1939 1306,1965 1304,1914 324,1875"/>
+                <Baseline points="333,1923 381,1926 430,1927 479,1931 528,1931 577,1933 625,1935 674,1936 723,1937 772,1937 821,1938 869,1939 918,1942 967,1943 1016,1947 1065,1948 1113,1949 1162,1950 1211,1954 1260,1955 1309,1957"/>
+                <TextEquiv>
+                    <Unicode>I. Von Buchhändlern, nebst ihren Läden.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_40" custom="readingOrder {index:39;}">
+                <Coords points="265,2003 1369,2047 1366,1967 735,1970 397,1923 262,1950"/>
+                <Baseline points="271,1981 326,1981 381,1979 436,1981 491,1983 546,1983 601,1987 656,1989 711,1992 766,1994 821,1996 876,1997 931,1999 986,2001 1041,2002 1096,2005 1151,2007 1206,2009 1261,2011 1316,2009 1371,2009"/>
+                <TextEquiv>
+                    <Unicode>Hr. Arkstee und Merkus, auf der Petersstraße, im Hohman=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_41" custom="readingOrder {index:40;}">
+                <Coords points="356,2060 400,2071 430,2047 463,2058 478,2046 532,2070 558,2070 590,2052 612,2054 612,1999 587,1991 563,1999 513,1988 495,1998 412,1985 356,1991"/>
+                <Baseline points="363,2031 388,2029 413,2029 438,2029 463,2029 489,2029 514,2031 539,2031 564,2031 589,2031 615,2033"/>
+                <TextEquiv>
+                    <Unicode>nischen Hause.</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+    </Page>
+</PcGts>

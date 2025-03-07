@@ -1,0 +1,1534 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2025-02-18T15:30:43.397+01:00</Created>
+        <LastChange>2025-02-18T15:30:43.397+01:00</LastChange>
+    </Metadata>
+    <Page imageFilename="page_0002.tiff" imageWidth="1654" imageHeight="2339">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1739889093827" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="419,191 419,1757 1311,1757 1311,191"/>
+            <TextLine id="tr_1_tl_1" custom="readingOrder {index:0;}">
+                <Coords points="413,222 422,222 428,228 446,231 456,237 468,228 479,228 489,221 498,222 497,180 479,180 470,172 466,176 455,171 447,180 438,182 430,174 412,170"/>
+                <Baseline points="419,211 446,213 473,213 501,213"/>
+                <Word id="tr_1_tl_1_w1" custom="readingOrder {index:0;}">
+                    <Coords points="416,172 416,232 468,232 468,172"/>
+                    <TextEquiv>
+                        <Unicode>38</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>38</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:1;}">
+                <Coords points="537,248 1192,226 1186,159 1021,189 917,164 818,184 708,159 537,168"/>
+                <Baseline points="543,213 575,213 608,213 640,213 673,213 706,212 738,212 771,213 803,213 836,213 869,215 901,215 934,213 966,213 999,213 1032,215 1064,215 1097,215 1129,216 1162,217 1195,217"/>
+                <Word id="tr_1_tl_2_w1" custom="readingOrder {index:0;}">
+                    <Coords points="542,173 542,233 749,233 749,173"/>
+                    <TextEquiv>
+                        <Unicode>Alphabetisches</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_2_w2" custom="readingOrder {index:1;}">
+                    <Coords points="775,174 775,234 936,234 936,174"/>
+                    <TextEquiv>
+                        <Unicode>Verzeichniß</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_2_w3" custom="readingOrder {index:2;}">
+                    <Coords points="967,173 967,233 1008,233 1008,173"/>
+                    <TextEquiv>
+                        <Unicode>der</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_2_w4" custom="readingOrder {index:3;}">
+                    <Coords points="1030,175 1030,235 1190,235 1190,175"/>
+                    <TextEquiv>
+                        <Unicode>Bewohner.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Alphabetisches Verzeichniß der Bewohner.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:2;}">
+                <Coords points="421,308 730,291 1182,320 1163,251 421,248"/>
+                <Baseline points="427,295 464,297 502,295 540,295 578,295 616,295 654,295 692,297 730,293 768,295 806,295 843,295 881,293 919,295 957,295 995,295 1033,295 1071,295 1109,296 1147,295 1185,295"/>
+                <Word id="tr_1_tl_3_w1" custom="readingOrder {index:0;}">
+                    <Coords points="420,255 420,315 568,315 568,255"/>
+                    <TextEquiv>
+                        <Unicode>Frantzen,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_3_w2" custom="readingOrder {index:1;}">
+                    <Coords points="588,255 588,315 714,315 714,255"/>
+                    <TextEquiv>
+                        <Unicode>Arnold,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_3_w3" custom="readingOrder {index:2;}">
+                    <Coords points="733,255 733,315 919,315 919,255"/>
+                    <TextEquiv>
+                        <Unicode>Buchhalter,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_3_w4" custom="readingOrder {index:3;}">
+                    <Coords points="939,255 939,315 1176,315 1176,255"/>
+                    <TextEquiv>
+                        <Unicode>Templergraben.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Frantzen, Arnold, Buchhalter, Templergraben.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:3;}">
+                <Coords points="419,342 1146,346 1146,303 1096,299 419,309"/>
+                <Baseline points="425,333 461,333 497,333 533,333 569,331 605,333 641,333 677,335 713,334 749,333 786,333 822,333 858,331 894,331 930,331 966,333 1002,333 1038,333 1074,334 1110,333 1147,333"/>
+                <Word id="tr_1_tl_4_w1" custom="readingOrder {index:0;}">
+                    <Coords points="418,293 418,353 566,353 566,293"/>
+                    <TextEquiv>
+                        <Unicode>Frantzen,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_4_w2" custom="readingOrder {index:1;}">
+                    <Coords points="586,293 586,353 695,353 695,293"/>
+                    <TextEquiv>
+                        <Unicode>Franz,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_4_w3" custom="readingOrder {index:2;}">
+                    <Coords points="715,293 715,353 813,353 813,293"/>
+                    <TextEquiv>
+                        <Unicode>Weber</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_4_w4" custom="readingOrder {index:3;}">
+                    <Coords points="824,292 824,352 838,352 838,292"/>
+                    <TextEquiv>
+                        <Unicode>„</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_4_w5" custom="readingOrder {index:4;}">
+                    <Coords points="853,291 853,351 1006,351 1006,291"/>
+                    <TextEquiv>
+                        <Unicode>Borngasse</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_4_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1027,293 1027,353 1036,353 1036,293"/>
+                    <TextEquiv>
+                        <Unicode>B</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_4_w7" custom="readingOrder {index:6;}">
+                    <Coords points="1076,293 1076,353 1144,353 1144,293"/>
+                    <TextEquiv>
+                        <Unicode>527.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Frantzen, Franz, Weber „ Borngasse B 527.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:4;}">
+                <Coords points="419,398 583,370 1308,387 1308,336 1176,322 1135,348 419,346"/>
+                <Baseline points="425,369 469,369 513,371 557,371 602,370 646,371 690,371 735,371 779,371 823,371 868,371 912,369 956,369 1000,370 1045,371 1089,371 1133,371 1178,371 1222,369 1266,369 1311,365"/>
+                <Word id="tr_1_tl_5_w1" custom="readingOrder {index:0;}">
+                    <Coords points="418,330 418,390 568,390 568,330"/>
+                    <TextEquiv>
+                        <Unicode>Frantzen,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_5_w2" custom="readingOrder {index:1;}">
+                    <Coords points="586,331 586,391 718,391 718,331"/>
+                    <TextEquiv>
+                        <Unicode>Johann,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_5_w3" custom="readingOrder {index:2;}">
+                    <Coords points="737,331 737,391 924,391 924,331"/>
+                    <TextEquiv>
+                        <Unicode>Baumeister,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_5_w4" custom="readingOrder {index:3;}">
+                    <Coords points="943,330 943,390 1084,390 1084,330"/>
+                    <TextEquiv>
+                        <Unicode>außerhalb</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_5_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1112,331 1112,391 1157,391 1157,331"/>
+                    <TextEquiv>
+                        <Unicode>des</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_5_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1175,329 1175,389 1303,389 1303,329"/>
+                    <TextEquiv>
+                        <Unicode>Theater¬</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Frantzen, Johann, Baumeister, außerhalb des Theater¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_6" custom="readingOrder {index:5;}">
+                <Coords points="451,419 518,422 527,414 556,424 601,412 618,419 670,416 670,383 659,378 612,388 582,370 562,386 543,379 509,387 479,374 451,384"/>
+                <Baseline points="457,405 484,407 511,407 538,407 565,407 592,408 619,408 646,407 673,407"/>
+                <Word id="tr_1_tl_6_w1" custom="readingOrder {index:0;}">
+                    <Coords points="454,367 454,427 543,427 543,367"/>
+                    <TextEquiv>
+                        <Unicode>thores</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_6_w2" custom="readingOrder {index:1;}">
+                    <Coords points="571,367 571,427 580,427 580,367"/>
+                    <TextEquiv>
+                        <Unicode>B</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_6_w3" custom="readingOrder {index:2;}">
+                    <Coords points="623,367 623,427 674,427 674,367"/>
+                    <TextEquiv>
+                        <Unicode>35.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>thores B 35.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_7" custom="readingOrder {index:6;}">
+                <Coords points="419,450 1176,450 1176,394 1106,383 802,382 739,427 419,414"/>
+                <Baseline points="425,445 462,443 500,445 538,445 575,447 613,445 651,445 688,445 726,445 764,447 802,446 839,446 877,447 915,447 952,447 990,447 1028,445 1065,445 1103,443 1141,444 1179,441"/>
+                <Word id="tr_1_tl_7_w1" custom="readingOrder {index:0;}">
+                    <Coords points="422,404 422,464 570,464 570,404"/>
+                    <TextEquiv>
+                        <Unicode>Frantzen,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_7_w2" custom="readingOrder {index:1;}">
+                    <Coords points="591,405 591,465 718,465 718,405"/>
+                    <TextEquiv>
+                        <Unicode>Johann,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_7_w3" custom="readingOrder {index:2;}">
+                    <Coords points="740,406 740,466 881,466 881,406"/>
+                    <TextEquiv>
+                        <Unicode>Händler,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_7_w4" custom="readingOrder {index:3;}">
+                    <Coords points="895,407 895,467 1056,467 1056,407"/>
+                    <TextEquiv>
+                        <Unicode>Pontstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_7_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1077,404 1077,464 1090,464 1090,404"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_7_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1125,403 1125,463 1171,463 1171,403"/>
+                    <TextEquiv>
+                        <Unicode>39.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Frantzen, Johann, Händler, Pontstraße A 39.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_8" custom="readingOrder {index:7;}">
+                <Coords points="421,495 1305,498 1305,455 1185,441 1102,465 421,451"/>
+                <Baseline points="427,483 471,479 515,482 559,485 603,481 647,481 691,483 735,483 779,483 823,483 867,484 911,485 955,484 999,483 1043,483 1087,483 1131,481 1175,482 1219,481 1263,480 1307,479"/>
+                <Word id="tr_1_tl_8_w1" custom="readingOrder {index:0;}">
+                    <Coords points="420,439 420,499 526,499 526,439"/>
+                    <TextEquiv>
+                        <Unicode>Franz,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_8_w2" custom="readingOrder {index:1;}">
+                    <Coords points="546,441 546,501 652,501 652,441"/>
+                    <TextEquiv>
+                        <Unicode>Johann</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_8_w3" custom="readingOrder {index:2;}">
+                    <Coords points="676,443 676,503 787,503 787,443"/>
+                    <TextEquiv>
+                        <Unicode>Anton,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_8_w4" custom="readingOrder {index:3;}">
+                    <Coords points="811,443 811,503 1104,503 1104,443"/>
+                    <TextEquiv>
+                        <Unicode>Gerichtsvollzieher,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_8_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1132,441 1132,501 1290,501 1290,441"/>
+                    <TextEquiv>
+                        <Unicode>Seilgraben</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Franz, Johann Anton, Gerichtsvollzieher, Seilgraben</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_9" custom="readingOrder {index:8;}">
+                <Coords points="456,528 508,531 518,526 535,533 571,527 570,492 549,488 545,492 535,486 525,495 517,490 503,499 489,488 455,488"/>
+                <Baseline points="461,515 489,517 517,519 545,519 573,519"/>
+                <Word id="tr_1_tl_9_w1" custom="readingOrder {index:0;}">
+                    <Coords points="459,475 459,535 468,535 468,475"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_9_w2" custom="readingOrder {index:1;}">
+                    <Coords points="503,479 503,539 570,539 570,479"/>
+                    <TextEquiv>
+                        <Unicode>790.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>A 790.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_10" custom="readingOrder {index:9;}">
+                <Coords points="424,579 1246,572 1246,535 1167,516 850,532 786,506 696,538 424,515"/>
+                <Baseline points="431,555 471,555 512,556 553,559 594,557 635,556 675,555 716,555 757,555 798,557 839,557 879,556 920,557 961,557 1002,557 1043,557 1083,557 1124,557 1165,555 1206,555 1247,553"/>
+                <Word id="tr_1_tl_10_w1" custom="readingOrder {index:0;}">
+                    <Coords points="423,515 423,575 560,575 560,515"/>
+                    <TextEquiv>
+                        <Unicode>Franzen,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_10_w2" custom="readingOrder {index:1;}">
+                    <Coords points="580,516 580,576 684,576 684,516"/>
+                    <TextEquiv>
+                        <Unicode>Jakob,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_10_w3" custom="readingOrder {index:2;}">
+                    <Coords points="704,516 704,576 861,576 861,516"/>
+                    <TextEquiv>
+                        <Unicode>Schlosser,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_10_w4" custom="readingOrder {index:3;}">
+                    <Coords points="881,517 881,577 1107,577 1107,517"/>
+                    <TextEquiv>
+                        <Unicode>Großkölnstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_10_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1132,516 1132,576 1141,576 1141,516"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_10_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1176,514 1176,574 1240,574 1240,514"/>
+                    <TextEquiv>
+                        <Unicode>380.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Franzen, Jakob, Schlosser, Großkölnstraße A 380.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_11" custom="readingOrder {index:10;}">
+                <Coords points="419,603 1188,597 1172,559 419,580"/>
+                <Baseline points="425,593 463,593 501,593 539,595 578,595 616,593 654,593 693,593 731,593 769,594 808,593 846,595 884,595 922,595 961,595 999,595 1037,596 1076,594 1114,595 1152,593 1191,593"/>
+                <Word id="tr_1_tl_11_w1" custom="readingOrder {index:0;}">
+                    <Coords points="422,553 422,613 563,613 563,553"/>
+                    <TextEquiv>
+                        <Unicode>Franzen,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_11_w2" custom="readingOrder {index:1;}">
+                    <Coords points="582,553 582,613 704,613 704,553"/>
+                    <TextEquiv>
+                        <Unicode>Joseph,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_11_w3" custom="readingOrder {index:2;}">
+                    <Coords points="723,553 723,613 878,613 878,553"/>
+                    <TextEquiv>
+                        <Unicode>Musikus,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_11_w4" custom="readingOrder {index:3;}">
+                    <Coords points="896,555 896,615 1060,615 1060,555"/>
+                    <TextEquiv>
+                        <Unicode>Bergstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_11_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1078,554 1078,614 1092,614 1092,554"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_11_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1129,553 1129,613 1192,613 1192,553"/>
+                    <TextEquiv>
+                        <Unicode>135.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Franzen, Joseph, Musikus, Bergstraße A 135.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_12" custom="readingOrder {index:11;}">
+                <Coords points="419,645 1302,639 1291,592 419,603"/>
+                <Baseline points="425,633 469,631 513,631 557,632 601,633 645,631 689,631 733,632 777,631 821,633 865,635 909,633 953,635 997,634 1041,631 1085,632 1129,631 1173,630 1217,629 1261,628 1305,627"/>
+                <Word id="tr_1_tl_12_w1" custom="readingOrder {index:0;}">
+                    <Coords points="419,591 419,651 559,651 559,591"/>
+                    <TextEquiv>
+                        <Unicode>Franzen,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_12_w2" custom="readingOrder {index:1;}">
+                    <Coords points="590,591 590,651 695,651 695,591"/>
+                    <TextEquiv>
+                        <Unicode>Johann</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_12_w3" custom="readingOrder {index:2;}">
+                    <Coords points="731,591 731,651 856,651 856,591"/>
+                    <TextEquiv>
+                        <Unicode>Joseph,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_12_w4" custom="readingOrder {index:3;}">
+                    <Coords points="883,594 883,654 998,654 998,594"/>
+                    <TextEquiv>
+                        <Unicode>Wirth,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_12_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1029,590 1029,650 1255,650 1255,590"/>
+                    <TextEquiv>
+                        <Unicode>Großkölnstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_12_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1276,587 1276,647 1285,647 1285,587"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Franzen, Johann Joseph, Wirth, Großkölnstraße A</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_13" custom="readingOrder {index:12;}">
+                <Coords points="451,673 459,671 467,677 471,675 479,679 489,672 496,672 502,679 506,676 516,680 530,677 529,636 503,641 497,637 486,639 473,635 470,638 450,640"/>
+                <Baseline points="457,665 482,667 507,667 533,667"/>
+                <Word id="tr_1_tl_13_w1" custom="readingOrder {index:0;}">
+                    <Coords points="454,627 454,687 528,687 528,627"/>
+                    <TextEquiv>
+                        <Unicode>390.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>390.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_14" custom="readingOrder {index:13;}">
+                <Coords points="417,710 1235,711 1235,671 1191,668 481,683 417,659"/>
+                <Baseline points="423,703 463,703 504,703 545,705 585,704 626,702 667,703 707,703 748,703 789,703 830,704 870,707 911,707 952,705 992,705 1033,705 1074,705 1114,703 1155,703 1196,702 1237,699"/>
+                <Word id="tr_1_tl_14_w1" custom="readingOrder {index:0;}">
+                    <Coords points="416,663 416,723 560,723 560,663"/>
+                    <TextEquiv>
+                        <Unicode>Franzen,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_14_w2" custom="readingOrder {index:1;}">
+                    <Coords points="580,662 580,722 747,722 747,662"/>
+                    <TextEquiv>
+                        <Unicode>Kornelius,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_14_w3" custom="readingOrder {index:2;}">
+                    <Coords points="767,664 767,724 916,724 916,664"/>
+                    <TextEquiv>
+                        <Unicode>Schmidt,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_14_w4" custom="readingOrder {index:3;}">
+                    <Coords points="935,665 935,725 1103,725 1103,665"/>
+                    <TextEquiv>
+                        <Unicode>Peterstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_14_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1127,663 1127,723 1136,723 1136,663"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_14_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1169,661 1169,721 1239,721 1239,661"/>
+                    <TextEquiv>
+                        <Unicode>538.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Franzen, Kornelius, Schmidt, Peterstraße A 538.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_15" custom="readingOrder {index:14;}">
+                <Coords points="455,751 1209,748 1189,707 455,708"/>
+                <Baseline points="461,741 498,741 536,741 573,740 611,741 648,739 686,740 723,741 761,739 798,739 836,741 873,742 911,743 948,743 986,741 1023,741 1061,743 1098,741 1136,739 1173,739 1211,737"/>
+                <Word id="tr_1_tl_15_w1" custom="readingOrder {index:0;}">
+                    <Coords points="449,701 449,761 557,761 557,701"/>
+                    <TextEquiv>
+                        <Unicode>ranzen,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_15_w2" custom="readingOrder {index:1;}">
+                    <Coords points="576,699 576,759 730,759 730,699"/>
+                    <TextEquiv>
+                        <Unicode>Stephan,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_15_w3" custom="readingOrder {index:2;}">
+                    <Coords points="749,699 749,759 876,759 876,699"/>
+                    <TextEquiv>
+                        <Unicode>Ackerer,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_15_w4" custom="readingOrder {index:3;}">
+                    <Coords points="895,701 895,761 1068,761 1068,701"/>
+                    <TextEquiv>
+                        <Unicode>Jakobstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_15_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1086,701 1086,761 1099,761 1099,701"/>
+                    <TextEquiv>
+                        <Unicode>B</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_15_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1141,698 1141,758 1208,758 1208,698"/>
+                    <TextEquiv>
+                        <Unicode>211.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>ranzen, Stephan, Ackerer, Jakobstraße B 211.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_16" custom="readingOrder {index:15;}">
+                <Coords points="447,786 1226,783 1218,741 447,750"/>
+                <Baseline points="453,777 491,777 530,778 569,781 608,777 647,778 685,778 724,775 763,776 802,777 841,779 879,780 918,777 957,778 996,779 1035,779 1073,778 1112,777 1151,775 1190,776 1229,775"/>
+                <Word id="tr_1_tl_16_w1" custom="readingOrder {index:0;}">
+                    <Coords points="441,737 441,797 555,797 555,737"/>
+                    <TextEquiv>
+                        <Unicode>ranzen,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_16_w2" custom="readingOrder {index:1;}">
+                    <Coords points="573,737 573,797 705,797 705,737"/>
+                    <TextEquiv>
+                        <Unicode>Johann,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_16_w3" custom="readingOrder {index:2;}">
+                    <Coords points="723,737 723,797 895,797 895,737"/>
+                    <TextEquiv>
+                        <Unicode>Schreiner,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_16_w4" custom="readingOrder {index:3;}">
+                    <Coords points="913,739 913,799 1085,799 1085,739"/>
+                    <TextEquiv>
+                        <Unicode>Franzstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_16_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1107,736 1107,796 1120,796 1120,736"/>
+                    <TextEquiv>
+                        <Unicode>B</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_16_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1160,735 1160,795 1226,795 1226,735"/>
+                    <TextEquiv>
+                        <Unicode>479.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>ranzen, Johann, Schreiner, Franzstraße B 479.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_17" custom="readingOrder {index:16;}">
+                <Coords points="419,825 1258,828 1250,778 419,785"/>
+                <Baseline points="425,817 466,813 508,815 550,813 592,813 634,813 675,814 717,811 759,815 801,815 843,817 884,817 926,816 968,815 1010,815 1052,815 1093,813 1135,813 1177,813 1219,816 1261,817"/>
+                <Word id="tr_1_tl_17_w1" custom="readingOrder {index:0;}">
+                    <Coords points="418,773 418,833 531,833 531,773"/>
+                    <TextEquiv>
+                        <Unicode>Freber,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_17_w2" custom="readingOrder {index:1;}">
+                    <Coords points="550,773 550,833 682,833 682,773"/>
+                    <TextEquiv>
+                        <Unicode>Ludwig,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_17_w3" custom="readingOrder {index:2;}">
+                    <Coords points="701,775 701,835 851,835 851,775"/>
+                    <TextEquiv>
+                        <Unicode>Schuster,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_17_w4" custom="readingOrder {index:3;}">
+                    <Coords points="870,775 870,835 1084,835 1084,775"/>
+                    <TextEquiv>
+                        <Unicode>Adalbertstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_17_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1107,773 1107,833 1120,833 1120,773"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_17_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1153,775 1153,835 1257,835 1257,775"/>
+                    <TextEquiv>
+                        <Unicode>646½.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Freber, Ludwig, Schuster, Adalbertstraße A 646½.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_18" custom="readingOrder {index:17;}">
+                <Coords points="421,860 1155,861 1136,817 421,823"/>
+                <Baseline points="427,851 463,851 500,851 536,850 573,849 609,851 646,851 682,851 719,850 755,851 792,853 828,853 865,853 901,851 938,853 974,853 1011,852 1047,852 1084,851 1120,851 1157,853"/>
+                <Word id="tr_1_tl_18_w1" custom="readingOrder {index:0;}">
+                    <Coords points="420,811 420,871 536,871 536,811"/>
+                    <TextEquiv>
+                        <Unicode>Freber,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_18_w2" custom="readingOrder {index:1;}">
+                    <Coords points="555,811 555,871 704,871 704,811"/>
+                    <TextEquiv>
+                        <Unicode>Christian,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_18_w3" custom="readingOrder {index:2;}">
+                    <Coords points="724,811 724,871 817,871 817,811"/>
+                    <TextEquiv>
+                        <Unicode>Bote,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_18_w4" custom="readingOrder {index:3;}">
+                    <Coords points="836,812 836,872 1004,872 1004,812"/>
+                    <TextEquiv>
+                        <Unicode>Jakobstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_18_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1029,812 1029,872 1042,872 1042,812"/>
+                    <TextEquiv>
+                        <Unicode>B</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_18_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1080,811 1080,871 1149,871 1149,811"/>
+                    <TextEquiv>
+                        <Unicode>864.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Freber, Christian, Bote, Jakobstraße B 864.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_19" custom="readingOrder {index:18;}">
+                <Coords points="417,899 1110,895 1110,861 1015,851 417,861"/>
+                <Baseline points="423,885 457,887 492,888 526,886 561,886 595,888 630,889 664,887 699,889 733,888 768,889 802,889 837,889 871,891 906,889 940,891 975,889 1009,889 1044,889 1078,887 1113,887"/>
+                <Word id="tr_1_tl_19_w1" custom="readingOrder {index:0;}">
+                    <Coords points="416,846 416,906 497,906 497,846"/>
+                    <TextEquiv>
+                        <Unicode>Freh,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_19_w2" custom="readingOrder {index:1;}">
+                    <Coords points="521,847 521,907 650,907 650,847"/>
+                    <TextEquiv>
+                        <Unicode>Gerard,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_19_w3" custom="readingOrder {index:2;}">
+                    <Coords points="668,848 668,908 796,908 796,848"/>
+                    <TextEquiv>
+                        <Unicode>Nadler,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_19_w4" custom="readingOrder {index:3;}">
+                    <Coords points="816,849 816,909 971,909 971,849"/>
+                    <TextEquiv>
+                        <Unicode>Bergdrisch</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_19_w5" custom="readingOrder {index:4;}">
+                    <Coords points="995,849 995,909 1008,909 1008,849"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_19_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1041,847 1041,907 1109,907 1109,847"/>
+                    <TextEquiv>
+                        <Unicode>814.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Freh, Gerard, Nadler, Bergdrisch A 814.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_20" custom="readingOrder {index:19;}">
+                <Coords points="414,937 1216,939 1205,878 946,906 414,899"/>
+                <Baseline points="421,915 460,924 500,926 540,925 580,925 620,925 660,925 700,926 740,928 780,927 820,927 859,927 899,927 939,927 979,926 1019,927 1059,925 1099,925 1139,925 1179,925 1219,925"/>
+                <Word id="tr_1_tl_20_w1" custom="readingOrder {index:0;}">
+                    <Coords points="413,883 413,943 502,943 502,883"/>
+                    <TextEquiv>
+                        <Unicode>Freh,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_20_w2" custom="readingOrder {index:1;}">
+                    <Coords points="522,885 522,945 635,945 635,885"/>
+                    <TextEquiv>
+                        <Unicode>Severin</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_20_w3" custom="readingOrder {index:2;}">
+                    <Coords points="665,887 665,947 784,947 784,887"/>
+                    <TextEquiv>
+                        <Unicode>Joseph,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_20_w4" custom="readingOrder {index:3;}">
+                    <Coords points="804,887 804,947 937,947 937,887"/>
+                    <TextEquiv>
+                        <Unicode>Friseur,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_20_w5" custom="readingOrder {index:4;}">
+                    <Coords points="958,886 958,946 1056,946 1056,886"/>
+                    <TextEquiv>
+                        <Unicode>Büchel</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_20_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1077,885 1077,945 1091,945 1091,885"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_20_w7" custom="readingOrder {index:6;}">
+                    <Coords points="1126,885 1126,945 1209,945 1209,885"/>
+                    <TextEquiv>
+                        <Unicode>1125.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Freh, Severin Joseph, Friseur, Büchel A 1125.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_21" custom="readingOrder {index:20;}">
+                <Coords points="422,972 537,990 570,966 1052,969 1052,939 998,928 422,936"/>
+                <Baseline points="428,962 459,963 490,965 522,965 553,963 584,963 616,965 647,964 678,963 710,962 741,962 772,964 804,965 835,964 866,963 898,963 929,963 960,963 992,963 1023,961 1055,961"/>
+                <Word id="tr_1_tl_21_w1" custom="readingOrder {index:0;}">
+                    <Coords points="422,923 422,983 504,983 504,923"/>
+                    <TextEquiv>
+                        <Unicode>Freh,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_21_w2" custom="readingOrder {index:1;}">
+                    <Coords points="526,923 526,983 624,983 624,923"/>
+                    <TextEquiv>
+                        <Unicode>Peter,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_21_w3" custom="readingOrder {index:2;}">
+                    <Coords points="645,922 645,982 774,982 774,922"/>
+                    <TextEquiv>
+                        <Unicode>Friseur,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_21_w4" custom="readingOrder {index:3;}">
+                    <Coords points="791,923 791,983 894,983 894,923"/>
+                    <TextEquiv>
+                        <Unicode>Büchel</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_21_w5" custom="readingOrder {index:4;}">
+                    <Coords points="916,923 916,983 930,983 930,923"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_21_w6" custom="readingOrder {index:5;}">
+                    <Coords points="962,922 962,982 1050,982 1050,922"/>
+                    <TextEquiv>
+                        <Unicode>1125.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Freh, Peter, Friseur, Büchel A 1125.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_22" custom="readingOrder {index:21;}">
+                <Coords points="439,1009 1127,1005 1117,963 439,981"/>
+                <Baseline points="445,1001 479,1001 513,1003 547,1002 581,1000 616,999 650,999 684,999 718,999 752,999 787,1000 821,1001 855,1001 889,1001 923,1001 958,999 992,999 1026,999 1060,999 1094,998 1129,997"/>
+                <Word id="tr_1_tl_22_w1" custom="readingOrder {index:0;}">
+                    <Coords points="433,961 433,1021 503,1021 503,961"/>
+                    <TextEquiv>
+                        <Unicode>greh,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_22_w2" custom="readingOrder {index:1;}">
+                    <Coords points="526,959 526,1019 653,1019 653,959"/>
+                    <TextEquiv>
+                        <Unicode>Johann,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_22_w3" custom="readingOrder {index:2;}">
+                    <Coords points="671,959 671,1019 817,1019 817,959"/>
+                    <TextEquiv>
+                        <Unicode>Schuster,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_22_w4" custom="readingOrder {index:3;}">
+                    <Coords points="840,961 840,1021 985,1021 985,961"/>
+                    <TextEquiv>
+                        <Unicode>Rosstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_22_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1008,959 1008,1019 1021,1019 1021,959"/>
+                    <TextEquiv>
+                        <Unicode>B</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_22_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1061,958 1061,1018 1127,1018 1127,958"/>
+                    <TextEquiv>
+                        <Unicode>276.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>greh, Johann, Schuster, Rosstraße B 276.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_23" custom="readingOrder {index:22;}">
+                <Coords points="417,1056 1305,1063 1305,1003 1265,998 417,1009"/>
+                <Baseline points="423,1029 467,1037 511,1039 555,1038 599,1039 644,1039 688,1037 732,1037 776,1037 820,1037 865,1039 909,1037 953,1038 997,1037 1041,1037 1086,1035 1130,1036 1174,1035 1218,1035 1262,1035 1307,1033"/>
+                <Word id="tr_1_tl_23_w1" custom="readingOrder {index:0;}">
+                    <Coords points="416,997 416,1057 522,1057 522,997"/>
+                    <TextEquiv>
+                        <Unicode>Frehe,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_23_w2" custom="readingOrder {index:1;}">
+                    <Coords points="547,999 547,1059 667,1059 667,999"/>
+                    <TextEquiv>
+                        <Unicode>Joseph,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_23_w3" custom="readingOrder {index:2;}">
+                    <Coords points="696,997 696,1057 918,1057 918,997"/>
+                    <TextEquiv>
+                        <Unicode>Meisterknecht,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_23_w4" custom="readingOrder {index:3;}">
+                    <Coords points="943,995 943,1055 1246,1055 1246,995"/>
+                    <TextEquiv>
+                        <Unicode>Kleinmarschierstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_23_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1271,994 1271,1054 1280,1054 1280,994"/>
+                    <TextEquiv>
+                        <Unicode>B</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Frehe, Joseph, Meisterknecht, Kleinmarschierstraße B</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_24" custom="readingOrder {index:23;}">
+                <Coords points="455,1083 465,1085 470,1080 483,1079 496,1088 512,1078 530,1089 548,1087 548,1053 541,1053 525,1041 515,1049 502,1045 455,1049"/>
+                <Baseline points="461,1073 491,1073 521,1075 551,1073"/>
+                <Word id="tr_1_tl_24_w1" custom="readingOrder {index:0;}">
+                    <Coords points="455,1033 455,1093 541,1093 541,1033"/>
+                    <TextEquiv>
+                        <Unicode>1192.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>1192.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_25" custom="readingOrder {index:24;}">
+                <Coords points="475,1117 1302,1129 1287,1056 1015,1088 475,1079"/>
+                <Baseline points="481,1107 522,1111 563,1111 604,1111 645,1111 687,1111 728,1113 769,1111 810,1111 851,1113 893,1113 934,1111 975,1110 1016,1109 1057,1111 1099,1110 1140,1109 1181,1110 1222,1109 1263,1109 1305,1107"/>
+                <Word id="tr_1_tl_25_w1" custom="readingOrder {index:0;}">
+                    <Coords points="475,1071 475,1131 665,1131 665,1071"/>
+                    <TextEquiv>
+                        <Unicode>ialdenhoven,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_25_w2" custom="readingOrder {index:1;}">
+                    <Coords points="686,1071 686,1131 839,1131 839,1071"/>
+                    <TextEquiv>
+                        <Unicode>Mathias,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_25_w3" custom="readingOrder {index:2;}">
+                    <Coords points="856,1071 856,1131 998,1131 998,1071"/>
+                    <TextEquiv>
+                        <Unicode>Maurer,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_25_w4" custom="readingOrder {index:3;}">
+                    <Coords points="1020,1069 1020,1129 1247,1129 1247,1069"/>
+                    <TextEquiv>
+                        <Unicode>Sandkaulstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_25_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1269,1068 1269,1128 1284,1128 1284,1068"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>ialdenhoven, Mathias, Maurer, Sandkaulstraße A</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_26" custom="readingOrder {index:25;}">
+                <Coords points="453,1140 461,1140 466,1143 477,1141 487,1132 497,1128 500,1131 509,1132 510,1121 498,1119 496,1116 486,1120 482,1117 480,1118 477,1113 467,1121 462,1117 456,1116"/>
+                <Baseline points="461,1135 486,1129 511,1129"/>
+                <Word id="tr_1_tl_26_w1" custom="readingOrder {index:0;}">
+                    <Coords points="452,1095 452,1155 461,1155 461,1095"/>
+                    <TextEquiv>
+                        <Unicode>9</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>9</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_27" custom="readingOrder {index:26;}">
+                <Coords points="453,1160 460,1161 469,1155 475,1157 478,1153 490,1157 493,1153 495,1155 506,1153 508,1156 512,1152 522,1155 523,1131 513,1129 501,1132 497,1128 476,1141 467,1143 465,1140 455,1139"/>
+                <Baseline points="459,1151 492,1149 525,1147"/>
+                <Word id="tr_1_tl_27_w1" custom="readingOrder {index:0;}">
+                    <Coords points="452,1109 452,1169 525,1169 525,1109"/>
+                    <TextEquiv>
+                        <Unicode>-)5).</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>-)5).</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_28" custom="readingOrder {index:27;}">
+                <Coords points="414,1205 1306,1192 1297,1129 1190,1160 414,1139"/>
+                <Baseline points="421,1181 465,1185 509,1185 554,1185 598,1183 643,1185 687,1185 731,1185 776,1185 820,1185 865,1185 909,1185 953,1185 998,1185 1042,1185 1087,1185 1131,1184 1175,1185 1220,1185 1264,1183 1309,1181"/>
+                <Word id="tr_1_tl_28_w1" custom="readingOrder {index:0;}">
+                    <Coords points="414,1145 414,1205 663,1205 663,1145"/>
+                    <TextEquiv>
+                        <Unicode>Freialdenhoven,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_28_w2" custom="readingOrder {index:1;}">
+                    <Coords points="680,1145 680,1205 847,1205 847,1145"/>
+                    <TextEquiv>
+                        <Unicode>Engelbert,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_28_w3" custom="readingOrder {index:2;}">
+                    <Coords points="865,1145 865,1205 1206,1205 1206,1145"/>
+                    <TextEquiv>
+                        <Unicode>Kurzwaarenhandlung,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_28_w4" custom="readingOrder {index:3;}">
+                    <Coords points="1223,1143 1223,1203 1298,1203 1298,1143"/>
+                    <TextEquiv>
+                        <Unicode>Hüh¬</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Freialdenhoven, Engelbert, Kurzwaarenhandlung, Hüh¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_29" custom="readingOrder {index:28;}">
+                <Coords points="451,1230 500,1228 518,1241 596,1221 608,1233 637,1226 650,1235 687,1231 703,1246 728,1240 729,1193 713,1190 671,1188 657,1200 632,1187 548,1200 507,1191 452,1198"/>
+                <Baseline points="457,1221 484,1221 511,1223 539,1223 566,1222 594,1221 621,1220 648,1219 676,1220 703,1221 731,1221"/>
+                <Word id="tr_1_tl_29_w1" custom="readingOrder {index:0;}">
+                    <Coords points="454,1183 454,1243 589,1243 589,1183"/>
+                    <TextEquiv>
+                        <Unicode>nermarkt</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_29_w2" custom="readingOrder {index:1;}">
+                    <Coords points="608,1180 608,1240 621,1240 621,1180"/>
+                    <TextEquiv>
+                        <Unicode>B</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_29_w3" custom="readingOrder {index:2;}">
+                    <Coords points="664,1180 664,1240 733,1240 733,1180"/>
+                    <TextEquiv>
+                        <Unicode>977.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>nermarkt B 977.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_30" custom="readingOrder {index:29;}">
+                <Coords points="417,1270 1238,1268 1238,1232 1176,1218 876,1242 781,1218 703,1245 417,1216"/>
+                <Baseline points="423,1257 463,1259 504,1259 545,1263 586,1260 627,1259 668,1259 709,1259 750,1261 791,1259 832,1259 872,1259 913,1259 954,1258 995,1259 1036,1259 1077,1257 1118,1257 1159,1258 1200,1259 1241,1259"/>
+                <Word id="tr_1_tl_30_w1" custom="readingOrder {index:0;}">
+                    <Coords points="416,1219 416,1279 550,1279 550,1219"/>
+                    <TextEquiv>
+                        <Unicode>Freitag,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_30_w2" custom="readingOrder {index:1;}">
+                    <Coords points="570,1219 570,1279 704,1279 704,1219"/>
+                    <TextEquiv>
+                        <Unicode>Johann,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_30_w3" custom="readingOrder {index:2;}">
+                    <Coords points="724,1219 724,1279 872,1279 872,1219"/>
+                    <TextEquiv>
+                        <Unicode>Kutscher,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_30_w4" custom="readingOrder {index:3;}">
+                    <Coords points="892,1219 892,1279 1102,1279 1102,1219"/>
+                    <TextEquiv>
+                        <Unicode>Adalbertstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_30_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1127,1217 1127,1277 1136,1277 1136,1217"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_30_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1170,1219 1170,1279 1237,1279 1237,1219"/>
+                    <TextEquiv>
+                        <Unicode>734.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Freitag, Johann, Kutscher, Adalbertstraße A 734.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_31" custom="readingOrder {index:30;}">
+                <Coords points="417,1307 1246,1308 1246,1269 1212,1261 417,1273"/>
+                <Baseline points="423,1299 464,1297 505,1297 546,1295 588,1297 629,1298 670,1296 712,1297 753,1296 794,1297 836,1297 877,1297 918,1297 959,1297 1001,1296 1042,1295 1083,1295 1125,1295 1166,1297 1207,1295 1249,1295"/>
+                <Word id="tr_1_tl_31_w1" custom="readingOrder {index:0;}">
+                    <Coords points="416,1256 416,1316 597,1316 597,1256"/>
+                    <TextEquiv>
+                        <Unicode>Fremdgens,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_31_w2" custom="readingOrder {index:1;}">
+                    <Coords points="615,1256 615,1316 751,1316 751,1256"/>
+                    <TextEquiv>
+                        <Unicode>Johann,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_31_w3" custom="readingOrder {index:2;}">
+                    <Coords points="770,1257 770,1317 946,1317 946,1257"/>
+                    <TextEquiv>
+                        <Unicode>Fuhrmann,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_31_w4" custom="readingOrder {index:3;}">
+                    <Coords points="965,1255 965,1315 1101,1315 1101,1255"/>
+                    <TextEquiv>
+                        <Unicode>Rosgasse</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_31_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1124,1255 1124,1315 1132,1315 1132,1255"/>
+                    <TextEquiv>
+                        <Unicode>B</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_31_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1174,1255 1174,1315 1241,1315 1241,1255"/>
+                    <TextEquiv>
+                        <Unicode>259.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Fremdgens, Johann, Fuhrmann, Rosgasse B 259.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_32" custom="readingOrder {index:31;}">
+                <Coords points="419,1342 1201,1339 1188,1299 419,1307"/>
+                <Baseline points="425,1329 463,1334 502,1335 541,1335 580,1333 619,1333 658,1333 697,1333 736,1334 775,1334 814,1333 852,1333 891,1333 930,1333 969,1333 1008,1332 1047,1331 1086,1331 1125,1331 1164,1332 1203,1333"/>
+                <Word id="tr_1_tl_32_w1" custom="readingOrder {index:0;}">
+                    <Coords points="418,1295 418,1355 604,1355 604,1295"/>
+                    <TextEquiv>
+                        <Unicode>Fremdgens,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_32_w2" custom="readingOrder {index:1;}">
+                    <Coords points="622,1293 622,1353 754,1353 754,1293"/>
+                    <TextEquiv>
+                        <Unicode>Johann,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_32_w3" custom="readingOrder {index:2;}">
+                    <Coords points="777,1293 777,1353 904,1353 904,1293"/>
+                    <TextEquiv>
+                        <Unicode>Walker,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_32_w4" custom="readingOrder {index:3;}">
+                    <Coords points="923,1292 923,1352 1082,1352 1082,1292"/>
+                    <TextEquiv>
+                        <Unicode>Pontstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_32_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1106,1291 1106,1351 1119,1351 1119,1291"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_32_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1151,1292 1151,1352 1200,1352 1200,1292"/>
+                    <TextEquiv>
+                        <Unicode>39.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Fremdgens, Johann, Walker, Pontstraße A 39.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_33" custom="readingOrder {index:32;}">
+                <Coords points="417,1380 1195,1377 1195,1345 1130,1332 417,1347"/>
+                <Baseline points="423,1373 461,1371 500,1371 539,1371 577,1371 616,1371 655,1369 693,1371 732,1371 771,1371 810,1371 848,1370 887,1370 926,1369 964,1369 1003,1369 1042,1369 1080,1369 1119,1368 1158,1367 1197,1369"/>
+                <Word id="tr_1_tl_33_w1" custom="readingOrder {index:0;}">
+                    <Coords points="416,1331 416,1391 556,1391 556,1331"/>
+                    <TextEquiv>
+                        <Unicode>Fremmy,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_33_w2" custom="readingOrder {index:1;}">
+                    <Coords points="575,1329 575,1389 720,1389 720,1329"/>
+                    <TextEquiv>
+                        <Unicode>Theodor,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_33_w3" custom="readingOrder {index:2;}">
+                    <Coords points="739,1330 739,1390 884,1390 884,1330"/>
+                    <TextEquiv>
+                        <Unicode>Händler,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_33_w4" custom="readingOrder {index:3;}">
+                    <Coords points="903,1329 903,1389 1053,1389 1053,1329"/>
+                    <TextEquiv>
+                        <Unicode>Rosstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_33_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1077,1328 1077,1388 1085,1388 1085,1328"/>
+                    <TextEquiv>
+                        <Unicode>B</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_33_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1127,1327 1127,1387 1194,1387 1194,1327"/>
+                    <TextEquiv>
+                        <Unicode>362.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Fremmy, Theodor, Händler, Rosstraße B 362.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_34" custom="readingOrder {index:33;}">
+                <Coords points="417,1421 1106,1410 1231,1445 1296,1426 1297,1371 417,1379"/>
+                <Baseline points="423,1413 466,1407 510,1409 554,1409 598,1407 642,1407 685,1408 729,1409 773,1409 817,1409 861,1409 904,1407 948,1407 992,1407 1036,1407 1080,1406 1123,1405 1167,1406 1211,1405 1255,1407 1299,1405"/>
+                <Word id="tr_1_tl_34_w1" custom="readingOrder {index:0;}">
+                    <Coords points="417,1367 417,1427 549,1427 549,1367"/>
+                    <TextEquiv>
+                        <Unicode>Frenken,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_34_w2" custom="readingOrder {index:1;}">
+                    <Coords points="581,1367 581,1427 734,1427 734,1367"/>
+                    <TextEquiv>
+                        <Unicode>Wilhelm,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_34_w3" custom="readingOrder {index:2;}">
+                    <Coords points="761,1368 761,1428 988,1428 988,1368"/>
+                    <TextEquiv>
+                        <Unicode>Religionslehrer</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_34_w4" custom="readingOrder {index:3;}">
+                    <Coords points="1020,1367 1020,1427 1046,1427 1046,1367"/>
+                    <TextEquiv>
+                        <Unicode>am</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_34_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1089,1365 1089,1425 1295,1425 1295,1365"/>
+                    <TextEquiv>
+                        <Unicode>Gymnasium,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Frenken, Wilhelm, Religionslehrer am Gymnasium,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_35" custom="readingOrder {index:34;}">
+                <Coords points="453,1451 472,1461 505,1450 537,1462 567,1450 748,1455 748,1417 710,1411 670,1421 643,1412 628,1427 573,1408 527,1422 486,1411 453,1419"/>
+                <Baseline points="459,1441 485,1443 512,1445 538,1445 565,1445 591,1445 618,1445 644,1445 671,1445 697,1445 724,1445 751,1445"/>
+                <Word id="tr_1_tl_35_w1" custom="readingOrder {index:0;}">
+                    <Coords points="452,1405 452,1465 619,1465 619,1405"/>
+                    <TextEquiv>
+                        <Unicode>Pontstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_35_w2" custom="readingOrder {index:1;}">
+                    <Coords points="639,1405 639,1465 648,1465 648,1405"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_35_w3" custom="readingOrder {index:2;}">
+                    <Coords points="683,1405 683,1465 751,1465 751,1405"/>
+                    <TextEquiv>
+                        <Unicode>891.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Pontstraße A 891.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_36" custom="readingOrder {index:35;}">
+                <Coords points="414,1496 1213,1495 1213,1450 1063,1430 901,1459 414,1447"/>
+                <Baseline points="421,1481 460,1483 500,1483 540,1483 579,1483 619,1483 659,1483 698,1483 738,1483 778,1481 818,1481 857,1481 897,1480 937,1479 976,1479 1016,1479 1056,1479 1095,1481 1135,1480 1175,1479 1215,1477"/>
+                <Word id="tr_1_tl_36_w1" custom="readingOrder {index:0;}">
+                    <Coords points="418,1443 418,1503 532,1503 532,1443"/>
+                    <TextEquiv>
+                        <Unicode>Frentz,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_36_w2" custom="readingOrder {index:1;}">
+                    <Coords points="552,1443 552,1503 685,1503 685,1443"/>
+                    <TextEquiv>
+                        <Unicode>Johann,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_36_w3" custom="readingOrder {index:2;}">
+                    <Coords points="705,1441 705,1501 910,1501 910,1441"/>
+                    <TextEquiv>
+                        <Unicode>Tuchscheerer,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_36_w4" custom="readingOrder {index:3;}">
+                    <Coords points="930,1439 930,1499 1078,1499 1078,1439"/>
+                    <TextEquiv>
+                        <Unicode>Borngasse</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_36_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1102,1440 1102,1500 1111,1500 1111,1440"/>
+                    <TextEquiv>
+                        <Unicode>B</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_36_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1150,1438 1150,1498 1217,1498 1217,1438"/>
+                    <TextEquiv>
+                        <Unicode>529.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Frentz, Johann, Tuchscheerer, Borngasse B 529.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_37" custom="readingOrder {index:36;}">
+                <Coords points="417,1534 1207,1520 1300,1545 1300,1481 417,1497"/>
+                <Baseline points="423,1519 467,1517 511,1520 555,1519 599,1519 643,1521 687,1522 731,1521 775,1520 819,1519 863,1520 907,1517 951,1517 995,1517 1039,1517 1083,1517 1127,1515 1171,1515 1215,1515 1259,1517 1303,1517"/>
+                <Word id="tr_1_tl_37_w1" custom="readingOrder {index:0;}">
+                    <Coords points="416,1479 416,1539 653,1539 653,1479"/>
+                    <TextEquiv>
+                        <Unicode>Freudenberger,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_37_w2" custom="readingOrder {index:1;}">
+                    <Coords points="687,1480 687,1540 827,1540 827,1480"/>
+                    <TextEquiv>
+                        <Unicode>Nikolas,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_37_w3" custom="readingOrder {index:2;}">
+                    <Coords points="851,1477 851,1537 1108,1537 1108,1477"/>
+                    <TextEquiv>
+                        <Unicode>Tapetenhändler,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_37_w4" custom="readingOrder {index:3;}">
+                    <Coords points="1131,1475 1131,1535 1294,1535 1294,1475"/>
+                    <TextEquiv>
+                        <Unicode>Peterstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Freudenberger, Nikolas, Tapetenhändler, Peterstraße</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_38" custom="readingOrder {index:37;}">
+                <Coords points="451,1575 467,1568 485,1572 498,1561 512,1568 541,1570 568,1560 578,1564 578,1526 569,1527 561,1521 546,1529 517,1524 510,1531 493,1524 478,1529 451,1526"/>
+                <Baseline points="457,1555 487,1555 518,1555 548,1557 579,1555"/>
+                <Word id="tr_1_tl_38_w1" custom="readingOrder {index:0;}">
+                    <Coords points="456,1515 456,1575 466,1575 466,1515"/>
+                    <TextEquiv>
+                        <Unicode>B</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_38_w2" custom="readingOrder {index:1;}">
+                    <Coords points="508,1516 508,1576 581,1576 581,1516"/>
+                    <TextEquiv>
+                        <Unicode>493.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>B 493.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_39" custom="readingOrder {index:38;}">
+                <Coords points="414,1611 1300,1591 1300,1557 1071,1569 999,1532 879,1569 800,1528 689,1528 628,1570 416,1544"/>
+                <Baseline points="421,1597 465,1595 509,1595 553,1595 597,1595 641,1595 685,1593 729,1593 773,1593 817,1593 862,1594 906,1593 950,1593 994,1593 1038,1591 1082,1591 1126,1591 1170,1590 1214,1591 1258,1591 1303,1589"/>
+                <Word id="tr_1_tl_39_w1" custom="readingOrder {index:0;}">
+                    <Coords points="416,1555 416,1615 618,1615 618,1555"/>
+                    <TextEquiv>
+                        <Unicode>Freudenthal,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_39_w2" custom="readingOrder {index:1;}">
+                    <Coords points="644,1553 644,1613 723,1613 723,1553"/>
+                    <TextEquiv>
+                        <Unicode>Jakob</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_39_w3" custom="readingOrder {index:2;}">
+                    <Coords points="748,1553 748,1613 883,1613 883,1553"/>
+                    <TextEquiv>
+                        <Unicode>Eduard,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_39_w4" custom="readingOrder {index:3;}">
+                    <Coords points="902,1551 902,1611 1185,1611 1185,1551"/>
+                    <TextEquiv>
+                        <Unicode>Polizeikommissair,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_39_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1210,1551 1210,1611 1296,1611 1296,1551"/>
+                    <TextEquiv>
+                        <Unicode>Mün¬</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Freudenthal, Jakob Eduard, Polizeikommissair, Mün¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_40" custom="readingOrder {index:39;}">
+                <Coords points="457,1646 550,1638 567,1646 579,1637 613,1645 631,1632 647,1645 662,1635 679,1646 730,1637 730,1604 699,1596 573,1607 538,1598 521,1610 457,1599"/>
+                <Baseline points="463,1631 490,1631 517,1631 544,1632 571,1633 598,1632 625,1631 652,1631 679,1631 706,1631 733,1629"/>
+                <Word id="tr_1_tl_40_w1" custom="readingOrder {index:0;}">
+                    <Coords points="456,1591 456,1651 572,1651 572,1591"/>
+                    <TextEquiv>
+                        <Unicode>sterplatz</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_40_w2" custom="readingOrder {index:1;}">
+                    <Coords points="593,1592 593,1652 602,1652 602,1592"/>
+                    <TextEquiv>
+                        <Unicode>B</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_40_w3" custom="readingOrder {index:2;}">
+                    <Coords points="648,1591 648,1651 733,1651 733,1591"/>
+                    <TextEquiv>
+                        <Unicode>1034.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>sterplatz B 1034.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_41" custom="readingOrder {index:40;}">
+                <Coords points="417,1679 1175,1671 1175,1639 1122,1632 923,1620 851,1651 778,1604 699,1649 417,1625"/>
+                <Baseline points="423,1671 460,1669 498,1669 536,1670 573,1669 611,1669 649,1668 686,1666 724,1669 762,1669 800,1668 837,1667 875,1665 913,1667 950,1667 988,1666 1026,1665 1063,1665 1101,1665 1139,1665 1177,1663"/>
+                <Word id="tr_1_tl_41_w1" custom="readingOrder {index:0;}">
+                    <Coords points="418,1629 418,1689 545,1689 545,1629"/>
+                    <TextEquiv>
+                        <Unicode>Freund,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_41_w2" custom="readingOrder {index:1;}">
+                    <Coords points="568,1628 568,1688 683,1688 683,1628"/>
+                    <TextEquiv>
+                        <Unicode>Joseph,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_41_w3" custom="readingOrder {index:2;}">
+                    <Coords points="706,1628 706,1688 850,1688 850,1628"/>
+                    <TextEquiv>
+                        <Unicode>Schuster,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_41_w4" custom="readingOrder {index:3;}">
+                    <Coords points="873,1626 873,1686 1033,1686 1033,1626"/>
+                    <TextEquiv>
+                        <Unicode>Seilgraben</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_41_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1056,1625 1056,1685 1072,1685 1072,1625"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_41_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1106,1625 1106,1685 1172,1685 1172,1625"/>
+                    <TextEquiv>
+                        <Unicode>794.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Freund, Joseph, Schuster, Seilgraben A 794.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_42" custom="readingOrder {index:41;}">
+                <Coords points="417,1720 1266,1707 1267,1666 418,1681"/>
+                <Baseline points="423,1705 465,1707 507,1707 549,1707 591,1705 634,1705 676,1706 718,1707 760,1705 802,1706 845,1705 887,1705 929,1705 971,1705 1013,1703 1056,1703 1098,1703 1140,1701 1182,1701 1224,1701 1267,1701"/>
+                <Word id="tr_1_tl_42_w1" custom="readingOrder {index:0;}">
+                    <Coords points="416,1667 416,1727 570,1727 570,1667"/>
+                    <TextEquiv>
+                        <Unicode>Freyberg,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_42_w2" custom="readingOrder {index:1;}">
+                    <Coords points="593,1665 593,1725 715,1725 715,1665"/>
+                    <TextEquiv>
+                        <Unicode>Moritz,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_42_w3" custom="readingOrder {index:2;}">
+                    <Coords points="734,1665 734,1725 939,1725 939,1665"/>
+                    <TextEquiv>
+                        <Unicode>Postsekretair,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_42_w4" custom="readingOrder {index:3;}">
+                    <Coords points="958,1663 958,1723 1131,1723 1131,1663"/>
+                    <TextEquiv>
+                        <Unicode>Jakobstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_42_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1155,1661 1155,1721 1164,1721 1164,1661"/>
+                    <TextEquiv>
+                        <Unicode>B</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_42_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1206,1661 1206,1721 1271,1721 1271,1661"/>
+                    <TextEquiv>
+                        <Unicode>928.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Freyberg, Moritz, Postsekretair, Jakobstraße B 928.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_43" custom="readingOrder {index:42;}">
+                <Coords points="414,1765 1300,1755 1288,1704 414,1720"/>
+                <Baseline points="421,1745 465,1745 509,1745 553,1745 597,1746 641,1745 685,1747 729,1745 773,1745 817,1743 862,1743 906,1743 950,1743 994,1742 1038,1741 1082,1741 1126,1741 1170,1740 1214,1739 1258,1738 1303,1741"/>
+                <Word id="tr_1_tl_43_w1" custom="readingOrder {index:0;}">
+                    <Coords points="419,1705 419,1765 568,1765 568,1705"/>
+                    <TextEquiv>
+                        <Unicode>Friedrich,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_43_w2" custom="readingOrder {index:1;}">
+                    <Coords points="585,1705 585,1765 719,1765 719,1705"/>
+                    <TextEquiv>
+                        <Unicode>Nikolas,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_43_w3" custom="readingOrder {index:2;}">
+                    <Coords points="735,1703 735,1763 946,1763 946,1703"/>
+                    <TextEquiv>
+                        <Unicode>Fabrikmeister,</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_43_w4" custom="readingOrder {index:3;}">
+                    <Coords points="962,1701 962,1761 1184,1761 1184,1701"/>
+                    <TextEquiv>
+                        <Unicode>Großkölnstraße</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_43_w5" custom="readingOrder {index:4;}">
+                    <Coords points="1206,1699 1206,1759 1210,1759 1210,1699"/>
+                    <TextEquiv>
+                        <Unicode>A</Unicode>
+                    </TextEquiv>
+                </Word>
+                <Word id="tr_1_tl_43_w6" custom="readingOrder {index:5;}">
+                    <Coords points="1237,1698 1237,1758 1298,1758 1298,1698"/>
+                    <TextEquiv>
+                        <Unicode>424.</Unicode>
+                    </TextEquiv>
+                </Word>
+                <TextEquiv>
+                    <Unicode>Friedrich, Nikolas, Fabrikmeister, Großkölnstraße A 424.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

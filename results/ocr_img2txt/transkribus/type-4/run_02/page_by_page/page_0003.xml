@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2025-03-05T19:57:27.245+01:00</Created>
+        <LastChange>2025-03-05T19:57:27.245+01:00</LastChange>
+    </Metadata>
+    <Page imageFilename="page_0003.tiff" imageWidth="1654" imageHeight="2339">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1741201094115" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="269,121 269,2129 1377,2129 1377,121"/>
+            <TextLine id="tr_1_tl_1" custom="readingOrder {index:0;}">
+                <Coords points="671,153 699,164 725,153 776,164 838,153 884,165 910,154 955,163 953,87 920,103 862,102 827,121 768,92 749,98 724,85 696,95 670,80"/>
+                <Baseline points="679,147 704,145 729,145 754,145 780,144 805,143 830,145 855,148 881,149 906,149 931,149 957,149"/>
+                <TextEquiv>
+                    <Unicode>Fritz — Fucke</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:1;}">
+                <Coords points="1303,161 1315,161 1324,154 1336,154 1343,159 1348,154 1353,156 1372,150 1372,90 1357,88 1353,91 1347,85 1342,88 1335,85 1318,98 1303,99"/>
+                <Baseline points="1311,149 1343,149 1375,149"/>
+                <TextEquiv>
+                    <Unicode>97</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:2;}">
+                <Coords points="1222,232 1230,233 1237,240 1244,240 1249,236 1256,237 1264,244 1271,240 1284,240 1282,194 1270,196 1249,185 1242,185 1235,190 1220,189"/>
+                <Baseline points="1229,223 1258,223 1287,225"/>
+                <TextEquiv>
+                    <Unicode>Ml</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:3;}">
+                <Coords points="266,236 1186,239 1164,186 266,192"/>
+                <Baseline points="273,225 318,225 364,225 410,225 456,227 502,227 547,227 593,227 639,229 685,227 731,227 776,227 822,227 868,227 914,226 960,227 1005,227 1051,229 1097,229 1143,227 1189,229"/>
+                <TextEquiv>
+                    <Unicode>Fritz Joh. Bernhard, Schuhmacher, Schäfergasse 7.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:4;}">
+                <Coords points="267,277 1217,280 1198,230 267,236"/>
+                <Baseline points="275,269 322,269 369,269 416,269 463,270 511,269 558,269 605,271 652,270 699,271 747,271 794,271 841,271 888,271 935,271 983,273 1030,273 1077,273 1124,273 1171,271 1219,271"/>
+                <TextEquiv>
+                    <Unicode>Fritz Joh. Conrad, Restaurateur, gr. Kornmarkt 18.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_6" custom="readingOrder {index:5;}">
+                <Coords points="267,320 1364,321 1364,283 1251,274 267,277"/>
+                <Baseline points="275,311 329,311 384,312 438,313 493,313 548,311 602,313 657,313 711,314 766,315 821,313 875,313 930,315 984,315 1039,316 1094,316 1148,315 1203,315 1257,315 1312,315 1367,315"/>
+                <TextEquiv>
+                    <Unicode>Fritz Joh. Friedrich Carl, Specereikrämer, Rechneigrabenstr. 19.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_7" custom="readingOrder {index:6;}">
+                <Coords points="263,368 1365,367 1365,327 1303,318 263,327"/>
+                <Baseline points="271,355 325,355 380,356 435,357 490,356 545,355 599,357 654,357 709,357 764,357 819,357 873,357 928,359 983,359 1038,359 1093,360 1147,361 1202,359 1257,359 1312,359 1367,361"/>
+                <TextEquiv>
+                    <Unicode>Fritz Joh. Heinrich, Lohnbedientens, Wittwe, gr. Kornmarkt 16.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_8" custom="readingOrder {index:7;}">
+                <Coords points="267,405 1121,408 1106,367 267,370"/>
+                <Baseline points="275,399 317,399 359,399 402,399 444,399 487,401 529,399 571,399 614,399 656,400 699,401 741,401 783,401 826,400 868,401 911,401 953,402 995,403 1038,402 1080,403 1123,401"/>
+                <TextEquiv>
+                    <Unicode>Fritz Joh. Jacob, Weinhändler, Kerbengasse 4.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_9" custom="readingOrder {index:8;}">
+                <Coords points="266,451 1238,448 1238,407 1166,400 266,405"/>
+                <Baseline points="273,441 321,441 369,443 418,443 466,444 515,443 563,443 611,444 660,445 708,444 757,443 805,444 853,444 902,445 950,445 999,445 1047,445 1095,445 1144,445 1192,445 1241,449"/>
+                <TextEquiv>
+                    <Unicode>Fritz Joh. Ludwig, Lohnbediente, Schärfengässchen 4.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_10" custom="readingOrder {index:9;}">
+                <Coords points="267,496 1296,514 1296,434 993,478 904,448 267,451"/>
+                <Baseline points="275,485 326,486 377,487 428,487 479,487 531,487 582,487 633,487 684,489 735,487 787,487 838,487 889,488 940,487 991,487 1043,489 1094,489 1145,489 1196,490 1247,490 1299,493"/>
+                <TextEquiv>
+                    <Unicode>Fritz Louise Charlotte, Merceriegeschäft, siehe vorstehend.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_11" custom="readingOrder {index:10;}">
+                <Coords points="266,535 1176,542 1176,496 1129,492 266,498"/>
+                <Baseline points="273,527 318,529 363,529 408,530 454,531 499,530 544,531 590,531 635,531 680,531 726,531 771,531 816,529 861,532 907,531 952,531 997,531 1043,531 1088,531 1133,532 1179,533"/>
+                <TextEquiv>
+                    <Unicode>Fritz Philipp Jacob, Schlosser, Frohnhofstrasse 11.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_12" custom="readingOrder {index:11;}">
+                <Coords points="266,580 1292,594 1292,532 266,539"/>
+                <Baseline points="273,573 324,573 375,572 426,571 477,571 528,572 579,573 630,575 681,575 732,575 784,575 835,575 886,574 937,575 988,575 1039,576 1090,575 1141,577 1192,576 1243,576 1295,575"/>
+                <TextEquiv>
+                    <Unicode>Fritz Philipp Nicolaus, Schuhmacher, Elementengasse 10</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_13" custom="readingOrder {index:12;}">
+                <Coords points="267,625 1362,630 1351,571 267,582"/>
+                <Baseline points="275,615 329,617 384,616 438,617 493,617 547,617 602,617 656,618 711,617 765,617 820,619 874,619 929,619 983,619 1038,619 1092,619 1147,621 1201,619 1256,620 1310,620 1365,621"/>
+                <TextEquiv>
+                    <Unicode>Frohberg Christian Heinrich, Schreiners, Wittwe, Bleidenstr. 15.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_14" custom="readingOrder {index:13;}">
+                <Coords points="267,669 1155,673 1146,625 267,625"/>
+                <Baseline points="275,661 319,660 363,661 407,661 451,661 495,661 539,661 583,659 627,659 671,663 716,663 760,663 804,663 848,663 892,663 936,663 980,663 1024,663 1068,662 1112,659 1157,661"/>
+                <TextEquiv>
+                    <Unicode>Frohberg Joh. Philipp, Schreiner, Karpfengasse 7</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_15" custom="readingOrder {index:14;}">
+                <Coords points="267,709 1364,724 1364,660 1217,649 1040,688 267,667"/>
+                <Baseline points="275,705 329,703 384,704 438,706 493,703 548,705 602,705 657,705 711,705 766,706 821,705 875,705 930,707 984,706 1039,707 1094,706 1148,707 1203,707 1257,707 1312,707 1367,711"/>
+                <TextEquiv>
+                    <Unicode>Fröhlich Joseph Friedrich, Stiefelholzmacher, Vilbelerstrasse 17.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_16" custom="readingOrder {index:15;}">
+                <Coords points="267,753 1359,767 1351,718 267,718"/>
+                <Baseline points="275,745 329,747 383,747 438,748 492,747 547,747 601,747 655,747 710,748 764,749 819,749 873,749 927,749 982,751 1036,751 1091,753 1145,751 1199,751 1254,750 1308,751 1363,751"/>
+                <TextEquiv>
+                    <Unicode>Fröhling Joh. Georg Herm. Schriftgiessergeh. gr. Eschenkstr. 72.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_17" custom="readingOrder {index:16;}">
+                <Coords points="267,798 1359,801 1343,758 267,751"/>
+                <Baseline points="275,791 329,791 383,791 438,791 492,791 547,791 601,791 655,791 710,792 764,793 819,793 873,793 927,793 982,793 1036,793 1091,795 1145,795 1199,793 1254,795 1308,795 1363,793"/>
+                <TextEquiv>
+                    <Unicode>Frohmann Herz, Hdlsm (s. M. L. Rosenstein &amp; C.) Seilerstr. 11.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_18" custom="readingOrder {index:17;}">
+                <Coords points="266,838 1364,856 1333,800 266,797"/>
+                <Baseline points="273,831 327,833 382,835 437,835 491,835 546,835 601,835 655,835 710,835 765,835 820,835 874,837 929,837 984,837 1038,837 1093,838 1148,837 1202,837 1257,837 1312,839 1367,841"/>
+                <TextEquiv>
+                    <Unicode>Frohmann Joh. Adam Christoph, Buchbinder, Neue Rothhofg. 3.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_19" custom="readingOrder {index:18;}">
+                <Coords points="267,884 1346,900 1333,847 267,837"/>
+                <Baseline points="275,877 328,877 382,877 436,878 489,879 543,879 597,878 650,878 704,879 758,879 812,879 865,879 919,881 973,881 1026,881 1080,881 1134,881 1187,881 1241,881 1295,883 1349,883"/>
+                <TextEquiv>
+                    <Unicode>Erohmann Joh. Martin, Handelsmann, Oberrader Fussweg 4.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_20" custom="readingOrder {index:19;}">
+                <Coords points="266,955 352,927 910,936 910,902 869,888 677,903 266,881"/>
+                <Baseline points="273,921 305,919 337,919 369,921 401,921 433,921 465,921 497,921 529,920 561,919 593,920 625,922 657,921 689,921 721,921 753,923 785,923 817,923 849,925 881,925 913,925"/>
+                <TextEquiv>
+                    <Unicode>Frölich, Carl — Neue Kräme 24.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_21" custom="readingOrder {index:20;}">
+                <Coords points="335,967 1067,976 1067,936 1016,933 335,935"/>
+                <Baseline points="343,957 379,959 415,959 452,960 488,959 525,959 561,959 597,960 634,961 670,961 707,961 743,961 779,962 816,963 852,963 889,961 925,961 961,961 998,961 1034,961 1071,965"/>
+                <TextEquiv>
+                    <Unicode>Manufacturwaaren, C. u. Sp. (Eig. Nachstehender.)</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_22" custom="readingOrder {index:21;}">
+                <Coords points="262,1001 1062,1026 1046,972 262,965"/>
+                <Baseline points="269,997 308,998 348,999 388,1001 428,1000 468,1001 507,1001 547,1001 587,1001 627,999 667,1001 706,1001 746,1001 786,1001 826,1001 866,1001 905,1001 945,1003 985,1003 1025,1003 1065,1003"/>
+                <TextEquiv>
+                    <Unicode>Frölich Carl Heinrich Ludwig, Hdlsm (s. vorst.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_23" custom="readingOrder {index:22;}">
+                <Coords points="1084,1023 1129,1013 1153,1024 1172,1012 1197,1024 1224,1013 1271,1022 1285,1011 1306,1024 1322,1013 1337,1022 1368,1013 1366,969 1325,947 1308,958 1227,936 1217,946 1191,940 1177,953 1158,939 1132,951 1109,942 1082,949"/>
+                <Baseline points="1091,1003 1116,1003 1141,1003 1167,1003 1192,1003 1218,1003 1243,1003 1269,1003 1294,1005 1320,1005 1345,1005 1371,1003"/>
+                <TextEquiv>
+                    <Unicode>Neue Kräme 19.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_24" custom="readingOrder {index:23;}">
+                <Coords points="267,1048 1073,1059 1073,1023 1011,1016 267,1004"/>
+                <Baseline points="275,1041 315,1043 355,1043 395,1043 435,1043 475,1043 515,1045 555,1044 595,1043 635,1043 675,1044 715,1043 755,1043 795,1044 835,1045 875,1045 915,1045 955,1045 995,1045 1035,1047 1075,1047"/>
+                <TextEquiv>
+                    <Unicode>Frölich Georg Adolph (Scribent) Conducteur,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_25" custom="readingOrder {index:24;}">
+                <Coords points="1088,1063 1135,1066 1153,1056 1166,1067 1182,1058 1211,1067 1336,1067 1362,1059 1361,1012 1304,1024 1292,1013 1249,1024 1223,1013 1195,1024 1176,1011 1151,1023 1128,1013 1086,1022"/>
+                <Baseline points="1095,1047 1122,1047 1149,1045 1176,1045 1203,1045 1230,1046 1257,1047 1284,1047 1311,1047 1338,1047 1365,1047"/>
+                <TextEquiv>
+                    <Unicode>Allerheilstr. 66.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_26" custom="readingOrder {index:25;}">
+                <Coords points="267,1093 1369,1103 1354,1059 267,1048"/>
+                <Baseline points="275,1087 329,1085 384,1085 439,1087 494,1087 549,1087 603,1087 658,1085 713,1087 768,1087 823,1089 877,1089 932,1089 987,1089 1042,1089 1097,1089 1151,1091 1206,1089 1261,1089 1316,1091 1371,1093"/>
+                <TextEquiv>
+                    <Unicode>Fronmüller Joh. Georg Christoph, Bereiters, Wittwe, Bergweg 4.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_27" custom="readingOrder {index:26;}">
+                <Coords points="266,1147 1372,1150 1372,1100 266,1093"/>
+                <Baseline points="273,1129 328,1129 383,1129 438,1131 493,1131 548,1131 603,1129 658,1131 713,1131 768,1131 824,1133 879,1133 934,1133 989,1133 1044,1133 1099,1133 1154,1134 1209,1135 1264,1135 1319,1133 1375,1133"/>
+                <TextEquiv>
+                    <Unicode>Frühauf Joseph [o B] Prof. der italien. Sprache und beeidigter</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_28" custom="readingOrder {index:27;}">
+                <Coords points="285,1176 507,1197 921,1187 907,1144 285,1139"/>
+                <Baseline points="293,1175 324,1177 356,1173 387,1173 419,1175 451,1173 482,1173 514,1173 545,1174 577,1175 609,1175 640,1174 672,1173 703,1173 735,1173 767,1175 798,1173 830,1173 861,1175 893,1173 925,1175"/>
+                <TextEquiv>
+                    <Unicode>Uebersetzer, Lange Strasse 19.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_29" custom="readingOrder {index:28;}">
+                <Coords points="277,1224 1121,1241 1121,1188 276,1176"/>
+                <Baseline points="285,1215 327,1215 369,1215 411,1217 453,1217 495,1219 537,1219 579,1219 621,1219 663,1217 705,1217 747,1217 789,1217 831,1217 873,1219 915,1219 957,1220 999,1219 1041,1219 1083,1219 1125,1221"/>
+                <TextEquiv>
+                    <Unicode>Fruth Balthasar, Tabaksspinner, Stiftstrasse 30.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_30" custom="readingOrder {index:29;}">
+                <Coords points="276,1274 1081,1282 1070,1226 721,1248 276,1228"/>
+                <Baseline points="283,1259 323,1259 363,1260 403,1261 443,1261 483,1261 523,1263 563,1263 603,1262 643,1261 683,1261 723,1260 763,1261 803,1261 843,1262 883,1261 923,1263 963,1263 1003,1261 1043,1262 1083,1263"/>
+                <TextEquiv>
+                    <Unicode>Fruth Georg, tapezierer, Gelnhäusergasse 6.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_31" custom="readingOrder {index:30;}">
+                <Coords points="269,1304 1372,1326 1372,1274 1251,1267 269,1268"/>
+                <Baseline points="277,1301 331,1303 386,1304 441,1304 496,1305 551,1305 606,1303 661,1303 716,1305 771,1305 826,1306 880,1307 935,1307 990,1307 1045,1305 1100,1307 1155,1307 1210,1307 1265,1307 1320,1309 1375,1309"/>
+                <TextEquiv>
+                    <Unicode>Fruth Heinrich Dominicus, Tabakspinners, Wwe, Dreikönigstr. 5.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_32" custom="readingOrder {index:31;}">
+                <Coords points="269,1347 1354,1359 1293,1315 269,1315"/>
+                <Baseline points="277,1347 331,1347 385,1347 439,1347 493,1347 547,1349 601,1349 655,1349 709,1349 763,1349 817,1347 871,1349 925,1349 979,1350 1033,1351 1087,1349 1141,1349 1195,1350 1249,1350 1303,1351 1357,1351"/>
+                <TextEquiv>
+                    <Unicode>Fruth Joh. Adam, Schuhmachers, Wittwe, Dreikönigstrasse 5.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_33" custom="readingOrder {index:32;}">
+                <Coords points="269,1406 1358,1404 1333,1359 269,1364"/>
+                <Baseline points="277,1389 331,1391 385,1391 439,1391 493,1391 548,1393 602,1391 656,1391 710,1393 764,1393 819,1393 873,1393 927,1393 981,1393 1035,1395 1090,1393 1144,1393 1198,1393 1252,1394 1306,1395 1361,1397"/>
+                <TextEquiv>
+                    <Unicode>Fuchs Anselm Anton August, Hdlsm, Neue Rothhofgasse 15.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_34" custom="readingOrder {index:33;}">
+                <Coords points="269,1441 1289,1455 1277,1402 269,1406"/>
+                <Baseline points="277,1433 327,1433 378,1434 429,1433 480,1433 531,1435 581,1435 632,1435 683,1435 734,1435 785,1437 835,1435 886,1437 937,1437 988,1437 1039,1437 1089,1437 1140,1437 1191,1437 1242,1437 1293,1439"/>
+                <TextEquiv>
+                    <Unicode>Fuchs Christian Wilhelm, Handelsmann, in Wilhelmsbad.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_35" custom="readingOrder {index:34;}">
+                <Coords points="269,1485 1102,1492 1102,1446 1045,1442 269,1439"/>
+                <Baseline points="277,1477 318,1477 359,1477 401,1477 442,1477 484,1479 525,1479 566,1478 608,1477 649,1479 691,1479 732,1479 773,1479 815,1481 856,1481 898,1481 939,1479 980,1479 1022,1479 1063,1481 1105,1479"/>
+                <TextEquiv>
+                    <Unicode>Fuchs Daniel Hirsch, Wittwe, Judengasse 93.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_36" custom="readingOrder {index:35;}">
+                <Coords points="272,1532 1066,1530 1038,1486 272,1493"/>
+                <Baseline points="279,1519 318,1520 358,1521 397,1521 437,1521 476,1521 516,1521 555,1521 595,1521 634,1521 674,1521 713,1522 753,1521 792,1523 832,1523 871,1523 911,1523 950,1523 990,1523 1029,1523 1069,1525"/>
+                <TextEquiv>
+                    <Unicode>Fuchs Georg, Handelsmann, Taunusplatz 6.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_37" custom="readingOrder {index:36;}">
+                <Coords points="272,1576 1104,1583 1078,1526 272,1533"/>
+                <Baseline points="279,1563 320,1563 361,1564 403,1563 444,1565 486,1567 527,1567 568,1566 610,1565 651,1565 693,1565 734,1565 775,1565 817,1565 858,1567 900,1566 941,1567 982,1567 1024,1567 1065,1567 1107,1567"/>
+                <TextEquiv>
+                    <Unicode>Fuchs Georg, Steindecker, Trierischer Platz 5.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_38" custom="readingOrder {index:37;}">
+                <Coords points="273,1623 1336,1624 1335,1568 272,1575"/>
+                <Baseline points="279,1605 332,1607 385,1608 438,1607 491,1607 544,1607 597,1606 650,1608 703,1609 756,1609 809,1609 862,1610 915,1611 968,1611 1021,1611 1074,1611 1127,1611 1180,1611 1233,1611 1286,1611 1339,1609"/>
+                <TextEquiv>
+                    <Unicode>Fuchs Gottfried Wilhelm, Handelsmann, Darmst. Landstr. 4.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_39" custom="readingOrder {index:38;}">
+                <Coords points="273,1668 1342,1664 1342,1617 273,1623"/>
+                <Baseline points="281,1649 334,1651 387,1651 440,1651 493,1651 547,1651 600,1651 653,1651 706,1651 759,1651 813,1654 866,1654 919,1653 972,1653 1025,1655 1079,1654 1132,1654 1185,1655 1238,1655 1291,1655 1345,1657"/>
+                <TextEquiv>
+                    <Unicode>Fuchs Heinrich Ludwig Jacob, Handelsmann, in Offenbach.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_40" custom="readingOrder {index:39;}">
+                <Coords points="272,1707 1031,1703 1031,1660 272,1668"/>
+                <Baseline points="279,1695 316,1695 354,1695 392,1697 430,1695 468,1695 505,1695 543,1695 581,1695 619,1695 657,1695 694,1692 732,1691 770,1695 808,1695 846,1695 883,1697 921,1696 959,1696 997,1697 1035,1697"/>
+                <TextEquiv>
+                    <Unicode>Fuchs, Joh. Conrad — Töngesgasse 45</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_41" custom="readingOrder {index:40;}">
+                <Coords points="339,1733 1227,1750 1227,1696 1091,1689 339,1710"/>
+                <Baseline points="347,1731 391,1733 435,1733 479,1733 523,1733 568,1733 612,1735 656,1734 700,1733 744,1735 789,1735 833,1735 877,1735 921,1735 965,1735 1010,1735 1054,1736 1098,1737 1142,1737 1186,1735 1231,1735"/>
+                <TextEquiv>
+                    <Unicode>Specereiwaaren, Landesproducte, Commission und Spedition.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_42" custom="readingOrder {index:41;}">
+                <Coords points="269,1781 1212,1785 1186,1741 269,1736"/>
+                <Baseline points="277,1773 323,1773 370,1773 417,1773 464,1771 511,1773 558,1773 605,1773 652,1775 699,1775 746,1775 792,1775 839,1775 886,1775 933,1775 980,1775 1027,1775 1074,1775 1121,1777 1168,1775 1215,1775"/>
+                <TextEquiv>
+                    <Unicode>Fuchs Joh. Conrad, Handelsmann, siehe vorstehend.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_43" custom="readingOrder {index:42;}">
+                <Coords points="269,1820 1372,1828 1355,1768 269,1781"/>
+                <Baseline points="277,1815 331,1817 386,1817 441,1817 496,1817 551,1815 606,1817 661,1819 716,1819 771,1819 826,1819 880,1819 935,1819 990,1819 1045,1821 1100,1819 1155,1821 1210,1819 1265,1819 1320,1819 1375,1821"/>
+                <TextEquiv>
+                    <Unicode>Fuchs Joh. Gottfried, Schuhmachers, Wwe, Neue Rothhofg. 15.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_44" custom="readingOrder {index:43;}">
+                <Coords points="269,1870 1350,1890 1350,1830 269,1820"/>
+                <Baseline points="277,1859 330,1859 384,1860 438,1859 492,1861 546,1861 599,1861 653,1861 707,1861 761,1860 815,1861 868,1863 922,1863 976,1863 1030,1863 1084,1863 1137,1863 1191,1863 1245,1863 1299,1863 1353,1863"/>
+                <TextEquiv>
+                    <Unicode>Fuchs Matthias (Schlosser) Locomotivführer, Schäfergasse 2.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_45" custom="readingOrder {index:44;}">
+                <Coords points="276,1914 1115,1914 1100,1872 276,1870"/>
+                <Baseline points="283,1903 324,1903 366,1905 408,1905 450,1904 492,1903 533,1904 575,1905 617,1905 659,1905 701,1905 742,1906 784,1907 826,1907 868,1907 910,1907 951,1907 993,1907 1035,1907 1077,1907 1119,1907"/>
+                <TextEquiv>
+                    <Unicode>Fück Daniel, Schuhmacher, am Porzellanhof 2.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_46" custom="readingOrder {index:45;}">
+                <Coords points="272,1962 1147,1961 1137,1905 900,1937 841,1908 272,1914"/>
+                <Baseline points="279,1945 322,1947 366,1949 409,1948 453,1949 497,1949 540,1949 584,1949 627,1949 671,1949 715,1949 758,1949 802,1951 845,1949 889,1950 933,1951 976,1951 1020,1951 1063,1949 1107,1950 1151,1951"/>
+                <TextEquiv>
+                    <Unicode>Fück Joh. Georg, Wildprethändler, in Bornheim.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_47" custom="readingOrder {index:46;}">
+                <Coords points="269,1999 1373,2021 1365,1937 1150,1977 269,1962"/>
+                <Baseline points="277,1989 332,1991 387,1991 442,1991 497,1993 552,1991 607,1991 662,1993 717,1992 772,1993 827,1994 882,1995 937,1995 992,1995 1047,1995 1102,1995 1157,1995 1212,1995 1267,1995 1322,1993 1377,1997"/>
+                <TextEquiv>
+                    <Unicode>Fucke Joh. Friedrich August, Handelsmann, siehe nachstehend.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_48" custom="readingOrder {index:47;}">
+                <Coords points="273,2057 509,2032 760,2060 837,2043 822,1996 767,2024 658,1995 534,2016 489,1998 273,2003"/>
+                <Baseline points="281,2033 308,2033 336,2033 364,2035 392,2035 420,2035 448,2035 476,2035 504,2033 532,2031 560,2032 587,2033 615,2035 643,2035 671,2035 699,2035 727,2035 755,2037 783,2037 811,2037 839,2039"/>
+                <TextEquiv>
+                    <Unicode>Fucke-Metz — Fahrgasse 25.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_49" custom="readingOrder {index:48;}">
+                <Coords points="335,2085 642,2092 673,2114 1063,2104 1062,2047 939,2024 760,2060 335,2047"/>
+                <Baseline points="343,2073 379,2073 415,2073 451,2073 487,2075 523,2073 559,2075 595,2074 631,2075 667,2075 704,2075 740,2075 776,2077 812,2076 848,2077 884,2075 920,2075 956,2077 992,2077 1028,2077 1065,2079"/>
+                <TextEquiv>
+                    <Unicode>Papier, Musikalien, C. u. Sp. (Eig. Vorstehender.)</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_50" custom="readingOrder {index:49;}">
+                <Coords points="303,2126 363,2134 379,2123 440,2132 478,2126 500,2141 543,2137 542,2086 506,2082 483,2092 466,2082 441,2090 425,2082 361,2100 342,2085 302,2086"/>
+                <Baseline points="311,2115 337,2117 363,2117 389,2117 415,2118 442,2119 468,2119 494,2117 520,2117 547,2117"/>
+                <TextEquiv>
+                    <Unicode>II. 1860. 17/3</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+    </Page>
+</PcGts>

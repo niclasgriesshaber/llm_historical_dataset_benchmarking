@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2025-03-05T20:04:10.181+01:00</Created>
+        <LastChange>2025-03-05T20:04:10.181+01:00</LastChange>
+    </Metadata>
+    <Page imageFilename="page_0001.tiff" imageWidth="1654" imageHeight="2339">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1741201507653" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="323,137 323,2100 1413,2100 1413,137"/>
+            <TextLine id="tr_1_tl_1" custom="readingOrder {index:0;}">
+                <Coords points="552,164 693,191 933,164 1186,174 1186,118 1033,117 1006,93 552,102"/>
+                <Baseline points="559,163 590,161 622,161 653,163 685,163 716,161 748,161 779,160 811,159 842,159 874,159 905,160 937,161 968,161 1000,160 1031,160 1063,161 1094,161 1126,161 1157,161 1189,165"/>
+                <TextEquiv>
+                    <Unicode>Das Rent=Amt=Dresden.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:1;}">
+                <Coords points="330,174 339,174 353,182 372,176 378,180 408,180 411,106 394,105 380,98 366,102 351,93 333,96"/>
+                <Baseline points="337,169 374,169 411,167"/>
+                <TextEquiv>
+                    <Unicode>44</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:2;}">
+                <Coords points="327,245 1241,257 1241,206 1202,186 327,199"/>
+                <Baseline points="335,245 380,247 426,249 471,249 517,247 562,247 608,245 653,247 699,249 744,249 790,247 835,245 881,245 926,246 972,247 1017,247 1063,247 1108,246 1154,249 1199,247 1245,241"/>
+                <TextEquiv>
+                    <Unicode>Carl Friedrich Grohmann, PV. Johannisg. 225</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:3;}">
+                <Coords points="326,315 1020,293 1291,324 1276,242 1123,269 326,245"/>
+                <Baseline points="333,291 381,292 429,291 477,291 525,292 573,293 621,292 669,295 717,293 765,291 814,291 862,291 910,291 958,291 1006,291 1054,291 1102,291 1150,293 1198,293 1246,295 1295,293"/>
+                <TextEquiv>
+                    <Unicode>Benjamin Häntzschel, Assistent, WV. Entenpf. 653</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:4;}">
+                <Coords points="730,342 770,339 798,351 843,339 872,353 913,338 952,357 1011,342 1011,299 938,295 914,311 897,296 835,310 810,299 788,310 767,295 730,296"/>
+                <Baseline points="737,337 762,337 787,337 812,337 837,337 862,337 887,337 912,337 937,338 962,338 987,337 1013,337"/>
+                <TextEquiv>
+                    <Unicode>Amtsfrohn.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_6" custom="readingOrder {index:5;}">
+                <Coords points="326,412 1267,411 1267,343 1218,335 953,357 326,327"/>
+                <Baseline points="333,385 379,386 426,387 473,385 520,385 567,385 613,385 660,387 707,388 754,387 801,388 847,387 894,386 941,385 988,385 1035,385 1081,385 1128,385 1175,385 1222,385 1269,385"/>
+                <TextEquiv>
+                    <Unicode>Gottlob Friedrich Junig, Breiteg. Amtsfrohnveste.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_7" custom="readingOrder {index:6;}">
+                <Coords points="657,440 777,451 836,440 887,456 913,436 952,450 1074,439 1074,396 1057,392 770,405 657,394"/>
+                <Baseline points="665,431 690,431 716,432 742,434 768,435 793,434 819,433 845,433 871,433 896,433 922,433 948,433 974,433 999,433 1025,433 1051,433 1077,433"/>
+                <TextEquiv>
+                    <Unicode>Amts=Physikus.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_8" custom="readingOrder {index:7;}">
+                <Coords points="330,508 1410,505 1410,448 1330,421 886,458 330,424"/>
+                <Baseline points="337,481 390,481 444,478 498,478 552,481 606,481 659,481 713,481 767,481 821,481 875,481 928,479 982,479 1036,479 1090,481 1144,481 1197,481 1251,481 1305,479 1359,479 1413,481"/>
+                <TextEquiv>
+                    <Unicode>Hr. D. Carl Gottfr. Erdmann, Eoe. S.V. kl. Plau G. 500</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_9" custom="readingOrder {index:8;}">
+                <Coords points="673,536 718,529 749,545 816,525 840,538 1055,540 1055,486 790,487 762,502 732,486 673,486"/>
+                <Baseline points="681,523 706,525 731,525 756,525 781,525 807,525 832,525 857,525 882,525 907,525 933,525 958,525 983,523 1008,525 1033,525 1059,525"/>
+                <TextEquiv>
+                    <Unicode>Amtschirurgus.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_10" custom="readingOrder {index:9;}">
+                <Coords points="330,592 1167,584 1167,530 330,537"/>
+                <Baseline points="337,577 378,570 420,569 462,570 503,569 545,569 587,569 628,569 670,570 712,571 754,569 795,571 837,569 879,570 920,571 962,569 1004,569 1045,569 1087,573 1129,573 1171,567"/>
+                <TextEquiv>
+                    <Unicode>Hr. Christian Friedrich Gonne, Weberg. 110</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_11" custom="readingOrder {index:10;}">
+                <Coords points="553,615 1179,626 1179,590 1082,572 1027,591 992,571 841,591 553,576"/>
+                <Baseline points="561,615 592,617 623,617 654,617 685,617 716,619 747,619 778,617 809,618 840,617 872,617 903,617 934,617 965,617 996,617 1027,617 1058,617 1089,617 1120,617 1151,617 1183,615"/>
+                <TextEquiv>
+                    <Unicode>Das Rent=Amt Dresden.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_12" custom="readingOrder {index:11;}">
+                <Coords points="335,681 1401,666 1350,609 335,625"/>
+                <Baseline points="343,671 396,664 449,663 502,663 555,663 608,664 661,665 714,667 767,666 820,666 874,665 927,665 980,663 1033,663 1086,664 1139,663 1192,661 1245,662 1298,661 1351,662 1405,659"/>
+                <TextEquiv>
+                    <Unicode>Hr. Friedrich August Thyme, Ober=Kriegs=Commissar</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_13" custom="readingOrder {index:12;}">
+                <Coords points="420,716 668,744 728,716 1300,712 1300,679 420,684"/>
+                <Baseline points="427,711 470,709 514,711 558,711 602,711 646,711 689,709 733,711 777,709 821,707 865,708 908,709 952,708 996,709 1040,709 1084,709 1127,709 1171,708 1215,707 1259,708 1303,709"/>
+                <TextEquiv>
+                    <Unicode>und Rentbeamter, Oe. Pirn. G. im Amthause.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_14" custom="readingOrder {index:13;}">
+                <Coords points="708,774 743,763 789,769 806,757 915,774 936,761 972,773 1023,763 1023,720 928,718 905,730 891,716 863,724 820,715 762,731 736,716 708,722"/>
+                <Baseline points="715,757 741,757 767,757 793,757 819,756 845,755 871,755 897,755 923,755 949,755 975,755 1001,755 1027,757"/>
+                <TextEquiv>
+                    <Unicode>Expeditoren.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_15" custom="readingOrder {index:14;}">
+                <Coords points="330,827 1191,809 1191,766 1131,750 918,774 330,750"/>
+                <Baseline points="337,803 379,801 422,801 465,801 508,801 551,801 594,801 637,802 680,803 723,803 766,803 808,803 851,803 894,803 937,803 980,803 1023,802 1066,801 1109,803 1152,803 1195,799"/>
+                <TextEquiv>
+                    <Unicode>Hr. Friedrich Christian Richter, Ram. G. 651</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_16" custom="readingOrder {index:15;}">
+                <Coords points="372,849 1195,858 1186,806 372,814"/>
+                <Baseline points="379,843 420,846 461,847 502,847 543,847 584,849 625,849 666,849 707,849 748,849 789,850 830,849 871,849 912,849 953,849 994,849 1035,847 1076,847 1117,848 1158,849 1199,847"/>
+                <TextEquiv>
+                    <Unicode>Gustav Adolph Franke, PG. Pirn. G. 274.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_17" custom="readingOrder {index:16;}">
+                <Coords points="392,901 1340,903 1340,847 392,852"/>
+                <Baseline points="399,887 446,892 493,895 540,895 587,895 635,895 682,895 729,895 776,897 823,897 871,895 918,896 965,895 1012,893 1059,893 1107,894 1154,895 1201,894 1248,894 1295,895 1343,895"/>
+                <TextEquiv>
+                    <Unicode>Carl Johann Friedrich Franke, WV. Schießg. 924</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_18" custom="readingOrder {index:17;}">
+                <Coords points="392,968 1232,953 1232,911 1182,897 819,921 392,901"/>
+                <Baseline points="399,935 440,939 482,941 524,941 566,941 608,939 649,938 691,940 733,941 775,941 817,941 858,941 900,941 942,939 984,940 1026,939 1067,940 1109,941 1151,941 1193,940 1235,939"/>
+                <TextEquiv>
+                    <Unicode>Carl Heinrich Wagner, S.V. Waisenhg. 9 A.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_19" custom="readingOrder {index:18;}">
+                <Coords points="623,994 1107,996 1108,957 1073,946 625,959"/>
+                <Baseline points="631,985 656,985 681,985 706,986 731,987 756,987 781,987 807,987 832,987 857,986 882,985 907,985 932,985 958,985 983,985 1008,985 1033,985 1058,985 1083,985 1109,987"/>
+                <TextEquiv>
+                    <Unicode>Rentamts = Bothen.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_20" custom="readingOrder {index:19;}">
+                <Coords points="326,1038 1182,1046 1174,988 448,1004 326,972"/>
+                <Baseline points="333,1033 375,1029 418,1029 460,1029 503,1029 546,1030 588,1031 631,1031 673,1031 716,1031 759,1031 801,1031 844,1032 886,1031 929,1030 972,1031 1014,1031 1057,1031 1099,1033 1142,1034 1185,1027"/>
+                <TextEquiv>
+                    <Unicode>Johann Gottlieb Schütze, WV. Hundsg. 777</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_21" custom="readingOrder {index:20;}">
+                <Coords points="327,1090 1120,1096 1120,1047 1086,1039 327,1038"/>
+                <Baseline points="335,1071 374,1075 413,1075 453,1077 492,1077 532,1076 571,1077 610,1077 650,1078 689,1077 729,1079 768,1077 807,1077 847,1079 886,1078 926,1077 965,1077 1004,1077 1044,1077 1083,1079 1123,1077"/>
+                <TextEquiv>
+                    <Unicode>Johann Christian Linke, Nst. Rhänitzg. 88</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_22" custom="readingOrder {index:21;}">
+                <Coords points="331,1121 1073,1139 1089,1089 330,1089"/>
+                <Baseline points="339,1119 376,1119 414,1121 452,1121 489,1121 527,1123 565,1123 602,1123 640,1123 678,1124 716,1125 753,1125 791,1125 829,1123 866,1123 904,1123 942,1123 979,1123 1017,1124 1055,1123 1093,1123"/>
+                <TextEquiv>
+                    <Unicode>Carl Gottfried Beyer, WV. Viehw. 903.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_23" custom="readingOrder {index:22;}">
+                <Coords points="327,1189 915,1171 1151,1198 1151,1127 1112,1120 744,1143 327,1120"/>
+                <Baseline points="335,1173 376,1169 417,1169 458,1169 499,1169 540,1169 581,1169 622,1169 663,1169 704,1169 745,1171 786,1170 827,1167 868,1169 909,1169 950,1169 991,1169 1032,1169 1073,1171 1114,1170 1155,1169"/>
+                <TextEquiv>
+                    <Unicode>Johann Gottfried Klaus, PG. Ziegelg. 110</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_24" custom="readingOrder {index:23;}">
+                <Coords points="676,1220 771,1237 816,1221 961,1218 998,1232 1045,1221 1045,1194 973,1177 913,1191 875,1177 828,1187 676,1178"/>
+                <Baseline points="683,1211 709,1213 735,1214 761,1216 787,1216 813,1215 839,1215 865,1215 891,1213 917,1215 943,1214 969,1214 995,1214 1021,1214 1047,1213"/>
+                <TextEquiv>
+                    <Unicode>Amtsgewerken.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_25" custom="readingOrder {index:24;}">
+                <Coords points="327,1275 1305,1276 1396,1263 1397,1214 328,1221"/>
+                <Baseline points="335,1257 388,1259 441,1258 494,1259 547,1259 601,1259 654,1261 707,1261 760,1263 813,1263 867,1260 920,1258 973,1257 1026,1259 1079,1259 1133,1257 1186,1258 1239,1258 1292,1259 1345,1258 1399,1257"/>
+                <TextEquiv>
+                    <Unicode>Hr. Joh. Benj. Oehser, Mauermstr. WW. am See 72A.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_26" custom="readingOrder {index:25;}">
+                <Coords points="327,1300 1393,1321 1393,1264 1287,1257 327,1276"/>
+                <Baseline points="335,1299 388,1301 441,1304 494,1303 547,1303 600,1305 653,1306 706,1307 759,1307 812,1307 866,1307 919,1305 972,1305 1025,1305 1078,1305 1131,1305 1184,1304 1237,1305 1290,1307 1343,1308 1397,1303"/>
+                <TextEquiv>
+                    <Unicode>— Ge. S. Hörnig, Baucomm. Zimmermstr. Nst. Königstr. 15A.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_27" custom="readingOrder {index:26;}">
+                <Coords points="326,1356 1294,1358 1294,1310 326,1309"/>
+                <Baseline points="333,1347 381,1350 429,1349 477,1351 525,1350 574,1353 622,1354 670,1355 718,1353 766,1353 815,1353 863,1353 911,1352 959,1353 1007,1352 1056,1353 1104,1351 1152,1350 1200,1351 1248,1352 1297,1353"/>
+                <TextEquiv>
+                    <Unicode>Carl Schönheit, Zimmerpolier, WV. im Mühlhofe.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_28" custom="readingOrder {index:27;}">
+                <Coords points="333,1419 1377,1407 1341,1354 333,1354"/>
+                <Baseline points="340,1396 392,1397 444,1397 496,1397 548,1399 600,1399 652,1399 704,1399 756,1401 808,1400 860,1399 912,1399 964,1397 1016,1398 1068,1399 1120,1397 1172,1397 1224,1398 1276,1399 1328,1401 1381,1401"/>
+                <TextEquiv>
+                    <Unicode>Joh. Gotthelf Krause, Mauerpolier, W.V. Anneng. 738</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_29" custom="readingOrder {index:28;}">
+                <Coords points="591,1465 765,1481 837,1459 1121,1466 1121,1424 1055,1412 1035,1427 1008,1407 975,1419 949,1403 910,1426 762,1404 591,1422"/>
+                <Baseline points="599,1451 625,1453 651,1456 677,1457 704,1456 730,1456 756,1457 783,1457 809,1457 835,1457 862,1457 888,1457 914,1456 940,1456 967,1456 993,1455 1019,1457 1046,1455 1072,1455 1098,1455 1125,1453"/>
+                <TextEquiv>
+                    <Unicode>Die Amtsschreiberey.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_30" custom="readingOrder {index:29;}">
+                <Coords points="323,1519 1399,1509 1381,1442 794,1481 323,1442"/>
+                <Baseline points="331,1497 384,1497 438,1498 491,1498 545,1501 598,1501 652,1503 705,1502 759,1504 812,1503 866,1501 919,1501 973,1501 1026,1501 1080,1499 1133,1500 1187,1500 1240,1500 1294,1499 1347,1501 1401,1497"/>
+                <TextEquiv>
+                    <Unicode>Hr. Carl Friedr. Voigt, Amtsschreiber, im Kön. Amth.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_31" custom="readingOrder {index:30;}">
+                <Coords points="363,1560 1405,1572 1405,1510 1360,1502 1026,1536 363,1520"/>
+                <Baseline points="371,1541 422,1542 474,1545 526,1547 578,1547 630,1547 681,1549 733,1549 785,1549 837,1549 889,1548 940,1549 992,1548 1044,1547 1096,1547 1148,1547 1199,1545 1251,1547 1303,1549 1355,1551 1407,1551"/>
+                <TextEquiv>
+                    <Unicode>— Carl Traug. Donath, Expeditor, PG. Pirn. G. 241</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_32" custom="readingOrder {index:31;}">
+                <Coords points="381,1593 633,1629 734,1602 1178,1611 1178,1555 381,1545"/>
+                <Baseline points="389,1587 428,1591 468,1592 507,1593 547,1593 587,1594 626,1595 666,1595 705,1595 745,1597 785,1595 824,1594 864,1593 903,1595 943,1595 983,1595 1022,1595 1062,1594 1101,1596 1141,1595 1181,1595"/>
+                <TextEquiv>
+                    <Unicode>Anton Peterßen, Exped. PR. Neueg. 162</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_33" custom="readingOrder {index:32;}">
+                <Coords points="366,1661 1348,1660 1348,1610 1241,1587 1043,1628 366,1599"/>
+                <Baseline points="373,1643 421,1647 470,1649 519,1649 568,1649 617,1649 665,1651 714,1649 763,1651 812,1650 861,1649 909,1649 958,1649 1007,1649 1056,1649 1105,1649 1153,1649 1202,1649 1251,1649 1300,1647 1349,1647"/>
+                <TextEquiv>
+                    <Unicode>Amtsverwalter auf dem Vorwerk Ostra.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_34" custom="readingOrder {index:33;}">
+                <Coords points="323,1726 1400,1715 1391,1656 323,1648"/>
+                <Baseline points="331,1691 384,1697 438,1697 491,1696 545,1695 599,1697 652,1697 706,1697 759,1697 813,1697 867,1697 920,1696 974,1695 1027,1695 1081,1695 1135,1695 1188,1695 1242,1694 1295,1693 1349,1693 1403,1693"/>
+                <TextEquiv>
+                    <Unicode>Hr. Julius August Daniel Köhler, Oe. Amts = Inspector.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_35" custom="readingOrder {index:34;}">
+                <Coords points="574,1761 1138,1761 1138,1718 1068,1706 574,1715"/>
+                <Baseline points="581,1751 609,1751 637,1753 665,1753 693,1750 721,1752 749,1753 777,1753 805,1754 833,1754 861,1753 889,1753 917,1753 945,1753 973,1753 1001,1753 1029,1751 1057,1753 1085,1753 1113,1752 1141,1751"/>
+                <TextEquiv>
+                    <Unicode>Die Haupt=Kellerey.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_36" custom="readingOrder {index:35;}">
+                <Coords points="323,1809 1400,1801 1400,1753 323,1749"/>
+                <Baseline points="331,1795 384,1799 438,1799 491,1799 545,1799 599,1799 652,1799 706,1801 759,1801 813,1800 867,1799 920,1797 974,1798 1027,1797 1081,1795 1135,1795 1188,1797 1242,1796 1295,1797 1349,1795 1403,1793"/>
+                <TextEquiv>
+                    <Unicode>Hr. J. Mrt. Fleischmann, Oberlandwemmst. Eoe. Ram. G. K. G-</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_37" custom="readingOrder {index:36;}">
+                <Coords points="388,1851 1387,1852 1388,1801 389,1813"/>
+                <Baseline points="397,1847 446,1845 496,1843 546,1843 595,1844 645,1843 695,1843 744,1845 794,1845 844,1845 894,1845 943,1845 993,1844 1043,1843 1092,1841 1142,1842 1192,1842 1241,1845 1291,1843 1341,1841 1391,1841"/>
+                <TextEquiv>
+                    <Unicode>Joh. Glieb Wölffer, Kellerschreib. kl. Schießg. K. Geb.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_38" custom="readingOrder {index:37;}">
+                <Coords points="381,1897 1396,1901 1396,1859 1314,1844 381,1863"/>
+                <Baseline points="389,1891 439,1891 490,1889 540,1890 591,1891 641,1891 692,1892 742,1893 793,1891 843,1891 894,1891 944,1891 995,1891 1045,1889 1096,1889 1146,1889 1197,1889 1247,1889 1298,1889 1348,1889 1399,1887"/>
+                <TextEquiv>
+                    <Unicode>J. glob. Schönert, Oberböttch. u. Kellermstr. im Kuffenh.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_39" custom="readingOrder {index:38;}">
+                <Coords points="323,1944 1405,1951 1395,1896 323,1890"/>
+                <Baseline points="331,1933 384,1937 438,1936 492,1936 546,1937 600,1937 653,1938 707,1937 761,1937 815,1939 869,1939 922,1937 976,1937 1030,1937 1084,1937 1138,1935 1191,1935 1245,1935 1299,1937 1353,1937 1407,1935"/>
+                <TextEquiv>
+                    <Unicode>Friedrich Wilhelm Gömlich, Böttcher, P.V. Ram.G. 146</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_40" custom="readingOrder {index:39;}">
+                <Coords points="319,2006 1395,2010 1395,1955 1349,1940 319,1959"/>
+                <Baseline points="327,1993 380,1995 434,1995 487,1995 541,1996 594,1995 648,1997 701,1995 755,1994 808,1992 862,1993 915,1991 969,1992 1022,1993 1076,1993 1129,1993 1183,1993 1236,1994 1290,1995 1343,1993 1397,1989"/>
+                <TextEquiv>
+                    <Unicode>Ober-Accis- auch Gleits- und Land - Accis-</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_41" custom="readingOrder {index:40;}">
+                <Coords points="722,2044 751,2053 836,2044 860,2060 1004,2046 1004,2010 967,2001 954,2009 880,1996 858,2009 824,2009 781,1991 722,2007"/>
+                <Baseline points="729,2037 754,2039 779,2040 804,2040 830,2040 855,2041 880,2041 905,2039 931,2039 956,2039 981,2039 1007,2037"/>
+                <TextEquiv>
+                    <Unicode>Commissar.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_42" custom="readingOrder {index:41;}">
+                <Coords points="315,2110 871,2115 936,2089 1069,2124 1232,2097 1232,2042 1142,2027 886,2062 637,2027 429,2025 374,2056 315,2019"/>
+                <Baseline points="323,2089 368,2089 414,2089 459,2089 505,2089 551,2089 596,2089 642,2089 687,2087 733,2088 779,2089 824,2089 870,2089 915,2089 961,2089 1007,2089 1052,2087 1098,2087 1143,2087 1189,2087 1235,2085"/>
+                <TextEquiv>
+                    <Unicode>Hr. August Gottlob Gleisberg, Oe. Pirn. G. 724</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+    </Page>
+</PcGts>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2025-03-05T20:06:00.201+01:00</Created>
+        <LastChange>2025-03-05T20:06:00.201+01:00</LastChange>
+    </Metadata>
+    <Page imageFilename="page_0001.tiff" imageWidth="1654" imageHeight="2339">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1741201619823" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="255,229 255,2065 1303,2065 1303,229"/>
+            <TextLine id="tr_1_tl_1" custom="readingOrder {index:0;}">
+                <Coords points="537,265 642,282 670,263 871,276 994,262 995,201 929,180 884,192 827,179 751,200 684,177 613,200 539,188"/>
+                <Baseline points="545,255 570,257 595,257 620,257 645,257 670,257 695,257 720,257 745,256 771,255 796,254 821,253 846,251 871,253 896,252 921,250 946,249 971,249 997,249"/>
+                <TextEquiv>
+                    <Unicode>Vierter Abschnitt.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:1;}">
+                <Coords points="666,387 714,398 776,389 787,401 808,401 818,394 840,398 878,381 878,338 862,339 839,318 766,320 741,342 689,322 666,327"/>
+                <Baseline points="673,379 699,381 725,381 751,380 777,379 803,380 829,381 855,379 881,381"/>
+                <TextEquiv>
+                    <Unicode>Adressen.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:2;}">
+                <Coords points="247,450 1277,445 1277,406 1139,389 247,381"/>
+                <Baseline points="255,437 306,438 357,441 408,441 460,441 511,442 562,442 614,445 665,446 716,447 768,447 819,445 870,445 921,445 973,443 1024,442 1075,440 1127,439 1178,439 1229,438 1281,437"/>
+                <TextEquiv>
+                    <Unicode>Anmerkung. Bei der Folge der Namen ist durchgängig die</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:3;}">
+                <Coords points="380,476 1277,473 1277,445 1231,441 381,447"/>
+                <Baseline points="389,473 433,473 478,473 522,475 567,477 612,477 656,477 701,477 745,479 790,477 835,477 879,475 924,475 968,474 1013,475 1058,471 1102,471 1147,470 1191,471 1236,469 1281,471"/>
+                <TextEquiv>
+                    <Unicode>alphabetische Ordnung, und zwar bei gleichlautenden</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:4;}">
+                <Coords points="380,505 1277,510 1269,472 380,474"/>
+                <Baseline points="387,505 431,503 476,505 521,507 565,507 610,509 655,507 699,509 744,509 789,507 834,505 878,504 923,505 968,505 1012,503 1057,503 1102,501 1146,502 1191,503 1236,501 1281,503"/>
+                <TextEquiv>
+                    <Unicode>Namen, ohne Rücksicht auf versönliche Verhaltnisse, nach</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_6" custom="readingOrder {index:5;}">
+                <Coords points="370,558 1013,568 1277,540 1263,505 370,508"/>
+                <Baseline points="377,535 422,536 467,537 512,538 557,539 602,539 647,541 692,541 737,541 782,539 828,539 873,538 918,537 963,537 1008,535 1053,535 1098,535 1143,534 1188,533 1233,532 1279,533"/>
+                <TextEquiv>
+                    <Unicode>den Anfangsbuchstaben der Vornamen beobachtet worden.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_7" custom="readingOrder {index:6;}">
+                <Coords points="751,643 766,648 771,643 777,646 794,641 802,648 818,648 818,580 809,580 804,584 796,580 791,585 782,585 764,572 751,575"/>
+                <Baseline points="759,629 790,629 821,629"/>
+                <TextEquiv>
+                    <Unicode>A.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_8" custom="readingOrder {index:7;}">
+                <Coords points="256,699 1277,714 1277,639 1211,631 256,646"/>
+                <Baseline points="263,683 313,683 364,683 415,683 466,685 517,686 568,687 619,691 670,691 721,689 772,687 822,689 873,690 924,691 975,689 1026,689 1077,687 1128,687 1179,686 1230,687 1281,683"/>
+                <TextEquiv>
+                    <Unicode>Aacken, Carl Wilh., Comptoirist. Kleine Neustraße Nr</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_9" custom="readingOrder {index:8;}">
+                <Coords points="302,724 326,732 352,723 384,733 418,728 433,738 450,728 470,729 485,737 497,733 496,697 414,688 300,692"/>
+                <Baseline points="309,721 336,721 363,723 391,723 418,723 446,723 473,724 501,725"/>
+                <TextEquiv>
+                    <Unicode>86 und 87</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_10" custom="readingOrder {index:9;}">
+                <Coords points="260,771 1284,784 1273,717 260,717"/>
+                <Baseline points="267,767 317,762 368,761 419,761 470,763 521,765 572,765 623,767 674,766 725,765 776,765 826,765 877,765 928,767 979,767 1030,768 1081,767 1132,767 1183,768 1234,767 1285,765"/>
+                <TextEquiv>
+                    <Unicode>Abrahamson, Carl, landscher Kommissionär. St.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_11" custom="readingOrder {index:10;}">
+                <Coords points="308,808 1010,811 996,781 903,771 308,771"/>
+                <Baseline points="315,799 349,801 384,800 419,799 454,800 489,803 524,805 559,805 594,804 629,805 664,805 698,803 733,805 768,803 803,804 838,805 873,804 908,803 943,805 978,805 1013,805"/>
+                <TextEquiv>
+                    <Unicode>Peterburger Straße Nr. 241 und 242.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_12" custom="readingOrder {index:11;}">
+                <Coords points="262,852 1199,875 1287,848 1266,781 856,824 262,799"/>
+                <Baseline points="269,843 320,840 371,840 422,839 473,840 524,841 575,841 626,841 677,842 728,843 780,843 831,842 882,842 933,843 984,843 1035,843 1086,845 1137,843 1188,843 1239,842 1291,839"/>
+                <TextEquiv>
+                    <Unicode>Abramow, Afonassiew, Budenhandel. Tod-</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_13" custom="readingOrder {index:12;}">
+                <Coords points="302,882 860,900 869,847 300,849"/>
+                <Baseline points="309,877 337,879 365,879 393,879 421,879 450,879 478,879 506,880 534,882 562,882 591,881 619,881 647,881 675,881 703,883 732,883 760,885 788,885 816,883 844,885 873,885"/>
+                <TextEquiv>
+                    <Unicode>tenstraße 6. Quartier Nr. 173.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_14" custom="readingOrder {index:13;}">
+                <Coords points="258,929 826,964 1281,936 1281,879 258,887"/>
+                <Baseline points="265,921 315,919 366,919 417,921 468,921 519,922 570,925 621,923 672,925 723,927 774,929 824,929 875,929 926,929 977,927 1028,927 1079,925 1130,927 1181,928 1232,927 1283,927"/>
+                <TextEquiv>
+                    <Unicode>Abramow, Thimofey, Budenhandel. Vorst. kl.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_15" custom="readingOrder {index:14;}">
+                <Coords points="308,973 383,969 446,985 517,968 602,985 693,977 692,934 307,929"/>
+                <Baseline points="315,961 340,961 365,962 391,964 416,965 441,965 467,967 492,967 517,967 543,967 568,967 593,967 619,967 644,967 669,969 695,969"/>
+                <TextEquiv>
+                    <Unicode>Sandstraße Nr. 222.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_16" custom="readingOrder {index:15;}">
+                <Coords points="260,1022 1290,1023 1290,965 445,985 260,954"/>
+                <Baseline points="267,1009 318,1008 369,1009 420,1011 472,1013 523,1011 574,1013 626,1013 677,1015 728,1015 780,1015 831,1013 882,1015 933,1015 985,1015 1036,1015 1087,1014 1139,1015 1190,1013 1241,1012 1293,1009"/>
+                <TextEquiv>
+                    <Unicode>Achelius, Eduard Bernhard, Glasermeister. Kalk-</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_17" custom="readingOrder {index:16;}">
+                <Coords points="308,1058 370,1067 427,1055 441,1068 506,1057 540,1070 552,1061 567,1074 584,1071 583,1025 490,1014 477,1027 451,1017 415,1027 372,1012 307,1014"/>
+                <Baseline points="315,1051 342,1051 369,1053 396,1053 423,1054 451,1055 478,1055 505,1056 532,1057 559,1057 587,1057"/>
+                <TextEquiv>
+                    <Unicode>straße Nr. 134.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_18" custom="readingOrder {index:17;}">
+                <Coords points="260,1115 1287,1121 1278,1048 260,1058"/>
+                <Baseline points="267,1097 318,1093 369,1095 420,1093 471,1095 523,1096 574,1099 625,1097 676,1099 727,1099 779,1099 830,1098 881,1099 932,1099 983,1099 1035,1099 1086,1099 1137,1097 1188,1097 1239,1094 1291,1093"/>
+                <TextEquiv>
+                    <Unicode>Adachowsky, Michael, Arbeiter. St. Peterburger</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_19" custom="readingOrder {index:18;}">
+                <Coords points="312,1146 334,1152 387,1142 406,1153 452,1138 468,1148 532,1138 589,1151 588,1110 563,1104 527,1113 477,1101 406,1101 390,1110 335,1095 312,1102"/>
+                <Baseline points="319,1133 346,1133 373,1135 400,1136 427,1137 455,1137 482,1137 509,1137 536,1137 563,1140 591,1143"/>
+                <TextEquiv>
+                    <Unicode>Straße Nr. 64.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_20" custom="readingOrder {index:19;}">
+                <Coords points="258,1205 331,1178 816,1217 1284,1197 1284,1142 1204,1130 258,1138"/>
+                <Baseline points="265,1177 316,1177 367,1177 418,1177 469,1177 520,1180 571,1179 622,1181 673,1182 724,1183 776,1181 827,1182 878,1181 929,1181 980,1181 1031,1181 1082,1183 1133,1181 1184,1180 1235,1177 1287,1179"/>
+                <TextEquiv>
+                    <Unicode>Adamowitsch, Vincent, Marktpächter. Schmiede=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_21" custom="readingOrder {index:20;}">
+                <Coords points="304,1220 372,1232 513,1223 555,1237 580,1228 580,1195 506,1196 438,1180 410,1192 330,1178 303,1187"/>
+                <Baseline points="311,1217 338,1217 365,1217 392,1217 419,1218 447,1220 474,1221 501,1222 528,1223 555,1223 583,1223"/>
+                <TextEquiv>
+                    <Unicode>straße Nr. 174.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_22" custom="readingOrder {index:21;}">
+                <Coords points="262,1284 1287,1272 1287,1229 1227,1215 262,1218"/>
+                <Baseline points="269,1261 320,1259 371,1259 422,1257 473,1260 524,1262 575,1263 626,1265 677,1264 728,1265 780,1265 831,1265 882,1265 933,1263 984,1265 1035,1263 1086,1263 1137,1263 1188,1262 1239,1260 1291,1257"/>
+                <TextEquiv>
+                    <Unicode>Adamowiz, Mattwey, Uhrmacher. Gr. Klüvers¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_23" custom="readingOrder {index:22;}">
+                <Coords points="312,1308 339,1321 371,1303 401,1308 421,1298 441,1312 467,1306 537,1316 537,1273 492,1287 470,1268 434,1259 402,1273 379,1264 312,1266"/>
+                <Baseline points="319,1299 346,1299 374,1299 402,1299 430,1298 457,1299 485,1301 513,1302 541,1303"/>
+                <TextEquiv>
+                    <Unicode>holm Nr. 5.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_24" custom="readingOrder {index:23;}">
+                <Coords points="260,1347 1294,1375 1294,1302 1233,1290 901,1325 762,1286 336,1321 260,1284"/>
+                <Baseline points="267,1343 318,1342 370,1341 421,1341 473,1341 524,1342 576,1344 627,1345 679,1345 730,1347 782,1347 833,1345 885,1347 936,1346 988,1347 1039,1347 1091,1347 1142,1347 1194,1345 1245,1345 1297,1347"/>
+                <TextEquiv>
+                    <Unicode>Adamsohn, Adam, Lohndiener. St. Peterburgische</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_25" custom="readingOrder {index:24;}">
+                <Coords points="313,1388 340,1402 385,1389 429,1396 451,1384 577,1401 602,1393 601,1352 528,1362 482,1343 450,1361 427,1344 381,1356 334,1342 312,1348"/>
+                <Baseline points="319,1381 345,1381 371,1382 397,1383 423,1383 449,1383 475,1383 501,1383 527,1385 553,1387 579,1388 605,1389"/>
+                <TextEquiv>
+                    <Unicode>Straße Nr. 55.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_26" custom="readingOrder {index:25;}">
+                <Coords points="264,1427 978,1440 978,1397 950,1380 759,1394 713,1374 599,1416 516,1387 340,1402 264,1380"/>
+                <Baseline points="271,1423 306,1423 342,1424 377,1425 413,1425 448,1423 484,1425 519,1425 555,1425 590,1425 626,1427 661,1425 697,1427 732,1427 768,1427 803,1427 839,1429 874,1427 910,1428 945,1428 981,1431"/>
+                <TextEquiv>
+                    <Unicode>Adamy Erben. Kalkstraße Nr. 230.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_27" custom="readingOrder {index:26;}">
+                <Coords points="262,1469 1272,1473 1263,1419 262,1436"/>
+                <Baseline points="269,1463 319,1463 369,1463 419,1463 470,1465 520,1465 570,1465 621,1467 671,1468 721,1469 772,1467 822,1466 872,1465 922,1467 973,1466 1023,1467 1073,1467 1124,1468 1174,1469 1224,1467 1275,1467"/>
+                <TextEquiv>
+                    <Unicode>Adler, Joh. Gabriel, Lehrer. Thorersberg Nr. 10.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_28" custom="readingOrder {index:27;}">
+                <Coords points="264,1510 1290,1522 1290,1479 1204,1469 264,1468"/>
+                <Baseline points="271,1503 322,1502 373,1503 424,1503 475,1505 526,1503 577,1505 628,1505 679,1505 730,1507 782,1505 833,1505 884,1507 935,1509 986,1507 1037,1507 1088,1507 1139,1509 1190,1508 1241,1506 1293,1505"/>
+                <TextEquiv>
+                    <Unicode>Adler, Reinh., Schneidermeister. Vorst. kl. Schu=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_29" custom="readingOrder {index:28;}">
+                <Coords points="316,1545 366,1557 397,1546 653,1550 653,1519 610,1505 585,1519 316,1510"/>
+                <Baseline points="323,1539 348,1539 374,1540 400,1541 425,1541 451,1541 477,1541 502,1541 528,1539 554,1539 579,1539 605,1540 631,1541 657,1541"/>
+                <TextEquiv>
+                    <Unicode>lenstraße Nr. 164.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_30" custom="readingOrder {index:29;}">
+                <Coords points="269,1588 1300,1598 1287,1535 269,1532"/>
+                <Baseline points="277,1577 328,1577 379,1577 430,1577 482,1577 533,1577 584,1577 636,1577 687,1577 738,1577 790,1577 841,1579 892,1580 943,1581 995,1581 1046,1581 1097,1583 1149,1583 1200,1585 1251,1588 1303,1589"/>
+                <TextEquiv>
+                    <Unicode>Adler, Samson, Metschierstecher. gr. Neustraße Nr. 74.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_31" custom="readingOrder {index:30;}">
+                <Coords points="269,1638 918,1624 1155,1668 1290,1638 1255,1589 268,1593"/>
+                <Baseline points="275,1621 325,1617 376,1617 427,1619 478,1619 529,1620 580,1621 631,1621 682,1622 733,1623 784,1623 834,1622 885,1624 936,1625 987,1625 1038,1625 1089,1625 1140,1625 1191,1626 1242,1628 1293,1633"/>
+                <TextEquiv>
+                    <Unicode>Afonassiiew, Anna, Wittwe. Todtenstraße 2. Q.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_32" custom="readingOrder {index:31;}">
+                <Coords points="309,1668 360,1670 376,1677 397,1664 412,1674 478,1666 478,1635 459,1629 430,1633 394,1623 388,1629 378,1624 358,1630 336,1621 309,1629"/>
+                <Baseline points="317,1657 344,1659 371,1659 399,1660 426,1661 453,1661 481,1661"/>
+                <TextEquiv>
+                    <Unicode>Nr. 223.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_33" custom="readingOrder {index:32;}">
+                <Coords points="272,1722 1290,1728 1290,1656 812,1684 706,1643 626,1672 272,1657"/>
+                <Baseline points="279,1707 329,1704 380,1703 431,1703 481,1703 532,1705 583,1707 633,1709 684,1709 735,1709 786,1711 836,1710 887,1710 938,1711 988,1711 1039,1711 1090,1711 1140,1710 1191,1710 1242,1711 1293,1709"/>
+                <TextEquiv>
+                    <Unicode>Affonassiiew, Lawrenty, dim. Sergeant. Hagens¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_34" custom="readingOrder {index:33;}">
+                <Coords points="314,1760 396,1755 421,1766 442,1750 486,1760 506,1749 532,1750 532,1702 497,1714 486,1710 473,1723 415,1708 388,1717 366,1711 351,1722 334,1708 314,1717"/>
+                <Baseline points="321,1747 347,1748 374,1749 401,1749 428,1748 454,1747 481,1747 508,1745 535,1745"/>
+                <TextEquiv>
+                    <Unicode>hof Nr. 71.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_35" custom="readingOrder {index:34;}">
+                <Coords points="268,1811 1294,1812 1294,1766 1193,1731 956,1764 268,1744"/>
+                <Baseline points="275,1791 326,1790 377,1791 428,1791 479,1789 530,1788 581,1786 632,1789 683,1791 734,1793 786,1795 837,1795 888,1795 939,1795 990,1795 1041,1793 1092,1793 1143,1795 1194,1796 1245,1797 1297,1795"/>
+                <TextEquiv>
+                    <Unicode>Afonaßiew, George, Lohndiener. Schmiedestraße</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_36" custom="readingOrder {index:35;}">
+                <Coords points="320,1840 345,1849 369,1842 381,1849 409,1840 433,1849 451,1840 479,1840 479,1799 450,1804 407,1799 383,1812 363,1797 349,1800 334,1794 320,1802"/>
+                <Baseline points="327,1833 353,1835 379,1835 405,1835 431,1835 457,1835 483,1833"/>
+                <TextEquiv>
+                    <Unicode>Nr. 198.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_37" custom="readingOrder {index:36;}">
+                <Coords points="269,1889 1300,1911 1299,1834 269,1829"/>
+                <Baseline points="277,1879 328,1875 379,1877 430,1875 481,1875 533,1873 584,1873 635,1873 686,1873 737,1875 789,1877 840,1879 891,1880 942,1879 993,1879 1045,1881 1096,1879 1147,1881 1198,1881 1249,1881 1301,1877"/>
+                <TextEquiv>
+                    <Unicode>Afonaßiew, Luka, Hanfbinder. Vorst. gr. Neureus=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_38" custom="readingOrder {index:37;}">
+                <Coords points="320,1925 733,1928 733,1888 715,1880 652,1894 559,1874 415,1896 370,1879 320,1891"/>
+                <Baseline points="327,1919 352,1919 378,1919 403,1921 429,1921 455,1920 480,1918 506,1917 532,1917 557,1917 583,1917 608,1917 634,1917 660,1916 685,1916 711,1917 737,1917"/>
+                <TextEquiv>
+                    <Unicode>sische Straße Nr. 168.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_39" custom="readingOrder {index:38;}">
+                <Coords points="275,1968 1112,1969 1102,1925 420,1940 275,1907"/>
+                <Baseline points="281,1963 322,1962 364,1961 406,1961 447,1962 489,1963 531,1961 572,1961 614,1962 656,1960 698,1959 739,1960 781,1961 823,1963 864,1963 906,1963 948,1962 989,1963 1031,1961 1073,1961 1115,1961"/>
+                <TextEquiv>
+                    <Unicode>Affonassiew, Pawel. Hagenshof Nr. 53.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_40" custom="readingOrder {index:39;}">
+                <Coords points="280,2018 1300,2023 1290,1958 280,1969"/>
+                <Baseline points="287,2007 337,2003 388,2003 439,2003 490,2003 541,2003 591,2005 642,2005 693,2005 744,2003 795,2007 845,2008 896,2009 947,2009 998,2007 1049,2007 1099,2007 1150,2007 1201,2007 1252,2007 1303,2007"/>
+                <TextEquiv>
+                    <Unicode>Agarius, Franz, Maurergesell. Vorst. Schmiede=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_41" custom="readingOrder {index:40;}">
+                <Coords points="320,2072 380,2084 424,2071 548,2075 608,2058 607,2022 523,2025 456,2007 434,2016 348,2008 318,2023"/>
+                <Baseline points="325,2047 351,2047 377,2048 403,2049 429,2048 455,2048 481,2049 507,2049 533,2049 559,2052 585,2053 611,2055"/>
+                <TextEquiv>
+                    <Unicode>straße Nr. 279.</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+    </Page>
+</PcGts>

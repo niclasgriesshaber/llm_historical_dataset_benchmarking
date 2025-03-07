@@ -1,0 +1,113 @@
+id,address,first and middle names,occupation,surname
+1,II Deutschstr. 270.,Anna,"Wittwe, Taglöhnerin",Dreier
+2,I Domfreihof 88.,Christoph,Reg.=Bote,Dreikorn
+3,I Banthusstr. 146.,Karl,Ober=Staatsarzt,Drescher
+4,I Pallaststr. 229.,Peter,Conditor,Drescher
+5,II Zuckerbergstr. 129.,Karl,Gärtner,Dressler
+6,III Weberstr. 50.,Ferdinand,Speisewirth,Dressler
+7,IV Johannisstr. 271,Michael,Schreiner,Drost
+8,II Diedrichsstr. 173.,Peter,Schreiner,Druckenmüller
+9,II Diedrichsstr. 173.,Maria,Wittwe,Druckenmüller
+10,Grabenstr. 285.,Eduard,Katastergeh.,"Drunks, v."
+11,I vorm Römerthor 296.,Elisabeth,NULL,Dümmer
+12,II Judenplatz 287.,Regina,Wittwe,Dümmig
+13,III Neustr. 244.,Peter,Schneider,Dümong
+14,III Jesuitenstr. 187.,Joseph,Castellan,Dünnebacke
+15,I Sichelstr. 45.,Clara,ohne,Düntzer
+16,III Neustr 265.,Joseph,Küster,Düntzer
+17,II Diedrichsstr. 191.,Friedrich,Friedensrichter,Düring
+18,IV Jüdemerstr. 97.,Jakob,Schreiner,Dürrwald
+19,IV Brückenstr. 240.,"Mathias, Aloys und A. Maria","Geschwister, Rentner",Dulcius
+20,III vor dem Neu= thor 287.,Joh. Conrad,Taglöhner,Dumetz
+21,III Rahnenstr. 145.,Franz,Schuhmacher,Duplang
+22,II Fleischstr. 16.,Nikolaus,Musiklehrer,Dunst
+23,II Fleischstr. 16.,Clara,Wittwe,Dunst
+24,IV Irminer-Freihof 307.,Charlotte,barmherzige Schwester,Duroy
+25,IV Johannisstr. 278.,Johann,Taglöhner,Durst
+26,I Pallaststr 201.,Veronika,Rentnerin,Eberhard
+27,I Brodstr. 230.,Friedrich,Kürschner,Eberhard
+28,II Fleischstr. 12.,Ludwig,Buchhändler,Eberhard
+29,II Böhmerstr. 91.,Anna,"Wittwe,",Eberhard
+30,III Engelbergstr. 85.,Peter,Pflasterer,Eberhard
+31,III Weberstr. 183.,Mathias,Regens,Eberhard
+32,III Platzstr. 157.,Herrmann,Gerbergesell,Eberle
+33,II Zuckerbergstr. 138.,Nikolaus,Reg.-Secret.,Ebentheurer
+34,I Dominikanerst. 139.,Jakob,Katastergeometer,Eberts
+35,III Weberstr. 184.,Georg Jakob,Knecht,Eck
+36,I Dominikanerstr. 137.,Wilhelm,Apotheker,Eckerts
+37,IV Jüdemerstr. 78.,Anna Maria,NULL,Edel
+38,II Walleramsneustr. 199.,Johann,Taglöhner,Edinger
+39,IV Krahnenstr. 352.,Catharina,Wittwe,Effert
+40,I Brodstr. 236.,Joseph,Kaufmann,Ehlen
+41,II Walleramsneustr. 199.,Margartha,Wittwe,Ehmann
+42,II Metzelstr. 102.,Margaretha,Wittwe,Ehnert
+43,II Metzelstr. 102.,Joseph,Buchbinder,Ehnert
+44,III Neustr. 314.,Thomas,Gerber u. Wirth,Ehses
+45,IV Jüdemerstr. 58.,Susanna,NULL,Eibers
+46,IV Krahnenstr. 311.,Peter,Kaminfeger,Eich
+47,IV Brittanien 383.,Johann,Kaminfeger,Eich
+48,IV Brittanien 379.,Margaretha,Wittwe,Eichert
+49,II Fleischstraße 155.,Wilhelm,Rector,Eichholz
+50,II Fleischstr. 55.,August,Dampfschifffahrts=Geh.,Eichler
+51,II Fleischstr. 55.,Florentine,Musiklehrerin,Eichler
+52,IV Nagelstr. 31.,Wilhelm,Civil=Supernumerar,Eichler
+53,III Neustraße 252.,Mathias,Färber,Eisenstecken
+54,IV Krahnenstr. 345.,Lorenz,NULL,Elbert
+55,IV Krahnenstr. 354.,Johann,"Steuermann,",Elbert
+56,III Wechselstr. 124.,Wilhelm,Gerbergesell,Elges
+57,IV Jüdemerstr. 62.,Nikolaus,Schriftsetzer,Eltges
+58,IV Jüdemerstraße 78.,Johann Peter,Friseur,Eltges
+59,IV Jüdemerstr. 78.,Elis.,Wittwe,Eltges
+60,IV Krahnenstr. 332.,Nikolaus,Magazin=Aufseher,Eltges
+61,I Brodstr. 279.,Mathias,Schmied,Elsen
+62,III Platzstr. 157.,Johann,Taglöhner,Elsen
+63,I Hauptmarkt 187.,Maxm. August,Apotheker,Emans
+64,II Judenplatz 305.,Heinrich,Schreiner,Embser
+65,IV Schanzstr. 145.,Hieronimus,Friseur,Embser
+66,II Fleischstr. 18.,Jonas,Hospitalsbote,Emmel
+67,I Brodstraße 248.,Michel,Commissionär,Emmel
+68,III Neustr. 348.,Michel,Taxator,Emmel
+69,II Simeonsstift 369.,Friedrich,Rechn.=Rath,Emmerich
+70,II Simeonsstift 371.,Johanna,Rentnerin,Emmersdorf
+71,I Simeonsstr. 11.,Anna Elisabeth,Rentnerin,Endres
+72,I Pallaststr. 223.,Peter Joseph,Rentner,Endres
+73,I Brodstr. 234.,Johann Mathias,Eisenhandel,Endres
+74,I Brodstr. 234.,Ewald,Eisenhandel,Endres
+75,I Brodstr. 266.,Barbara,Rentnerin,Endres
+76,II Moselstr. 243.,Stephan,Maurer,Endres
+77,IV vor der Moselbrück 192.,Johann,Gärtner,Endres
+78,IV Irminer= Freihof 367.,Johanna,barmherzige Schwester,Endres
+79,I Sichelstr. 45.,Andreas,Aufseher,Engel
+80,I Glockenstr. 64.,Catharina,ohne,Engel
+81,I Brodstr. 266.,Johann,Buchbinder,Engel
+82,II Jakobsstr. 286.,Christoph,Schuhmacher,Engel
+83,III Neustr.279.,Johann Adam,Hauptamts-Assistent,Engel
+84,IV Brückenstr. 243.,Heinrich,Schlosser,Engel
+85,IV Krahnenstr. 355.,Georg,Metzger,Engel
+86,I Pallaststr. 223.,Gottlieb,Weber,Engels
+87,II Deutschstr. 269.,Angela,ohne,Engels
+88,III Weberstr. 194.,Nikolaus,Schieferdecker,Engels
+89,III Neustr. 267.,NULL,Wittwe,Engesser
+90,III Hinterstr. 76.,Elisabeth,Wittwe,Engler
+91,I Pallaststr. 229.,Sybilla,Rentnerin,Englert
+92,III Weberstr. 58.,Johann,Schuhmacher,Ensch
+93,IV Brückenstr. 244.,Johann,Tabakspinner,Ensch
+94,II Simeonsstr. 321.,Peter Adolph,Sattler,Entz
+95,IV Irminer= Freihof 367.,Xavier,barmherz. Schwester,Enzminger
+96,II Fleischstr. 160.,Joseph,Hutfabrikant,Eppert
+97,IV Schanzstr. 147.,Catharina,Wittwe,Eppert
+98,IV Schanzstr. 210.,NULL,Wittwe,Erhard
+99,IV Jüdemerstr. 73.,Nosina,Wittwe,Erkens
+100,II Jakobsstr. 293.,Anton,Schlosser,Ernsdorf
+101,III Hinterstr. 75.,Maria,ohne,Ernserhof
+102,III Wechselstr. 128.,Math. Jos.,Geschäftsmann,Ersfeld
+103,I Sichelstr. 41.,Johann,Kappenmacher,Ertz
+104,III Neustr. 247.,Philipp,Gerber,Ertz
+105,IV Nagelstr. 31.,August,Postbüreaugehilfen,Ertz
+106,IV Jüdemerstr. 96.,Franziska,Näherin,Ertz
+107,II Pferdemarkt 252.,Johann,Schreiber,Erz
+108,IV Nagelstr. 28.,Jakob,Packmeister,Erz
+109,II Metzelstr. 120.,Mathias,Handelsmann,Esch
+110,II Hauptmarkt 298.,Peter,Postbote,Esch
+111,III Hosenstr. 5.,Theodor,Gerichtsvollzieher,Esch
+112,III Wechselstr. 124.,Peter,Taglöhner,Esch

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2025-03-05T20:07:58.457+01:00</Created>
+        <LastChange>2025-03-05T20:07:58.457+01:00</LastChange>
+    </Metadata>
+    <Page imageFilename="page_0002.tiff" imageWidth="1654" imageHeight="2339">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1741201731647" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="429,196 429,2017 1405,2017 1405,196"/>
+            <TextLine id="tr_1_tl_1" custom="readingOrder {index:0;}">
+                <Coords points="752,239 841,251 878,230 934,249 996,234 1083,255 1083,184 1046,170 912,160 900,173 799,171 752,185"/>
+                <Baseline points="759,219 784,219 809,218 834,217 859,217 884,217 909,217 934,217 959,217 984,218 1009,220 1034,221 1059,221 1085,223"/>
+                <TextEquiv>
+                    <Unicode>Kaufmannschaft.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:1;}">
+                <Coords points="446,238 465,236 470,243 488,238 489,242 495,240 500,248 508,243 517,243 524,183 513,177 493,179 481,171 468,179 455,175"/>
+                <Baseline points="455,225 489,220 523,217"/>
+                <TextEquiv>
+                    <Unicode>96</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:2;}">
+                <Coords points="457,322 1396,339 1395,281 1190,255 767,286 548,251 456,281"/>
+                <Baseline points="463,317 509,312 556,307 603,307 650,309 697,308 743,308 790,309 837,309 884,307 931,307 977,307 1024,309 1071,311 1118,313 1165,313 1211,315 1258,319 1305,321 1352,323 1399,325"/>
+                <TextEquiv>
+                    <Unicode>Hr. Rignet, Jsaac, Ragg. Riquet u. C. Klosterg. N. 162.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:3;}">
+                <Coords points="457,366 1254,382 1252,342 1174,317 457,323"/>
+                <Baseline points="463,359 502,358 542,354 581,353 621,354 661,355 700,351 740,351 779,351 819,351 859,351 898,351 938,351 977,353 1017,354 1057,357 1096,357 1136,359 1175,360 1215,363 1255,363"/>
+                <TextEquiv>
+                    <Unicode>Hr. Roder, Joh. Chph. Grimm. Gasse, N. 8.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:4;}">
+                <Coords points="449,413 973,397 1090,422 1090,367 1067,361 958,379 868,356 449,367"/>
+                <Baseline points="455,407 486,404 518,400 550,399 582,397 614,397 646,397 678,397 710,395 742,394 774,394 805,394 837,395 869,395 901,395 933,395 965,396 997,395 1029,395 1061,397 1093,399"/>
+                <TextEquiv>
+                    <Unicode>Hrn. Röder, Gebr. Petersstr. N. 57.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_6" custom="readingOrder {index:5;}">
+                <Coords points="457,455 1242,461 1242,419 1127,396 1086,419 962,397 457,413"/>
+                <Baseline points="463,447 502,445 541,445 580,442 619,441 658,439 697,439 736,439 775,438 814,438 854,439 893,439 932,440 971,439 1010,441 1049,442 1088,445 1127,445 1166,445 1205,444 1245,445"/>
+                <TextEquiv>
+                    <Unicode>Hr. Röller, Carl Heinr. am Markte, N. 172.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_7" custom="readingOrder {index:6;}">
+                <Coords points="452,499 1392,511 1367,453 452,455"/>
+                <Baseline points="459,491 505,487 552,487 599,485 646,485 693,483 739,482 786,481 833,481 880,483 927,483 973,485 1020,486 1067,488 1114,492 1161,493 1207,493 1254,491 1301,491 1348,492 1395,493"/>
+                <TextEquiv>
+                    <Unicode>Hr Rosentreter, Gottfr. Brühl, N. 447. handelt mit</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_8" custom="readingOrder {index:7;}">
+                <Coords points="490,551 1030,530 1197,555 1197,494 490,499"/>
+                <Baseline points="497,529 532,529 567,529 602,529 637,528 673,527 708,527 743,527 778,526 813,525 849,526 884,527 919,527 954,527 989,527 1025,527 1060,529 1095,529 1130,529 1165,530 1201,533"/>
+                <TextEquiv>
+                    <Unicode>Engl. baumw. und Mousselin=Waaren.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_9" custom="readingOrder {index:8;}">
+                <Coords points="443,593 746,569 1196,604 1196,555 1104,537 514,553 443,525"/>
+                <Baseline points="449,581 486,579 524,577 561,574 599,573 636,575 674,572 711,570 749,569 786,569 824,569 861,570 899,569 936,571 974,571 1011,571 1049,571 1086,573 1124,575 1161,576 1199,577"/>
+                <TextEquiv>
+                    <Unicode>Hr. Rosse, Joh. Bernh. Petersstr. N. 71.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_10" custom="readingOrder {index:9;}">
+                <Coords points="449,633 935,618 1023,635 1024,579 450,590"/>
+                <Baseline points="455,625 483,621 512,621 540,619 569,618 598,616 626,615 655,615 683,615 712,616 741,616 769,615 798,615 826,615 855,614 884,613 912,615 941,615 969,615 998,613 1027,613"/>
+                <TextEquiv>
+                    <Unicode>Hr. Rostosky, Carl, s. Ant. Valz.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_11" custom="readingOrder {index:10;}">
+                <Coords points="449,677 1273,670 1273,629 1215,638 1141,591 1023,635 449,632"/>
+                <Baseline points="455,669 496,665 537,663 578,663 619,661 660,660 701,659 742,659 783,657 824,657 865,656 906,657 947,659 988,658 1029,657 1070,659 1111,661 1152,663 1193,664 1234,666 1275,663"/>
+                <TextEquiv>
+                    <Unicode>Hr. Rothstein, Friedr. Catharinenstr. N. 414.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_12" custom="readingOrder {index:11;}">
+                <Coords points="446,723 1024,703 1394,732 1394,684 1329,659 446,678"/>
+                <Baseline points="453,715 500,711 547,708 594,705 641,705 689,703 736,703 783,703 830,701 877,701 925,703 972,703 1019,703 1066,703 1113,703 1161,705 1208,705 1255,706 1302,707 1349,708 1397,711"/>
+                <TextEquiv>
+                    <Unicode>Hr. Rousset, Phil. Wilh. Ragg. Ronsset und Sohn,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_13" custom="readingOrder {index:12;}">
+                <Coords points="493,766 941,748 1395,779 1395,732 1281,709 493,715"/>
+                <Baseline points="499,753 543,749 588,747 633,749 678,747 723,749 768,749 813,747 858,747 903,747 948,747 992,746 1037,745 1082,746 1127,749 1172,750 1217,751 1262,754 1307,755 1352,755 1397,757"/>
+                <TextEquiv>
+                    <Unicode>Grimm. Gasse, N. 578. u wohnt am Markte, N- 170.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_14" custom="readingOrder {index:13;}">
+                <Coords points="440,807 1238,800 1213,756 440,766"/>
+                <Baseline points="447,801 486,798 526,797 566,796 605,793 645,793 685,792 724,791 764,791 804,790 844,789 883,789 923,789 963,790 1002,791 1042,789 1082,790 1121,791 1161,793 1201,794 1241,793"/>
+                <TextEquiv>
+                    <Unicode>Hr. Rummel und Sohn, am Markte, N. 1.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_15" custom="readingOrder {index:14;}">
+                <Coords points="443,852 1402,846 1402,815 1299,781 1065,815 443,807"/>
+                <Baseline points="449,847 496,844 544,841 592,839 640,837 688,835 735,833 783,832 831,831 879,832 927,833 974,833 1022,833 1070,833 1118,834 1166,835 1213,836 1261,839 1309,839 1357,839 1405,837"/>
+                <TextEquiv>
+                    <Unicode>Hr. Rumpf, Wilh. Ludw. unterm Rathhause, Auer=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_16" custom="readingOrder {index:15;}">
+                <Coords points="478,895 1392,908 1392,843 478,858"/>
+                <Baseline points="485,883 530,883 576,883 621,880 667,879 712,877 758,877 803,875 849,877 894,876 940,879 985,879 1031,879 1076,877 1122,879 1167,878 1213,882 1258,885 1304,885 1349,885 1395,887"/>
+                <TextEquiv>
+                    <Unicode>bachs Hof gegenüber. Ragg. Rumpf und Härtel,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_17" custom="readingOrder {index:16;}">
+                <Coords points="484,937 645,944 693,926 718,939 744,922 861,925 862,896 843,890 486,894"/>
+                <Baseline points="491,931 517,928 544,927 571,927 597,927 624,925 651,923 678,921 704,921 731,920 758,920 784,920 811,919 838,919 865,919"/>
+                <TextEquiv>
+                    <Unicode>s. die Kramerinnung.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_18" custom="readingOrder {index:17;}">
+                <Coords points="440,983 1187,968 1346,994 1347,937 1183,898 888,935 441,932"/>
+                <Baseline points="447,977 492,974 537,973 582,970 627,967 672,969 717,965 762,965 807,963 852,960 898,961 943,961 988,961 1033,961 1078,961 1123,963 1168,965 1213,965 1258,967 1303,968 1349,969"/>
+                <TextEquiv>
+                    <Unicode>Hr. Sander, Joh. Fr. jun. Catharinenstr. N. K67.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_19" custom="readingOrder {index:18;}">
+                <Coords points="438,1023 1065,1013 1066,970 439,981"/>
+                <Baseline points="445,1021 476,1019 507,1018 538,1016 569,1013 600,1012 631,1012 662,1014 693,1015 724,1012 756,1009 787,1008 818,1006 849,1005 880,1005 911,1005 942,1005 973,1005 1004,1005 1035,1003 1067,1001"/>
+                <TextEquiv>
+                    <Unicode>Hr. Sander, Joh. Gottfr. ebendas.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_20" custom="readingOrder {index:19;}">
+                <Coords points="440,1074 757,1052 1101,1074 1260,1059 1261,1018 1164,993 1032,1025 441,1028"/>
+                <Baseline points="447,1065 487,1063 528,1061 569,1059 610,1057 651,1055 691,1053 732,1052 773,1051 814,1051 855,1051 895,1050 936,1047 977,1048 1018,1047 1059,1047 1099,1049 1140,1051 1181,1052 1222,1053 1263,1055"/>
+                <TextEquiv>
+                    <Unicode>Hr. Schalle, Joh. Wilh. Grimm. Gasse, N. 4.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_21" custom="readingOrder {index:20;}">
+                <Coords points="440,1135 845,1093 1162,1104 1207,1135 1376,1110 1360,1044 1170,1075 440,1074"/>
+                <Baseline points="447,1111 493,1106 540,1103 586,1101 633,1101 680,1099 726,1099 773,1095 819,1094 866,1093 913,1093 959,1093 1006,1094 1052,1095 1099,1095 1146,1097 1192,1097 1239,1098 1285,1097 1332,1096 1379,1097"/>
+                <TextEquiv>
+                    <Unicode>Hr. Schilling, Dav. Catharinenstr N. 276. Ragg.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_22" custom="readingOrder {index:21;}">
+                <Coords points="478,1151 1132,1145 1132,1116 1086,1098 478,1111"/>
+                <Baseline points="485,1147 517,1147 550,1146 582,1144 615,1143 647,1143 680,1143 712,1141 745,1141 777,1141 810,1139 842,1137 875,1138 907,1137 940,1137 972,1138 1005,1138 1037,1137 1070,1137 1102,1139 1135,1137"/>
+                <TextEquiv>
+                    <Unicode>Dav. Schilling und Geier, s. Geier.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_23" custom="readingOrder {index:22;}">
+                <Coords points="438,1203 1260,1197 1396,1227 1397,1120 1109,1159 439,1162"/>
+                <Baseline points="445,1193 492,1191 540,1189 588,1187 635,1186 683,1185 731,1186 778,1184 826,1183 874,1183 922,1183 969,1183 1017,1183 1065,1183 1112,1182 1160,1181 1208,1181 1255,1181 1303,1183 1351,1183 1399,1181"/>
+                <TextEquiv>
+                    <Unicode>Mad. Schlemm, geb. Kornmann, unt. Rathhause, der</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_24" custom="readingOrder {index:23;}">
+                <Coords points="473,1244 574,1235 683,1245 705,1231 769,1243 782,1238 784,1193 749,1202 714,1189 642,1194 605,1207 579,1195 474,1201"/>
+                <Baseline points="479,1233 504,1232 530,1231 556,1231 581,1231 607,1229 633,1227 658,1227 684,1227 710,1226 735,1225 761,1225 787,1227"/>
+                <TextEquiv>
+                    <Unicode>Börse gegenüber.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_25" custom="readingOrder {index:24;}">
+                <Coords points="432,1299 804,1266 1390,1286 1390,1227 1260,1197 682,1248 432,1230"/>
+                <Baseline points="439,1281 486,1275 534,1275 582,1271 629,1270 677,1269 725,1267 772,1266 820,1265 868,1263 916,1263 963,1263 1011,1265 1059,1263 1106,1265 1154,1265 1202,1266 1249,1267 1297,1269 1345,1269 1393,1269"/>
+                <TextEquiv>
+                    <Unicode>Hr. Schletter, Sam. Gotthold, Ragg. Schleter und</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_26" custom="readingOrder {index:25;}">
+                <Coords points="470,1333 1212,1322 1221,1274 470,1291"/>
+                <Baseline points="477,1323 514,1319 551,1319 588,1316 626,1315 663,1312 700,1311 738,1311 775,1309 812,1309 850,1309 887,1309 924,1309 961,1307 999,1307 1036,1307 1073,1309 1111,1308 1148,1307 1185,1308 1223,1309"/>
+                <TextEquiv>
+                    <Unicode>Ringelsdörfer, auf der Reichsstr. N. 605.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_27" custom="readingOrder {index:26;}">
+                <Coords points="426,1392 833,1355 1382,1382 1383,1297 427,1336"/>
+                <Baseline points="433,1367 480,1365 528,1363 575,1361 623,1360 671,1359 718,1357 766,1355 813,1353 861,1353 909,1353 956,1351 1004,1351 1051,1351 1099,1351 1147,1351 1194,1353 1242,1355 1289,1355 1337,1355 1385,1357"/>
+                <TextEquiv>
+                    <Unicode>Hr. Schmidt, Casp. Dietr. Reinh. am Markt, N.386.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_28" custom="readingOrder {index:27;}">
+                <Coords points="470,1422 1135,1410 1136,1361 471,1377"/>
+                <Baseline points="477,1413 510,1409 543,1407 576,1404 609,1402 642,1403 675,1402 708,1400 741,1399 774,1397 808,1399 841,1397 874,1395 907,1395 940,1395 973,1395 1006,1394 1039,1394 1072,1393 1105,1395 1139,1395"/>
+                <TextEquiv>
+                    <Unicode>Ragg. Joh. Ge Schmidt und Comp.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_29" custom="readingOrder {index:28;}">
+                <Coords points="434,1468 1017,1441 1087,1479 1165,1470 1166,1409 435,1418"/>
+                <Baseline points="441,1459 477,1457 513,1454 550,1451 586,1449 623,1448 659,1448 695,1445 732,1443 768,1442 805,1441 841,1441 877,1441 914,1441 950,1441 987,1441 1023,1441 1059,1440 1096,1443 1132,1443 1169,1441"/>
+                <TextEquiv>
+                    <Unicode>Hr. Schmidt, Fr Wilh. ebendas. N. 173.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_30" custom="readingOrder {index:29;}">
+                <Coords points="431,1514 520,1495 883,1506 940,1485 1006,1504 1044,1494 1046,1446 432,1467"/>
+                <Baseline points="439,1503 469,1499 499,1497 530,1495 560,1495 591,1493 621,1491 651,1491 682,1493 712,1492 743,1487 773,1487 803,1485 834,1485 864,1485 895,1485 925,1483 955,1483 986,1483 1016,1483 1047,1485"/>
+                <TextEquiv>
+                    <Unicode>Hr. Schmidt, Joh. Zach. ebendas.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_31" custom="readingOrder {index:30;}">
+                <Coords points="432,1568 797,1532 1150,1532 1221,1568 1377,1538 1377,1495 1305,1471 433,1513"/>
+                <Baseline points="439,1549 486,1543 533,1539 580,1536 627,1533 674,1534 721,1531 768,1530 815,1531 862,1529 909,1529 956,1529 1003,1529 1050,1527 1097,1527 1144,1527 1191,1527 1238,1527 1285,1527 1332,1528 1379,1529"/>
+                <TextEquiv>
+                    <Unicode>Hr. Schneider, Joh. Ulr. Ragg. Engel und Schneider,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_32" custom="readingOrder {index:31;}">
+                <Coords points="470,1592 499,1603 563,1587 711,1597 733,1581 909,1581 910,1540 471,1555"/>
+                <Baseline points="477,1587 502,1583 528,1583 553,1583 579,1580 605,1579 630,1579 656,1578 682,1576 707,1575 733,1575 759,1575 784,1575 810,1575 836,1575 861,1574 887,1573 913,1571"/>
+                <TextEquiv>
+                    <Unicode>Hällische Gasse, N. 464.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_33" custom="readingOrder {index:32;}">
+                <Coords points="426,1634 1274,1626 1245,1554 1129,1587 1008,1558 848,1592 427,1589"/>
+                <Baseline points="433,1633 475,1630 517,1629 559,1627 601,1623 644,1623 686,1622 728,1618 770,1617 812,1616 855,1613 897,1613 939,1613 981,1613 1023,1615 1066,1613 1108,1613 1150,1613 1192,1611 1234,1612 1277,1611"/>
+                <TextEquiv>
+                    <Unicode>Hr. Schnetger, Gottfr Wilh. s. Küiper, F. W.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_34" custom="readingOrder {index:33;}">
+                <Coords points="437,1682 1376,1660 1324,1611 438,1638"/>
+                <Baseline points="443,1677 489,1673 536,1671 583,1669 629,1667 676,1666 723,1663 769,1661 816,1658 863,1659 910,1657 956,1657 1003,1657 1050,1657 1096,1657 1143,1657 1190,1659 1236,1656 1283,1655 1330,1654 1377,1651"/>
+                <TextEquiv>
+                    <Unicode>Hr. Schöffel, Heinr. Gottlob, und Hänel, Catharinen.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_35" custom="readingOrder {index:34;}">
+                <Coords points="470,1727 1063,1725 1207,1713 1225,1670 471,1677"/>
+                <Baseline points="477,1715 514,1713 551,1713 589,1713 626,1713 664,1712 701,1709 738,1707 776,1705 813,1703 851,1704 888,1703 925,1701 963,1701 1000,1701 1038,1701 1075,1701 1112,1699 1150,1699 1187,1699 1225,1697"/>
+                <TextEquiv>
+                    <Unicode>straße, N. 372. Engl. Waaren=Handlung.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_36" custom="readingOrder {index:35;}">
+                <Coords points="428,1763 1345,1756 1374,1681 1063,1725 429,1724"/>
+                <Baseline points="435,1759 482,1757 529,1757 576,1756 623,1755 670,1753 717,1749 764,1746 811,1747 858,1745 905,1746 952,1745 999,1745 1046,1745 1093,1745 1140,1743 1187,1742 1234,1741 1281,1741 1328,1740 1375,1737"/>
+                <TextEquiv>
+                    <Unicode>Hr. Schrepffer, Ge Wolfg. u. Sohn, s. Handlungsdep.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_37" custom="readingOrder {index:36;}">
+                <Coords points="431,1818 1132,1790 1300,1816 1378,1798 1379,1749 432,1767"/>
+                <Baseline points="439,1807 486,1801 533,1800 580,1798 627,1797 674,1795 721,1795 768,1793 815,1793 862,1790 910,1788 957,1789 1004,1789 1051,1787 1098,1789 1145,1787 1192,1787 1239,1786 1286,1785 1333,1784 1381,1781"/>
+                <TextEquiv>
+                    <Unicode>Hr. Schröder. Carl Chr. Abrah. Ragg. Anders Witt=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_38" custom="readingOrder {index:37;}">
+                <Coords points="463,1857 1116,1848 1146,1843 1147,1796 463,1823"/>
+                <Baseline points="469,1843 503,1841 537,1840 571,1839 605,1839 639,1837 673,1837 707,1837 741,1836 775,1835 809,1835 843,1835 877,1833 911,1831 945,1831 979,1830 1013,1831 1047,1831 1081,1831 1115,1831 1149,1831"/>
+                <TextEquiv>
+                    <Unicode>we und Schröder, s. Anders Wittwe.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_39" custom="readingOrder {index:38;}">
+                <Coords points="422,1902 1202,1885 1187,1818 1146,1847 423,1854"/>
+                <Baseline points="429,1893 467,1891 506,1888 545,1885 584,1883 623,1883 661,1883 700,1883 739,1880 778,1881 817,1881 855,1879 894,1878 933,1875 972,1875 1011,1875 1049,1875 1088,1875 1127,1875 1166,1875 1205,1873"/>
+                <TextEquiv>
+                    <Unicode>Hr. Schröder, Joh. Chr. Haynstr. N. 196.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_40" custom="readingOrder {index:39;}">
+                <Coords points="422,1943 1343,1928 1376,1878 423,1903"/>
+                <Baseline points="429,1941 476,1937 523,1934 571,1929 618,1927 666,1925 713,1925 760,1922 808,1921 855,1922 903,1921 950,1919 997,1918 1045,1917 1092,1917 1140,1915 1187,1916 1234,1915 1282,1912 1329,1913 1377,1917"/>
+                <TextEquiv>
+                    <Unicode>Hr. Schröter, C. Aug. Heinr. Ragg. Schräter Gebr.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_41" custom="readingOrder {index:40;}">
+                <Coords points="467,1985 611,2012 892,1980 987,2013 1279,1986 1280,1926 468,1952"/>
+                <Baseline points="473,1979 513,1978 554,1976 594,1975 635,1972 675,1971 716,1969 756,1966 797,1967 837,1967 878,1969 918,1971 959,1971 999,1968 1040,1965 1080,1965 1121,1963 1161,1963 1202,1961 1242,1960 1283,1957"/>
+                <TextEquiv>
+                    <Unicode>und Comp. ebendas. N. 375. s. Kramerinnung.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_42" custom="readingOrder {index:41;}">
+                <Coords points="1294,2029 1306,2025 1318,2028 1327,2023 1348,2034 1357,2030 1367,2037 1385,2038 1382,1943 1334,1950 1324,1944 1312,1956 1293,1953"/>
+                <Baseline points="1301,2003 1329,2003 1358,2003 1387,2007"/>
+                <TextEquiv>
+                    <Unicode>Hr.</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+    </Page>
+</PcGts>

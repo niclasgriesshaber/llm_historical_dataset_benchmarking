@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2025-03-05T20:04:21.593+01:00</Created>
+        <LastChange>2025-03-05T20:04:21.593+01:00</LastChange>
+    </Metadata>
+    <Page imageFilename="page_0003.tiff" imageWidth="1654" imageHeight="2339">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1741201508482" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="291,129 291,2120 1397,2120 1397,129"/>
+            <TextLine id="tr_1_tl_1" custom="readingOrder {index:0;}">
+                <Coords points="584,178 791,166 902,181 920,165 946,182 1079,183 1079,95 1017,114 944,83 894,103 754,83 723,106 671,82 584,86"/>
+                <Baseline points="591,151 616,151 642,151 668,151 694,151 720,152 746,153 772,155 798,155 824,158 849,158 875,155 901,153 927,153 953,153 979,153 1005,153 1031,152 1057,151 1083,151"/>
+                <TextEquiv>
+                    <Unicode>Die Fluß=Inspection.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:1;}">
+                <Coords points="282,181 300,189 303,186 307,189 316,186 324,191 337,189 343,195 351,189 359,189 363,100 341,102 325,116 317,115 309,107 301,111 295,104 286,102"/>
+                <Baseline points="291,159 327,157 363,155"/>
+                <TextEquiv>
+                    <Unicode>46</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:2;}">
+                <Coords points="296,261 1370,268 1370,199 1167,173 602,217 296,186"/>
+                <Baseline points="303,239 356,239 410,240 463,240 517,239 570,241 624,240 677,239 731,239 784,239 838,241 891,239 945,238 998,239 1052,239 1105,237 1159,239 1212,240 1266,241 1319,243 1373,245"/>
+                <TextEquiv>
+                    <Unicode>General=Accis= Waage= Güter=Bestädter.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:3;}">
+                <Coords points="293,296 1200,297 1200,245 293,261"/>
+                <Baseline points="301,283 346,285 391,285 436,283 481,283 526,281 571,283 616,283 661,283 706,283 752,283 797,283 842,283 887,282 932,281 977,281 1022,283 1067,284 1112,287 1157,286 1203,285"/>
+                <TextEquiv>
+                    <Unicode>Hr. Hanns Hieronymus Köckeritz, Scheffelg. 151</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:4;}">
+                <Coords points="491,327 616,348 672,328 1153,339 1153,307 1062,288 491,293"/>
+                <Baseline points="499,321 531,321 564,327 597,329 630,329 663,328 695,327 728,327 761,327 794,329 827,329 859,329 892,329 925,329 958,327 990,327 1023,327 1056,327 1089,327 1122,329 1155,329"/>
+                <TextEquiv>
+                    <Unicode>Wein=Visier zu Dresden.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_6" custom="readingOrder {index:5;}">
+                <Coords points="296,400 1158,391 1145,337 620,349 296,300"/>
+                <Baseline points="303,373 345,377 388,377 431,376 474,375 517,375 560,375 603,376 646,377 689,375 732,375 774,375 817,375 860,375 903,375 946,373 989,373 1032,373 1075,373 1118,375 1161,371"/>
+                <TextEquiv>
+                    <Unicode>Hr. Friedrich August Leisching, Wilsdr. G. 237</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_7" custom="readingOrder {index:6;}">
+                <Coords points="439,430 1191,442 1220,380 440,384"/>
+                <Baseline points="447,419 485,423 524,423 563,423 601,423 640,422 679,421 717,421 756,423 795,422 834,421 872,423 911,423 950,421 988,421 1027,421 1066,421 1104,421 1143,421 1182,421 1221,421"/>
+                <TextEquiv>
+                    <Unicode>General=Accis=Thorschreiber.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_8" custom="readingOrder {index:7;}">
+                <Coords points="300,489 1230,491 1230,443 1142,427 478,440 300,400"/>
+                <Baseline points="307,473 353,473 399,471 445,471 492,469 538,471 584,471 631,471 677,469 723,469 770,470 816,469 862,471 908,469 955,470 1001,469 1047,469 1094,467 1140,467 1186,469 1233,465"/>
+                <TextEquiv>
+                    <Unicode>Hr. Gottlieb Ehrenfried Mittag, im weißen Thor¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_9" custom="readingOrder {index:8;}">
+                <Coords points="369,519 459,541 530,518 1147,525 1147,481 1074,475 369,481"/>
+                <Baseline points="377,515 415,516 454,517 493,517 531,516 570,516 609,517 647,517 686,515 725,515 764,515 802,515 841,515 880,517 918,515 957,515 996,513 1034,513 1073,515 1112,514 1151,511"/>
+                <TextEquiv>
+                    <Unicode>Johann Gottlieb Stöckel, im weißen Thor=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_10" custom="readingOrder {index:9;}">
+                <Coords points="365,560 1368,581 1355,487 1154,536 365,531"/>
+                <Baseline points="373,557 422,559 472,559 522,561 572,559 622,559 672,559 722,559 772,560 822,559 872,559 921,558 971,559 1021,559 1071,558 1121,559 1171,559 1221,559 1271,559 1321,559 1371,563"/>
+                <TextEquiv>
+                    <Unicode>Aug. Heinr. Gotthard Kunath, jun. im schwarzen Thor.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_11" custom="readingOrder {index:10;}">
+                <Coords points="369,601 470,625 507,605 684,625 997,613 997,568 731,562 693,584 584,562 487,582 369,561"/>
+                <Baseline points="377,601 408,601 439,603 470,603 501,601 533,603 564,603 595,603 626,603 657,603 689,604 720,605 751,605 782,605 813,606 845,607 876,606 907,604 938,603 969,603 1001,605"/>
+                <TextEquiv>
+                    <Unicode>George Christoph Helsig, ebendas.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_12" custom="readingOrder {index:11;}">
+                <Coords points="368,660 1218,657 1218,586 1086,578 904,627 368,616"/>
+                <Baseline points="375,645 417,651 459,651 501,651 544,650 586,651 628,652 671,651 713,653 755,653 798,653 840,652 882,651 924,651 967,651 1009,649 1051,649 1094,651 1136,650 1178,649 1221,651"/>
+                <TextEquiv>
+                    <Unicode>Friedrich Wilhelm Jäckel, am Meißn. Elbthor.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_13" custom="readingOrder {index:12;}">
+                <Coords points="365,707 1372,710 1362,632 1264,663 365,659"/>
+                <Baseline points="373,701 423,697 473,695 523,695 573,697 623,697 673,697 723,696 773,697 823,697 874,697 924,697 974,697 1024,695 1074,695 1124,695 1174,695 1224,695 1274,695 1324,697 1375,697"/>
+                <TextEquiv>
+                    <Unicode>Joh. Henoch, Gleits= u. Ld. Accis=Unter=Einnehm. ebendas.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_14" custom="readingOrder {index:13;}">
+                <Coords points="368,763 1015,742 1181,778 1272,752 1272,712 1226,699 912,727 872,702 368,707"/>
+                <Baseline points="375,745 420,743 465,741 510,741 555,741 600,741 645,741 690,743 735,743 780,743 825,741 870,741 915,743 960,743 1005,741 1050,742 1095,743 1140,743 1185,743 1230,742 1275,745"/>
+                <TextEquiv>
+                    <Unicode>Johann George Kunath. sen. an der Pirn. Elbe.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_15" custom="readingOrder {index:14;}">
+                <Coords points="369,797 1146,806 1146,766 984,740 810,766 369,759"/>
+                <Baseline points="377,789 415,790 454,789 492,789 531,789 570,790 608,791 647,789 685,789 724,789 763,789 801,789 840,789 878,789 917,789 956,788 994,788 1033,787 1071,789 1110,789 1149,789"/>
+                <TextEquiv>
+                    <Unicode>Johann August Knauth, Blasew. Schlag.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_16" custom="readingOrder {index:15;}">
+                <Coords points="369,835 573,855 1092,835 1151,862 1151,806 1088,793 369,797"/>
+                <Baseline points="377,833 415,834 454,835 493,835 532,835 571,835 610,833 649,833 688,835 727,835 766,831 804,831 843,833 882,833 921,835 960,833 999,833 1038,833 1077,834 1116,835 1155,833"/>
+                <TextEquiv>
+                    <Unicode>Carl Adolph Hänisch, jun. Ram. Schlag.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_17" custom="readingOrder {index:16;}">
+                <Coords points="365,894 1100,905 1134,884 1134,854 1092,837 799,855 616,834 562,858 365,835"/>
+                <Baseline points="373,875 411,881 449,881 487,881 525,883 564,881 602,881 640,881 678,881 716,880 755,880 793,881 831,881 869,881 907,881 946,881 984,881 1022,880 1060,879 1098,879 1137,881"/>
+                <TextEquiv>
+                    <Unicode>Benjamin Gotthelf Franz, Pirn. Schlag.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_18" custom="readingOrder {index:17;}">
+                <Coords points="369,940 1237,941 1254,858 1100,905 369,890"/>
+                <Baseline points="377,923 421,927 465,927 509,927 553,927 597,927 641,927 685,926 729,925 773,927 817,925 861,927 905,927 949,927 993,926 1037,925 1081,925 1125,925 1169,925 1213,925 1257,923"/>
+                <TextEquiv>
+                    <Unicode>Carl Gottlieb Friedrich Heidrich, Dohn. Schlag.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_19" custom="readingOrder {index:18;}">
+                <Coords points="369,985 1296,987 1280,926 369,940"/>
+                <Baseline points="377,969 423,972 469,973 515,971 561,971 607,972 653,971 699,971 745,971 791,971 838,971 884,971 930,971 976,971 1022,971 1068,969 1114,969 1160,969 1206,970 1252,969 1299,969"/>
+                <TextEquiv>
+                    <Unicode>Ephraim Andreas Böttiger, Dippoldisw. Schlag.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_20" custom="readingOrder {index:19;}">
+                <Coords points="376,1031 1126,1038 1126,991 1027,973 817,999 625,972 376,983"/>
+                <Baseline points="383,1021 420,1017 457,1018 494,1017 532,1017 569,1017 606,1017 644,1017 681,1017 718,1018 756,1017 793,1019 830,1017 867,1017 905,1017 942,1017 979,1017 1017,1015 1054,1016 1091,1016 1129,1017"/>
+                <TextEquiv>
+                    <Unicode>Johann Gottlieb Dreß, am Falkenschlag.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_21" custom="readingOrder {index:20;}">
+                <Coords points="368,1076 1305,1074 1305,1015 1200,993 1005,1042 368,1035"/>
+                <Baseline points="375,1059 421,1064 468,1065 515,1063 561,1063 608,1061 655,1063 701,1063 748,1062 795,1063 842,1062 888,1061 935,1061 982,1061 1028,1058 1075,1059 1122,1059 1168,1059 1215,1059 1262,1058 1309,1057"/>
+                <TextEquiv>
+                    <Unicode>Johann Ludwig Zimmermann, sen. Freyb. Schlag.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_22" custom="readingOrder {index:21;}">
+                <Coords points="369,1123 1360,1121 1380,1050 1205,1088 369,1074"/>
+                <Baseline points="377,1107 427,1111 477,1109 527,1109 577,1108 628,1108 678,1109 728,1109 778,1109 828,1109 879,1108 929,1107 979,1107 1029,1107 1079,1108 1130,1105 1180,1107 1230,1106 1280,1105 1330,1105 1381,1107"/>
+                <TextEquiv>
+                    <Unicode>Joh. Christoph Benjamin Zimmermann, jun. ebendas.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_23" custom="readingOrder {index:22;}">
+                <Coords points="364,1154 723,1178 1123,1155 1123,1131 1056,1111 853,1133 364,1119"/>
+                <Baseline points="371,1151 408,1153 446,1155 484,1155 522,1155 560,1155 597,1154 635,1155 673,1155 711,1153 749,1155 786,1155 824,1153 862,1153 900,1154 938,1153 975,1153 1013,1151 1051,1152 1089,1151 1127,1149"/>
+                <TextEquiv>
+                    <Unicode>Christian Friedrich Flachs, Wilsdr. Thor.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_24" custom="readingOrder {index:23;}">
+                <Coords points="368,1202 1166,1208 1154,1153 929,1179 369,1154"/>
+                <Baseline points="375,1197 414,1199 454,1200 494,1199 533,1200 573,1199 613,1201 652,1199 692,1200 732,1199 772,1199 811,1199 851,1199 891,1199 930,1198 970,1199 1010,1199 1049,1199 1089,1197 1129,1197 1169,1197"/>
+                <TextEquiv>
+                    <Unicode>Gottlob Benjamin Bernhard. Pirn. Thor.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_25" custom="readingOrder {index:24;}">
+                <Coords points="369,1248 1232,1272 1233,1221 1166,1202 916,1225 371,1204"/>
+                <Baseline points="377,1241 419,1245 462,1247 505,1245 548,1245 591,1245 633,1245 676,1245 719,1245 762,1245 805,1245 847,1245 890,1245 933,1244 976,1243 1019,1243 1061,1241 1104,1241 1147,1241 1190,1243 1233,1241"/>
+                <TextEquiv>
+                    <Unicode>Christian Traugott Hiemann, Löbtaer Schlag.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_26" custom="readingOrder {index:25;}">
+                <Coords points="372,1313 1170,1307 1170,1268 1111,1249 372,1258"/>
+                <Baseline points="379,1289 418,1291 458,1291 498,1291 537,1290 577,1291 617,1293 656,1293 696,1292 736,1291 776,1291 815,1292 855,1293 895,1293 934,1291 974,1291 1014,1291 1053,1289 1093,1289 1133,1289 1173,1289"/>
+                <TextEquiv>
+                    <Unicode>Christoph Samuel Redtel, Prießn. Schlag.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_27" custom="readingOrder {index:26;}">
+                <Coords points="494,1403 859,1424 1189,1402 1173,1329 1024,1359 897,1323 793,1347 707,1323 635,1351 542,1321 494,1345"/>
+                <Baseline points="501,1397 535,1397 570,1397 604,1397 639,1396 673,1396 708,1397 742,1397 777,1396 811,1399 846,1399 880,1398 915,1397 949,1395 984,1397 1018,1395 1053,1394 1087,1393 1122,1393 1156,1393 1191,1395"/>
+                <TextEquiv>
+                    <Unicode>Die Fluß=Inspection.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_28" custom="readingOrder {index:27;}">
+                <Coords points="301,1482 1234,1458 1374,1497 1374,1400 301,1416"/>
+                <Baseline points="309,1459 362,1461 415,1461 469,1461 522,1461 576,1460 629,1461 682,1459 736,1460 789,1461 843,1461 896,1461 949,1460 1003,1458 1056,1458 1110,1457 1163,1455 1216,1455 1270,1455 1323,1455 1377,1455"/>
+                <TextEquiv>
+                    <Unicode>Hr Johann Friedrich Zahn, geh. Finanz=Rath und Direct.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_29" custom="readingOrder {index:28;}">
+                <Coords points="394,1509 1300,1513 1300,1475 1258,1461 394,1473"/>
+                <Baseline points="401,1505 446,1508 491,1507 536,1508 581,1507 626,1507 671,1507 716,1507 761,1507 806,1507 852,1507 897,1506 942,1505 987,1505 1032,1505 1077,1505 1122,1503 1167,1501 1212,1503 1257,1500 1303,1497"/>
+                <TextEquiv>
+                    <Unicode>der gesammten Flößen, SV. waysenh. G. 412b.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_30" custom="readingOrder {index:29;}">
+                <Coords points="374,1552 1384,1561 1384,1497 1349,1491 983,1525 374,1505"/>
+                <Baseline points="381,1547 431,1553 481,1555 531,1554 582,1553 632,1551 682,1551 733,1551 783,1553 833,1553 884,1551 934,1551 984,1551 1034,1549 1085,1549 1135,1548 1185,1547 1236,1547 1286,1545 1336,1545 1387,1545"/>
+                <TextEquiv>
+                    <Unicode>C. Aug. Jursch, Holzverwalt im Ram. Holzh. PV. Ram. G.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_31" custom="readingOrder {index:30;}">
+                <Coords points="309,1609 1126,1611 1126,1569 1047,1556 309,1564"/>
+                <Baseline points="317,1603 357,1598 398,1598 438,1599 479,1599 520,1598 560,1597 601,1597 641,1597 682,1597 723,1596 763,1597 804,1599 844,1598 885,1597 926,1595 966,1597 1007,1597 1047,1595 1088,1595 1129,1595"/>
+                <TextEquiv>
+                    <Unicode>Johann Gottfried Schober, Anweiser, ebend.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_32" custom="readingOrder {index:31;}">
+                <Coords points="313,1651 1380,1645 1380,1592 313,1613"/>
+                <Baseline points="321,1643 374,1644 427,1643 480,1643 533,1643 586,1643 639,1641 692,1643 745,1643 798,1644 852,1641 905,1643 958,1643 1011,1643 1064,1643 1117,1641 1170,1639 1223,1638 1276,1638 1329,1637 1383,1635"/>
+                <TextEquiv>
+                    <Unicode>Hr. Friedr. Gotth. Schubert, Holzverw. im Ostraer Holzhof.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_33" custom="readingOrder {index:32;}">
+                <Coords points="305,1708 1375,1696 1343,1644 305,1652"/>
+                <Baseline points="313,1683 366,1689 419,1691 472,1689 525,1689 579,1689 632,1689 685,1689 738,1689 791,1689 845,1689 898,1689 951,1689 1004,1687 1057,1686 1111,1685 1164,1685 1217,1684 1270,1684 1323,1683 1377,1679"/>
+                <TextEquiv>
+                    <Unicode>Fr. Wilh Wegener, Anweiser, W.V. an der Schmelzm. 35 A.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_34" custom="readingOrder {index:33;}">
+                <Coords points="308,1759 1382,1755 1382,1700 1325,1687 309,1708"/>
+                <Baseline points="317,1733 370,1737 423,1737 477,1736 530,1735 584,1735 637,1737 690,1735 744,1735 797,1734 851,1733 904,1735 957,1735 1011,1733 1064,1732 1118,1733 1171,1729 1224,1730 1278,1730 1331,1729 1385,1729"/>
+                <TextEquiv>
+                    <Unicode>Hr. Johann Carl Friedrich Frhr. v. Spillner, Flußmeister,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_35" custom="readingOrder {index:34;}">
+                <Coords points="404,1801 1194,1786 1194,1743 404,1751"/>
+                <Baseline points="411,1785 450,1785 489,1784 528,1783 568,1781 607,1783 646,1783 686,1783 725,1783 764,1783 804,1783 843,1781 882,1781 921,1779 961,1781 1000,1779 1039,1779 1079,1779 1118,1778 1157,1776 1197,1773"/>
+                <TextEquiv>
+                    <Unicode>geh Finanz=Rath, im Weiseritzfloßholzhof.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_36" custom="readingOrder {index:35;}">
+                <Coords points="312,1835 1228,1839 1269,1827 1270,1768 900,1803 313,1775"/>
+                <Baseline points="319,1827 366,1827 414,1826 462,1827 509,1827 557,1827 605,1827 652,1827 700,1827 748,1827 796,1827 843,1826 891,1827 939,1827 986,1827 1034,1825 1082,1825 1129,1823 1177,1821 1225,1821 1273,1821"/>
+                <TextEquiv>
+                    <Unicode>Carl Gotth. Gutsch, Anweiser auf der Weiseritzflöße.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_37" custom="readingOrder {index:36;}">
+                <Coords points="316,1882 1386,1866 1332,1809 1056,1849 316,1833"/>
+                <Baseline points="323,1873 376,1875 429,1873 482,1873 536,1874 589,1875 642,1875 696,1873 749,1873 802,1873 856,1873 909,1873 962,1871 1015,1871 1069,1869 1122,1869 1175,1869 1229,1868 1282,1866 1335,1865 1389,1861"/>
+                <TextEquiv>
+                    <Unicode>Hr. Carl Tüllmann, Holzverw. Major, Holzhof a. d. NA.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_38" custom="readingOrder {index:37;}">
+                <Coords points="510,1930 1179,1929 1179,1890 1107,1874 510,1882"/>
+                <Baseline points="517,1921 550,1921 583,1921 616,1921 650,1919 683,1919 716,1920 750,1920 783,1919 816,1921 850,1919 883,1919 916,1921 949,1919 983,1919 1016,1919 1049,1919 1083,1918 1116,1915 1149,1915 1183,1917"/>
+                <TextEquiv>
+                    <Unicode>Die Spiegel= Manufactur.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_39" custom="readingOrder {index:38;}">
+                <Coords points="317,1985 1390,1965 1390,1924 317,1936"/>
+                <Baseline points="325,1969 378,1965 431,1963 485,1964 538,1966 592,1967 645,1967 698,1967 752,1965 805,1965 859,1965 912,1965 965,1965 1019,1964 1072,1963 1126,1961 1179,1961 1232,1960 1286,1957 1339,1957 1393,1955"/>
+                <TextEquiv>
+                    <Unicode>Hr. Ldw. Schneider, Commissär u Landrentmstr. a. Jüdh.390</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_40" custom="readingOrder {index:39;}">
+                <Coords points="378,2032 1344,2020 1394,2015 1395,1963 379,1975"/>
+                <Baseline points="385,2007 435,2011 486,2012 536,2012 587,2013 638,2013 688,2012 739,2011 789,2012 840,2013 891,2013 941,2011 992,2011 1042,2009 1093,2007 1144,2006 1194,2005 1245,2005 1295,2004 1346,2000 1397,1997"/>
+                <TextEquiv>
+                    <Unicode>Friedrich Ferdinand Breuer, factor bey der Spiegel-</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_41" custom="readingOrder {index:40;}">
+                <Coords points="402,2060 1353,2059 1353,2020 402,2028"/>
+                <Baseline points="409,2059 456,2059 503,2059 551,2061 598,2060 646,2060 693,2059 740,2059 788,2059 835,2059 883,2059 930,2059 977,2058 1025,2057 1072,2056 1120,2055 1167,2053 1214,2051 1262,2053 1309,2050 1357,2047"/>
+                <TextEquiv>
+                    <Unicode>Niederlage in Dresden, an der kl. Ostrawiese 32 A.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_42" custom="readingOrder {index:41;}">
+                <Coords points="380,2130 1181,2145 1376,2119 1378,2062 382,2068"/>
+                <Baseline points="387,2103 436,2105 486,2107 536,2107 585,2107 635,2107 685,2107 734,2109 784,2109 834,2107 884,2106 933,2107 983,2107 1033,2106 1082,2103 1132,2102 1182,2101 1231,2099 1281,2099 1331,2096 1381,2093"/>
+                <TextEquiv>
+                    <Unicode>Glob Friedrich Pauli, Inspector, an der Frauenk. 646</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+    </Page>
+</PcGts>

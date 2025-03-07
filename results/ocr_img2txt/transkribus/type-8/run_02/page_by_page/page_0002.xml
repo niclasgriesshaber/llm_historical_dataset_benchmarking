@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2025-03-05T20:06:07.429+01:00</Created>
+        <LastChange>2025-03-05T20:06:07.429+01:00</LastChange>
+    </Metadata>
+    <Page imageFilename="page_0002.tiff" imageWidth="1654" imageHeight="2339">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1741201620209" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="305,85 305,2047 1347,2047 1347,85"/>
+            <TextLine id="tr_1_tl_1" custom="readingOrder {index:0;}">
+                <Coords points="302,140 318,140 327,135 338,136 344,132 354,135 356,53 347,53 337,62 333,62 323,52 315,57 305,58"/>
+                <Baseline points="309,107 357,105"/>
+                <TextEquiv>
+                    <Unicode>6</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:1;}">
+                <Coords points="302,215 490,200 642,232 754,207 858,214 865,145 814,162 735,148 697,169 502,141 419,169 301,153"/>
+                <Baseline points="309,197 337,199 365,199 393,197 421,197 449,197 477,197 505,198 533,199 561,199 589,199 617,199 645,199 673,199 701,199 729,199 757,199 785,199 813,199 841,199 869,201"/>
+                <TextEquiv>
+                    <Unicode>Agunzow, Iwan, Major.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:2;}">
+                <Coords points="896,215 966,205 1040,223 1104,209 1220,228 1282,210 1335,216 1335,161 1282,171 1230,144 1171,161 1117,148 1088,167 984,145 958,162 920,148 896,158"/>
+                <Baseline points="903,201 928,199 954,199 979,200 1005,201 1030,201 1056,201 1081,201 1107,201 1132,201 1158,201 1183,201 1209,201 1234,203 1260,203 1285,203 1311,203 1337,201"/>
+                <TextEquiv>
+                    <Unicode>Vorst. Schmiedestraße</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:3;}">
+                <Coords points="347,240 385,254 406,250 416,258 428,250 468,251 478,245 499,258 516,251 515,207 471,210 465,205 456,214 406,202 393,209 379,201 346,211"/>
+                <Baseline points="355,239 382,239 409,241 437,240 464,240 491,242 519,241"/>
+                <TextEquiv>
+                    <Unicode>Nr. 279.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:4;}">
+                <Coords points="303,288 1327,293 1311,237 303,245"/>
+                <Baseline points="311,281 362,280 413,281 464,281 515,281 566,279 617,277 668,279 719,280 770,280 821,279 872,281 923,280 974,281 1025,283 1076,283 1127,283 1178,285 1229,285 1280,284 1331,285"/>
+                <TextEquiv>
+                    <Unicode>Ahrens, Eduard, Comptoirist. Münzstraße Nr. 303.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_6" custom="readingOrder {index:5;}">
+                <Coords points="302,338 1338,334 1338,296 1290,290 302,288"/>
+                <Baseline points="309,323 360,323 412,323 463,323 515,319 567,319 618,320 670,323 721,325 773,325 825,325 876,323 928,323 979,326 1031,327 1083,325 1134,325 1186,325 1237,327 1289,327 1341,325"/>
+                <TextEquiv>
+                    <Unicode>Ahrens, Friedr., Schneidermeister. Scharrenstraße</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_7" custom="readingOrder {index:6;}">
+                <Coords points="346,368 507,379 526,368 620,363 671,375 671,341 656,332 625,342 590,341 569,325 539,341 443,332 429,342 382,325 346,333"/>
+                <Baseline points="353,363 379,365 406,363 433,364 460,366 487,366 514,364 540,363 567,361 594,363 621,361 648,364 675,365"/>
+                <TextEquiv>
+                    <Unicode>Nr. 244 und 245.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_8" custom="readingOrder {index:7;}">
+                <Coords points="303,419 1243,442 1346,415 1346,359 1264,353 428,381 303,349"/>
+                <Baseline points="311,409 362,407 414,407 466,408 518,407 570,405 621,401 673,405 725,406 777,407 829,405 880,404 932,405 984,407 1036,408 1088,407 1139,407 1191,409 1243,409 1295,408 1347,403"/>
+                <TextEquiv>
+                    <Unicode>Ahrens, Joh. Friedr., Zimmermeister. Gerberstraße</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_9" custom="readingOrder {index:8;}">
+                <Coords points="346,452 404,463 419,455 432,458 441,449 454,449 468,461 487,452 513,452 513,416 404,420 367,412 346,415"/>
+                <Baseline points="353,445 380,447 407,447 435,447 462,447 489,447 517,447"/>
+                <TextEquiv>
+                    <Unicode>Nr. 141.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_10" custom="readingOrder {index:9;}">
+                <Coords points="306,520 375,489 651,526 1330,517 1330,458 972,464 866,424 726,450 607,420 306,459"/>
+                <Baseline points="313,489 364,487 415,487 466,487 517,487 568,487 619,489 670,489 721,490 772,491 823,491 874,490 925,489 976,489 1027,489 1078,491 1129,489 1180,491 1231,492 1282,491 1333,489"/>
+                <TextEquiv>
+                    <Unicode>Ahrentz, Joh. Heinr., Tischlermeister. Schmiede-</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_11" custom="readingOrder {index:10;}">
+                <Coords points="350,537 425,543 550,530 627,542 627,495 617,493 556,509 521,489 464,502 430,489 350,498"/>
+                <Baseline points="357,527 384,527 411,529 439,528 466,528 494,529 521,529 548,528 576,528 603,529 631,529"/>
+                <TextEquiv>
+                    <Unicode>straße Nr. 138.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_12" custom="readingOrder {index:11;}">
+                <Coords points="303,579 1320,586 1318,518 948,544 705,518 512,556 303,529"/>
+                <Baseline points="311,573 361,570 412,569 462,569 513,570 563,571 614,571 664,571 715,571 765,571 816,571 866,571 917,573 967,573 1018,572 1068,573 1119,573 1169,574 1220,574 1270,577 1321,579"/>
+                <TextEquiv>
+                    <Unicode>Ahrens, Julius, Konditor. gr. Neustraße Nr. 75.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_13" custom="readingOrder {index:12;}">
+                <Coords points="298,617 1169,635 1323,625 1323,581 297,579"/>
+                <Baseline points="305,613 356,612 407,609 458,609 509,611 560,611 611,611 662,613 713,613 764,613 816,615 867,614 918,615 969,615 1020,615 1071,616 1122,615 1173,617 1224,618 1275,617 1327,617"/>
+                <TextEquiv>
+                    <Unicode>Ahrends, Andreas, Arbeitsmann. Sassenhof Nr. 72.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_14" custom="readingOrder {index:13;}">
+                <Coords points="302,670 1327,684 1312,620 302,620"/>
+                <Baseline points="309,655 360,652 411,650 462,649 513,651 564,651 615,653 666,655 717,655 768,656 819,659 870,658 921,658 972,657 1023,657 1074,657 1125,657 1176,657 1227,657 1278,658 1329,659"/>
+                <TextEquiv>
+                    <Unicode>Ahrendt, Joh. Michael, Lohgerbermeister. Vorst.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_15" custom="readingOrder {index:14;}">
+                <Coords points="346,700 415,695 445,712 556,696 600,713 717,697 763,716 763,670 745,664 611,658 574,673 547,651 521,664 346,661"/>
+                <Baseline points="353,691 378,693 404,693 430,694 456,694 482,692 508,691 534,693 560,693 585,693 611,693 637,693 663,694 689,695 715,695 741,695 767,697"/>
+                <TextEquiv>
+                    <Unicode>gr. Sandstraße Nr. 5.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_16" custom="readingOrder {index:15;}">
+                <Coords points="306,757 1331,771 1331,705 1251,670 961,708 828,684 748,718 306,693"/>
+                <Baseline points="313,737 364,734 415,735 466,735 517,737 568,739 619,739 670,741 721,741 772,739 824,739 875,739 926,739 977,739 1028,739 1079,740 1130,739 1181,739 1232,740 1283,740 1335,739"/>
+                <TextEquiv>
+                    <Unicode>Aksentowitz, Joh., Barbierer. Schmiedestraße</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_17" custom="readingOrder {index:16;}">
+                <Coords points="351,783 388,786 395,792 408,784 424,791 456,782 471,788 515,786 512,744 469,745 455,756 446,751 425,754 410,743 350,741"/>
+                <Baseline points="359,771 385,776 411,778 438,778 464,778 490,780 517,781"/>
+                <TextEquiv>
+                    <Unicode>Nr. 188.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_18" custom="readingOrder {index:17;}">
+                <Coords points="303,836 1330,846 1330,780 1295,774 1194,806 872,756 303,779"/>
+                <Baseline points="311,823 362,821 413,821 464,823 515,822 566,823 617,823 668,825 719,823 770,823 822,823 873,821 924,823 975,821 1026,821 1077,821 1128,821 1179,821 1230,822 1281,823 1333,819"/>
+                <TextEquiv>
+                    <Unicode>Albanus, August, m. s. den 3ten Abschnitt. Neu=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_19" custom="readingOrder {index:18;}">
+                <Coords points="356,874 1200,870 1200,837 1085,827 356,826"/>
+                <Baseline points="363,863 405,863 447,865 489,865 531,865 573,865 615,865 657,865 699,865 741,865 783,865 825,866 867,865 909,865 951,865 993,865 1035,864 1077,865 1119,865 1161,862 1203,861"/>
+                <TextEquiv>
+                    <Unicode>straße am Eingange des Domesganges Nr. 50.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_20" custom="readingOrder {index:19;}">
+                <Coords points="299,940 375,906 879,944 1331,926 1331,848 1132,884 299,875"/>
+                <Baseline points="307,907 358,905 409,905 461,905 512,907 564,907 615,905 666,905 718,908 769,909 821,911 872,907 923,907 975,907 1026,907 1078,907 1129,907 1180,905 1232,905 1283,905 1335,907"/>
+                <TextEquiv>
+                    <Unicode>Albrecht, Carl George, Tischlermeister. Schmiede¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_21" custom="readingOrder {index:20;}">
+                <Coords points="351,949 436,958 472,946 546,966 579,949 587,957 629,950 629,919 585,911 547,926 490,907 465,919 428,909 351,911"/>
+                <Baseline points="359,943 386,943 413,943 440,944 467,945 495,945 522,945 549,944 576,943 603,941 631,945"/>
+                <TextEquiv>
+                    <Unicode>straße Nr. 162.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_22" custom="readingOrder {index:21;}">
+                <Coords points="298,998 1327,1008 1327,938 1290,924 546,966 298,924"/>
+                <Baseline points="305,985 356,981 407,981 458,981 510,981 561,980 612,983 664,983 715,985 766,983 818,983 869,985 920,984 971,985 1023,985 1074,985 1125,987 1177,987 1228,987 1279,989 1331,991"/>
+                <TextEquiv>
+                    <Unicode>Albrecht, Carl Joachim, Schuhmachermeister.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_23" custom="readingOrder {index:22;}">
+                <Coords points="350,1028 809,1033 809,1010 786,999 717,1005 679,984 350,990"/>
+                <Baseline points="357,1025 382,1023 407,1023 432,1024 457,1025 483,1025 508,1025 533,1025 558,1025 584,1025 609,1025 634,1025 659,1023 684,1025 710,1025 735,1025 760,1025 785,1025 811,1025"/>
+                <TextEquiv>
+                    <Unicode>Schmiedestraße Nr. 124.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_24" custom="readingOrder {index:23;}">
+                <Coords points="302,1075 1308,1076 1308,1038 1106,1006 852,1042 302,1007"/>
+                <Baseline points="309,1069 359,1066 409,1067 459,1067 509,1069 559,1069 609,1069 659,1069 709,1069 759,1069 810,1067 860,1068 910,1069 960,1070 1010,1071 1060,1069 1110,1069 1160,1070 1210,1071 1260,1072 1311,1071"/>
+                <TextEquiv>
+                    <Unicode>Albrecht, Catharina, Lehrerin. Hagenshof Nr. 29.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_25" custom="readingOrder {index:24;}">
+                <Coords points="302,1129 1331,1124 1320,1073 302,1080"/>
+                <Baseline points="309,1111 360,1109 411,1111 462,1111 513,1113 565,1111 616,1113 667,1113 718,1115 769,1115 821,1113 872,1113 923,1113 974,1113 1025,1115 1077,1115 1128,1115 1179,1115 1230,1114 1281,1115 1333,1115"/>
+                <TextEquiv>
+                    <Unicode>Albrecht, George, Tischlermeister. Riesingsstraße</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_26" custom="readingOrder {index:25;}">
+                <Coords points="344,1155 386,1161 399,1172 417,1161 456,1171 480,1159 511,1169 511,1133 495,1126 397,1125 377,1115 344,1125"/>
+                <Baseline points="351,1153 378,1153 405,1153 432,1153 459,1153 486,1154 513,1155"/>
+                <TextEquiv>
+                    <Unicode>Nr. 151.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_27" custom="readingOrder {index:26;}">
+                <Coords points="302,1203 1309,1203 1309,1159 1209,1141 302,1159"/>
+                <Baseline points="309,1195 359,1195 409,1196 459,1195 509,1196 560,1196 610,1193 660,1193 710,1193 760,1193 811,1193 861,1192 911,1191 961,1192 1011,1192 1062,1193 1112,1193 1162,1194 1212,1195 1262,1195 1313,1197"/>
+                <TextEquiv>
+                    <Unicode>Aldagh, Daniel Friedrich. Friedrichsholm Nr. 12.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_28" custom="readingOrder {index:27;}">
+                <Coords points="299,1247 1335,1269 1335,1200 299,1204"/>
+                <Baseline points="307,1235 358,1237 410,1237 461,1235 513,1235 564,1235 616,1237 667,1236 719,1237 770,1241 822,1237 873,1235 925,1235 976,1235 1028,1235 1079,1233 1131,1235 1182,1235 1234,1232 1285,1235 1337,1233"/>
+                <TextEquiv>
+                    <Unicode>Alexandrowitsch, Jakob, Schuhmacher. Frie¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_29" custom="readingOrder {index:28;}">
+                <Coords points="342,1285 375,1278 433,1296 552,1279 583,1292 636,1278 700,1288 700,1253 679,1246 644,1257 588,1242 529,1250 512,1235 487,1250 342,1246"/>
+                <Baseline points="349,1275 374,1277 399,1277 424,1277 450,1278 475,1279 500,1277 526,1277 551,1278 576,1278 601,1277 627,1277 652,1277 677,1277 703,1277"/>
+                <TextEquiv>
+                    <Unicode>drichsholm Nr. 28.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_30" custom="readingOrder {index:29;}">
+                <Coords points="299,1342 1329,1346 1329,1266 573,1298 299,1272"/>
+                <Baseline points="307,1321 358,1319 409,1319 460,1321 511,1321 563,1319 614,1319 665,1319 716,1318 767,1320 819,1321 870,1319 921,1319 972,1319 1023,1321 1075,1321 1126,1321 1177,1321 1228,1323 1279,1322 1331,1321"/>
+                <TextEquiv>
+                    <Unicode>Alifannow, Kusma Pawel, Wechsler und Kauf¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_31" custom="readingOrder {index:30;}">
+                <Coords points="347,1364 1018,1365 997,1325 346,1331"/>
+                <Baseline points="353,1359 386,1359 419,1359 453,1360 486,1359 520,1357 553,1358 586,1361 620,1361 653,1361 687,1361 720,1361 753,1361 787,1361 820,1361 854,1360 887,1361 920,1363 954,1363 987,1363 1021,1361"/>
+                <TextEquiv>
+                    <Unicode>mann. Lindenstraße Nr. 96 bis 98.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_32" custom="readingOrder {index:31;}">
+                <Coords points="299,1418 1342,1412 1342,1373 1193,1357 299,1370"/>
+                <Baseline points="307,1403 358,1399 410,1399 462,1399 514,1399 566,1399 617,1399 669,1399 721,1401 773,1400 825,1399 876,1399 928,1401 980,1400 1032,1401 1084,1401 1135,1401 1187,1401 1239,1403 1291,1403 1343,1405"/>
+                <TextEquiv>
+                    <Unicode>Alifannow, Michael Kusmin, Wechsler und Kauf¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_33" custom="readingOrder {index:32;}">
+                <Coords points="346,1447 1073,1449 1073,1412 954,1400 644,1423 608,1397 346,1405"/>
+                <Baseline points="353,1439 389,1439 425,1439 461,1440 497,1438 534,1439 570,1439 606,1440 642,1440 678,1439 715,1441 751,1439 787,1438 823,1438 859,1439 896,1439 932,1439 968,1439 1004,1439 1040,1439 1077,1441"/>
+                <TextEquiv>
+                    <Unicode>mann. Vorst. gr. Sandstraße Nr. 2.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_34" custom="readingOrder {index:33;}">
+                <Coords points="302,1495 1331,1492 1331,1439 430,1457 302,1426"/>
+                <Baseline points="309,1485 360,1483 411,1482 462,1481 513,1481 565,1479 616,1477 667,1479 718,1479 769,1479 821,1479 872,1481 923,1481 974,1481 1025,1481 1077,1481 1128,1481 1179,1483 1230,1485 1281,1485 1333,1483"/>
+                <TextEquiv>
+                    <Unicode>Alimpiew, Gregor Iwan, Kurrenne= und Buden=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_35" custom="readingOrder {index:34;}">
+                <Coords points="344,1536 966,1531 953,1497 831,1484 344,1497"/>
+                <Baseline points="351,1525 381,1525 412,1525 443,1525 474,1525 505,1525 536,1525 567,1525 598,1523 629,1523 660,1523 690,1523 721,1522 752,1521 783,1521 814,1522 845,1523 876,1524 907,1524 938,1524 969,1525"/>
+                <TextEquiv>
+                    <Unicode>handel. Lastadienstraße Nr. 104.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_36" custom="readingOrder {index:35;}">
+                <Coords points="302,1592 900,1571 1334,1601 1325,1524 302,1537"/>
+                <Baseline points="309,1571 360,1569 411,1569 463,1569 514,1569 566,1568 617,1567 668,1567 720,1567 771,1567 823,1567 874,1569 925,1568 977,1569 1028,1569 1080,1568 1131,1569 1182,1569 1234,1569 1285,1569 1337,1573"/>
+                <TextEquiv>
+                    <Unicode>Allenstein, Joh. Christian, Bäckermeister. Vorst.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_37" custom="readingOrder {index:36;}">
+                <Coords points="347,1620 574,1628 598,1611 669,1624 716,1609 878,1624 878,1581 347,1584"/>
+                <Baseline points="355,1607 381,1610 407,1611 433,1611 459,1610 486,1609 512,1609 538,1609 564,1609 590,1609 617,1609 643,1609 669,1608 695,1608 721,1609 748,1609 774,1609 800,1609 826,1609 852,1610 879,1613"/>
+                <TextEquiv>
+                    <Unicode>gr. Schmiedestraße Nr. 143.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_38" custom="readingOrder {index:37;}">
+                <Coords points="303,1663 1225,1686 1335,1653 1335,1600 1178,1583 574,1627 368,1627 303,1592"/>
+                <Baseline points="311,1655 362,1651 413,1653 465,1653 516,1651 568,1652 619,1651 670,1651 722,1650 773,1651 825,1651 876,1651 927,1651 979,1651 1030,1651 1082,1651 1133,1653 1184,1651 1236,1651 1287,1652 1339,1649"/>
+                <TextEquiv>
+                    <Unicode>Allelujew, Fedor Gegorow, Lichtgießer. Palisaden=</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_39" custom="readingOrder {index:38;}">
+                <Coords points="350,1701 386,1702 403,1714 464,1695 489,1706 579,1695 627,1714 627,1659 587,1666 576,1657 541,1673 513,1658 451,1666 437,1654 394,1667 350,1660"/>
+                <Baseline points="357,1691 384,1693 411,1693 439,1694 466,1695 494,1695 521,1694 548,1693 576,1691 603,1689 631,1689"/>
+                <TextEquiv>
+                    <Unicode>straße Nr. 180.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_40" custom="readingOrder {index:39;}">
+                <Coords points="303,1737 1238,1745 1239,1685 1071,1698 971,1666 821,1694 751,1664 625,1699 303,1699"/>
+                <Baseline points="311,1735 357,1736 404,1739 450,1737 497,1735 543,1735 590,1733 636,1733 683,1733 729,1733 776,1730 822,1731 869,1734 915,1733 962,1733 1008,1733 1055,1735 1101,1735 1148,1733 1194,1732 1241,1735"/>
+                <TextEquiv>
+                    <Unicode>Alp, Andreas, Ligger. gr. Reeperstraße Nr. 79.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_41" custom="readingOrder {index:40;}">
+                <Coords points="309,1784 1314,1791 1299,1729 309,1741"/>
+                <Baseline points="315,1775 365,1776 415,1776 465,1777 515,1778 565,1778 615,1775 665,1773 715,1772 765,1771 816,1774 866,1776 916,1777 966,1776 1016,1776 1066,1775 1116,1775 1166,1774 1216,1775 1266,1776 1317,1777"/>
+                <TextEquiv>
+                    <Unicode>Alp, Joh., Ligger. Vorst. gr. Mühlenstraße Nr. 76.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_42" custom="readingOrder {index:41;}">
+                <Coords points="303,1828 1171,1819 1163,1777 303,1782"/>
+                <Baseline points="311,1815 354,1816 397,1817 440,1817 483,1817 526,1819 569,1819 612,1816 655,1815 698,1815 742,1816 785,1813 828,1816 871,1817 914,1818 957,1817 1000,1817 1043,1816 1086,1815 1129,1813 1173,1813"/>
+                <TextEquiv>
+                    <Unicode>Alp, Michael, Ligger. Galgenstraße Nr. 75.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_43" custom="readingOrder {index:42;}">
+                <Coords points="306,1864 555,1891 604,1860 795,1860 833,1894 980,1856 1242,1868 1242,1807 306,1828"/>
+                <Baseline points="313,1857 359,1857 406,1857 452,1858 499,1861 546,1861 592,1860 639,1857 685,1857 732,1857 779,1857 825,1859 872,1861 918,1859 965,1854 1012,1855 1058,1855 1105,1856 1151,1855 1198,1856 1245,1857"/>
+                <TextEquiv>
+                    <Unicode>Altmann, Carl, Maurergesell. Petrikirchhof.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_44" custom="readingOrder {index:43;}">
+                <Coords points="310,1912 1333,1903 1305,1855 833,1893 795,1860 557,1891 310,1867"/>
+                <Baseline points="317,1899 367,1898 418,1901 469,1901 520,1903 571,1900 622,1899 673,1901 724,1902 775,1904 826,1907 876,1905 927,1902 978,1899 1029,1899 1080,1901 1131,1901 1182,1901 1233,1900 1284,1899 1335,1897"/>
+                <TextEquiv>
+                    <Unicode>Amelong, Joh. Christ., Kaufmann. Badstuben¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_45" custom="readingOrder {index:44;}">
+                <Coords points="349,1952 388,1946 415,1957 461,1946 526,1966 563,1947 605,1953 640,1944 640,1909 625,1905 556,1918 515,1916 502,1903 476,1913 372,1904 350,1917"/>
+                <Baseline points="357,1941 383,1941 409,1941 435,1943 461,1945 487,1945 513,1945 539,1944 565,1942 591,1940 617,1938 643,1935"/>
+                <TextEquiv>
+                    <Unicode>straße Nr. 260.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_46" custom="readingOrder {index:45;}">
+                <Coords points="310,1995 1340,2014 1340,1957 1206,1916 1143,1944 751,1915 544,1964 310,1942"/>
+                <Baseline points="317,1989 368,1982 419,1983 470,1985 522,1986 573,1986 624,1985 676,1981 727,1983 778,1983 830,1989 881,1989 932,1989 983,1987 1035,1987 1086,1987 1137,1987 1189,1989 1240,1987 1291,1983 1343,1985"/>
+                <TextEquiv>
+                    <Unicode>Amende, Christian Gustav, Comptoirist. Herren-</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_47" custom="readingOrder {index:46;}">
+                <Coords points="350,2044 635,2040 700,2060 739,2036 804,2039 802,2004 690,1990 556,2008 499,1988 349,1996"/>
+                <Baseline points="357,2029 382,2029 407,2029 432,2030 457,2031 482,2031 507,2033 532,2033 557,2033 582,2032 607,2031 632,2031 657,2031 682,2031 707,2031 732,2032 757,2033 782,2034 807,2037"/>
+                <TextEquiv>
+                    <Unicode>straße Nr. 308 und 309.</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+    </Page>
+</PcGts>

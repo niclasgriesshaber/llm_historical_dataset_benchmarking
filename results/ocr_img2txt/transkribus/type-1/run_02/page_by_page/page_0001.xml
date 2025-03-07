@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2025-03-05T19:50:24.726+01:00</Created>
+        <LastChange>2025-03-05T19:50:24.726+01:00</LastChange>
+    </Metadata>
+    <Page imageFilename="page_0001.tiff" imageWidth="1654" imageHeight="2339">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1741200684133" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="313,195 313,1767 1217,1767 1217,195"/>
+            <TextLine id="tr_1_tl_1" custom="readingOrder {index:0;}">
+                <Coords points="428,229 1106,238 1104,179 933,181 901,158 724,185 427,181"/>
+                <Baseline points="433,217 466,217 500,217 534,215 567,215 601,215 635,216 668,217 702,217 736,217 770,217 803,217 837,218 871,219 904,220 938,221 972,221 1005,223 1039,223 1073,224 1107,223"/>
+                <TextEquiv>
+                    <Unicode>Alphabetisches Verzeichniß der Bewohner.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:1;}">
+                <Coords points="1143,237 1168,232 1176,238 1186,235 1195,239 1211,232 1205,172 1191,169 1189,173 1177,176 1172,183 1138,187"/>
+                <Baseline points="1147,219 1180,223 1213,225"/>
+                <TextEquiv>
+                    <Unicode>37</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:2;}">
+                <Coords points="317,314 330,318 370,302 383,308 451,293 450,241 416,252 400,248 390,255 364,251 340,260 316,258"/>
+                <Baseline points="323,297 349,297 375,298 401,298 427,299 453,299"/>
+                <TextEquiv>
+                    <Unicode>Förster</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:3;}">
+                <Coords points="474,308 591,303 688,340 894,337 958,307 1213,321 1213,270 1184,262 474,259"/>
+                <Baseline points="481,295 517,297 554,297 591,298 627,299 664,297 701,299 737,299 774,299 811,299 848,299 884,301 921,302 958,301 994,303 1031,303 1068,304 1104,305 1141,303 1178,303 1215,305"/>
+                <TextEquiv>
+                    <Unicode>Christian, Fabrikmeister, Großkölnstraße A</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:4;}">
+                <Coords points="354,335 360,335 372,344 386,345 399,339 407,344 417,339 425,344 432,344 432,309 425,311 408,302 399,307 395,304 386,307 370,305 354,309"/>
+                <Baseline points="361,333 397,333 433,335"/>
+                <TextEquiv>
+                    <Unicode> 1891.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_6" custom="readingOrder {index:5;}">
+                <Coords points="321,378 349,381 362,374 380,383 398,378 416,382 427,374 446,381 445,345 418,339 407,344 399,339 385,346 372,344 358,332 336,339 320,335"/>
+                <Baseline points="327,369 357,371 388,371 418,371 449,371"/>
+                <TextEquiv>
+                    <Unicode>Förster,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_7" custom="readingOrder {index:6;}">
+                <Coords points="463,383 1172,383 1172,342 1136,336 463,339"/>
+                <Baseline points="469,373 504,371 539,371 574,372 610,372 645,373 680,371 716,371 751,373 786,373 822,371 857,373 892,373 927,375 963,375 998,376 1033,377 1069,377 1104,379 1139,381 1175,381"/>
+                <TextEquiv>
+                    <Unicode>Johann, Schreiner, Großkölnstraße A 393.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_8" custom="readingOrder {index:7;}">
+                <Coords points="318,413 333,420 352,419 360,411 372,418 398,414 419,419 444,406 444,369 416,382 398,378 380,383 362,374 349,381 318,379"/>
+                <Baseline points="325,405 355,407 386,407 416,407 447,407"/>
+                <TextEquiv>
+                    <Unicode>Förster</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_9" custom="readingOrder {index:8;}">
+                <Coords points="469,418 1164,423 1145,383 469,378"/>
+                <Baseline points="475,411 509,407 544,408 578,409 613,409 648,411 682,409 717,409 751,409 786,409 821,410 855,410 890,412 924,411 959,413 994,411 1028,412 1063,413 1097,414 1132,417 1167,417"/>
+                <TextEquiv>
+                    <Unicode>Johann, ohne Gewerb, Seilgraben A 222.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_10" custom="readingOrder {index:9;}">
+                <Coords points="324,461 367,449 387,454 400,449 411,454 433,450 452,457 451,426 367,411 351,419 322,416"/>
+                <Baseline points="329,441 360,443 391,445 422,445 453,447"/>
+                <TextEquiv>
+                    <Unicode>Förster,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_11" custom="readingOrder {index:10;}">
+                <Coords points="472,457 1201,469 1213,415 471,422"/>
+                <Baseline points="477,445 514,445 551,445 588,446 625,449 662,447 699,448 736,448 773,449 810,449 847,450 884,450 921,449 958,449 995,450 1032,451 1069,451 1106,453 1143,453 1180,453 1217,453"/>
+                <TextEquiv>
+                    <Unicode>Mathias, Posamentierer, Großkölnstraße A</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_12" custom="readingOrder {index:11;}">
+                <Coords points="361,488 381,490 390,486 411,493 425,484 435,493 446,493 445,453 432,449 427,453 417,450 414,454 400,449 389,454 380,450 373,453 360,450"/>
+                <Baseline points="367,479 394,479 421,481 449,481"/>
+                <TextEquiv>
+                    <Unicode>1007.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_13" custom="readingOrder {index:12;}">
+                <Coords points="315,519 332,528 358,523 388,527 398,523 420,530 438,520 438,497 409,496 390,486 373,490 357,484 345,491 339,486 315,484"/>
+                <Baseline points="321,517 351,517 381,519 411,517 441,519"/>
+                <TextEquiv>
+                    <Unicode>Förster</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_14" custom="readingOrder {index:13;}">
+                <Coords points="463,526 1209,545 1208,493 1137,484 463,486"/>
+                <Baseline points="469,521 506,519 543,519 580,518 617,519 654,521 691,521 728,521 765,521 802,523 839,523 876,523 913,523 950,523 987,524 1024,524 1061,525 1098,525 1135,527 1172,530 1209,531"/>
+                <TextEquiv>
+                    <Unicode>Jakob, Posamentierer, Damengraben A 459½.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_15" custom="readingOrder {index:14;}">
+                <Coords points="323,565 1052,570 1052,531 1019,527 323,528"/>
+                <Baseline points="329,555 365,553 401,554 437,555 474,554 510,555 546,556 583,557 619,559 655,558 692,558 728,557 764,559 800,559 837,561 873,561 909,561 946,561 982,559 1018,561 1055,561"/>
+                <TextEquiv>
+                    <Unicode>Förster, Arnold, Lehrer, Franzstraße B 556.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_16" custom="readingOrder {index:15;}">
+                <Coords points="321,600 1206,610 1199,558 321,563"/>
+                <Baseline points="327,589 371,591 415,591 459,591 503,593 547,593 591,593 635,595 679,595 723,595 768,597 812,597 856,597 900,597 944,597 988,597 1032,597 1076,599 1120,599 1164,601 1209,601"/>
+                <TextEquiv>
+                    <Unicode>Förster, Heinrich, Konditor, Kapuzinergraben B 594.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_17" custom="readingOrder {index:16;}">
+                <Coords points="321,635 332,637 337,632 345,638 360,632 383,640 395,632 415,637 432,632 432,599 401,602 363,593 345,602 321,600"/>
+                <Baseline points="327,629 354,627 381,627 408,627 435,629"/>
+                <TextEquiv>
+                    <Unicode>Förster</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_18" custom="readingOrder {index:17;}">
+                <Coords points="463,637 1090,647 1080,600 882,616 463,597"/>
+                <Baseline points="469,629 500,627 531,629 562,629 593,631 624,631 655,631 686,631 717,632 748,634 780,635 811,634 842,633 873,634 904,635 935,634 966,634 997,635 1028,635 1059,635 1091,635"/>
+                <TextEquiv>
+                    <Unicode>Nikolas, Rentner, Judengasse B 820.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_19" custom="readingOrder {index:18;}">
+                <Coords points="321,674 331,675 336,668 343,675 373,669 388,677 391,672 441,667 440,631 416,637 395,631 383,640 363,632 352,632 345,638 337,632 333,637 320,635"/>
+                <Baseline points="327,661 356,663 385,665 414,665 443,665"/>
+                <TextEquiv>
+                    <Unicode>Förster</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_20" custom="readingOrder {index:19;}">
+                <Coords points="463,673 1084,678 1084,645 1033,639 463,636"/>
+                <Baseline points="469,665 499,665 530,665 561,665 592,667 623,669 654,669 685,669 716,669 747,671 778,671 808,671 839,671 870,671 901,671 932,671 963,671 994,671 1025,671 1056,671 1087,673"/>
+                <TextEquiv>
+                    <Unicode>Heinrich, Bäcker, Jakobstraße B 889.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_21" custom="readingOrder {index:20;}">
+                <Coords points="316,715 1209,721 1176,671 315,672"/>
+                <Baseline points="321,697 365,700 410,701 454,703 499,703 543,704 588,703 632,703 677,703 721,706 766,707 810,707 855,705 899,707 944,707 988,707 1033,709 1077,709 1122,710 1166,713 1211,713"/>
+                <TextEquiv>
+                    <Unicode>Formanns, Mathias, Schneider, Großkölnstraße A 393.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_22" custom="readingOrder {index:21;}">
+                <Coords points="321,745 1189,759 1205,719 320,712"/>
+                <Baseline points="327,735 371,738 415,739 459,739 503,741 547,740 591,741 635,741 679,741 723,743 768,743 812,743 856,744 900,743 944,745 988,747 1032,747 1076,749 1120,749 1164,749 1209,751"/>
+                <TextEquiv>
+                    <Unicode>Formanns, Joseph, Schuhmacher, Hirschgraben A 830.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_23" custom="readingOrder {index:22;}">
+                <Coords points="318,785 325,786 336,778 345,782 354,779 364,787 380,782 385,785 392,778 398,782 416,775 413,745 388,742 374,753 357,743 343,748 337,743 332,747 320,740 314,741"/>
+                <Baseline points="323,767 355,771 387,773 419,777"/>
+                <TextEquiv>
+                    <Unicode>Forst</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_24" custom="readingOrder {index:23;}">
+                <Coords points="435,780 1041,790 1041,755 1020,751 435,748"/>
+                <Baseline points="441,775 471,775 501,777 531,777 561,777 591,777 621,779 651,779 681,777 711,779 742,779 772,779 802,779 832,781 862,779 892,781 922,781 952,781 982,781 1012,781 1043,781"/>
+                <TextEquiv>
+                    <Unicode>Johann, Maurer, Bergbrisch A 110.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_25" custom="readingOrder {index:24;}">
+                <Coords points="322,820 335,823 371,815 379,822 394,817 404,824 414,822 410,775 395,783 390,780 378,789 345,782 340,777 320,787"/>
+                <Baseline points="327,807 356,809 385,811 415,813"/>
+                <TextEquiv>
+                    <Unicode>Forst,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_26" custom="readingOrder {index:25;}">
+                <Coords points="441,822 1095,825 1083,780 441,784"/>
+                <Baseline points="447,811 479,811 512,813 544,813 577,814 609,814 642,814 674,815 707,815 739,815 772,815 804,815 837,817 869,817 902,817 934,819 967,818 999,818 1032,820 1064,821 1097,821"/>
+                <TextEquiv>
+                    <Unicode>Peter, ohne Gewerb, Peterstraße A 517.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_27" custom="readingOrder {index:26;}">
+                <Coords points="317,854 331,857 336,850 343,856 364,852 385,860 390,854 405,854 418,860 414,823 405,824 396,817 378,824 313,816"/>
+                <Baseline points="321,841 353,843 386,848 419,851"/>
+                <TextEquiv>
+                    <Unicode>Forst,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_28" custom="readingOrder {index:27;}">
+                <Coords points="435,852 1073,872 1073,825 756,839 712,817 435,814"/>
+                <Baseline points="441,847 472,849 504,849 536,849 567,851 599,851 631,851 662,852 694,853 726,854 758,854 789,853 821,853 853,853 884,855 916,855 948,855 979,857 1011,857 1043,857 1075,857"/>
+                <TextEquiv>
+                    <Unicode>Wilhelm, Musikus, Peterstraße A 557.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_29" custom="readingOrder {index:28;}">
+                <Coords points="322,895 339,888 344,893 359,888 376,898 395,890 408,897 414,896 410,853 394,857 390,854 385,859 363,852 345,857 336,851 332,856 318,856"/>
+                <Baseline points="327,879 357,883 387,885 417,887"/>
+                <TextEquiv>
+                    <Unicode>Forst,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_30" custom="readingOrder {index:29;}">
+                <Coords points="433,893 1028,898 1028,867 995,861 433,851"/>
+                <Baseline points="439,887 468,887 498,887 527,887 557,887 587,887 616,889 646,887 675,889 705,891 735,891 764,891 794,891 823,891 853,891 883,891 912,893 942,893 971,893 1001,894 1031,893"/>
+                <TextEquiv>
+                    <Unicode>Johann, Weber, Peterstraße A 582.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_31" custom="readingOrder {index:30;}">
+                <Coords points="323,930 334,930 336,926 342,931 361,924 377,935 400,926 413,933 422,932 419,900 397,889 374,898 367,891 359,897 339,886 330,893 321,891"/>
+                <Baseline points="329,917 360,919 391,921 423,923"/>
+                <TextEquiv>
+                    <Unicode>Forst,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_32" custom="readingOrder {index:31;}">
+                <Coords points="435,943 1126,938 1108,891 434,893"/>
+                <Baseline points="441,923 475,923 509,924 544,925 578,925 613,925 647,927 681,927 716,927 750,926 785,926 819,928 853,929 888,929 922,929 957,929 991,931 1025,931 1060,931 1094,931 1129,933"/>
+                <TextEquiv>
+                    <Unicode>Franz, Kaufmann, Großkölnstraße A 967.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_33" custom="readingOrder {index:32;}">
+                <Coords points="323,970 590,1011 751,971 1209,989 1201,931 323,927"/>
+                <Baseline points="329,953 373,958 417,961 461,962 505,963 549,962 593,963 637,963 681,963 725,963 770,964 814,967 858,967 902,967 946,967 990,969 1034,969 1078,971 1122,971 1166,971 1211,973"/>
+                <TextEquiv>
+                    <Unicode>Fortier, Johann, Tapetendrucker, Kapuzinergraben B</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_34" custom="readingOrder {index:33;}">
+                <Coords points="362,1005 370,1002 376,1007 385,1008 389,1004 405,1009 419,1004 432,1004 429,970 422,972 414,967 397,971 385,963 372,963 368,959 359,961"/>
+                <Baseline points="367,991 401,993 435,997"/>
+                <TextEquiv>
+                    <Unicode> 72.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_35" custom="readingOrder {index:34;}">
+                <Coords points="315,1038 1127,1055 1144,1005 314,992"/>
+                <Baseline points="321,1023 362,1032 403,1033 444,1033 486,1034 527,1035 568,1035 610,1036 651,1037 692,1038 734,1039 775,1039 816,1041 857,1041 899,1041 940,1042 981,1043 1023,1043 1064,1045 1105,1045 1147,1045"/>
+                <TextEquiv>
+                    <Unicode>Franck, Paskal, Lederhändler, Jakobstraße B 854.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_36" custom="readingOrder {index:35;}">
+                <Coords points="318,1080 1125,1098 1123,1052 1074,1044 317,1038"/>
+                <Baseline points="325,1065 365,1068 405,1069 445,1069 485,1071 525,1072 565,1073 605,1073 645,1074 685,1075 726,1076 766,1077 806,1073 846,1077 886,1077 926,1077 966,1077 1006,1078 1046,1079 1086,1082 1127,1081"/>
+                <TextEquiv>
+                    <Unicode>François, Hubert, Schmidt, extra muros A 30.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_37" custom="readingOrder {index:36;}">
+                <Coords points="322,1112 1111,1127 1064,1082 321,1080"/>
+                <Baseline points="327,1097 366,1104 405,1106 444,1107 484,1109 523,1109 562,1109 602,1108 641,1111 680,1113 720,1113 759,1114 798,1113 837,1115 877,1115 916,1116 955,1117 995,1117 1034,1117 1073,1119 1113,1119"/>
+                <TextEquiv>
+                    <Unicode>Frank, Johann, Pensionair, Peterstraße A 562.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_38" custom="readingOrder {index:37;}">
+                <Coords points="316,1149 345,1152 360,1146 374,1155 383,1146 396,1155 413,1150 428,1162 427,1118 419,1120 406,1111 390,1122 362,1120 351,1112 344,1115 337,1110 313,1109"/>
+                <Baseline points="321,1137 348,1141 376,1143 403,1144 431,1145"/>
+                <TextEquiv>
+                    <Unicode>Frank,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_39" custom="readingOrder {index:38;}">
+                <Coords points="449,1149 1052,1165 1066,1130 447,1115"/>
+                <Baseline points="455,1143 485,1145 516,1145 547,1147 577,1145 608,1147 639,1147 669,1149 700,1149 731,1151 762,1151 792,1151 823,1152 854,1152 884,1153 915,1153 946,1153 976,1153 1007,1154 1038,1156 1069,1157"/>
+                <TextEquiv>
+                    <Unicode>Peter, Schneider, Peterstraße A 627.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_40" custom="readingOrder {index:39;}">
+                <Coords points="317,1184 1101,1199 1100,1152 316,1148"/>
+                <Baseline points="323,1175 362,1180 401,1181 440,1180 479,1181 518,1182 557,1183 596,1183 635,1185 674,1186 713,1187 752,1187 791,1188 830,1189 869,1189 908,1191 947,1191 986,1191 1025,1192 1064,1193 1103,1193"/>
+                <TextEquiv>
+                    <Unicode>Frank, Anton, Schmidt, Adalbertstraße A 661.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_41" custom="readingOrder {index:40;}">
+                <Coords points="320,1223 336,1221 343,1226 348,1222 353,1227 357,1223 382,1230 408,1222 423,1229 419,1187 405,1190 399,1186 381,1196 360,1185 316,1189"/>
+                <Baseline points="325,1211 350,1214 375,1216 400,1218 425,1219"/>
+                <TextEquiv>
+                    <Unicode>Frank,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_42" custom="readingOrder {index:41;}">
+                <Coords points="440,1228 1150,1237 1149,1195 808,1208 438,1181"/>
+                <Baseline points="445,1219 480,1219 515,1220 551,1221 586,1219 622,1222 657,1223 692,1223 728,1223 763,1224 799,1226 834,1227 869,1227 905,1227 940,1228 976,1229 1011,1227 1046,1227 1082,1229 1117,1232 1153,1233"/>
+                <TextEquiv>
+                    <Unicode>Johann, Thorwächter, Franzstraße B 487.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_43" custom="readingOrder {index:42;}">
+                <Coords points="318,1261 334,1259 343,1263 346,1259 355,1265 383,1269 396,1268 401,1260 422,1265 419,1220 383,1231 366,1221 354,1226 339,1223 335,1227 317,1223"/>
+                <Baseline points="325,1251 357,1253 390,1253 423,1257"/>
+                <TextEquiv>
+                    <Unicode>Frank,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_44" custom="readingOrder {index:43;}">
+                <Coords points="438,1267 1095,1268 1173,1292 1172,1239 437,1228"/>
+                <Baseline points="445,1257 481,1255 518,1255 554,1257 591,1255 627,1257 664,1261 700,1260 737,1262 773,1263 810,1263 846,1263 883,1263 919,1264 956,1265 992,1265 1029,1266 1065,1267 1102,1269 1138,1269 1175,1267"/>
+                <TextEquiv>
+                    <Unicode>Johann, Geschäftsmann, Pontstraße B 619.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_45" custom="readingOrder {index:44;}">
+                <Coords points="321,1298 335,1296 340,1300 363,1293 374,1300 387,1295 399,1300 424,1293 423,1265 409,1259 391,1269 354,1265 346,1259 343,1263 320,1260"/>
+                <Baseline points="327,1291 352,1289 377,1290 402,1292 427,1293"/>
+                <TextEquiv>
+                    <Unicode>Frank,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_46" custom="readingOrder {index:45;}">
+                <Coords points="445,1302 471,1300 483,1304 490,1298 500,1301 510,1297 520,1304 534,1302 542,1308 552,1307 551,1267 543,1269 530,1263 510,1265 507,1261 491,1266 480,1259 470,1264 444,1264"/>
+                <Baseline points="451,1295 477,1293 503,1294 529,1295 555,1295"/>
+                <TextEquiv>
+                    <Unicode>Jakob,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_47" custom="readingOrder {index:46;}">
+                <Coords points="567,1295 1122,1319 1150,1311 1150,1276 566,1270"/>
+                <Baseline points="573,1293 602,1295 631,1295 660,1297 689,1297 718,1297 747,1299 776,1299 805,1300 834,1300 863,1300 892,1301 921,1301 950,1302 979,1303 1008,1304 1037,1305 1066,1305 1095,1305 1124,1306 1153,1305"/>
+                <TextEquiv>
+                    <Unicode>Geschäftsmann, Pontstraße B 619.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_48" custom="readingOrder {index:47;}">
+                <Coords points="346,1337 382,1342 387,1337 405,1339 410,1333 420,1341 431,1341 425,1289 411,1296 404,1295 391,1305 376,1300 366,1304 353,1296 342,1295"/>
+                <Baseline points="351,1322 377,1326 404,1329 431,1331"/>
+                <TextEquiv>
+                    <Unicode>Frank,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_49" custom="readingOrder {index:48;}">
+                <Coords points="447,1338 1205,1365 1204,1308 446,1303"/>
+                <Baseline points="453,1333 490,1331 528,1331 566,1333 603,1331 641,1335 679,1335 716,1335 754,1335 792,1337 830,1337 867,1337 905,1339 943,1339 980,1339 1018,1341 1056,1341 1093,1343 1131,1344 1169,1345 1207,1345"/>
+                <TextEquiv>
+                    <Unicode>Johann, Nagelschmidt, Augustinerbach B 640.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_50" custom="readingOrder {index:49;}">
+                <Coords points="323,1371 1035,1391 1073,1385 1073,1349 322,1334"/>
+                <Baseline points="329,1363 366,1363 403,1366 440,1367 478,1367 515,1367 552,1367 590,1369 627,1371 664,1371 702,1371 739,1373 776,1375 813,1375 851,1375 888,1375 925,1377 963,1377 1000,1377 1037,1377 1075,1379"/>
+                <TextEquiv>
+                    <Unicode>Frank, Joseph, Barbier, Königsstraße B 684.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_51" custom="readingOrder {index:50;}">
+                <Coords points="316,1409 330,1408 335,1403 379,1416 389,1416 400,1406 427,1412 426,1378 417,1377 409,1369 385,1376 359,1372 353,1367 344,1372 336,1368 333,1372 315,1369"/>
+                <Baseline points="321,1401 348,1401 375,1403 402,1403 429,1403"/>
+                <TextEquiv>
+                    <Unicode>Frank,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_52" custom="readingOrder {index:51;}">
+                <Coords points="445,1408 1160,1426 1159,1387 1122,1383 445,1376"/>
+                <Baseline points="451,1403 486,1403 522,1405 557,1406 593,1407 629,1407 664,1407 700,1409 735,1409 771,1410 807,1411 842,1411 878,1413 913,1413 949,1413 985,1415 1020,1415 1056,1416 1091,1414 1127,1418 1163,1421"/>
+                <TextEquiv>
+                    <Unicode>Peter, Tuchfabrikant, Königsstraße B 719.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_53" custom="readingOrder {index:52;}">
+                <Coords points="318,1443 345,1446 352,1441 361,1448 381,1442 401,1449 408,1444 417,1450 432,1449 429,1415 415,1408 398,1408 395,1413 385,1408 369,1414 335,1404 316,1411"/>
+                <Baseline points="325,1433 352,1437 379,1439 406,1440 433,1441"/>
+                <TextEquiv>
+                    <Unicode>Frank,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_54" custom="readingOrder {index:53;}">
+                <Coords points="465,1449 1034,1459 1018,1416 988,1431 465,1411"/>
+                <Baseline points="471,1435 499,1441 527,1443 555,1441 583,1444 612,1444 640,1444 668,1445 696,1446 724,1446 753,1446 781,1448 809,1449 837,1449 865,1449 894,1449 922,1447 950,1449 978,1451 1006,1451 1035,1447"/>
+                <TextEquiv>
+                    <Unicode>Franz, Spinner, Königsstraße B 72</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_55" custom="readingOrder {index:54;}">
+                <Coords points="318,1480 1181,1509 1186,1449 1047,1476 317,1448"/>
+                <Baseline points="325,1469 368,1473 411,1478 454,1479 497,1479 541,1480 584,1481 627,1482 670,1483 713,1483 757,1483 800,1485 843,1486 886,1487 929,1487 973,1489 1016,1489 1059,1489 1102,1490 1145,1492 1189,1493"/>
+                <TextEquiv>
+                    <Unicode>Frank, Nikolas, Spinnermeister, Jakobstraße B 884.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_56" custom="readingOrder {index:55;}">
+                <Coords points="318,1518 1178,1537 1178,1502 317,1481"/>
+                <Baseline points="325,1509 367,1511 410,1514 453,1516 496,1517 539,1517 581,1519 624,1519 667,1521 710,1519 753,1520 795,1522 838,1525 881,1525 924,1525 967,1526 1009,1527 1052,1527 1095,1528 1138,1527 1181,1529"/>
+                <TextEquiv>
+                    <Unicode>Frank, Heinrich, Handelsmann, Jakobstraße B 894.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_57" custom="readingOrder {index:56;}">
+                <Coords points="316,1564 695,1561 761,1602 928,1603 993,1569 1202,1587 1201,1535 315,1517"/>
+                <Baseline points="321,1549 365,1549 409,1549 453,1553 497,1557 542,1556 586,1557 630,1557 674,1557 718,1559 763,1559 807,1559 851,1561 895,1561 939,1563 984,1563 1028,1565 1072,1567 1116,1567 1160,1567 1205,1569"/>
+                <TextEquiv>
+                    <Unicode>Franken, Josephine, Kaufmannfchaft, Großkölnstraße</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_58" custom="readingOrder {index:57;}">
+                <Coords points="348,1594 377,1603 417,1592 425,1599 451,1597 464,1610 491,1608 509,1599 508,1561 479,1557 454,1562 423,1553 415,1559 373,1552 345,1557"/>
+                <Baseline points="353,1585 379,1585 405,1588 432,1589 458,1589 484,1590 511,1589"/>
+                <TextEquiv>
+                    <Unicode>A 932½.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_59" custom="readingOrder {index:58;}">
+                <Coords points="320,1644 417,1629 483,1673 600,1637 1204,1663 1203,1608 318,1590"/>
+                <Baseline points="325,1623 369,1625 413,1627 457,1628 501,1629 545,1631 589,1633 633,1634 677,1632 721,1633 766,1635 810,1635 854,1636 898,1637 942,1638 986,1639 1030,1639 1074,1641 1118,1641 1162,1643 1207,1643"/>
+                <TextEquiv>
+                    <Unicode>Franouse, Konstantin, Postsekretair, Schmidtstraße B</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_60" custom="readingOrder {index:59;}">
+                <Coords points="352,1672 363,1671 369,1666 383,1673 395,1666 419,1674 447,1672 445,1637 434,1638 425,1631 411,1635 398,1629 389,1635 378,1635 371,1628 350,1634"/>
+                <Baseline points="357,1659 387,1663 418,1663 449,1665"/>
+                <TextEquiv>
+                    <Unicode>1044.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_61" custom="readingOrder {index:60;}">
+                <Coords points="308,1711 1211,1740 1210,1680 307,1658"/>
+                <Baseline points="315,1697 359,1698 404,1701 449,1701 494,1703 539,1705 583,1705 628,1706 673,1707 718,1709 763,1709 807,1709 852,1711 897,1712 942,1713 987,1714 1031,1715 1076,1715 1121,1717 1166,1718 1211,1719"/>
+                <TextEquiv>
+                    <Unicode>Frantzen, Wilhelm, Zuckerbäcker, Hirschgraben A 833.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_62" custom="readingOrder {index:61;}">
+                <Coords points="307,1753 1163,1784 1189,1726 306,1710"/>
+                <Baseline points="313,1741 356,1740 400,1739 444,1742 488,1745 532,1744 576,1745 620,1745 664,1746 708,1747 752,1748 795,1749 839,1749 883,1751 927,1751 971,1751 1015,1754 1059,1753 1103,1755 1147,1755 1191,1757"/>
+                <TextEquiv>
+                    <Unicode>Frantzen, Aloisa, Lehrerin, Hartmannstraße B 1266.</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+    </Page>
+</PcGts>
