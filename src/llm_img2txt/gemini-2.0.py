@@ -395,7 +395,7 @@ def main() -> None:
         "final_text_file": str(final_txt_path),
         "total_usage": {
             "prompt_tokens": total_prompt_tokens,
-            "candidates_tokens": total_candidates_tokens,
+            "candidate_tokens": total_candidates_tokens,
             "total_tokens": total_tokens
         },
         "total_duration_seconds": int(total_duration),

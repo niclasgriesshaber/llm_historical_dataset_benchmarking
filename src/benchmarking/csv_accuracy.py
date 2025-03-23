@@ -19,8 +19,6 @@ generating SIX tables now:
 We only allow these 4 columns in the final comparison:
   ["first and middle names", "surname", "occupation", "address"]
 
-(Previously included "id", but we now exclude it from all calculations.)
-
 For Table 1's and 3's and 5's row "Total number of cells", we use:
   (GT row count) * 4
 since we only compare these 4 columns.

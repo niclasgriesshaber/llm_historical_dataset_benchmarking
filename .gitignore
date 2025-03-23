@@ -18,3 +18,16 @@ __pycache__/
 venv/
 .idea/
 .vscode/
+
+# Ignore all files in the results directory
+results/*
+results_paper/*
+replication_txt_results/*
+other/*
+logs_paper/*
+replication_logs/*
+data/ground_truth/noisyOCR/*
+src/benchmarking/csv_accuracy.html
+src/benchmarking/txt_accuracy.html
+src/figures/csv_accuracy.html
+src/figures/txt_accuracy.html

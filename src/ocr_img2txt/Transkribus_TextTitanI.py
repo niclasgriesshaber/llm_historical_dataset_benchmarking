@@ -46,8 +46,8 @@ load_dotenv(dotenv_path=ENV_PATH)
 TRANSKRIBUS_USERNAME = os.getenv("TRANSKRIBUS_USERNAME")
 TRANSKRIBUS_PASSWORD = os.getenv("TRANSKRIBUS_PASSWORD")
 
-line_det_str = os.getenv("TRANSKRIBUS_LINE_DETECTION_ID")
-htr_id_str = os.getenv("TRANSKRIBUS_HTR_ID")
+line_det_str = 49272
+htr_id_str = 51170
 
 if not line_det_str or not htr_id_str:
     print("Missing TRANSKRIBUS_LINE_DETECTION_ID or TRANSKRIBUS_HTR_ID in .env.")
@@ -242,7 +242,7 @@ def main() -> None:
     # -------------------------------------------------------------------------
     args = parse_arguments()
     pdf_name = args.pdf
-    model_name = "transkribus"
+    model_name = "Transkribus_TextTitanI"
 
     logging.basicConfig(
         level=logging.INFO,
