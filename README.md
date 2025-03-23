@@ -166,17 +166,6 @@ Results are generated as:
 - Transkribus Team
 - Tesseract OCR Community
 
-## 👥 Contributing
-
-Contributions are very welcome! Feel free to:
-- Fork the repository
-- Create a feature branch
-- Submit pull requests
-- Open issues for bugs or feature requests
-- Suggest improvements to documentation
-
-Please ensure your contributions align with the project's coding standards and include appropriate tests where applicable.
-
 ## 📝 How to Cite
 
 If you use this pipeline in your research, please cite:
@@ -191,7 +180,14 @@ If you use this pipeline in your research, please cite:
 }
 ```
 
+## 🛠️ Code Generation
+
+This code was generated with assistance of:
+- o1-Pro
+- Cursor IDE
+- Sonnet-3.7-Thinking
+
 ## 📧 Contact
 
-Niclas Griesshaber, niclasgriesshaber@outlook.com
-Gavin Greif, gavin.greif@history.ox.ac.uk
+Niclas Griesshaber, niclasgriesshaber@outlook.com, Gavin Greif, gavin.greif@history.ox.ac.uk
+
