@@ -171,12 +171,14 @@ Results are generated as:
 If you use this pipeline in your research, please cite:
 
 ```bibtex
-@article{gg2025,
-    title={Multimodal LLMs for OCR, OCR-Post-Correction, and Named Entity Recognition in Historical Documents},
-    author={Greif, Gavin and Griesshaber, Niclas},
-    year={2025},
-    journal={arXiv preprint},
-    url={https://arxiv.org/abs/forthcoming}
+@misc{greif2025multimodalllmsocrocr,
+      title={Multimodal LLMs for OCR, OCR Post-Correction, and Named Entity Recognition in Historical Documents}, 
+      author={Gavin Greif and Niclas Griesshaber and Robin Greif},
+      year={2025},
+      eprint={2504.00414},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2504.00414}, 
 }
 ```
 
@@ -189,4 +191,4 @@ This code was generated with assistance of:
 
 ## 📧 Contact
 
-Niclas Griesshaber, niclasgriesshaber@outlook.com, Gavin Greif, gavin.greif@history.ox.ac.uk
+Niclas Griesshaber, niclasgriesshaber@outlook.com, Gavin Greif, gavin.greif@history.ox.ac.uk, Robin Greif, robin.greif@physics.ox.ac.uk
