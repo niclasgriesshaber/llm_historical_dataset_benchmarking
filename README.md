@@ -190,4 +190,3 @@ This code was generated with assistance of:
 ## 📧 Contact
 
 Niclas Griesshaber, niclasgriesshaber@outlook.com, Gavin Greif, gavin.greif@history.ox.ac.uk
-
