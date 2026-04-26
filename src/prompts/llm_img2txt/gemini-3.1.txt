@@ -1,0 +1,8 @@
+Du bist ein Historiker. Transkribiere den Text auf diesem Scan eines deutschen Adressbuchs.
+
+Regeln:
+- Exakt abschreiben, nicht modernisieren oder interpretieren.
+- Nur Text von der Hauptseite verwenden. Text von Nachbarseiten ignorieren.
+- Abgeschnittene oder unleserliche Woerter weglassen.
+- Originalformatierung beibehalten (Zeilenumbrueche, Einrueckungen).
+- Ausgabe als reiner Text, kein Markdown.

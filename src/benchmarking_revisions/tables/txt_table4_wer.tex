@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Non-normalized WER (punctuation and casing preserved). Gemini-3.1 uses temperature 0.0. GPT-5.5 is a reasoning model (temperature fixed at 1.0).}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|ccccccccccc}
+\hline
+Model & type-1 & type-2 & type-3 & type-4 & type-5 & type-6 & type-7 & type-8 & type-9 & type-10 & Complete Sample \\
+\hline
+gemini-3.1 & 4.97\% & 8.61\% & 8.33\% & 1.96\% & 21.33\% & 9.76\% & 22.68\% & 15.19\% & 13.21\% & 3.69\% & 10.56\% \\
+gemini-3.1-with-transkribus & 2.88\% & 9.98\% & 9.64\% & 2.17\% & 24.75\% & 37.72\% & 28.74\% & 14.84\% & 12.71\% & 2.41\% & 14.99\% \\
+gpt-5.5 & 17.31\% & 20.14\% & 16.50\% & 4.02\% & 25.75\% & 15.79\% & 36.86\% & 27.39\% & 22.36\% & 11.06\% & 19.05\% \\
+gpt-5.5-with-transkribus & 2.24\% & 13.77\% & 9.80\% & 3.04\% & 31.19\% & 10.31\% & 19.33\% & 16.61\% & 11.94\% & 2.70\% & 11.29\% \\
+pytesseract & 417.15\% & 158.00\% & 228.92\% & 286.09\% & 356.74\% & 223.57\% & 129.90\% & 265.02\% & 465.82\% & 25.39\% & 253.57\% \\
+transkribus & 30.93\% & 23.92\% & 19.44\% & 7.17\% & 123.14\% & 77.08\% & 26.80\% & 17.14\% & 18.42\% & 30.92\% & 35.72\% \\
+\hline
+GT length & 4997 & 4225 & 4274 & 7285 & 3138 & 6274 & 5456 & 4433 & 4888 & 5336 & 50315 \\
+\hline
+\end{tabular}
+}
+\label{tab:revision_txt_table4}
+\end{table}
