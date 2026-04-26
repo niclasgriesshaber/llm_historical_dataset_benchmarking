@@ -207,12 +207,12 @@ def main():
 
     # Models to include in OCR table
     ocr_models = [
-        ("llm_img2txt", "gemini-3.1", "Gemini 3.1 Pro"),
-        ("llm_img2txt", "gpt-5.5", "GPT-5.5"),
+        ("llm_img2txt", "gemini-3.1", r"\textbf{Gemini 3.1 Pro}"),
+        ("llm_img2txt", "gpt-5.5", r"\textbf{GPT-5.5}"),
         ("llm_img2txt", "gemini-3.1-with-transkribus",
-         "Transkribus\\\\Print M1\\\\$\\downarrow$\\\\Gemini 3.1 Pro"),
+         r"\makecell[c]{\textbf{Transkribus}\\\textbf{Print M1}\\$\downarrow$\\\textbf{Gemini 3.1 Pro}}"),
         ("llm_img2txt", "gpt-5.5-with-transkribus",
-         "Transkribus\\\\Print M1\\\\$\\downarrow$\\\\GPT-5.5"),
+         r"\makecell[c]{\textbf{Transkribus}\\\textbf{Print M1}\\$\downarrow$\\\textbf{GPT-5.5}}"),
     ]
 
     # Collect metrics: {(model, doc, normalized): (cer, wer)}
@@ -266,7 +266,7 @@ def main():
                 cer, wer = compute_txt_metrics(full_gt, full_hyp, normalized=norm)
                 ocr_data[(model, "Full Sample", norm)] = (cer, wer)
 
-    # Build Table A
+    # Build Table A (CER + WER, matching paper style with \downarrow headers)
     n_models = len(ocr_models)
     col_spec = "l" + " rr" * n_models
     lines.append(r"\begin{table*}[htbp]")
@@ -278,15 +278,15 @@ def main():
     lines.append(r"\begin{tabular}{" + col_spec + "}")
     lines.append(r"\toprule")
 
-    # Header row 1: model names
+    # Header row 1: model names with multicolumn
     header1 = " "
     for _, _, label in ocr_models:
-        header1 += f" & \\multicolumn{{2}}{{c}}{{\\makecell{{\\textbf{{{label}}}}}}}"
+        header1 += f" & \\multicolumn{{2}}{{c}}{{{label}}}"
     header1 += r" \\"
     lines.append(header1)
 
     # cmidrules
-    for i, _ in enumerate(ocr_models):
+    for i in range(n_models):
         start = 2 + i * 2
         end = start + 1
         lines.append(f"\\cmidrule(lr){{{start}-{end}}}")
@@ -360,7 +360,6 @@ def main():
     lines.append(r"\bottomrule")
     lines.append(r"\end{tabular}%")
     lines.append("}")
-    lines.append(r"\justify")
     lines.append(r"\footnotesize")
     lines.append(r"\textit{Notes}: ")
     lines.append(r"Gemini 3.1 Pro Preview uses temperature 0.0 with dynamic thinking (thinking\_budget=-1). ")
