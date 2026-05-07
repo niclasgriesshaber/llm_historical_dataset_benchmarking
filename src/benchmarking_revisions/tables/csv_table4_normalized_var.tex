@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Table 4 (Normalized): By Variable. Gemini-3.1 uses temperature 0.0. GPT-5.5 uses reasoning\_effort=high (temperature 1.0).}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|cccc|c}
+\hline
+Model & first and middle names & surname & occupation & address & All \\
+\hline
+llm\_img2csv/gemini-3.1 & 94.62\% (739/781) & 92.45\% (722/781) & 80.28\% (627/781) & 76.57\% (598/781) & 85.98\% (2686/3124) \\
+llm\_img2csv/gpt-5.5 & 89.36\% (647/724) & 80.66\% (584/724) & 76.66\% (555/724) & 73.62\% (533/724) & 80.08\% (2319/2896) \\
+llm\_txt2csv/gemini-3.1 & 95.03\% (688/724) & 96.69\% (700/724) & 86.33\% (625/724) & 95.58\% (692/724) & 93.40\% (2705/2896) \\
+llm\_txt2csv/gemini-3.1-with-transkribus & 93.09\% (674/724) & 91.57\% (663/724) & 81.35\% (589/724) & 83.98\% (608/724) & 87.50\% (2534/2896) \\
+llm\_txt2csv/gpt-5.5 & 94.06\% (681/724) & 95.58\% (692/724) & 88.67\% (642/724) & 94.61\% (685/724) & 93.23\% (2700/2896) \\
+llm\_txt2csv/gpt-5.5-with-transkribus & 90.03\% (551/612) & 87.91\% (538/612) & 80.07\% (490/612) & 82.84\% (507/612) & 85.21\% (2086/2448) \\
+\hline
+\end{tabular}
+}
+\label{tab:revision_table4}
+\end{table}

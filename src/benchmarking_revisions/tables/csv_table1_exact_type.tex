@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Table 1 (Exact): By Type. Gemini-3.1 uses temperature 0.0. GPT-5.5 uses reasoning\_effort=high (temperature 1.0).}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|cccccccccc|c}
+\hline
+Model & type-1 & type-2 & type-3 & type-4 & type-5 & type-6 & type-7 & type-8 & type-9 & type-10 & All \\
+\hline
+llm\_img2csv/gemini-3.1 & 93.88\% & 80.26\% & 63.12\% & 91.59\% & 60.29\% & 81.11\% & 67.33\% & 78.99\% & 82.79\% & 87.50\% & 81.72\% \\
+llm\_img2csv/gpt-5.5 & 68.37\% & mismatch & 62.50\% & 64.22\% & 49.26\% & 66.94\% & 54.83\% & 56.52\% & 63.64\% & 89.73\% & 66.33\% \\
+llm\_txt2csv/gemini-3.1 & 99.23\% & mismatch & 75.62\% & 91.59\% & 78.68\% & 84.17\% & 73.58\% & 94.57\% & 88.31\% & 99.55\% & 89.19\% \\
+llm\_txt2csv/gemini-3.1-with-transkribus & 91.07\% & mismatch & 70.62\% & 88.79\% & 55.88\% & 81.39\% & 73.01\% & 75.72\% & 83.12\% & 93.30\% & 82.56\% \\
+llm\_txt2csv/gpt-5.5 & 75.26\% & mismatch & 66.25\% & 67.24\% & 62.50\% & 65.56\% & 83.81\% & 72.10\% & 75.32\% & 75.00\% & 72.38\% \\
+llm\_txt2csv/gpt-5.5-with-transkribus & 68.88\% & mismatch & 71.25\% & 64.66\% & 52.21\% & 62.78\% & 75.57\% & 62.32\% & 82.79\% & mismatch & 68.38\% \\
+\hline
+Total cells & 392 & 228 & 160 & 464 & 136 & 360 & 352 & 276 & 308 & 448 & 3124 \\
+GT Rows & 98 & 57 & 40 & 116 & 34 & 90 & 88 & 69 & 77 & 112 & 781 \\
+\hline
+\end{tabular}
+}
+\label{tab:revision_table1}
+\end{table}

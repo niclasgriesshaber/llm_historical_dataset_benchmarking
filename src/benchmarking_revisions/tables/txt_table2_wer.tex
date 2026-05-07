@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Normalized WER (ASCII-only, punctuation removed, lowercased). Gemini-3.1 uses temperature 0.0. GPT-5.5 uses reasoning\_effort=high (temperature 1.0).}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|ccccccccccc}
+\hline
+Model & type-1 & type-2 & type-3 & type-4 & type-5 & type-6 & type-7 & type-8 & type-9 & type-10 & Complete Sample \\
+\hline
+gemini-3.1 & 3.37\% & 5.32\% & 2.12\% & 0.55\% & 6.90\% & 1.85\% & 12.04\% & 12.39\% & 8.15\% & 1.57\% & 5.12\% \\
+gemini-3.1-with-transkribus & 1.12\% & 4.95\% & 2.61\% & 0.67\% & 8.05\% & 1.51\% & 15.55\% & 12.04\% & 9.04\% & 0.43\% & 5.29\% \\
+gpt-5.5 & 15.87\% & 11.56\% & 7.84\% & 2.11\% & 14.25\% & 4.17\% & 21.01\% & 21.77\% & 15.80\% & 7.87\% & 11.55\% \\
+gpt-5.5-with-transkribus & 1.12\% & 5.32\% & 2.45\% & 1.11\% & 5.06\% & 1.51\% & 10.50\% & 11.86\% & 7.77\% & 0.43\% & 4.48\% \\
+pytesseract & 341.35\% & 103.12\% & 185.29\% & 212.86\% & 282.30\% & 178.45\% & 91.88\% & 208.14\% & 388.41\% & 16.74\% & 199.91\% \\
+transkribus & 23.56\% & 9.36\% & 12.42\% & 4.32\% & 91.03\% & 60.14\% & 11.76\% & 11.68\% & 12.48\% & 23.89\% & 24.26\% \\
+\hline
+GT length & 4458 & 3815 & 3921 & 6586 & 2796 & 5289 & 4786 & 3932 & 4194 & 4824 & 44610 \\
+\hline
+\end{tabular}
+}
+\label{tab:revision_txt_table2}
+\end{table}

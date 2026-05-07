@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Model Performance and Token Costs (PNG-to-CSV)}
+\label{tab:cost-revision}
+\begin{tabular}{l r r r r}
+\toprule
+\textbf{Model} & \textbf{s/page} & \textbf{Input tokens} & \textbf{Output tokens} & \textbf{\$/1,000 pages} \\
+\midrule
+Gemini 3.1 Pro & 24.6 & 1,313 & 1,434 & 19.83 \\
+GPT-5.5 & 196.3 & 2,988 & 12,457 & 388.65 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.5em}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Notes}: s/page represents the average processing time per page. Token counts are averages per page, computed from the log files of our runs across the 30-page corpus. Output tokens include internal reasoning tokens (Gemini uses dynamic thinking; GPT-5.5 uses reasoning\_effort=high). Price per 1,000 pages estimated at current API pricing: Gemini 3.1 Pro at \$2.00 per M input tokens and \$12.00 per M output tokens (including thinking); GPT-5.5 at \$5.00 per M input tokens and \$30.00 per M output tokens (including reasoning). Gemini 3.1 Pro uses temperature 0.0. GPT-5.5 is a reasoning model (temperature fixed at 1.0).
+\end{minipage}
+\end{table}
