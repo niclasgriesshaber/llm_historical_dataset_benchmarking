@@ -8,53 +8,56 @@
 \caption{OCR and OCR Post-Correction Results for Revision Models}
 \label{tab:ocr-results-revision}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{l rr rr rr rr}
+\begin{tabular}{l rr rr rr rr rr rr}
 \toprule
-  & \multicolumn{2}{c}{\textbf{Gemini 3.1 Pro}} & \multicolumn{2}{c}{\textbf{GPT-5.5}} & \multicolumn{2}{c}{\makecell[c]{\textbf{Transkribus}\\\textbf{Print M1}\\$\downarrow$\\\textbf{Gemini 3.1 Pro}}} & \multicolumn{2}{c}{\makecell[c]{\textbf{Transkribus}\\\textbf{Print M1}\\$\downarrow$\\\textbf{GPT-5.5}}} \\
+  & \multicolumn{2}{c}{\textbf{Gemini 3.1 Pro}} & \multicolumn{2}{c}{\textbf{GPT-5.5}} & \multicolumn{2}{c}{\makecell[c]{\textbf{Transkribus}\\\textbf{The Text Titan I}}} & \multicolumn{2}{c}{\makecell[c]{\textbf{Transkribus}\\\textbf{Print M1}}} & \multicolumn{2}{c}{\makecell[c]{\textbf{Transkribus}\\\textbf{Print M1}\\$\downarrow$\\\textbf{Gemini 3.1 Pro}}} & \multicolumn{2}{c}{\makecell[c]{\textbf{Transkribus}\\\textbf{Print M1}\\$\downarrow$\\\textbf{GPT-5.5}}} \\
 \cmidrule(lr){2-3}
 \cmidrule(lr){4-5}
 \cmidrule(lr){6-7}
 \cmidrule(lr){8-9}
-\textbf{Source} & \textbf{CER} & \textbf{WER} & \textbf{CER} & \textbf{WER} & \textbf{CER} & \textbf{WER} & \textbf{CER} & \textbf{WER} \\
+\cmidrule(lr){10-11}
+\cmidrule(lr){12-13}
+\textbf{Source} & \textbf{CER} & \textbf{WER} & \textbf{CER} & \textbf{WER} & \textbf{CER} & \textbf{WER} & \textbf{CER} & \textbf{WER} & \textbf{CER} & \textbf{WER} & \textbf{CER} & \textbf{WER} \\
 \midrule
-\multicolumn{9}{c}{\textbf{Normalized}} \\
+\multicolumn{13}{c}{\textbf{Normalized}} \\
 \midrule
-Aachen-1838 & 0.47\% & 3.37\% & 2.22\% & 15.87\% & 0.16\% & 1.12\% & 0.16\% & 1.12\% \\
-Dresden-1797 & 0.76\% & 5.32\% & 1.65\% & 11.56\% & 0.71\% & 4.95\% & 0.76\% & 5.32\% \\
-Leipzig-1753 & 0.33\% & 2.12\% & 1.22\% & 7.84\% & 0.41\% & 2.61\% & 0.38\% & 2.45\% \\
-Frankfurt-1860 & 0.08\% & 0.55\% & 0.29\% & 2.11\% & 0.09\% & 0.67\% & 0.15\% & 1.11\% \\
-Frankfurt-1778 & 1.07\% & 6.90\% & 2.22\% & 14.25\% & 1.25\% & 8.05\% & 0.79\% & 5.06\% \\
-L\"{u}beck-1870 & 0.30\% & 1.85\% & 0.68\% & 4.17\% & 4.01\% & 24.57\% & 0.25\% & 1.51\% \\
-Dresden-1819 & 1.80\% & 12.04\% & 3.13\% & 21.01\% & 2.32\% & 15.55\% & 1.57\% & 10.50\% \\
-Riga-1810 & 1.78\% & 12.39\% & 3.13\% & 21.77\% & 1.73\% & 12.04\% & 1.70\% & 11.86\% \\
-Leipzig-1800 & 1.53\% & 8.15\% & 2.96\% & 15.80\% & 1.69\% & 9.04\% & 1.45\% & 7.77\% \\
-Trier-1853 & 0.23\% & 1.57\% & 1.14\% & 7.87\% & 0.06\% & 0.43\% & 0.06\% & 0.43\% \\
+Aachen-1838 & 0.47\% & 3.37\% & 2.22\% & 15.87\% & 3.54\% & 25.32\% & 3.30\% & 23.56\% & \textbf{0.16\%} & 1.12\% & \textbf{0.16\%} & 1.12\% \\
+Dresden-1797 & 0.76\% & 5.32\% & 1.65\% & 11.56\% & 1.94\% & 13.58\% & 1.34\% & 9.36\% & \textbf{0.71\%} & 4.95\% & 0.76\% & 5.32\% \\
+Leipzig-1753 & \textbf{0.33\%} & 2.12\% & 1.22\% & 7.84\% & 1.99\% & 12.75\% & 1.94\% & 12.42\% & 0.41\% & 2.61\% & 0.38\% & 2.45\% \\
+Frankfurt-1860 & \textbf{0.08\%} & 0.55\% & 0.29\% & 2.11\% & 0.38\% & 2.77\% & 0.59\% & 4.32\% & 0.09\% & 0.67\% & 0.15\% & 1.11\% \\
+Frankfurt-1778 & 1.07\% & 6.90\% & 2.22\% & 14.25\% & 17.92\% & 115.17\% & 14.16\% & 91.03\% & 1.25\% & 8.05\% & \textbf{0.79\%} & 5.06\% \\
+L\"{u}beck-1870 & 0.30\% & 1.85\% & 0.68\% & 4.17\% & 10.23\% & 62.69\% & 9.81\% & 60.14\% & \textbf{0.25\%} & 1.51\% & \textbf{0.25\%} & 1.51\% \\
+Dresden-1819 & 1.80\% & 12.04\% & 3.13\% & 21.01\% & 2.17\% & 14.57\% & 1.76\% & 11.76\% & 2.32\% & 15.55\% & \textbf{1.57\%} & 10.50\% \\
+Riga-1810 & 1.78\% & 12.39\% & 3.13\% & 21.77\% & 1.91\% & 13.27\% & \textbf{1.68\%} & 11.68\% & 1.73\% & 12.04\% & 1.70\% & 11.86\% \\
+Leipzig-1800 & 1.53\% & 8.15\% & 2.96\% & 15.80\% & 2.79\% & 14.90\% & 2.34\% & 12.48\% & 1.69\% & 9.04\% & \textbf{1.45\%} & 7.77\% \\
+Trier-1853 & 0.23\% & 1.57\% & 1.14\% & 7.87\% & 3.98\% & 27.47\% & 3.46\% & 23.89\% & \textbf{0.06\%} & 0.43\% & \textbf{0.06\%} & 0.43\% \\
 \midrule
-\textbf{Full Sample} & 0.77\% & 5.12\% & 1.75\% & 11.55\% & 1.25\% & 8.24\% & 0.68\% & 4.48\% \\
+\textbf{Full Sample} & 0.77\% & 5.12\% & 1.75\% & 11.55\% & 4.16\% & 27.55\% & 3.67\% & 24.26\% & 0.80\% & 5.29\% & \textbf{0.68\%} & 4.48\% \\
 \midrule
-\multicolumn{9}{c}{\textbf{Non-normalized}} \\
+\multicolumn{13}{c}{\textbf{Non-normalized}} \\
 \midrule
-Aachen-1838 & 0.62\% & 4.97\% & 2.16\% & 17.31\% & 0.36\% & 2.88\% & 0.28\% & 2.24\% \\
-Dresden-1797 & 1.18\% & 8.61\% & 2.77\% & 20.14\% & 1.37\% & 9.98\% & 1.89\% & 13.77\% \\
-Leipzig-1753 & 1.19\% & 8.33\% & 2.36\% & 16.50\% & 1.38\% & 9.64\% & 1.40\% & 9.80\% \\
-Frankfurt-1860 & 0.25\% & 1.96\% & 0.51\% & 4.02\% & 0.27\% & 2.17\% & 0.38\% & 3.04\% \\
-Frankfurt-1778 & 3.38\% & 21.33\% & 4.08\% & 25.75\% & 3.92\% & 24.75\% & 4.94\% & 31.19\% \\
-L\"{u}beck-1870 & 1.42\% & 9.76\% & 2.30\% & 15.79\% & 5.48\% & 37.72\% & 1.50\% & 10.31\% \\
-Dresden-1819 & 3.23\% & 22.68\% & 5.24\% & 36.86\% & 4.09\% & 28.74\% & 2.75\% & 19.33\% \\
-Riga-1810 & 1.94\% & 15.19\% & 3.50\% & 27.39\% & 1.89\% & 14.84\% & 2.12\% & 16.61\% \\
-Leipzig-1800 & 2.13\% & 13.21\% & 3.60\% & 22.36\% & 2.05\% & 12.71\% & 1.92\% & 11.94\% \\
-Trier-1853 & 0.49\% & 3.69\% & 1.46\% & 11.06\% & 0.32\% & 2.41\% & 0.36\% & 2.70\% \\
+Aachen-1838 & 0.62\% & 4.97\% & 2.16\% & 17.31\% & 3.96\% & 31.73\% & 3.86\% & 30.93\% & 0.36\% & 2.88\% & \textbf{0.28\%} & 2.24\% \\
+Dresden-1797 & \textbf{1.18\%} & 8.61\% & 2.77\% & 20.14\% & 3.41\% & 24.78\% & 3.29\% & 23.92\% & 1.37\% & 9.98\% & 1.89\% & 13.77\% \\
+Leipzig-1753 & \textbf{1.19\%} & 8.33\% & 2.36\% & 16.50\% & 3.07\% & 21.41\% & 2.78\% & 19.44\% & 1.38\% & 9.64\% & 1.40\% & 9.80\% \\
+Frankfurt-1860 & \textbf{0.25\%} & 1.96\% & 0.51\% & 4.02\% & 0.91\% & 7.17\% & 0.91\% & 7.17\% & 0.27\% & 2.17\% & 0.38\% & 3.04\% \\
+Frankfurt-1778 & \textbf{3.38\%} & 21.33\% & 4.08\% & 25.75\% & 23.04\% & 145.47\% & 19.50\% & 123.14\% & 3.92\% & 24.75\% & 4.94\% & 31.19\% \\
+L\"{u}beck-1870 & \textbf{1.42\%} & 9.76\% & 2.30\% & 15.79\% & 11.67\% & 80.26\% & 11.20\% & 77.08\% & 1.53\% & 10.53\% & 1.50\% & 10.31\% \\
+Dresden-1819 & 3.23\% & 22.68\% & 5.24\% & 36.86\% & 4.60\% & 32.35\% & 3.81\% & 26.80\% & 4.09\% & 28.74\% & \textbf{2.75\%} & 19.33\% \\
+Riga-1810 & 1.94\% & 15.19\% & 3.50\% & 27.39\% & 2.39\% & 18.73\% & 2.19\% & 17.14\% & \textbf{1.89\%} & 14.84\% & 2.12\% & 16.61\% \\
+Leipzig-1800 & 2.13\% & 13.21\% & 3.60\% & 22.36\% & 3.38\% & 20.97\% & 2.97\% & 18.42\% & 2.05\% & 12.71\% & \textbf{1.92\%} & 11.94\% \\
+Trier-1853 & 0.49\% & 3.69\% & 1.46\% & 11.06\% & 4.52\% & 34.18\% & 4.09\% & 30.92\% & \textbf{0.32\%} & 2.41\% & 0.36\% & 2.70\% \\
 \midrule
-\textbf{Full Sample} & 1.46\% & 10.56\% & 2.64\% & 19.05\% & 2.08\% & 14.99\% & 1.57\% & 11.29\% \\
+\textbf{Full Sample} & \textbf{1.46\%} & 10.56\% & 2.64\% & 19.05\% & 5.46\% & 39.37\% & 4.95\% & 35.72\% & 1.59\% & 11.43\% & 1.57\% & 11.29\% \\
 \bottomrule
 \end{tabular}%
 }
 \footnotesize
 \textit{Notes}: 
 Gemini 3.1 Pro Preview uses temperature 0.0 with dynamic thinking (thinking\_budget=-1). 
-GPT-5.5 is a reasoning model with reasoning\_effort=``high'' (temperature fixed at 1.0). 
+GPT-5.5 is a reasoning model with reasoning\_effort=``high'' (temperature 1.0). 
 Post-correction uses existing Transkribus Print M1 OCR output as input. 
-CER = Character Error Rate, WER = Word Error Rate.
+CER = Character Error Rate, WER = Word Error Rate. 
+The best CER results per row are in \textbf{bold}.
 \end{table*}
 
 \begin{table*}[htbp]
@@ -63,35 +66,37 @@ CER = Character Error Rate, WER = Word Error Rate.
 \caption{NER Results for Revision Models (pass@1)}
 \label{tab:ner-results-revision}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{l r rr rr rr rr}
+\begin{tabular}{l r rr rr rr rr rr rr}
 \toprule
-\multicolumn{2}{c}{} & \multicolumn{2}{c}{\textbf{Gemini 3.1 Pro}} & \multicolumn{2}{c}{\textbf{Gemini 3.1 Pro}} & \multicolumn{2}{c}{\textbf{GPT-5.5}} & \multicolumn{2}{c}{\textbf{GPT-5.5}} \\
- &  & \multicolumn{2}{c}{(GT TXT-to-CSV)} & \multicolumn{2}{c}{(PNG-to-CSV)} & \multicolumn{2}{c}{(GT TXT-to-CSV)} & \multicolumn{2}{c}{(PNG-to-CSV)} \\
+\multicolumn{2}{c}{} & \multicolumn{2}{c}{\textbf{Gemini 3.1 Pro}} & \multicolumn{2}{c}{\textbf{Gemini 3.1 Pro}} & \multicolumn{2}{c}{\textbf{Gemini 3.1 Pro}} & \multicolumn{2}{c}{\textbf{GPT-5.5}} & \multicolumn{2}{c}{\textbf{GPT-5.5}} & \multicolumn{2}{c}{\textbf{GPT-5.5}} \\
+ &  & \multicolumn{2}{c}{(GT TXT-to-CSV)} & \multicolumn{2}{c}{(OCR TXT-to-CSV)} & \multicolumn{2}{c}{(PNG-to-CSV)} & \multicolumn{2}{c}{(GT TXT-to-CSV)} & \multicolumn{2}{c}{(OCR TXT-to-CSV)} & \multicolumn{2}{c}{(PNG-to-CSV)} \\
 \cmidrule(lr){3-4}
 \cmidrule(lr){5-6}
 \cmidrule(lr){7-8}
 \cmidrule(lr){9-10}
-\textbf{Source} & \textbf{\# Cells} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} \\
+\cmidrule(lr){11-12}
+\cmidrule(lr){13-14}
+\textbf{Source} & \textbf{\# Cells} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} \\
 \midrule
-Aachen-1838 & 392 & 99.23\% & 99.49\% & 93.88\% & 100.00\% & 75.26\% & 100.00\% & 68.37\% & 97.45\% \\
-Dresden-1797 & 228 & - & - & 80.26\% & 84.65\% & - & - & - & - \\
-Leipzig-1753 & 160 & 75.62\% & 87.50\% & 63.12\% & 80.62\% & 66.25\% & 86.25\% & 62.50\% & 84.38\% \\
-Frankfurt-1860 & 464 & 91.59\% & 93.53\% & 91.59\% & 94.18\% & 67.24\% & 93.32\% & 64.22\% & 92.46\% \\
-Frankfurt-1778 & 136 & 78.68\% & 89.71\% & 60.29\% & 85.29\% & 62.50\% & 86.76\% & 49.26\% & 84.56\% \\
-L\"{u}beck-1870 & 360 & 84.17\% & 89.44\% & 81.11\% & 89.72\% & 65.56\% & 88.61\% & 66.94\% & 88.89\% \\
-Dresden-1819 & 352 & 73.58\% & 87.22\% & 67.33\% & 84.09\% & 83.81\% & 86.93\% & 54.83\% & 82.10\% \\
-Riga-1810 & 276 & 94.57\% & 98.19\% & 78.99\% & 95.29\% & 72.10\% & 97.83\% & 56.52\% & 92.75\% \\
-Leipzig-1800 & 308 & 88.31\% & 98.70\% & 82.79\% & 95.78\% & 75.32\% & 96.75\% & 63.64\% & 82.47\% \\
-Trier-1853 & 448 & 99.55\% & 100.00\% & 87.50\% & 96.43\% & 75.00\% & 100.00\% & 89.73\% & 97.99\% \\
+Aachen-1838 & 392 & \textbf{99.23\%} & 99.49\% & 91.07\% & 98.72\% & 93.88\% & \textbf{100.00\%} & 75.26\% & \textbf{100.00\%} & 68.88\% & 98.21\% & 68.37\% & 97.45\% \\
+Dresden-1797 & 228 & - & - & - & - & \textbf{80.26\%} & \textbf{84.65\%} & - & - & - & - & - & - \\
+Leipzig-1753 & 160 & \textbf{75.62\%} & \textbf{87.50\%} & 70.62\% & 86.88\% & 63.12\% & 80.62\% & 66.25\% & 86.25\% & 71.25\% & 86.88\% & 62.50\% & 84.38\% \\
+Frankfurt-1860 & 464 & \textbf{91.59\%} & 93.53\% & 88.79\% & 92.89\% & \textbf{91.59\%} & \textbf{94.18\%} & 67.24\% & 93.32\% & 64.66\% & 90.73\% & 64.22\% & 92.46\% \\
+Frankfurt-1778 & 136 & \textbf{78.68\%} & \textbf{89.71\%} & 55.88\% & 87.50\% & 60.29\% & 85.29\% & 62.50\% & 86.76\% & 52.21\% & 84.56\% & 49.26\% & 84.56\% \\
+L\"{u}beck-1870 & 360 & \textbf{84.17\%} & 89.44\% & 81.39\% & \textbf{91.67\%} & 81.11\% & 89.72\% & 65.56\% & 88.61\% & 62.78\% & 88.33\% & 66.94\% & 88.89\% \\
+Dresden-1819 & 352 & 73.58\% & 87.22\% & 73.01\% & 86.36\% & 67.33\% & 84.09\% & \textbf{83.81\%} & 86.93\% & 75.57\% & \textbf{87.50\%} & 54.83\% & 82.10\% \\
+Riga-1810 & 276 & \textbf{94.57\%} & \textbf{98.19\%} & 75.72\% & 96.74\% & 78.99\% & 95.29\% & 72.10\% & 97.83\% & 62.32\% & 96.74\% & 56.52\% & 92.75\% \\
+Leipzig-1800 & 308 & \textbf{88.31\%} & \textbf{98.70\%} & 83.12\% & 97.08\% & 82.79\% & 95.78\% & 75.32\% & 96.75\% & 82.79\% & 96.43\% & 63.64\% & 82.47\% \\
+Trier-1853 & 448 & \textbf{99.55\%} & \textbf{100.00\%} & 93.30\% & 99.33\% & 87.50\% & 96.43\% & 75.00\% & \textbf{100.00\%} & 74.33\% & 99.33\% & 89.73\% & 97.99\% \\
 \midrule
-\textbf{Full Sample} & 3124 & 89.19\% & 94.54\% & 81.72\% & 92.06\% & 72.38\% & 93.99\% & 66.33\% & 90.44\% \\
+\textbf{Full Sample} & 3124 & \textbf{89.19\%} & \textbf{94.54\%} & 82.56\% & 93.96\% & 81.72\% & 92.06\% & 72.38\% & 93.99\% & 69.30\% & 93.06\% & 66.33\% & 90.44\% \\
 \bottomrule
 \end{tabular}%
 }
 \vspace{0.5em}
 \begin{minipage}{\textwidth}
 \footnotesize
-\textit{Notes}: Strict and fuzzy match rates (\%) for all directories. Before evaluation, all cells were lowercased and leading/trailing whitespaces removed. For fuzzy matches, Jaro-Winkler similarity with threshold 0.9 was applied. Gemini 3.1 Pro Preview: temperature 0.0, dynamic thinking. GPT-5.5: reasoning\_effort=``high'', temperature=default (1.0). ``-'' indicates dimension mismatch (predicted row count $\neq$ ground truth).
+\textit{Notes}: Strict and fuzzy match rates (\%) for all directories. Before evaluation, all cells were lowercased and leading/trailing whitespaces removed. For fuzzy matches, Jaro-Winkler similarity with threshold 0.9 was applied. Gemini 3.1 Pro Preview: temperature 0.0, dynamic thinking. GPT-5.5: reasoning\_effort=``high'', temperature 1.0. ``-'' indicates dimension mismatch (predicted row count $\neq$ ground truth). Best results per row are in \textbf{bold}.
 \end{minipage}
 \end{table*}
 
@@ -102,26 +107,28 @@ Trier-1853 & 448 & 99.55\% & 100.00\% & 87.50\% & 96.43\% & 75.00\% & 100.00\% &
 \label{tab:ner-by-variables-revision}
 \vspace{0.75em}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{l rr rr rr rr}
+\begin{tabular}{l rr rr rr rr rr rr}
 \toprule
-  & \multicolumn{2}{c}{\textbf{Gemini 3.1 Pro}} & \multicolumn{2}{c}{\textbf{Gemini 3.1 Pro}} & \multicolumn{2}{c}{\textbf{GPT-5.5}} & \multicolumn{2}{c}{\textbf{GPT-5.5}} \\
-  & \multicolumn{2}{c}{(GT TXT-to-CSV)} & \multicolumn{2}{c}{(PNG-to-CSV)} & \multicolumn{2}{c}{(GT TXT-to-CSV)} & \multicolumn{2}{c}{(PNG-to-CSV)} \\
+  & \multicolumn{2}{c}{\textbf{Gemini 3.1 Pro}} & \multicolumn{2}{c}{\textbf{Gemini 3.1 Pro}} & \multicolumn{2}{c}{\textbf{Gemini 3.1 Pro}} & \multicolumn{2}{c}{\textbf{GPT-5.5}} & \multicolumn{2}{c}{\textbf{GPT-5.5}} & \multicolumn{2}{c}{\textbf{GPT-5.5}} \\
+  & \multicolumn{2}{c}{(GT TXT-to-CSV)} & \multicolumn{2}{c}{(OCR TXT-to-CSV)} & \multicolumn{2}{c}{(PNG-to-CSV)} & \multicolumn{2}{c}{(GT TXT-to-CSV)} & \multicolumn{2}{c}{(OCR TXT-to-CSV)} & \multicolumn{2}{c}{(PNG-to-CSV)} \\
 \cmidrule(lr){2-3}
 \cmidrule(lr){4-5}
 \cmidrule(lr){6-7}
 \cmidrule(lr){8-9}
-\textbf{Variable} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} \\
+\cmidrule(lr){10-11}
+\cmidrule(lr){12-13}
+\textbf{Variable} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} & \textbf{Strict} & \textbf{Fuzzy} \\
 \midrule
-First names & 94.75\% & 95.86\% & 93.34\% & 96.67\% & 93.92\% & 94.20\% & 87.98\% & 93.23\% \\
-Surnames & 96.27\% & 98.48\% & 92.32\% & 96.54\% & 95.58\% & 97.65\% & 80.39\% & 92.40\% \\
-Occupation & 78.31\% & 87.98\% & 71.45\% & 85.53\% & 82.04\% & 89.09\% & 67.54\% & 82.87\% \\
-Address & 87.43\% & 95.86\% & 69.78\% & 89.50\% & 17.96\% & 95.03\% & 29.42\% & 93.23\% \\
+First names & \textbf{94.75\%} & 95.86\% & 92.27\% & 96.13\% & 93.34\% & \textbf{96.67\%} & 93.92\% & 94.20\% & 90.75\% & 94.06\% & 87.98\% & 93.23\% \\
+Surnames & \textbf{96.27\%} & \textbf{98.48\%} & 90.75\% & 97.24\% & 92.32\% & 96.54\% & 95.58\% & 97.65\% & 89.36\% & 95.86\% & 80.39\% & 92.40\% \\
+Occupation & 78.31\% & 87.98\% & 75.41\% & 87.85\% & 71.45\% & 85.53\% & \textbf{82.04\%} & \textbf{89.09\%} & 76.93\% & 87.71\% & 67.54\% & 82.87\% \\
+Address & \textbf{87.43\%} & \textbf{95.86\%} & 71.82\% & 94.61\% & 69.78\% & 89.50\% & 17.96\% & 95.03\% & 20.17\% & 94.61\% & 29.42\% & 93.23\% \\
 \bottomrule
 \end{tabular}
 }
 \vspace{0.5em}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Notes}: Aggregated strict and fuzzy match rates (\%) by variable. Only directories where the predicted CSV matched the ground truth row count are included. Gemini 3.1 Pro Preview: temperature 0.0, dynamic thinking. GPT-5.5: reasoning\_effort=``high'', temperature=default (1.0).
+\textit{Notes}: Aggregated strict and fuzzy match rates (\%) by variable. Only directories where the predicted CSV matched the ground truth row count are included. Gemini 3.1 Pro Preview: temperature 0.0, dynamic thinking. GPT-5.5: reasoning\_effort=``high'', temperature 1.0. Best results per row are in \textbf{bold}.
 \end{minipage}
 \end{table}

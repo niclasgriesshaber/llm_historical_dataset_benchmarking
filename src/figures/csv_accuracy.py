@@ -77,6 +77,12 @@ def parse_arguments():
         default="run_01",
         help="Run folder name (default: run_01)."
     )
+    parser.add_argument(
+        "--results-dir",
+        type=str,
+        default="results",
+        help="Results directory name (default: results). Use 'results_revisions' for revision models."
+    )
     return parser.parse_args()
 
 def read_csv_file(csv_path):
@@ -231,10 +237,11 @@ def main():
     ground_truth_root = os.path.join(project_root, "data", "ground_truth", "csv")
 
     # Now also include txt2csv in our tasks:
+    results_base = args.results_dir
     tasks = [
-        ("img2csv", os.path.join(project_root, "results", "llm_img2csv")),
-        ("pdf2csv", os.path.join(project_root, "results", "llm_pdf2csv")),
-        ("txt2csv", os.path.join(project_root, "results", "llm_txt2csv")),
+        ("img2csv", os.path.join(project_root, results_base, "llm_img2csv")),
+        ("pdf2csv", os.path.join(project_root, results_base, "llm_pdf2csv")),
+        ("txt2csv", os.path.join(project_root, results_base, "llm_txt2csv")),
     ]
 
     all_comparisons_html = []
@@ -319,7 +326,10 @@ def main():
                 print(f"[INFO] No generated CSV => {csv_name}, Model: {model_name}")
 
     # Write the final HTML
-    out_html_path = os.path.join(script_dir, "csv_accuracy.html")
+    if args.results_dir != "results":
+        out_html_path = os.path.join(script_dir, "csv_accuracy_revisions.html")
+    else:
+        out_html_path = os.path.join(script_dir, "csv_accuracy.html")
 
     style_block = """
 <style>

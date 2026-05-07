@@ -1,14 +1,14 @@
 \begin{table}[htbp]
 \centering
 \small
-\caption{Normalized CER (ASCII-only, punctuation removed, lowercased). Gemini-3.1 uses temperature 0.0. GPT-5.5 is a reasoning model (temperature fixed at 1.0).}
+\caption{Normalized CER (ASCII-only, punctuation removed, lowercased). Gemini-3.1 uses temperature 0.0. GPT-5.5 uses reasoning\_effort=high (temperature 1.0).}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{l|ccccccccccc}
 \hline
 Model & type-1 & type-2 & type-3 & type-4 & type-5 & type-6 & type-7 & type-8 & type-9 & type-10 & Complete Sample \\
 \hline
 gemini-3.1 & 0.47\% & 0.76\% & 0.33\% & 0.08\% & 1.07\% & 0.30\% & 1.80\% & 1.78\% & 1.53\% & 0.23\% & 0.77\% \\
-gemini-3.1-with-transkribus & 0.16\% & 0.71\% & 0.41\% & 0.09\% & 1.25\% & 4.01\% & 2.32\% & 1.73\% & 1.69\% & 0.06\% & 1.25\% \\
+gemini-3.1-with-transkribus & 0.16\% & 0.71\% & 0.41\% & 0.09\% & 1.25\% & 0.25\% & 2.32\% & 1.73\% & 1.69\% & 0.06\% & 0.80\% \\
 gpt-5.5 & 2.22\% & 1.65\% & 1.22\% & 0.29\% & 2.22\% & 0.68\% & 3.13\% & 3.13\% & 2.96\% & 1.14\% & 1.75\% \\
 gpt-5.5-with-transkribus & 0.16\% & 0.76\% & 0.38\% & 0.15\% & 0.79\% & 0.25\% & 1.57\% & 1.70\% & 1.45\% & 0.06\% & 0.68\% \\
 pytesseract & 47.78\% & 14.73\% & 28.92\% & 29.15\% & 43.92\% & 29.12\% & 13.71\% & 29.91\% & 72.70\% & 2.43\% & 30.22\% \\

@@ -37,7 +37,9 @@ from dotenv import load_dotenv
 # PROJECT_ROOT is computed relative to this script's location (two levels up).
 ###############################################################################
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-DATA_DIR = PROJECT_ROOT / "data" / "ground_truth" / "txt"
+# Default directory containing the ground truth text files that serve as input.
+# Can be overridden via --input-dir to use noisy OCR text instead.
+DEFAULT_DATA_DIR = PROJECT_ROOT / "data" / "ground_truth" / "txt"
 # REVISION: Changed prompt filename from "gpt-4o.txt" to "gpt-5.5.txt"
 PROMPT_PATH = PROJECT_ROOT / "src" / "prompts" / "llm_txt2csv" / "gpt-5.5.txt"
 # REVISION: Changed from "results" to "results_revisions" and "gpt-4o" to "gpt-5.5"
@@ -287,6 +289,13 @@ def main():
         # REVISION: Changed help text from "GPT-4o" to "GPT-5.5"
         help="LLM temperature for GPT-5.5 (default = 0.0)"
     )
+    parser.add_argument(
+        "--input-dir",
+        type=str,
+        default=None,
+        help="Override input text directory (e.g. results/ocr_img2txt/transkribus/type-1/run_01/ for noisy OCR input). "
+             "When set, results are stored under a '-with-transkribus' model name to distinguish from GT-input results."
+    )
     args = parser.parse_args()
     txt_name = args.txt
     temperature = args.temperature
@@ -298,14 +307,29 @@ def main():
         handlers=[logging.StreamHandler(sys.stdout)]
     )
 
+    # -------------------------------------------------------------------------
+    # Determine input directory and output model name
+    # -------------------------------------------------------------------------
+    if args.input_dir:
+        data_dir = Path(args.input_dir)
+        if not data_dir.is_absolute():
+            data_dir = PROJECT_ROOT / data_dir
+        effective_model_name = MODEL_NAME + "-with-transkribus"
+    else:
+        data_dir = DEFAULT_DATA_DIR
+        effective_model_name = MODEL_NAME
+
+    results_dir = PROJECT_ROOT / "results_revisions" / "llm_txt2csv" / effective_model_name
+    logs_dir = PROJECT_ROOT / "logs_revisions" / "llm_txt2csv" / effective_model_name
+
     # REVISION: Changed pipeline banner from "GPT-4o" to "GPT-5.5"
     logging.info("=== GPT-5.5 TXT -> JSON -> CSV Pipeline ===")
-    logging.info(f"TXT: {txt_name} | Temperature: {temperature} | Seed={SEED}")
+    logging.info(f"TXT: {txt_name} | Temperature: {temperature} | Seed={SEED} | Input dir: {data_dir}")
 
     # -------------------------------------------------------------------------
     # Check for the input TXT file in the ground truth directory
     # -------------------------------------------------------------------------
-    txt_path = DATA_DIR / txt_name
+    txt_path = data_dir / txt_name
     if not txt_path.is_file():
         logging.error(f"TXT file not found at: {txt_path}")
         sys.exit(1)
@@ -343,7 +367,7 @@ def main():
     # Each run gets its own numbered subdirectory for reproducibility.
     # REVISION: Changed from results/ to results_revisions/ and gpt-4o to gpt-5.5
     # -------------------------------------------------------------------------
-    txt_folder = RESULTS_DIR / txt_stem
+    txt_folder = results_dir / txt_stem
     temp_folder = txt_folder / f"temperature_{temperature}"
     temp_folder.mkdir(parents=True, exist_ok=True)
 
@@ -445,14 +469,14 @@ def main():
     total_duration = time.time() - overall_start_time
     timestamp_str = datetime.now().strftime("%Y%m%d_%H%M%S")
     log_filename = f"run_{timestamp_str}.json"
-    log_path = LOGS_DIR / log_filename
+    log_path = logs_dir / log_filename
     log_path.parent.mkdir(parents=True, exist_ok=True)
 
     log_data = {
         "timestamp": datetime.now().isoformat(),
         "txt_name": txt_name,
         "txt_path": str(txt_path),
-        "model_name": MODEL_NAME,
+        "model_name": effective_model_name,
         "full_model_name": FULL_MODEL_NAME,
         "temperature": temperature,
         "run_directory": str(run_folder),

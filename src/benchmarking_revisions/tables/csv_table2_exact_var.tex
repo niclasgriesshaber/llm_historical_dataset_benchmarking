@@ -1,7 +1,7 @@
 \begin{table}[htbp]
 \centering
 \small
-\caption{Table 2 (Exact): By Variable. Gemini-3.1 uses temperature 0.0. GPT-5.5 is a reasoning model (temperature fixed at 1.0).}
+\caption{Table 2 (Exact): By Variable. Gemini-3.1 uses temperature 0.0. GPT-5.5 uses reasoning\_effort=high (temperature 1.0).}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{l|cccc|c}
 \hline
@@ -10,7 +10,9 @@ Model & first and middle names & surname & occupation & address & All \\
 llm\_img2csv/gemini-3.1 & 93.34\% (729/781) & 92.32\% (721/781) & 71.45\% (558/781) & 69.78\% (545/781) & 81.72\% (2553/3124) \\
 llm\_img2csv/gpt-5.5 & 87.98\% (637/724) & 80.39\% (582/724) & 67.54\% (489/724) & 29.42\% (213/724) & 66.33\% (1921/2896) \\
 llm\_txt2csv/gemini-3.1 & 94.75\% (686/724) & 96.27\% (697/724) & 78.31\% (567/724) & 87.43\% (633/724) & 89.19\% (2583/2896) \\
+llm\_txt2csv/gemini-3.1-with-transkribus & 92.27\% (668/724) & 90.75\% (657/724) & 75.41\% (546/724) & 71.82\% (520/724) & 82.56\% (2391/2896) \\
 llm\_txt2csv/gpt-5.5 & 93.92\% (680/724) & 95.58\% (692/724) & 82.04\% (594/724) & 17.96\% (130/724) & 72.38\% (2096/2896) \\
+llm\_txt2csv/gpt-5.5-with-transkribus & 89.22\% (546/612) & 87.58\% (536/612) & 73.04\% (447/612) & 23.69\% (145/612) & 68.38\% (1674/2448) \\
 \hline
 \end{tabular}
 }

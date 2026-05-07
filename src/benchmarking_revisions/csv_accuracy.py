@@ -77,6 +77,25 @@ FUZZY_THRESHOLD = 0.90
 
 
 ##############################################################################
+# Temperature resolution
+##############################################################################
+
+def resolve_temperature(base_dir, temperature):
+    """Return the temperature that has a matching folder.
+
+    Tries the requested temperature first; falls back to 0.0 then 1.0.
+    This is needed because GPT-5.5 (a reasoning model) ignores the
+    temperature parameter and only has results under temperature_1.0/.
+    """
+    if os.path.isdir(os.path.join(base_dir, f"temperature_{temperature}")):
+        return temperature
+    for fallback in ["0.0", "1.0"]:
+        if os.path.isdir(os.path.join(base_dir, f"temperature_{fallback}")):
+            return fallback
+    return temperature
+
+
+##############################################################################
 # CLI argument parsing
 ##############################################################################
 
@@ -327,7 +346,7 @@ def build_table1_latex(table1_dict, gt_row_counts, table_number, method_label):
     lines.append(
         rf"\caption{{Table {table_number} ({method_label}): By Type."
         r" Gemini-3.1 uses temperature 0.0."
-        r" GPT-5.5 is a reasoning model (temperature fixed at 1.0).}"
+        r" GPT-5.5 uses reasoning\_effort=high (temperature 1.0).}"
     )
     # Build the tabular environment inside a resizebox for wide tables.
     lines.append(r"\resizebox{\textwidth}{!}{%")
@@ -405,7 +424,7 @@ def build_table2_latex(table2_final_dict, table_number, method_label):
     lines.append(
         rf"\caption{{Table {table_number} ({method_label}): By Variable."
         r" Gemini-3.1 uses temperature 0.0."
-        r" GPT-5.5 is a reasoning model (temperature fixed at 1.0).}"
+        r" GPT-5.5 uses reasoning\_effort=high (temperature 1.0).}"
     )
     lines.append(r"\resizebox{\textwidth}{!}{%")
 
@@ -633,9 +652,11 @@ def main():
 
         # Build the path to the predicted CSV:
         #   results_revisions/{cat}/{model}/{doc}/temperature_{T}/run_{R}/{doc}.csv
+        model_base = os.path.join(results_dir, cat, model, doc)
+        temp = resolve_temperature(model_base, args.temperature)
         pred_path = os.path.join(
-            results_dir, cat, model, doc,
-            f"temperature_{args.temperature}",
+            model_base,
+            f"temperature_{temp}",
             args.run,
             f"{doc}.csv",
         )

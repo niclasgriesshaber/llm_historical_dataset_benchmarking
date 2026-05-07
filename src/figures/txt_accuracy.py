@@ -50,6 +50,12 @@ def parse_arguments():
         default="run_01",
         help="Run folder name (default: run_01)."
     )
+    parser.add_argument(
+        "--results-dir",
+        type=str,
+        default="results",
+        help="Results directory name (default: results). Use 'results_revisions' for revision models."
+    )
     return parser.parse_args()
 
 def color_diff_char_level(gt: str, hyp: str):
@@ -114,12 +120,12 @@ def add_line_numbers(diff_text: str) -> str:
         numbered_lines.append(f"{i:4d} | {line}")
     return "\n".join(numbered_lines)
 
-def is_llm_model(model_name: str, project_root: str) -> bool:
+def is_llm_model(model_name: str, project_root: str, results_dir: str) -> bool:
     """
-    Checks if 'model_name' is under results/llm_img2txt/<model_name>.
+    Checks if 'model_name' is under <results_dir>/llm_img2txt/<model_name>.
     If so => LLM. Otherwise => OCR.
     """
-    llm_path = os.path.join(project_root, "results", "llm_img2txt", model_name)
+    llm_path = os.path.join(project_root, results_dir, "llm_img2txt", model_name)
     return os.path.isdir(llm_path)
 
 def main():
@@ -129,8 +135,8 @@ def main():
     project_root = os.path.abspath(os.path.join(script_dir, "..", ".."))
 
     ground_truth_root = os.path.join(project_root, "data", "ground_truth", "txt")
-    llm_root = os.path.join(project_root, "results", "llm_img2txt")
-    ocr_root = os.path.join(project_root, "results", "ocr_img2txt")
+    llm_root = os.path.join(project_root, args.results_dir, "llm_img2txt")
+    ocr_root = os.path.join(project_root, args.results_dir, "ocr_img2txt")
 
     # Collect HTML chunks from each comparison
     all_comparisons_html = []
@@ -149,7 +155,7 @@ def main():
         gt_text = gt_text.rstrip()
 
         for model_name in args.models:
-            if is_llm_model(model_name, project_root):
+            if is_llm_model(model_name, project_root, args.results_dir):
                 gen_path = os.path.join(
                     llm_root,
                     model_name,
@@ -212,8 +218,11 @@ def main():
             all_comparisons_html.append(comparison_html)
             print(f"[INFO] Processed => PDF: {pdf_name}, Model: {model_name}")
 
-    # Write everything to a single file named txt_accuracy.html
-    out_html_path = os.path.join(script_dir, "txt_accuracy.html")
+    # Write to txt_accuracy.html (or txt_accuracy_revisions.html for revision results)
+    if args.results_dir != "results":
+        out_html_path = os.path.join(script_dir, "txt_accuracy_revisions.html")
+    else:
+        out_html_path = os.path.join(script_dir, "txt_accuracy.html")
 
     # Legend shown once at the end
     legend_html = """

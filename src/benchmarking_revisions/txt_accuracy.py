@@ -190,6 +190,21 @@ def compute_metrics(ref_text, hyp_text, normalized=False):
 # Parallel per-document worker
 ##############################################################################
 
+def resolve_temperature(base_dir, temperature):
+    """Return the temperature that has a matching folder.
+
+    Tries the requested temperature first; falls back to 0.0 then 1.0.
+    This is needed because GPT-5.5 (a reasoning model) ignores the
+    temperature parameter and only has results under temperature_1.0/.
+    """
+    if os.path.isdir(os.path.join(base_dir, f"temperature_{temperature}")):
+        return temperature
+    for fallback in ["0.0", "1.0"]:
+        if os.path.isdir(os.path.join(base_dir, f"temperature_{fallback}")):
+            return fallback
+    return temperature
+
+
 def process_one_doc(cat, model, doc, ref_text, llm_root, ocr_root, temperature, run):
     """
     Locate and read the predicted text file for one (model, document) pair.
@@ -204,9 +219,11 @@ def process_one_doc(cat, model, doc, ref_text, llm_root, ocr_root, temperature, 
     """
     if cat == "llm_img2txt":
         # LLM-based predictions live under results_revisions/.
+        model_base = os.path.join(llm_root, model, doc)
+        temp = resolve_temperature(model_base, temperature)
         pred_path = os.path.join(
-            llm_root, model, doc,
-            f"temperature_{temperature}", run, f"{doc}.txt",
+            model_base,
+            f"temperature_{temp}", run, f"{doc}.txt",
         )
     else:
         # OCR baselines live under the OLD results/ directory.
@@ -325,7 +342,7 @@ def build_latex_table(title, doc_names, results_data, doc_lengths, total_doc_len
     lines.append(
         rf"\caption{{{_escape_latex(title)}."
         r" Gemini-3.1 uses temperature 0.0."
-        r" GPT-5.5 is a reasoning model (temperature fixed at 1.0).}"
+        r" GPT-5.5 uses reasoning\_effort=high (temperature 1.0).}"
     )
     lines.append(r"\resizebox{\textwidth}{!}{%")
 

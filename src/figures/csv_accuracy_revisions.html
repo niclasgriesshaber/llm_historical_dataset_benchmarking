@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>CSV Accuracy Comparisons</title>
+
+<style>
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fafafa;
+  color: #333;
+  margin: 20px;
+}
+h1 {
+  font-size: 1.4em;
+  margin-bottom: 0.3em;
+}
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 2em;
+}
+.csv-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+.csv-table th {
+  background: #007BFF;
+  color: #fff;
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+}
+.csv-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.cell-match {
+  background-color: #c6f6d5; /* light green */
+}
+.cell-mismatch {
+  background-color: #fed7d7; /* light red */
+}
+.error {
+  color: #b00;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Comparison: type-10.csv — Model: gemini-3.1 (img2csv)</h1>
+<div class="table-container">
+<table class="csv-table">
+  <thead>
+    <tr>
+      <th>first and middle names</th>
+      <th>surname</th>
+      <th>occupation</th>
+      <th>address</th>
+      <th>id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="cell-match">Anna</td>
+      <td class="cell-match">Dreier</td>
+      <td class="cell-match">Taglöhnerin</td>
+      <td class="cell-match">II Deutschstr. 270.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Christoph</td>
+      <td class="cell-match">Dreikorn</td>
+      <td class="cell-mismatch">Reg.-Bote / Reg.=Bote (gt)</td>
+      <td class="cell-match">I Domfreihof 88.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Karl</td>
+      <td class="cell-match">Drescher</td>
+      <td class="cell-mismatch">Ober-Staatsarzt / Ober=Staatsarzt (gt)</td>
+      <td class="cell-match">I Banthusstr. 146.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Drescher</td>
+      <td class="cell-match">Conditor</td>
+      <td class="cell-match">I Pallaststr. 229.</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Karl</td>
+      <td class="cell-match">Dressler</td>
+      <td class="cell-match">Gärtner</td>
+      <td class="cell-match">II Zuckerbergstr. 129.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Ferdinand</td>
+      <td class="cell-match">Dressler</td>
+      <td class="cell-match">Speisewirth</td>
+      <td class="cell-match">III Weberstr. 50.</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Michael</td>
+      <td class="cell-match">Drost</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-mismatch">IV Johannisstr. 271. / IV Johannisstr. 271 (gt)</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Druckenmüller</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-match">II Diedrichsstr. 173.</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Maria</td>
+      <td class="cell-match">Druckenmüller</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">II Diedrichsstr. 173.</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Eduard</td>
+      <td class="cell-mismatch">Drunks, v. / Drunks (gt)</td>
+      <td class="cell-match">Katastergeh.</td>
+      <td class="cell-match">Grabenstr. 285.</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Elisabeth</td>
+      <td class="cell-match">Dümmer</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">I vorm Römerthor 296.</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Regina</td>
+      <td class="cell-match">Dümmig</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">II Judenplatz 287.</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Dümong</td>
+      <td class="cell-match">Schneider</td>
+      <td class="cell-match">III Neustr. 244.</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Dünnebacke</td>
+      <td class="cell-match">Castellan</td>
+      <td class="cell-match">III Jesuitenstr. 187.</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Clara</td>
+      <td class="cell-mismatch">Dünzer / Düntzer (gt)</td>
+      <td class="cell-match">ohne</td>
+      <td class="cell-match">I Sichelstr. 45.</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-mismatch">Dünzer / Düntzer (gt)</td>
+      <td class="cell-match">Küster</td>
+      <td class="cell-match">III Neustr 265.</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Düring</td>
+      <td class="cell-match">Friedensrichter</td>
+      <td class="cell-match">II Diedrichsstr. 191.</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob</td>
+      <td class="cell-match">Dürrwald</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-match">IV Jüdemerstr. 97.</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias, Aloys und A. Maria</td>
+      <td class="cell-match">Dulcius</td>
+      <td class="cell-match">Rentner</td>
+      <td class="cell-match">IV Brückenstr. 240.</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joh. Conrad</td>
+      <td class="cell-match">Dumetz</td>
+      <td class="cell-match">Taglöhner</td>
+      <td class="cell-mismatch">III vor dem Neu-thor 287. / III vor dem Neu= thor 287. (gt)</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Duplang</td>
+      <td class="cell-match">Schuhmacher</td>
+      <td class="cell-match">III Rahnenstr. 145.</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolaus</td>
+      <td class="cell-match">Dunst</td>
+      <td class="cell-match">Musiklehrer</td>
+      <td class="cell-match">II Fleischstr. 16.</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Clara</td>
+      <td class="cell-match">Dunst</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">II Fleischstr. 16.</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Charlotte</td>
+      <td class="cell-match">Duroy</td>
+      <td class="cell-match">barmherzige Schwester</td>
+      <td class="cell-match">IV Irminer-Freihof 307.</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Durst</td>
+      <td class="cell-match">Taglöhner</td>
+      <td class="cell-match">IV Johannisstr. 278.</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Veronika</td>
+      <td class="cell-match">Eberhard</td>
+      <td class="cell-match">Rentnerin</td>
+      <td class="cell-match">I Pallaststr 201.</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Eberhard</td>
+      <td class="cell-match">Kürschner</td>
+      <td class="cell-match">I Brodstr. 230.</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Ludwig</td>
+      <td class="cell-match">Eberhard</td>
+      <td class="cell-match">Buchhändler</td>
+      <td class="cell-match">II Fleischstr. 12.</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Anna</td>
+      <td class="cell-match">Eberhard</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">II Böhmerstr. 91.</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Eberhard</td>
+      <td class="cell-match">Pflasterer</td>
+      <td class="cell-match">III Engelbergstr. 85.</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Eberhard</td>
+      <td class="cell-match">Regens</td>
+      <td class="cell-match">III Weberstr. 183.</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Herrmann</td>
+      <td class="cell-match">Eberle</td>
+      <td class="cell-match">Gerbergesell</td>
+      <td class="cell-match">III Platzstr. 157.</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolaus</td>
+      <td class="cell-match">Ebentheurer</td>
+      <td class="cell-match">Reg.-Secret.</td>
+      <td class="cell-match">II Zuckerbergstr. 138.</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob</td>
+      <td class="cell-match">Eberts</td>
+      <td class="cell-match">Katastergeometer</td>
+      <td class="cell-match">I Dominikanerst. 139.</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Georg Jakob</td>
+      <td class="cell-match">Eck</td>
+      <td class="cell-match">Knecht</td>
+      <td class="cell-mismatch">Weberstr. 184. / III Weberstr. 184. (gt)</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Eckerts</td>
+      <td class="cell-match">Apotheker</td>
+      <td class="cell-mismatch">Dominikanerstr. 137. / I Dominikanerstr. 137. (gt)</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Anna Maria</td>
+      <td class="cell-match">Edel</td>
+      <td class="cell-match"></td>
+      <td class="cell-mismatch">Jüdemerstr. 78. / IV Jüdemerstr. 78. (gt)</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Edinger</td>
+      <td class="cell-match">Taglöhner</td>
+      <td class="cell-mismatch">Walleramsneustr. 199. / II Walleramsneustr. 199. (gt)</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Catharina</td>
+      <td class="cell-match">Effert</td>
+      <td class="cell-match"></td>
+      <td class="cell-mismatch">Krahnenstr. 352. / IV Krahnenstr. 352. (gt)</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Ehlen</td>
+      <td class="cell-match">Kaufmann</td>
+      <td class="cell-mismatch">Brodstr. 236. / I Brodstr. 236. (gt)</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Margartha</td>
+      <td class="cell-match">Ehmann</td>
+      <td class="cell-match"></td>
+      <td class="cell-mismatch">Walleramsneustr. 199. / II Walleramsneustr. 199. (gt)</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Margaretha</td>
+      <td class="cell-match">Ehnert</td>
+      <td class="cell-match"></td>
+      <td class="cell-mismatch">Metzelstr. 102. / II Metzelstr. 102. (gt)</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Ehnert</td>
+      <td class="cell-match">Buchbinder</td>
+      <td class="cell-mismatch">Metzelstr. 102. / II Metzelstr. 102. (gt)</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Thomas</td>
+      <td class="cell-match">Ehses</td>
+      <td class="cell-match">Gerber u. Wirth</td>
+      <td class="cell-mismatch">Neustr. 314. / III Neustr. 314. (gt)</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Susanna</td>
+      <td class="cell-match">Eibers</td>
+      <td class="cell-match"></td>
+      <td class="cell-mismatch">Jüdemerstr. 58. / IV Jüdemerstr. 58. (gt)</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Eich</td>
+      <td class="cell-match">Kaminfeger</td>
+      <td class="cell-mismatch">Krahnenstr. 311. / IV Krahnenstr. 311. (gt)</td>
+      <td>46</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Eich</td>
+      <td class="cell-match">Kaminfeger</td>
+      <td class="cell-mismatch">Brittanien 383. / IV Brittanien 383. (gt)</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Margaretha</td>
+      <td class="cell-match">Eichert</td>
+      <td class="cell-match"></td>
+      <td class="cell-mismatch">Brittanien 379. / IV Brittanien 379. (gt)</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Eichholz</td>
+      <td class="cell-match">Rector</td>
+      <td class="cell-mismatch">Fleischstraße 155. / II Fleischstraße 155. (gt)</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <td class="cell-match">August</td>
+      <td class="cell-match">Eichler</td>
+      <td class="cell-mismatch">Dampfschifffahrts-Geh. / Dampfschifffahrts=Geh. (gt)</td>
+      <td class="cell-mismatch">Fleischstr. 55. / II Fleischstr. 55. (gt)</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Florentine</td>
+      <td class="cell-match">Eichler</td>
+      <td class="cell-match">Musiklehrerin</td>
+      <td class="cell-mismatch">Fleischstr. 55. / II Fleischstr. 55. (gt)</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Eichler</td>
+      <td class="cell-mismatch">Civil-Supernumerar / Civil=Supernumerar (gt)</td>
+      <td class="cell-mismatch">Nagelstr. 31. / IV Nagelstr. 31. (gt)</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Eisenstecken</td>
+      <td class="cell-match">Färber</td>
+      <td class="cell-mismatch">Neustraße 252. / III Neustraße 252. (gt)</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Lorenz</td>
+      <td class="cell-match">Elbert</td>
+      <td class="cell-match"></td>
+      <td class="cell-mismatch">Krahnenstr. 345. / IV Krahnenstr. 345. (gt)</td>
+      <td>54</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Elbert</td>
+      <td class="cell-match">Steuermann</td>
+      <td class="cell-mismatch">Krahnenstr. 354. / IV Krahnenstr. 354. (gt)</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Elges</td>
+      <td class="cell-match">Gerbergesell</td>
+      <td class="cell-mismatch">Wechselstr. 124. / III Wechselstr. 124. (gt)</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolaus</td>
+      <td class="cell-match">Eltges</td>
+      <td class="cell-match">Schriftsetzer</td>
+      <td class="cell-mismatch">Jüdemerstr. 62. / IV Jüdemerstr. 62. (gt)</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann Peter</td>
+      <td class="cell-match">Eltges</td>
+      <td class="cell-match">Friseur</td>
+      <td class="cell-mismatch">Jüdemerstraße 78. / IV Jüdemerstraße 78. (gt)</td>
+      <td>58</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Elis.</td>
+      <td class="cell-match">Eltges</td>
+      <td class="cell-match"></td>
+      <td class="cell-mismatch">Jüdemerstr. 78. / IV Jüdemerstr. 78. (gt)</td>
+      <td>59</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolaus</td>
+      <td class="cell-match">Eltges</td>
+      <td class="cell-mismatch">Magazin-Aufseher / Magazin=Aufseher (gt)</td>
+      <td class="cell-mismatch">Krahnenstr. 332. / IV Krahnenstr. 332. (gt)</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Elsen</td>
+      <td class="cell-match">Schmied</td>
+      <td class="cell-mismatch">Brodstr. 279. / I Brodstr. 279. (gt)</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Elsen</td>
+      <td class="cell-match">Taglöhner</td>
+      <td class="cell-mismatch">Platzstr. 157. / III Platzstr. 157. (gt)</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Maxm. August</td>
+      <td class="cell-match">Emans</td>
+      <td class="cell-match">Apotheker</td>
+      <td class="cell-mismatch">Hauptmarkt 187. / I Hauptmarkt 187. (gt)</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Embser</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-mismatch">Judenplatz 305. / II Judenplatz 305. (gt)</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Hieronimus</td>
+      <td class="cell-match">Embser</td>
+      <td class="cell-match">Friseur</td>
+      <td class="cell-mismatch">Schanzstr. 145. / IV Schanzstr. 145. (gt)</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jonas</td>
+      <td class="cell-match">Emmel</td>
+      <td class="cell-match">Hospitalsbote</td>
+      <td class="cell-mismatch">Fleischstr. 18. / II Fleischstr. 18. (gt)</td>
+      <td>66</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Michel</td>
+      <td class="cell-match">Emmel</td>
+      <td class="cell-match">Commissionär</td>
+      <td class="cell-mismatch">Brodstraße 248. / I Brodstraße 248. (gt)</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Michel</td>
+      <td class="cell-match">Emmel</td>
+      <td class="cell-match">Taxator</td>
+      <td class="cell-mismatch">Neustr. 348. / III Neustr. 348. (gt)</td>
+      <td>68</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Emmerich</td>
+      <td class="cell-mismatch">Rechn.-Rath / Rechn.=Rath (gt)</td>
+      <td class="cell-mismatch">Simeonsstift 369. / II Simeonsstift 369. (gt)</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johanna</td>
+      <td class="cell-match">Emmersdorf</td>
+      <td class="cell-match">Rentnerin</td>
+      <td class="cell-mismatch">Simeonsstift 371. / II Simeonsstift 371. (gt)</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Anna Elisabeth</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">Rentnerin</td>
+      <td class="cell-mismatch">Simeonsstr. 11. / I Simeonsstr. 11. (gt)</td>
+      <td>71</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter Joseph</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">Rentner</td>
+      <td class="cell-mismatch">Pallaststr. 223. / I Pallaststr. 223. (gt)</td>
+      <td>72</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann Mathias</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">Eisenhandel</td>
+      <td class="cell-mismatch">Brodstr. 234. / I Brodstr. 234. (gt)</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Ewald</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">Eisenhandel</td>
+      <td class="cell-mismatch">Brodstr. 234. / I Brodstr. 234. (gt)</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Barbara</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">Rentnerin</td>
+      <td class="cell-match">I Brodstr. 266.</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Stephan</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">Maurer</td>
+      <td class="cell-match">II Moselstr. 243.</td>
+      <td>76</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">Gärtner</td>
+      <td class="cell-match">IV vor der Moselbrück 192.</td>
+      <td>77</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johanna</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">barmherzige Schwester</td>
+      <td class="cell-mismatch">IV Irminer-Freihof 367. / IV Irminer= Freihof 367. (gt)</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Andreas</td>
+      <td class="cell-match">Engel</td>
+      <td class="cell-match">Aufseher</td>
+      <td class="cell-match">I Sichelstr. 45.</td>
+      <td>79</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Catharina</td>
+      <td class="cell-match">Engel</td>
+      <td class="cell-match">ohne</td>
+      <td class="cell-match">I Glockenstr. 64.</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Engel</td>
+      <td class="cell-match">Buchbinder</td>
+      <td class="cell-match">I Brodstr. 266.</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Christoph</td>
+      <td class="cell-match">Engel</td>
+      <td class="cell-match">Schuhmacher</td>
+      <td class="cell-match">II Jakobsstr. 286.</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann Adam</td>
+      <td class="cell-match">Engel</td>
+      <td class="cell-match">Hauptamts-Assistent</td>
+      <td class="cell-mismatch">III Neustr. 279. / III Neustr.279. (gt)</td>
+      <td>83</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Engel</td>
+      <td class="cell-match">Schlosser</td>
+      <td class="cell-match">IV Brückenstr. 243.</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Georg</td>
+      <td class="cell-match">Engel</td>
+      <td class="cell-match">Metzger</td>
+      <td class="cell-match">IV Krahnenstr. 355.</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Gottlieb</td>
+      <td class="cell-match">Engels</td>
+      <td class="cell-match">Weber</td>
+      <td class="cell-match">I Pallaststr. 223.</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Angela</td>
+      <td class="cell-match">Engels</td>
+      <td class="cell-match">ohne</td>
+      <td class="cell-match">II Deutschstr. 269.</td>
+      <td>87</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolaus</td>
+      <td class="cell-match">Engels</td>
+      <td class="cell-match">Schieferdecker</td>
+      <td class="cell-match">III Weberstr. 194.</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td class="cell-match"></td>
+      <td class="cell-match">Engesser</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">III Neustr. 267.</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Elisabeth</td>
+      <td class="cell-match">Engler</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">III Hinterstr. 76.</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Sybilla</td>
+      <td class="cell-match">Englert</td>
+      <td class="cell-match">Rentnerin</td>
+      <td class="cell-match">I Pallaststr. 229.</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Ensch</td>
+      <td class="cell-match">Schuhmacher</td>
+      <td class="cell-match">III Weberstr. 58.</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Ensch</td>
+      <td class="cell-match">Tabakspinner</td>
+      <td class="cell-match">IV Brückenstr. 244.</td>
+      <td>93</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter Adolph</td>
+      <td class="cell-match">Entz</td>
+      <td class="cell-match">Sattler</td>
+      <td class="cell-match">II Simeonsstr. 321.</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Xavier</td>
+      <td class="cell-match">Enzminger</td>
+      <td class="cell-match">barmherz. Schwester</td>
+      <td class="cell-mismatch">IV Irminer-Freihof 367. / IV Irminer= Freihof 367. (gt)</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Eppert</td>
+      <td class="cell-match">Hutfabrikant</td>
+      <td class="cell-match">II Fleischstr. 160.</td>
+      <td>96</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Catharina</td>
+      <td class="cell-match">Eppert</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">IV Schanzstr. 147.</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <td class="cell-match"></td>
+      <td class="cell-match">Erhard</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">IV Schanzstr. 210.</td>
+      <td>98</td>
+    </tr>
+    <tr>
+      <td class="cell-mismatch">Rosina / Nosina (gt)</td>
+      <td class="cell-match">Erkens</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">IV Jüdemerstr. 73.</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Anton</td>
+      <td class="cell-match">Ernsdorf</td>
+      <td class="cell-match">Schlosser</td>
+      <td class="cell-match">II Jakobsstr. 293.</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Maria</td>
+      <td class="cell-match">Ernserhof</td>
+      <td class="cell-match">ohne</td>
+      <td class="cell-match">III Hinterstr. 75.</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Math. Jos.</td>
+      <td class="cell-match">Ersfeld</td>
+      <td class="cell-match">Geschäftsmann</td>
+      <td class="cell-match">III Wechselstr. 128.</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Ertz</td>
+      <td class="cell-match">Kappenmacher</td>
+      <td class="cell-match">I Sichelstr. 41.</td>
+      <td>103</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Philipp</td>
+      <td class="cell-match">Ertz</td>
+      <td class="cell-match">Gerber</td>
+      <td class="cell-match">III Neustr. 247.</td>
+      <td>104</td>
+    </tr>
+    <tr>
+      <td class="cell-match">August</td>
+      <td class="cell-match">Ertz</td>
+      <td class="cell-mismatch">Postbüreau-gehülfen / Postbüreaugehilfen (gt)</td>
+      <td class="cell-match">IV Nagelstr. 31.</td>
+      <td>105</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franziska</td>
+      <td class="cell-match">Ertz</td>
+      <td class="cell-match">Näherin</td>
+      <td class="cell-match">IV Jüdemerstr. 96.</td>
+      <td>106</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Erz</td>
+      <td class="cell-match">Schreiber</td>
+      <td class="cell-match">II Pferdemarkt 252.</td>
+      <td>107</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob</td>
+      <td class="cell-match">Erz</td>
+      <td class="cell-match">Packmeister</td>
+      <td class="cell-match">IV Nagelstr. 28.</td>
+      <td>108</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Esch</td>
+      <td class="cell-match">Handelsmann</td>
+      <td class="cell-match">II Metzelstr. 120.</td>
+      <td>109</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Esch</td>
+      <td class="cell-match">Postbote</td>
+      <td class="cell-match">II Hauptmarkt 298.</td>
+      <td>110</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Theodor</td>
+      <td class="cell-match">Esch</td>
+      <td class="cell-match">Gerichtsvollzieher</td>
+      <td class="cell-match">III Hosenstr. 5.</td>
+      <td>111</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Esch</td>
+      <td class="cell-match">Taglöhner</td>
+      <td class="cell-match">III Wechselstr. 124.</td>
+      <td>112</td>
+    </tr>
+  </tbody>
+</table>
+</div><h1>Comparison: type-10.csv — Model: gemini-3.1 (txt2csv)</h1>
+<div class="table-container">
+<table class="csv-table">
+  <thead>
+    <tr>
+      <th>first and middle names</th>
+      <th>surname</th>
+      <th>occupation</th>
+      <th>address</th>
+      <th>id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="cell-match">Anna</td>
+      <td class="cell-match">Dreier</td>
+      <td class="cell-match">Taglöhnerin</td>
+      <td class="cell-match">II Deutschstr. 270.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Christoph</td>
+      <td class="cell-match">Dreikorn</td>
+      <td class="cell-match">Reg.=Bote</td>
+      <td class="cell-match">I Domfreihof 88.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Karl</td>
+      <td class="cell-match">Drescher</td>
+      <td class="cell-match">Ober=Staatsarzt</td>
+      <td class="cell-match">I Banthusstr. 146.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Drescher</td>
+      <td class="cell-match">Conditor</td>
+      <td class="cell-match">I Pallaststr. 229.</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Karl</td>
+      <td class="cell-match">Dressler</td>
+      <td class="cell-match">Gärtner</td>
+      <td class="cell-match">II Zuckerbergstr. 129.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Ferdinand</td>
+      <td class="cell-match">Dressler</td>
+      <td class="cell-match">Speisewirth</td>
+      <td class="cell-match">III Weberstr. 50.</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Michael</td>
+      <td class="cell-match">Drost</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-match">IV Johannisstr. 271</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Druckenmüller</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-match">II Diedrichsstr. 173.</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Maria</td>
+      <td class="cell-match">Druckenmüller</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">II Diedrichsstr. 173.</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Eduard</td>
+      <td class="cell-mismatch">Drunks, v. / Drunks (gt)</td>
+      <td class="cell-match">Katastergeh.</td>
+      <td class="cell-match">Grabenstr. 285.</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Elisabeth</td>
+      <td class="cell-match">Dümmer</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">I vorm Römerthor 296.</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Regina</td>
+      <td class="cell-match">Dümmig</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">II Judenplatz 287.</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Dümong</td>
+      <td class="cell-match">Schneider</td>
+      <td class="cell-match">III Neustr. 244.</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Dünnebacke</td>
+      <td class="cell-match">Castellan</td>
+      <td class="cell-match">III Jesuitenstr. 187.</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Clara</td>
+      <td class="cell-match">Düntzer</td>
+      <td class="cell-match">ohne</td>
+      <td class="cell-match">I Sichelstr. 45.</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Düntzer</td>
+      <td class="cell-match">Küster</td>
+      <td class="cell-match">III Neustr 265.</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Düring</td>
+      <td class="cell-match">Friedensrichter</td>
+      <td class="cell-match">II Diedrichsstr. 191.</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob</td>
+      <td class="cell-match">Dürrwald</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-match">IV Jüdemerstr. 97.</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td class="cell-mismatch">Mathias, Aloys und A. Maria, Geschwister / Mathias, Aloys und A. Maria (gt)</td>
+      <td class="cell-match">Dulcius</td>
+      <td class="cell-match">Rentner</td>
+      <td class="cell-match">IV Brückenstr. 240.</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joh. Conrad</td>
+      <td class="cell-match">Dumetz</td>
+      <td class="cell-match">Taglöhner</td>
+      <td class="cell-match">III vor dem Neu= thor 287.</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franz</td>
+      <td class="cell-match">Duplang</td>
+      <td class="cell-match">Schuhmacher</td>
+      <td class="cell-match">III Rahnenstr. 145.</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolaus</td>
+      <td class="cell-match">Dunst</td>
+      <td class="cell-match">Musiklehrer</td>
+      <td class="cell-match">II Fleischstr. 16.</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Clara</td>
+      <td class="cell-match">Dunst</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">II Fleischstr. 16.</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Charlotte</td>
+      <td class="cell-match">Duroy</td>
+      <td class="cell-match">barmherzige Schwester</td>
+      <td class="cell-match">IV Irminer-Freihof 307.</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Durst</td>
+      <td class="cell-match">Taglöhner</td>
+      <td class="cell-match">IV Johannisstr. 278.</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Veronika</td>
+      <td class="cell-match">Eberhard</td>
+      <td class="cell-match">Rentnerin</td>
+      <td class="cell-match">I Pallaststr 201.</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Eberhard</td>
+      <td class="cell-match">Kürschner</td>
+      <td class="cell-match">I Brodstr. 230.</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Ludwig</td>
+      <td class="cell-match">Eberhard</td>
+      <td class="cell-match">Buchhändler</td>
+      <td class="cell-match">II Fleischstr. 12.</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Anna</td>
+      <td class="cell-match">Eberhard</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">II Böhmerstr. 91.</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Eberhard</td>
+      <td class="cell-match">Pflasterer</td>
+      <td class="cell-match">III Engelbergstr. 85.</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Eberhard</td>
+      <td class="cell-match">Regens</td>
+      <td class="cell-match">III Weberstr. 183.</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Herrmann</td>
+      <td class="cell-match">Eberle</td>
+      <td class="cell-match">Gerbergesell</td>
+      <td class="cell-match">III Platzstr. 157.</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolaus</td>
+      <td class="cell-match">Ebentheurer</td>
+      <td class="cell-match">Reg.-Secret.</td>
+      <td class="cell-match">II Zuckerbergstr. 138.</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob</td>
+      <td class="cell-match">Eberts</td>
+      <td class="cell-match">Katastergeometer</td>
+      <td class="cell-match">I Dominikanerst. 139.</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Georg Jakob</td>
+      <td class="cell-match">Eck</td>
+      <td class="cell-match">Knecht</td>
+      <td class="cell-match">III Weberstr. 184.</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Eckerts</td>
+      <td class="cell-match">Apotheker</td>
+      <td class="cell-match">I Dominikanerstr. 137.</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Anna Maria</td>
+      <td class="cell-match">Edel</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">IV Jüdemerstr. 78.</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Edinger</td>
+      <td class="cell-match">Taglöhner</td>
+      <td class="cell-match">II Walleramsneustr. 199.</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Catharina</td>
+      <td class="cell-match">Effert</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">IV Krahnenstr. 352.</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Ehlen</td>
+      <td class="cell-match">Kaufmann</td>
+      <td class="cell-match">I Brodstr. 236.</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Margartha</td>
+      <td class="cell-match">Ehmann</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">II Walleramsneustr. 199.</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Margaretha</td>
+      <td class="cell-match">Ehnert</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">II Metzelstr. 102.</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Ehnert</td>
+      <td class="cell-match">Buchbinder</td>
+      <td class="cell-match">II Metzelstr. 102.</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Thomas</td>
+      <td class="cell-match">Ehses</td>
+      <td class="cell-match">Gerber u. Wirth</td>
+      <td class="cell-match">III Neustr. 314.</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Susanna</td>
+      <td class="cell-match">Eibers</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">IV Jüdemerstr. 58.</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Eich</td>
+      <td class="cell-match">Kaminfeger</td>
+      <td class="cell-match">IV Krahnenstr. 311.</td>
+      <td>46</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Eich</td>
+      <td class="cell-match">Kaminfeger</td>
+      <td class="cell-match">IV Brittanien 383.</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Margaretha</td>
+      <td class="cell-match">Eichert</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">IV Brittanien 379.</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Eichholz</td>
+      <td class="cell-match">Rector</td>
+      <td class="cell-match">II Fleischstraße 155.</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <td class="cell-match">August</td>
+      <td class="cell-match">Eichler</td>
+      <td class="cell-match">Dampfschifffahrts=Geh.</td>
+      <td class="cell-match">II Fleischstr. 55.</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Florentine</td>
+      <td class="cell-match">Eichler</td>
+      <td class="cell-match">Musiklehrerin</td>
+      <td class="cell-match">II Fleischstr. 55.</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Eichler</td>
+      <td class="cell-match">Civil=Supernumerar</td>
+      <td class="cell-match">IV Nagelstr. 31.</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Eisenstecken</td>
+      <td class="cell-match">Färber</td>
+      <td class="cell-match">III Neustraße 252.</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Lorenz</td>
+      <td class="cell-match">Elbert</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">IV Krahnenstr. 345.</td>
+      <td>54</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Elbert</td>
+      <td class="cell-match">Steuermann</td>
+      <td class="cell-match">IV Krahnenstr. 354.</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Wilhelm</td>
+      <td class="cell-match">Elges</td>
+      <td class="cell-match">Gerbergesell</td>
+      <td class="cell-match">III Wechselstr. 124.</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolaus</td>
+      <td class="cell-match">Eltges</td>
+      <td class="cell-match">Schriftsetzer</td>
+      <td class="cell-match">IV Jüdemerstr. 62.</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann Peter</td>
+      <td class="cell-match">Eltges</td>
+      <td class="cell-match">Friseur</td>
+      <td class="cell-match">IV Jüdemerstraße 78.</td>
+      <td>58</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Elis.</td>
+      <td class="cell-match">Eltges</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">IV Jüdemerstr. 78.</td>
+      <td>59</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolaus</td>
+      <td class="cell-match">Eltges</td>
+      <td class="cell-match">Magazin=Aufseher</td>
+      <td class="cell-match">IV Krahnenstr. 332.</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Elsen</td>
+      <td class="cell-match">Schmied</td>
+      <td class="cell-match">I Brodstr. 279.</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Elsen</td>
+      <td class="cell-match">Taglöhner</td>
+      <td class="cell-match">III Platzstr. 157.</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Maxm. August</td>
+      <td class="cell-match">Emans</td>
+      <td class="cell-match">Apotheker</td>
+      <td class="cell-match">I Hauptmarkt 187.</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Embser</td>
+      <td class="cell-match">Schreiner</td>
+      <td class="cell-match">II Judenplatz 305.</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Hieronimus</td>
+      <td class="cell-match">Embser</td>
+      <td class="cell-match">Friseur</td>
+      <td class="cell-match">IV Schanzstr. 145.</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jonas</td>
+      <td class="cell-match">Emmel</td>
+      <td class="cell-match">Hospitalsbote</td>
+      <td class="cell-match">II Fleischstr. 18.</td>
+      <td>66</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Michel</td>
+      <td class="cell-match">Emmel</td>
+      <td class="cell-match">Commissionär</td>
+      <td class="cell-match">I Brodstraße 248.</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Michel</td>
+      <td class="cell-match">Emmel</td>
+      <td class="cell-match">Taxator</td>
+      <td class="cell-match">III Neustr. 348.</td>
+      <td>68</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Friedrich</td>
+      <td class="cell-match">Emmerich</td>
+      <td class="cell-match">Rechn.=Rath</td>
+      <td class="cell-match">II Simeonsstift 369.</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johanna</td>
+      <td class="cell-match">Emmersdorf</td>
+      <td class="cell-match">Rentnerin</td>
+      <td class="cell-match">II Simeonsstift 371.</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Anna Elisabeth</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">Rentnerin</td>
+      <td class="cell-match">I Simeonsstr. 11.</td>
+      <td>71</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter Joseph</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">Rentner</td>
+      <td class="cell-match">I Pallaststr. 223.</td>
+      <td>72</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann Mathias</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">Eisenhandel</td>
+      <td class="cell-match">I Brodstr. 234.</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Ewald</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">Eisenhandel</td>
+      <td class="cell-match">I Brodstr. 234.</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Barbara</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">Rentnerin</td>
+      <td class="cell-match">I Brodstr. 266.</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Stephan</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">Maurer</td>
+      <td class="cell-match">II Moselstr. 243.</td>
+      <td>76</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">Gärtner</td>
+      <td class="cell-match">IV vor der Moselbrück 192.</td>
+      <td>77</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johanna</td>
+      <td class="cell-match">Endres</td>
+      <td class="cell-match">barmherzige Schwester</td>
+      <td class="cell-match">IV Irminer= Freihof 367.</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Andreas</td>
+      <td class="cell-match">Engel</td>
+      <td class="cell-match">Aufseher</td>
+      <td class="cell-match">I Sichelstr. 45.</td>
+      <td>79</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Catharina</td>
+      <td class="cell-match">Engel</td>
+      <td class="cell-match">ohne</td>
+      <td class="cell-match">I Glockenstr. 64.</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Engel</td>
+      <td class="cell-match">Buchbinder</td>
+      <td class="cell-match">I Brodstr. 266.</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Christoph</td>
+      <td class="cell-match">Engel</td>
+      <td class="cell-match">Schuhmacher</td>
+      <td class="cell-match">II Jakobsstr. 286.</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann Adam</td>
+      <td class="cell-match">Engel</td>
+      <td class="cell-match">Hauptamts-Assistent</td>
+      <td class="cell-match">III Neustr.279.</td>
+      <td>83</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Heinrich</td>
+      <td class="cell-match">Engel</td>
+      <td class="cell-match">Schlosser</td>
+      <td class="cell-match">IV Brückenstr. 243.</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Georg</td>
+      <td class="cell-match">Engel</td>
+      <td class="cell-match">Metzger</td>
+      <td class="cell-match">IV Krahnenstr. 355.</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Gottlieb</td>
+      <td class="cell-match">Engels</td>
+      <td class="cell-match">Weber</td>
+      <td class="cell-match">I Pallaststr. 223.</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Angela</td>
+      <td class="cell-match">Engels</td>
+      <td class="cell-match">ohne</td>
+      <td class="cell-match">II Deutschstr. 269.</td>
+      <td>87</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nikolaus</td>
+      <td class="cell-match">Engels</td>
+      <td class="cell-match">Schieferdecker</td>
+      <td class="cell-match">III Weberstr. 194.</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td class="cell-match"></td>
+      <td class="cell-match">Engesser</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">III Neustr. 267.</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Elisabeth</td>
+      <td class="cell-match">Engler</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">III Hinterstr. 76.</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Sybilla</td>
+      <td class="cell-match">Englert</td>
+      <td class="cell-match">Rentnerin</td>
+      <td class="cell-match">I Pallaststr. 229.</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Ensch</td>
+      <td class="cell-match">Schuhmacher</td>
+      <td class="cell-match">III Weberstr. 58.</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Ensch</td>
+      <td class="cell-match">Tabakspinner</td>
+      <td class="cell-match">IV Brückenstr. 244.</td>
+      <td>93</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter Adolph</td>
+      <td class="cell-match">Entz</td>
+      <td class="cell-match">Sattler</td>
+      <td class="cell-match">II Simeonsstr. 321.</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Xavier</td>
+      <td class="cell-match">Enzminger</td>
+      <td class="cell-match">barmherz. Schwester</td>
+      <td class="cell-match">IV Irminer= Freihof 367.</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Joseph</td>
+      <td class="cell-match">Eppert</td>
+      <td class="cell-match">Hutfabrikant</td>
+      <td class="cell-match">II Fleischstr. 160.</td>
+      <td>96</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Catharina</td>
+      <td class="cell-match">Eppert</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">IV Schanzstr. 147.</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <td class="cell-match"></td>
+      <td class="cell-match">Erhard</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">IV Schanzstr. 210.</td>
+      <td>98</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Nosina</td>
+      <td class="cell-match">Erkens</td>
+      <td class="cell-match"></td>
+      <td class="cell-match">IV Jüdemerstr. 73.</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Anton</td>
+      <td class="cell-match">Ernsdorf</td>
+      <td class="cell-match">Schlosser</td>
+      <td class="cell-match">II Jakobsstr. 293.</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Maria</td>
+      <td class="cell-match">Ernserhof</td>
+      <td class="cell-match">ohne</td>
+      <td class="cell-match">III Hinterstr. 75.</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Math. Jos.</td>
+      <td class="cell-match">Ersfeld</td>
+      <td class="cell-match">Geschäftsmann</td>
+      <td class="cell-match">III Wechselstr. 128.</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Ertz</td>
+      <td class="cell-match">Kappenmacher</td>
+      <td class="cell-match">I Sichelstr. 41.</td>
+      <td>103</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Philipp</td>
+      <td class="cell-match">Ertz</td>
+      <td class="cell-match">Gerber</td>
+      <td class="cell-match">III Neustr. 247.</td>
+      <td>104</td>
+    </tr>
+    <tr>
+      <td class="cell-match">August</td>
+      <td class="cell-match">Ertz</td>
+      <td class="cell-match">Postbüreaugehilfen</td>
+      <td class="cell-match">IV Nagelstr. 31.</td>
+      <td>105</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Franziska</td>
+      <td class="cell-match">Ertz</td>
+      <td class="cell-match">Näherin</td>
+      <td class="cell-match">IV Jüdemerstr. 96.</td>
+      <td>106</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Johann</td>
+      <td class="cell-match">Erz</td>
+      <td class="cell-match">Schreiber</td>
+      <td class="cell-match">II Pferdemarkt 252.</td>
+      <td>107</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Jakob</td>
+      <td class="cell-match">Erz</td>
+      <td class="cell-match">Packmeister</td>
+      <td class="cell-match">IV Nagelstr. 28.</td>
+      <td>108</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Mathias</td>
+      <td class="cell-match">Esch</td>
+      <td class="cell-match">Handelsmann</td>
+      <td class="cell-match">II Metzelstr. 120.</td>
+      <td>109</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Esch</td>
+      <td class="cell-match">Postbote</td>
+      <td class="cell-match">II Hauptmarkt 298.</td>
+      <td>110</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Theodor</td>
+      <td class="cell-match">Esch</td>
+      <td class="cell-match">Gerichtsvollzieher</td>
+      <td class="cell-match">III Hosenstr. 5.</td>
+      <td>111</td>
+    </tr>
+    <tr>
+      <td class="cell-match">Peter</td>
+      <td class="cell-match">Esch</td>
+      <td class="cell-match">Taglöhner</td>
+      <td class="cell-match">III Wechselstr. 124.</td>
+      <td>112</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</body>
+</html>

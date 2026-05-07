@@ -53,8 +53,9 @@ from google.genai import types
 # PROJECT_ROOT is two levels up from this script (src/llm_txt2csv/ -> project root)
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
-# Directory containing the ground truth text files that serve as input
-DATA_DIR = PROJECT_ROOT / "data" / "ground_truth" / "txt"
+# Default directory containing the ground truth text files that serve as input.
+# Can be overridden via --input-dir to use noisy OCR text instead.
+DEFAULT_DATA_DIR = PROJECT_ROOT / "data" / "ground_truth" / "txt"
 
 # REVISION: Changed from "gemini-2.0.txt" to "gemini-3.1.txt" to use the revision prompt
 PROMPT_PATH = PROJECT_ROOT / "src" / "prompts" / "llm_txt2csv" / "gemini-3.1.txt"
@@ -299,6 +300,13 @@ def main():
         default=0.0,
         help="LLM temperature for Gemini-3.1 (default = 0.0)"
     )
+    parser.add_argument(
+        "--input-dir",
+        type=str,
+        default=None,
+        help="Override input text directory (e.g. results/ocr_img2txt/transkribus/type-1/run_01/ for noisy OCR input). "
+             "When set, results are stored under a '-with-transkribus' model name to distinguish from GT-input results."
+    )
     args = parser.parse_args()
     txt_name = args.txt
     temperature = args.temperature
@@ -312,14 +320,29 @@ def main():
         handlers=[logging.StreamHandler(sys.stdout)]
     )
 
+    # -------------------------------------------------------------------------
+    # Determine input directory and output model name
+    # -------------------------------------------------------------------------
+    if args.input_dir:
+        data_dir = Path(args.input_dir)
+        if not data_dir.is_absolute():
+            data_dir = PROJECT_ROOT / data_dir
+        effective_model_name = MODEL_NAME + "-with-transkribus"
+    else:
+        data_dir = DEFAULT_DATA_DIR
+        effective_model_name = MODEL_NAME
+
+    results_dir = PROJECT_ROOT / "results_revisions" / "llm_txt2csv" / effective_model_name
+    logs_dir = PROJECT_ROOT / "logs_revisions" / "llm_txt2csv" / effective_model_name
+
     # REVISION: Updated log header to reference Gemini-3.1
     logging.info("=== Gemini-3.1 TXT -> JSON -> CSV Pipeline ===")
-    logging.info(f"TXT: {txt_name} | Temperature: {temperature}")
+    logging.info(f"TXT: {txt_name} | Temperature: {temperature} | Input dir: {data_dir}")
 
     # -------------------------------------------------------------------------
     # Step 3: Verify the input TXT file exists
     # -------------------------------------------------------------------------
-    txt_path = DATA_DIR / txt_name
+    txt_path = data_dir / txt_name
     if not txt_path.is_file():
         logging.error(f"TXT file not found at: {txt_path}")
         sys.exit(1)
@@ -355,7 +378,7 @@ def main():
     # REVISION: Results go to results_revisions/ instead of results/
     # Path: results_revisions/llm_txt2csv/gemini-3.1/<txt_stem>/temperature_x.x/run_nn/
     # -------------------------------------------------------------------------
-    txt_folder = RESULTS_DIR / txt_stem
+    txt_folder = results_dir / txt_stem
     temp_folder = txt_folder / f"temperature_{temperature}"
     temp_folder.mkdir(parents=True, exist_ok=True)
 
@@ -470,14 +493,14 @@ def main():
     total_duration = time.time() - overall_start_time
     timestamp_str = datetime.now().strftime("%Y%m%d_%H%M%S")
     log_filename = f"run_{timestamp_str}.json"
-    log_path = LOGS_DIR / log_filename
+    log_path = logs_dir / log_filename
     log_path.parent.mkdir(parents=True, exist_ok=True)
 
     log_data = {
         "timestamp": datetime.now().isoformat(),
         "txt_name": txt_name,
         "txt_path": str(txt_path),
-        "model_name": MODEL_NAME,
+        "model_name": effective_model_name,
         "full_model_name": FULL_MODEL_NAME,
         "temperature": temperature,
         "run_directory": str(run_folder),
