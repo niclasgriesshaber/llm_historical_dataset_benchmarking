@@ -1,0 +1,69 @@
+id,address,first and middle names,occupation,surname
+1,Kleine Neustraße Nr. 86 und 87,Carl Wilh.,Comptoirist,Aacken
+2,St. Peterburger Straße Nr. 241 und 242,Carl,landscher Kommissionär,Abrahamson
+3,Todtenstraße 6. Quartier Nr. 173,Afonassiew,Budenhandel,Abramow
+4,Vorst. kl. Sandstraße Nr. 222,Thimofey,Budenhandel,Abramow
+5,Kalkstraße Nr. 134,Eduard Bernhard,Glasermeister,Achelius
+6,St. Peterburger Straße Nr. 64,Michael,Arbeiter,Adachowsky
+7,Schmiedestraße Nr. 174,Vincent,Marktpächter,Adamowitsch
+8,Gr. Klüversholm Nr. 5,Mattwey,Uhrmacher,Adamowiz
+9,St. Peterburgische Straße Nr. 55,Adam,Lohndiener,Adamsohn
+10,Kalkstraße Nr. 230,,,Adamy Erben
+11,Thorersberg Nr. 10,Joh. Gabriel,Lehrer,Adler
+12,Vorst. kl. Schulenstraße Nr. 164,Reinh.,Schneidermeister,Adler
+13,gr. Neustraße Nr. 74,Samson,Petschierstecher,Adler
+14,Todtenstraße 2. Q. Nr. 223,Anna,,Afonassijew
+15,Hagenshof Nr. 71,Lawrenty,dim. Sergeant,Affonassijew
+16,Schmiedestraße Nr. 198,George,Lohndiener,Afonaßjew
+17,Vorst. gr. Neureussische Straße Nr. 168,Luka,Hanfbinder,Afonaßjew
+18,Hagenshof Nr. 53,Pawel,,Affonassiew
+19,Vorst. Schmiedestraße Nr. 279,Franz,Maurergesell,Agarius
+20,Vorst. Schmiedestraße Nr. 279,Iwan,Major,Agunzow
+21,Münzstraße Nr. 303,Eduard,Comptoirist,Ahrens
+22,Scharrenstraße Nr. 244 und 245,Friedr.,Schneidermeister,Ahrens
+23,Gerberstraße Nr. 141,Joh. Friedr.,Zimmermeister,Ahrens
+24,Schmiedestraße Nr. 138,Joh. Heinr.,Tischlermeister,Ahrentz
+25,gr. Neustraße Nr. 75,Julius,Konditor,Ahrens
+26,Sassenhof Nr. 72,Andreas,Arbeitsmann,Ahrends
+27,Vorst. gr. Sandstraße Nr. 5,Joh. Michael,Lobgerbermeister,Ahrendt
+28,Schmiedestraße Nr. 188,Joh.,Barbierer,Aksentowitz
+29,Neustraße am Eingange des Domesganges Nr. 50,August,,Albanus
+30,Schmiedestraße Nr. 162,Carl George,Tischlermeister,Albrecht
+31,Schmiedestraße Nr. 124,Carl Joachim,Schuhmachermeister,Albrecht
+32,Hagenshof Nr. 29,Catharina,Lehrerin,Albrecht
+33,Riesingsstraße Nr. 151,George,Tischlermeister,Albrecht
+34,Friedrichsholm Nr. 12,Daniel Friedrich,,Aldagh
+35,Friedrichsholm Nr. 28,Jakob,Schuhmacher,Alexandrowitsch
+36,Lindenstraße Nr. 96 bis 98,Kusma Pawel,Wechsler und Kaufmann,Alifannow
+37,Vorst. gr. Sandstraße Nr. 25,Michael Kusmin,Wechsler und Kaufmann,Alifannow
+38,Lastadienstraße Nr. 104,Gregor Iwan,Kurrenne- und Budenhandel,Alimpjew
+39,Vorst. gr. Schmiedestraße Nr. 143,Joh. Christian,Bäckermeister,Allenstein
+40,Palisadenstraße Nr. 150,Fedor Gegorow,Lichtgießer,Allelujew
+41,gr. Reeperstraße Nr. 79,Andreas,Ligger,Alv
+42,Vorst. gr. Mühlenstraße Nr. 76,Joh.,Ligger,Alv
+43,Galgenstraße Nr. 75,Michael,Ligger,Alv
+44,Petrikirchhof,Carl,Maurergesell,Altmann
+45,Badstubenstraße Nr. 260,Joh. Christ.,Kaufmann,Amelong
+46,Herrenstraße Nr. 308 und 309,Christian Gustav,Comptoirist,Amende
+47,Pferdestraße Nr. 262,Fedor Stepan,Budenhandel,Andabursky
+48,Reeperstraße Nr. 167,Iwan Iwannow,Wechsler,Andabursky
+49,Gr. Kluversholm Nr. 68,Wassil Andrejew,Kaufmann,Andabursky
+50,Vorst. Kalkstraße Nr. 249,Elias,Arbeiter,Andersohn
+51,Vorst. kl. Schulenstraße Nr. 121,Maria,,Andrä
+52,"Karlsstraße, Nr. 37",Stepan,Tischler,Andräow
+53,Vorst. gr. Neureussische Straße Nr. 116,Worlam,Budenhandel,Andreow
+54,Schmiedestraße Nr. 159,Heinrich George,Kaufmann,Andresohn
+55,kl. Reeperstraße Nr. 117,Lew. Ossip.,Wechsler,Annekewitz
+56,gr. Reeperstraße Nr. 67,Massey Ossipow,Wechsler,Annekewitz
+57,Vorst. gr. Neureussische Straße Nr. 195,Michailow,Budenhandel,Antip
+58,Vorst. gr. Neureussische Straße Nr. 190,Damna Gregorjewa,,Antivow
+59,kl. Fuhrmannsstraße Nr. 168,Lorion,Badstüber und Budenhandel,Antipow
+60,Klosterstraße Nr. 102,Nicolai,Prediger an der Alexiikirche,Antonjew
+61,Badstubenstraße Nr. 281,Iwan Nikittin,Major,Antonow
+62,Friedrichsholm Nr. 3,Joh. Martin,Mastenwraker,Apse
+63,Seilerstraße Nr. 314,Johann,Budenhandel,Apselon
+64,Sassenhof Nr. 5,Philiv,Kunstgärtner,Arends
+65,Lastadienstraße Nr. 123,Tobias Ernst,Goldarbeiter,Arendt
+66,Peterholm Nr. 45,Anna Maria,Pfeifenfabrikantin,Arnold
+67,Brunnenstraße Nr. 124,Pawel,Arbeitsmann,Arremjew
+68,Vorst. Schmiedestraße Nr. 49,,Artill. Major,Arzibaschow

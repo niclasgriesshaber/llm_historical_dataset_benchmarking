@@ -21,7 +21,6 @@ venv/
 
 # Ignore all files in the results directory
 results/*
-results_revisions/*
 results_paper/*
 replication_txt_results/*
 other/*
